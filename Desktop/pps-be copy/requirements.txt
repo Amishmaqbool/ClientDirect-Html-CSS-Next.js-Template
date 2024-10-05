@@ -1,0 +1,11 @@
+# python 3.12
+
+uvicorn==0.30.6
+fastapi[all]==0.112.2
+
+pydantic[email]
+pydantic-settings==2.4.0
+
+python-multipart==0.0.9
+
+neo4j
