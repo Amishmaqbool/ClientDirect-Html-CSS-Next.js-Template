@@ -36,7 +36,6 @@ export default function Header() {
                 </div>
                 <nav>
                     <ul className='flex space-x-8 text-white text-sm'>
-                        {/* Products Dropdown */}
                         <li className='relative flex items-center dropdown'>
                             <button
                                 onClick={() =>
@@ -98,7 +97,6 @@ export default function Header() {
                             )}
                         </li>
 
-                        {/* Solutions Dropdown */}
                         <li className='relative flex items-center dropdown'>
                             <button
                                 onClick={() =>
