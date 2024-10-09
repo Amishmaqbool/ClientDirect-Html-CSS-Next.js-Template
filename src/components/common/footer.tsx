@@ -29,24 +29,32 @@ export default function Footer() {
                         </div>
                       
                         <div className='flex items-center -space-x-4 my-[18px]'>
-                            <Image src={highPerformerSummer} width={68} height={88.25} loading="lazy" alt="High Performer Summer"  className='z-10'/>
-                            <Image src={momentumLeader} loading="lazy" alt="Momentum Leader" width={68} height={88.25 }/>
-                            <Image src={highPerformerBussiness} loading="lazy" alt="Momentum Leader" width={68} height={88.25} className='z-40'/>                       
-                            <Image src={highPerformerAsia} loading="lazy" alt="Asia Pacific High Performer" width={68} height={88.25} className='z-30'/>
-                            <Image src={highPerformerEmea} loading="lazy" alt="EMEA High Performer" width={68} height={88.25} className='z-20'/>
+                            <Image src={highPerformerSummer} width={68} height={88.25} loading="lazy" alt="High Performer Summer" className='z-10' />
+                            <Image src={momentumLeader} loading="lazy" alt="Momentum Leader" width={68} height={88.25} />
+                            <Image src={highPerformerBussiness} loading="lazy" alt="Momentum Leader" width={68} height={88.25} className='z-40' />
+                            <Image src={highPerformerAsia} loading="lazy" alt="Asia Pacific High Performer" width={68} height={88.25} className='z-30' />
+                            <Image src={highPerformerEmea} loading="lazy" alt="EMEA High Performer" width={68} height={88.25} className='z-20' />
                             <Image src={highPerformerUk} loading="lazy" alt="United Kingdom High Performer" width={68} height={88.25} className='z-10' />
                         </div>
-                        
+
                         <div>
                             <button className='bg-[#ffffff1a] text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center'>
                                 Start 14-Day Free Trial
+<<<<<<< HEAD
                             <Image src={arrow} alt='arrow' width={20} height={21} className='ml-2'/>
            
+=======
+                                <Image src={arrow} alt='arrow' width={20} height={21} className='ml-2' />
+
+>>>>>>> 84af831 (Structure updated)
                             </button>
                         </div>
                     </div>
 
+<<<<<<< HEAD
                     
+=======
+>>>>>>> 84af831 (Structure updated)
                     <div className='grid grid-cols-4 gap-x-5 text-white text-sm'>
                         <div>
                             <p className='font-semibold mb-4 text-[#667085]'>Product</p>
