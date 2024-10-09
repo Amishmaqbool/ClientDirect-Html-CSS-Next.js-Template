@@ -9,7 +9,6 @@ import IdentifyDropdown from "@/assets/svgs/identify-dropdown-icon.svg";
 import AgenciesDropdown from "@/assets/svgs/agencies-dropdown.svg";
 import logo from '../../assets/svgs/logo.svg'
 import Guides from "@/assets/images/navbar-img.webp";
-import logo from '../../assets/svgs/logo.svg'
 
 
 export default function Header() {
