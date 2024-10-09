@@ -8,6 +8,7 @@ import GoogleAnalytics from "@/assets/svgs/google-analytics-dropdown.svg";
 import IdentifyDropdown from "@/assets/svgs/identify-dropdown-icon.svg";
 import AgenciesDropdown from "@/assets/svgs/agencies-dropdown.svg";
 import Guides from "@/assets/images/navbar-img.webp";
+import logo from '../../assets/svgs/logo.svg'
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -33,7 +34,7 @@ export default function Header() {
 
         <div className='flex items-center'>
           <Image
-            src='https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/642bbbd140c74505628ceb96_Logo.svg'
+            src={logo}
             height={35}
             width={125}
             alt='Logo'

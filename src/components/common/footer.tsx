@@ -9,6 +9,7 @@ import highPerformerAsia from '../../assets/svgs/high-performer-asia.svg'
 import highPerformerEmea from '../../assets/svgs/high-performer-emea.svg'
 import highPerformerUk from '../../assets/svgs/high-performer-uk.svg'
 import LinkedinIcon from '@/assets/svgs/linkedin-icon.svg';
+import logo from '../../assets/svgs/logo.svg'
 
 export default function Footer() {
     return (
@@ -20,14 +21,13 @@ export default function Footer() {
                     <div className='flex flex-col'>
                         <div>
                             <Image
-                                src='https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/642bbbd140c74505628ceb96_Logo.svg'
+                                src={logo}
                                 height={35}
                                 width={125}
                                 alt='Logo'
                             />
                         </div>
-
-                       
+                      
                         <div className='flex items-center -space-x-4 my-[18px]'>
                             <Image src={highPerformerSummer} width={68} height={88.25} loading="lazy" alt="High Performer Summer"  className='z-10'/>
                             <Image src={momentumLeader} loading="lazy" alt="Momentum Leader" width={68} height={88.25 }/>
@@ -51,36 +51,36 @@ export default function Footer() {
                         <div>
                             <p className='font-semibold mb-4 text-[#667085]'>Product</p>
                             <ul className='space-y-3'>
-                                <li>Visitor Identification</li>
-                                <li>Google Analytics Enrichment</li>
-                                <li>Real-Time API</li>
+                                <li className='cursor-pointer'>Visitor Identification</li>
+                                <li className='cursor-pointer'>Google Analytics Enrichment</li>
+                                <li className='cursor-pointer'>Real-Time API</li>
                             </ul>
                         </div>
                         <div>
                             <p className='font-semibold mb-4 text-[#667085]'>Solutions</p>
                             <ul className='space-y-3'>
-                                <li>For Sales</li>
-                                <li>For Marketing</li>
-                                <li>For Agencies</li>
+                                <li className='cursor-pointer'>For Sales</li>
+                                <li className='cursor-pointer'>For Marketing</li>
+                                <li className='cursor-pointer'>For Agencies</li>
                             </ul>
                         </div>
                         <div>
                             <p className='font-semibold mb-4 text-[#667085]'>Resources</p>
                             <ul className='space-y-3'>
-                                <li>Help Center</li>
-                                <li>Customer Stories</li>
-                                <li>FAQ</li>
-                                <li>Affiliate Program</li>
-                                <li>Snitcher&apos;s Guide for B2B Lead Generation</li>
-                                <li>B2B Marketing Blueprint</li>
+                                <li className='cursor-pointer'>Help Center</li>
+                                <li className='cursor-pointer'>Customer Stories</li>
+                                <li className='cursor-pointer'>FAQ</li>
+                                <li className='cursor-pointer'>Affiliate Program</li>
+                                <li className='cursor-pointer'>Snitcher&apos;s Guide for B2B Lead Generation</li>
+                                <li className='cursor-pointer'>B2B Marketing Blueprint</li>
                             </ul>
                         </div>
                         <div>
                             <p className='font-semibold mb-4 text-[#667085]'>Legal</p>
                             <ul className='space-y-3'>
-                                <li>Terms & Conditions</li>
-                                <li>Privacy Policy</li>
-                                <li>Security</li>
+                                <li className='cursor-pointer'>Terms & Conditions</li>
+                                <li className='cursor-pointer'>Privacy Policy</li>
+                                <li className='cursor-pointer'>Security</li>
                             </ul>
                         </div>
                     </div>
