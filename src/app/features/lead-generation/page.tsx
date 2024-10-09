@@ -30,7 +30,7 @@ export default function LeadGen() {
         <div className="flex flex-col gap-16 mb-24">
         <div className="flex gap-20">
           <div className="w-1/2">
-             <h2 className="text-4xl leading-[44px] font-bold text-black">Snitcher's data is just better. See it for yourself.</h2>
+            <h2 className="text-4xl leading-[44px] font-bold text-black">Snitcher's data is just better. <br></br><span>See it for yourself.</span></h2>
              
             <p className="text-[#475467] text-lg mt-4">We believe great data is at the heart of growth. So we made it our mission to continually evolve our identification rates and quality to give you the edge to win more customers.<br/>
             <span className="block pt-6">Fill sales pipelines and supercharge your marketing machine today!</span></p>
