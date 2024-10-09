@@ -46,7 +46,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-
                     <div className='grid grid-cols-4 gap-x-5 text-white text-sm'>
                         <div>
                             <p className='font-semibold mb-4 text-[#667085]'>Product</p>
