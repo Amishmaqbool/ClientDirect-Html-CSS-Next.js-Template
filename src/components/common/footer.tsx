@@ -5,20 +5,16 @@ import LinkedinIcon from '@/assets/svgs/linkedin-icon.svg';
 export default function Footer() {
     return (
         <>
-            {/* Hero CTA Section */}
             <div className="relative max-w-[1200px] -mt-28 mx-auto z-10 bg-[#3257ff] rounded-tl-[40px] rounded-tr-[40px] py-20 text-center text-white">
                 <div className="max-w-[1000px] mx-auto px-10">
-                    {/* Hero Title */}
                     <h2 className="text-4xl font-bold mb-6">
-                        Still waiting for conversions? your competitors aren't...
+                        Still waiting for conversions? your competitors aren&apos;t...
                     </h2>
 
-                    {/* Hero Subtitle */}
                     <p className="text-lg mb-8">
                         Your target audiences are comparing providers, beat the competition to the sale by identifying and capturing them first.
                     </p>
 
-                    {/* Call to Action Button */}
                     <a href="https://app.snitcher.com/register?ref=https%3A%2F%2Fwww.upwork.com%2F" className="inline-flex items-center justify-center bg-black text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-900">
                         Try Snitcher For Free
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none" className="ml-2">
@@ -27,7 +23,6 @@ export default function Footer() {
                     </a>
                 </div>
 
-                {/* Subtle Noise Background */}
                 <div className="absolute inset-0 opacity-10 bg-cover bg-no-repeat" style={{ backgroundImage: 'url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/641c3ad…_noiseBig.png)' }}></div>
 
                 {/* Left & Right Gradient Decorations */}
@@ -49,16 +44,56 @@ export default function Footer() {
                             />
                         </div>
 
-                        <div className='flex items-center -space-x-4'>
-                            <img src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/66845660515aa16c5fcddf46_VisitorIdentification_HighPerformer_HighPerformer.svg" loading="lazy" alt="High Performer" className='w-10' />
-                            <img src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/66845660709edcc788d6b1cd_VisitorIdentification_MomentumLeader_Leader.svg" loading="lazy" alt="Momentum Leader" className='w-10' />
-                            <img src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/66845660789e365f73030160_VisitorIdentification_HighPerformer_Small-Business_HighPerformer.svg" loading="lazy" alt="Small Business High Performer" className='w-10' />
-                            <img src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/668456606e129bc9b6447acc_VisitorIdentification_HighPerformer_AsiaPacific_HighPerformer.svg" loading="lazy" alt="Asia Pacific High Performer" className='w-10' />
-                            <img src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/668456601848d5010313554f_VisitorIdentification_HighPerformer_EMEA_HighPerformer.svg" loading="lazy" alt="EMEA High Performer" className='w-10' />
-                            <img src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/66845660045be54d86f0f94a_VisitorIdentification_HighPerformer_UnitedKingdom_HighPerformer.svg" loading="lazy" alt="United Kingdom High Performer" className='w-10' />
+                        <div className="flex items-center -space-x-4">
+                        <Image
+                            src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/66845660515aa16c5fcddf46_VisitorIdentification_HighPerformer_HighPerformer.svg"
+                            alt="High Performer"
+                            width={40}
+                            height={40}
+                            loading="lazy"
+                            className="w-10"
+                        />
+                        <Image
+                            src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/66845660709edcc788d6b1cd_VisitorIdentification_MomentumLeader_Leader.svg"
+                            alt="Momentum Leader"
+                            width={40}
+                            height={40}
+                            loading="lazy"
+                            className="w-10"
+                        />
+                        <Image
+                            src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/66845660789e365f73030160_VisitorIdentification_HighPerformer_Small-Business_HighPerformer.svg"
+                            alt="Small Business High Performer"
+                            width={40}
+                            height={40}
+                            loading="lazy"
+                            className="w-10"
+                        />
+                        <Image
+                            src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/668456606e129bc9b6447acc_VisitorIdentification_HighPerformer_AsiaPacific_HighPerformer.svg"
+                            alt="Asia Pacific High Performer"
+                            width={40}
+                            height={40}
+                            loading="lazy"
+                            className="w-10"
+                        />
+                        <Image
+                            src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/668456601848d5010313554f_VisitorIdentification_HighPerformer_EMEA_HighPerformer.svg"
+                            alt="EMEA High Performer"
+                            width={40}
+                            height={40}
+                            loading="lazy"
+                            className="w-10"
+                        />
+                        <Image
+                            src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/66845660045be54d86f0f94a_VisitorIdentification_HighPerformer_UnitedKingdom_HighPerformer.svg"
+                            alt="United Kingdom High Performer"
+                            width={40}
+                            height={40}
+                            loading="lazy"
+                            className="w-10"
+                        />
                         </div>
-
-                        {/* CTA Button */}
                         <div className='mt-8'>
                             <button className='bg-gray-700 text-white px-6 py-2 rounded-full hover:bg-gray-600 flex items-center'>
                                 Start 14-Day Free Trial
@@ -69,7 +104,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Right Section: Navigation Links */}
                     <div className='grid grid-cols-4 gap-x-12 text-white'>
                         <div>
                             <p className='font-semibold mb-4'>Product</p>

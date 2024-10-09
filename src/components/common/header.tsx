@@ -209,7 +209,7 @@ export default function Header() {
                       <div className='ml-3'>
                         <p className='font-semibold text-base'>B2B Marketing Blueprint</p>
                         <p className='text-sm text-gray-400 pt-2'>
-                          Tactical modules for B2B marketing growth, based on the industry's best practices.
+                          Tactical modules for B2B marketing growth, based on the industry&apos;s best practices.
                         </p>
                       </div>
                     </li>
@@ -419,7 +419,7 @@ export default function Header() {
                 <div className='ml-3'>
                   <p className='font-semibold text-base'>B2B Marketing Blueprint</p>
                   <p className='text-sm text-gray-400 pt-2'>
-                    Tactical modules for B2B marketing growth, based on the industry's best practices.
+                    Tactical modules for B2B marketing growth, based on the industry&apos;s best practices.
                   </p>
                 </div>
                 </li>
