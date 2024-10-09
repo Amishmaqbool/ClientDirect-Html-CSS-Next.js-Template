@@ -13,3 +13,17 @@ body {
     text-wrap: balance;
   }
 }
+
+.hero-noise-png {
+  opacity: 0.14;
+  object-fit: cover;
+  background-image: url(https://cdn.prod.website-files.com/64084df…/641c304…_noiseTile.png);
+  background-position: 0 0;
+  background-size: auto;
+  background-attachment: scroll;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0% auto auto 0%;
+}
