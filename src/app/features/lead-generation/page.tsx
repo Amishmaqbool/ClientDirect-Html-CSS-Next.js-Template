@@ -4,6 +4,7 @@ import { reviews } from "@/constants/features/lead-generation";
 import fullStars from "@/assets/images/five-stars.webp";
 import halfStars from "@/assets/images/four-five-stars.webp";
 import reviewIcon from "@/assets/images/review-icon.webp";
+import jumpLead from "@/assets/images/jump-lead-gen.webp";
 import Image from "next/image";
 
 export default function LeadGen() {
@@ -40,12 +41,12 @@ export default function LeadGen() {
             </svg></button>
           </div>
 
-          <div className="">
-
+          <div className="w-1/2">
+          <Image alt="snitcher" src={jumpLead} width={560} height={363}/>
           </div>
           </div>
 
-          <div className="flex justify-between gap-4 mt-8">
+          <div className="flex justify-between gap-6 mt-8">
             {reviews.map((review) => (
                 <div key={review.id} className="bg-white py-6 px-[17.5px] border-black border rounded-lg w-full max-w-md">
                 <div className="flex items-center mb-4">
