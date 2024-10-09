@@ -28,8 +28,8 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='bg-[#3f4046] fixed top-0 w-full z-50'>
-      <div className='max-w-[1280px] mx-auto px-6 py-4 flex justify-between items-center'>
+    <header className='bg-[#3f4046]'>
+      <div className='max-w-[1216px] mx-auto px-6 py-4 flex justify-between items-center'>
 
         <div className='flex items-center'>
           <Image
