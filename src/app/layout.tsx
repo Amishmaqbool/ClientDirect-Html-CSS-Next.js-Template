@@ -47,7 +47,7 @@ export default function RootLayout({
         className={`${soleil.variable} antialiased`}
       >
         <Header />
-        {children}
+        <div  className="py-40">{children}</div>
         <Footer />
       </body>
     </html>
