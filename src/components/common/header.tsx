@@ -7,6 +7,7 @@ import marketingDropdown from "@/assets/svgs/marketing-dropdown.svg";
 import GoogleAnalytics from "@/assets/svgs/google-analytics-dropdown.svg";
 import IdentifyDropdown from "@/assets/svgs/identify-dropdown-icon.svg";
 import AgenciesDropdown from "@/assets/svgs/agencies-dropdown.svg";
+import Guides from "@/assets/images/navbar-img.webp";
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -27,7 +28,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='bg-[#3f4046]'>
+    <header className='bg-[#3f4046] fixed top-0 w-full z-50'>
       <div className='max-w-[1280px] mx-auto px-6 py-4 flex justify-between items-center'>
 
         <div className='flex items-center'>
@@ -57,7 +58,7 @@ export default function Header() {
                 />
               </button>
               {openDropdown === 'products' && (
-                <div className='absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-[#1b1c1f] p-5 rounded-lg shadow-lg w-[350px]'>
+                <div className='absolute top-5 left-1/2 transform -translate-x-1/2 mt-2 bg-[#1b1c1f] p-5 rounded-lg shadow-lg w-[350px]'>
                   <ul>
 
                     <li className='flex items-center p-2 hover:bg-[#2c2e33] rounded-lg'>
@@ -123,7 +124,7 @@ export default function Header() {
                 />
               </button>
               {openDropdown === 'solutions' && (
-                <div className='absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-[#1b1c1f] p-5 rounded-lg shadow-lg w-[350px]'>
+                <div className='absolute top-4 left-1/2 transform -translate-x-1/2 mt-2 bg-[#1b1c1f] p-5 rounded-lg shadow-lg w-[350px]'>
                   <ul>
                     <li className='flex items-center p-2 hover:bg-[#2c2e33] rounded-lg'>
                       <Image
@@ -185,7 +186,42 @@ export default function Header() {
                   }`}
                 />
               </button>
-              {/* bing bong bang add content */}
+              {openDropdown === 'resources' && (
+                <div className='absolute top-3 left-1/2 transform -translate-x-1/2 bg-[#1b1c1f] mt-4 p-3 pb-8 rounded-lg shadow-lg w-[280px]'>
+                  <ul>
+                    <li className='flex items-center hover:bg-[#2c2e33] rounded-lg pt-5'>
+                      <div className='ml-3'>
+                        <p className='font-semibold text-base'>Help Center</p>
+                        <p className='text-sm text-gray-400 pt-2'>
+                          Advice, best practices and answers from the Snitchers Team.
+                        </p>
+                      </div>
+                    </li>
+                    <li className='flex items-center hover:bg-[#2c2e33] rounded-lg pt-7'>
+                      <div className='ml-3'>
+                        <p className='font-semibold text-base'>Customer Stories</p>
+                        <p className='text-sm text-gray-400 pt-2'>
+                          Discover how businesses like yours use Snitchers to identify, engage and acquire new customers.
+                        </p>
+                      </div>
+                    </li>
+                    <li className='flex items-center hover:bg-[#2c2e33] rounded-lg pt-7'>
+                      <div className='ml-3'>
+                        <p className='font-semibold text-base'>B2B Marketing Blueprint</p>
+                        <p className='text-sm text-gray-400 pt-2'>
+                          Tactical modules for B2B marketing growth, based on the industry's best practices.
+                        </p>
+                      </div>
+                    </li>
+                    <li className='flex items-center hover:bg-[#2c2e33] rounded-lg pt-7'>
+                      <div className='ml-3'>
+                        <p className='font-semibold text-base'>Guides</p>
+                       <div className='pt-2'><Image src={Guides} alt='Guides Img' width={232} height={116} className='rounded-lg'/></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </li>
 
             <li>
@@ -232,7 +268,7 @@ export default function Header() {
               />
             </button>
             {openDropdown === 'products' && (
-              <ul className='mt-2 pl-4 space-y-2'>
+              <ul className='p-4 pl-3 space-y-2'>
 
                 <li className='flex items-start'>
                   <Image
@@ -296,7 +332,7 @@ export default function Header() {
               />
             </button>
             {openDropdown === 'solutions' && (
-              <ul className='mt-2 pl-4 space-y-2'>
+              <ul className='p-4 pl-3 space-y-2'>
 
                 <li className='flex items-start'>
                   <Image
@@ -358,7 +394,44 @@ export default function Header() {
                 }`}
               />
             </button>
-            {/* bing bongbang part 2 */}
+            {openDropdown === 'resources' && (
+              <ul className='p-4 pl-3 space-y-2'>
+
+                <li className='flex items-start'>
+                <div className='ml-3'>
+                  <p className='font-semibold text-base'>Help Center</p>
+                  <p className='text-sm text-gray-400 pt-2'>
+                   Advice, best practices and answers from the Snitchers Team.
+                  </p>
+                 </div>
+                </li>
+
+                <li className='flex items-start'>
+                <div className='ml-3'>
+                  <p className='font-semibold text-base'>Customer Stories</p>
+                  <p className='text-sm text-gray-400 pt-2'>
+                    Discover how businesses like yours use Snitchers to identify, engage and acquire new customers.
+                  </p>
+                </div>
+                </li>
+
+                <li className='flex items-start'>
+                <div className='ml-3'>
+                  <p className='font-semibold text-base'>B2B Marketing Blueprint</p>
+                  <p className='text-sm text-gray-400 pt-2'>
+                    Tactical modules for B2B marketing growth, based on the industry's best practices.
+                  </p>
+                </div>
+                </li>
+
+                <li className='flex items-start'>
+                <div className='ml-3'>
+                  <p className='font-semibold text-base'>Guides</p>
+                  <div className='pt-2'><Image src={Guides} alt='Guides Img' width={232} height={116} className='rounded-lg'/></div>
+                </div>
+                </li>
+              </ul>
+            )}
           </li>
 
           <li>
@@ -368,7 +441,7 @@ export default function Header() {
           </li>
 
           <li className='flex items-center gap-4 mt-4 pt-4'>
-            <button className='rounded-full bg-[#3257ff] py-2 px-5 flex items-center justify-center gap-1 hover:bg-blue-600'>
+          <button className='rounded-full bg-[#3257ff] py-[7px] pl-5 pr-3 flex items-center gap-1 hover:bg-blue-600'>
               Start Now
               <ChevronRightIcon className='h-5 w-5' />
             </button>
