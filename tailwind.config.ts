@@ -15,6 +15,11 @@ const config: Config = {
       fontFamily: {
         soleil: "var(--font-soleil)",
       },
+      screens:{
+        'max-xl':{'max':'1280px'},
+        'max-md': {'max': '990px'},
+        'max-sm':{'max':'768px'}
+      }
     },
   },
   plugins: [],

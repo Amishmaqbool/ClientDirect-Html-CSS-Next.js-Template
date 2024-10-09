@@ -13,11 +13,11 @@ import logo from '../../assets/svgs/logo.svg'
 
 export default function Footer() {
     return (
-        <>
+        <div>
             
             <Panel/>
-            <div className='bg-[#101726] relative'>
-                <div className='max-w-[1216px] mx-auto pb-16 pt-[348px] flex justify-between gap-32'>
+            <div className='bg-[#101726] relative max-xl:px-8'>
+                <div className='max-w-[1216px] mx-auto pb-16 pt-[348px] flex justify-between gap-32 max-xl:gap-[22rem]  '>
                     <div className='flex flex-col'>
                         <div>
                             <Image
@@ -96,6 +96,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
