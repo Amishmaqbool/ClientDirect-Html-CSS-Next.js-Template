@@ -10,7 +10,7 @@ export default function Panel() {
         <div className="max-w-[1000px] mx-auto px-10 relative z-20">
           
           <h2 className="text-5xl font-bold -tracking-[2px] leading-[60px]">
-            Still waiting for conversions? your competitors aren't...
+            Still waiting for conversions? your competitors aren&apos;t...
           </h2>
 
         

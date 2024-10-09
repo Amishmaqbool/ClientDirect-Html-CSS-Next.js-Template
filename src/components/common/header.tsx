@@ -32,6 +32,7 @@ export default function Header() {
   return (
     <header className='bg-[#3f4046] fixed top-0 w-full z-50'>
       <div className='max-w-[1280px] mx-auto px-6 py-4 flex justify-between items-center'>
+
         <div className='flex items-center'>
           <Image
             src={logo}
@@ -250,6 +251,7 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Mobile part */}
       <div
         className={`lg:hidden bg-[#3f4046] overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
           isMobileMenuOpen ? 'max-h-screen opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-y-0'
@@ -269,52 +271,20 @@ export default function Header() {
               />
             </button>
             {openDropdown === 'products' && (
-              <ul className='p-4 pl-3 space-y-2'>
+              <ul className='py-4 space-y-2 text-gray-300'>
 
-                <li className='flex items-start'>
-                  <Image
-                    src={IdentifyDropdown}
-                    alt='Identify'
-                    width={40}
-                    height={40}
-                  />
-                  <div className='ml-3'>
-                    <p className='font-semibold'>Identify</p>
-                    <p className='text-sm text-gray-400'>
-                      Turn your anonymous website traffic into actionable leads.
-                    </p>
-                  </div>
+                <li className='pt-2'>
+                    <p className='text-base'>Identify</p>
                 </li>
 
-                <li className='flex items-start'>
-                  <Image
-                    src={GoogleAnalytics}
-                    alt='Google Analytics Enricher'
-                    width={40}
-                    height={40}
-                  />
-                  <div className='ml-3'>
-                    <p className='font-semibold'>Google Analytics Enricher</p>
-                    <p className='text-sm text-gray-400'>
-                      Turn Google Analytics into a platform made for B2B analytics.
-                    </p>
-                  </div>
+                <li className='pt-2'>
+                    <p className='text-base'>Google Analytics Enricher</p>
                 </li>
 
-                <li className='flex items-start'>
-                  <Image
-                    src={IdentifyDropdown}
-                    alt='Spotter'
-                    width={40}
-                    height={40}
-                  />
-                  <div className='ml-3'>
-                    <p className='font-semibold'>Spotter</p>
-                    <p className='text-sm text-gray-400'>
-                      Real-time visitor identification API.
-                    </p>
-                  </div>
+                <li className='pt-2'>
+                    <p className='text-base'>Spotter</p>
                 </li>
+
               </ul>
             )}
           </li>
@@ -324,7 +294,7 @@ export default function Header() {
               onClick={() =>
                 setOpenDropdown(openDropdown === 'solutions' ? null : 'solutions')
               }
-              className='w-full text-left flex items-center font-medium'>
+              className='w-full text-left flex items-center font-semibold'>
               Solutions
               <ChevronDownIcon
                 className={`ml-1 w-4 h-4 transition-transform duration-200 ${
@@ -333,50 +303,18 @@ export default function Header() {
               />
             </button>
             {openDropdown === 'solutions' && (
-              <ul className='p-4 pl-3 space-y-2'>
+              <ul className='py-4 space-y-2 text-gray-300'>
 
-                <li className='flex items-start'>
-                  <Image
-                    src={AgenciesDropdown}
-                    alt='For Sales'
-                    width={40}
-                    height={40}
-                  />
-                  <div className='ml-3'>
-                    <p className='font-semibold'>For Sales</p>
-                    <p className='text-sm text-gray-400'>
-                      Qualify and prioritize high-intent leads.
-                    </p>
-                  </div>
+                <li className='pt-2'>
+                    <p className='text-base'>For Sales</p>
                 </li>
 
-                <li className='flex items-start'>
-                  <Image
-                    src={marketingDropdown}
-                    alt='For Marketing'
-                    width={40}
-                    height={40}
-                  />
-                  <div className='ml-3'>
-                    <p className='font-semibold'>For Marketing</p>
-                    <p className='text-sm text-gray-400'>
-                      Reduce waste and improve retargeting.
-                    </p>
-                  </div>
+                <li className='pt-2'>
+                    <p className='text-base'>For Marketing</p>
                 </li>
-                <li className='flex items-start'>
-                  <Image
-                    src={marketingDropdown}
-                    alt='For Agencies'
-                    width={40}
-                    height={40}
-                  />
-                  <div className='ml-3'>
-                    <p className='font-semibold'>For Agencies</p>
-                    <p className='text-sm text-gray-400'>
-                      Drive more qualified leads for your clients.
-                    </p>
-                  </div>
+
+                <li className='flex items-start pt-2'>
+                    <p className='text-base'>For Agencies</p>
                 </li>
               </ul>
             )}
@@ -387,7 +325,7 @@ export default function Header() {
               onClick={() =>
                 setOpenDropdown(openDropdown === 'resources' ? null : 'resources')
               }
-              className='w-full text-left flex items-center font-medium'>
+              className='w-full text-left flex items-center font-semibold'>
               Resources
               <ChevronDownIcon
                 className={`ml-1 w-4 h-4 transition-transform duration-200 ${
@@ -396,38 +334,23 @@ export default function Header() {
               />
             </button>
             {openDropdown === 'resources' && (
-              <ul className='p-4 pl-3 space-y-2'>
+              <ul className='py-4 space-y-2 text-gray-300'>
 
-                <li className='flex items-start'>
-                <div className='ml-3'>
-                  <p className='font-semibold text-base'>Help Center</p>
-                  <p className='text-sm text-gray-400 pt-2'>
-                   Advice, best practices and answers from the Snitchers Team.
-                  </p>
-                 </div>
+                <li className='pt-2'>
+                  <p className='text-base'>Help Center</p>
                 </li>
 
-                <li className='flex items-start'>
-                <div className='ml-3'>
-                  <p className='font-semibold text-base'>Customer Stories</p>
-                  <p className='text-sm text-gray-400 pt-2'>
-                    Discover how businesses like yours use Snitchers to identify, engage and acquire new customers.
-                  </p>
-                </div>
+                <li className='pt-2'>
+                  <p className='text-base'>Customer Stories</p>
                 </li>
 
-                <li className='flex items-start'>
-                <div className='ml-3'>
-                  <p className='font-semibold text-base'>B2B Marketing Blueprint</p>
-                  <p className='text-sm text-gray-400 pt-2'>
-                    Tactical modules for B2B marketing growth, based on the industry&apos;s best practices.
-                  </p>
-                </div>
+                <li className='flex pt-2'>
+                  <p className='text-base'>B2B Marketing Blueprint</p>
                 </li>
 
-                <li className='flex items-start'>
-                <div className='ml-3'>
-                  <p className='font-semibold text-base'>Guides</p>
+                <li className='flex items-start pt-2'>
+                <div className=''>
+                  <p className='text-base'>Guides</p>
                   <div className='pt-2'><Image src={Guides} alt='Guides Img' width={232} height={116} className='rounded-lg'/></div>
                 </div>
                 </li>
