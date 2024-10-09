@@ -14,8 +14,8 @@ import logo from '../../assets/svgs/logo.svg'
 export default function Footer() {
     return (
         <>
-            
-            <Panel/>
+
+            <Panel />
             <div className='bg-[#101726] relative'>
                 <div className='max-w-[1216px] mx-auto pb-16 pt-[348px] flex justify-between gap-32'>
                     <div className='flex flex-col'>
@@ -27,7 +27,7 @@ export default function Footer() {
                                 alt='Logo'
                             />
                         </div>
-                      
+
                         <div className='flex items-center -space-x-4 my-[18px]'>
                             <Image src={highPerformerSummer} width={68} height={88.25} loading="lazy" alt="High Performer Summer" className='z-10' />
                             <Image src={momentumLeader} loading="lazy" alt="Momentum Leader" width={68} height={88.25} />
@@ -40,21 +40,13 @@ export default function Footer() {
                         <div>
                             <button className='bg-[#ffffff1a] text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center'>
                                 Start 14-Day Free Trial
-<<<<<<< HEAD
-                            <Image src={arrow} alt='arrow' width={20} height={21} className='ml-2'/>
-           
-=======
                                 <Image src={arrow} alt='arrow' width={20} height={21} className='ml-2' />
 
->>>>>>> 84af831 (Structure updated)
                             </button>
                         </div>
                     </div>
 
-<<<<<<< HEAD
-                    
-=======
->>>>>>> 84af831 (Structure updated)
+
                     <div className='grid grid-cols-4 gap-x-5 text-white text-sm'>
                         <div>
                             <p className='font-semibold mb-4 text-[#667085]'>Product</p>
