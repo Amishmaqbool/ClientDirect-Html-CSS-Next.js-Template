@@ -27,7 +27,6 @@ export default function Footer() {
                                 alt='Logo'
                             />
                         </div>
-                      
                         <div className='flex items-center -space-x-4 my-[18px]'>
                             <Image src={highPerformerSummer} width={68} height={88.25} loading="lazy" alt="High Performer Summer"  className='z-10'/>
                             <Image src={momentumLeader} loading="lazy" alt="Momentum Leader" width={68} height={88.25 }/>
@@ -39,13 +38,12 @@ export default function Footer() {
                         
                         <div>
                             <button className='bg-[#ffffff1a] text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center'>
-                                Start 14-Day Free Trial
+                  Start 14-Day Free Trial
                             <Image src={arrow} alt='arrow' width={20} height={21} className='ml-2'/>
            
                             </button>
                         </div>
                     </div>
-
                     
                     <div className='grid grid-cols-4 gap-x-5 text-white text-sm'>
                         <div>
