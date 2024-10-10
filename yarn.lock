@@ -126,6 +126,25 @@
   languageName: node
   linkType: hard
 
+"@lottiefiles/dotlottie-react@npm:^0.9.1":
+  version: 0.9.1
+  resolution: "@lottiefiles/dotlottie-react@npm:0.9.1"
+  dependencies:
+    "@lottiefiles/dotlottie-web": 0.35.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: a38703c2ebf00ebc3ad770b9659d2802792f012e1968ce18427bd47dea8de2f7065521e636c385ba5d0dffc4408b2926babdb7dd21229cc1b451dc41b0a9ac40
+  languageName: node
+  linkType: hard
+
+"@lottiefiles/dotlottie-web@npm:0.35.0":
+  version: 0.35.0
+  resolution: "@lottiefiles/dotlottie-web@npm:0.35.0"
+  checksum: a022c25a45e7c9e9fb48ab464348561e5102c36b5061e1a9f62a57134520c7f04580ca5a0f7bc8ea50621cf8b8f2f269cdd8a6dc315cd9dd4befe524b5a20622
+  languageName: node
+  linkType: hard
+
 "@next/env@npm:14.2.14":
   version: 14.2.14
   resolution: "@next/env@npm:14.2.14"
