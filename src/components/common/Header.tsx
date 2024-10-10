@@ -30,7 +30,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='backdrop-blur-md fixed top-0 w-full z-50' style={{background: 'rgb(7 11 24 / 80%)'}}>
+    <header className='backdrop-blur-md sticky top-0 w-full z-50' style={{background: 'rgb(7 11 24 / 80%)'}}>
       <div className='max-w-[1280px] mx-auto p-6 flex justify-between items-center'>
 
         <div className='flex items-center'>

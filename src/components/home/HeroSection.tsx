@@ -66,6 +66,7 @@ export default function HeroSection({
 
     const pathname = usePathname();
     const isHomePage = pathname === '/';
+    const isRestrictedPage = ['/customer-stories', '/privacy-policy', '/terms-conditions'].includes(pathname);
 
     const gradientClasses: Record<'purple' | 'blue' | 'aqua', string> = {
         purple: 'from-[#7f56d9] to-[#9e77ed]',
@@ -76,7 +77,7 @@ export default function HeroSection({
     return (
         <div className="relative overflow-hidden">
             <div className="mb-8 relative">
-                <div style={{ backgroundColor: bgColor }} className="w-full pt-28 pb-40 relative z-10">
+                <div style={{ backgroundColor: bgColor }} className={`w-full ${isRestrictedPage? "pb-[60px]" : "pt-28 pb-40"} relative z-10`}>
                     <Image
                         src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
                         alt="Hero Gradient 2"
@@ -95,13 +96,14 @@ export default function HeroSection({
                         priority
                     />
 
-                    <div style={{ maxWidth }} className="mx-auto 2xl:pt-24 max-md:px-4 max-lg:px-10">
+                    <div style={{ maxWidth }} className={`mx-auto ${isRestrictedPage? "pt-[56px]" : "2xl:pt-24"} max-md:px-4 max-lg:px-10`}>
                         <h1 className="text-[30px] md:text-[48px] lg:text-[72px] text-center text-white font-bold leading-[40px] md:leading-[60px] lg:leading-[92px]">
                             {formatTextWithLineBreaks(headingText, headingLineBreaks)}
                         </h1>
-                        <p className="text-center pt-2 leading-6 text-[#d0d5ddb3]">
+                        <p className={`text-center pt-2 leading-6 text-[#d0d5ddb3] ${isRestrictedPage? "max-w-md mx-auto":""}`}>
                             {formatTextWithLineBreaks(paragraphText, paragraphLineBreaks)}
                         </p>
+                        {!isRestrictedPage && (
                         <div className="flex flex-col items-center gap-2 pt-6">
                             <Button
                                 bgColor="bg-customBlue"
@@ -113,6 +115,7 @@ export default function HeroSection({
                             />
                             <span className="text-[#667085]">No credit card required</span>
                         </div>
+                        )}
                     </div>
                 </div>
 

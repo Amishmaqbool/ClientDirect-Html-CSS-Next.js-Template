@@ -11,10 +11,16 @@
   "dependencies": {
     "@heroicons/react": "latest",
     "@lottiefiles/dotlottie-react": "^0.9.1",
+    "@mdx-js/loader": "^3.0.1",
+    "@next/mdx": "^14.2.15",
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/react-router-dom": "^5.3.3",
     "next": "14.2.14",
+    "next-mdx-remote": "^5.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-lottie-player": "^2.1.0"
+    "react-lottie-player": "^2.1.0",
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -23,7 +29,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.13",
     "typescript": "^5"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
