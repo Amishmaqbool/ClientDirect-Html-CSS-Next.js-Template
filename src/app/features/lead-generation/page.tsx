@@ -41,7 +41,7 @@ export default function LeadGen() {
         <div className="flex flex-col gap-16 mb-12">
         <div className="flex gap-20">
           <div className="w-1/2">
-            <h2 className="text-4xl leading-[44px] font-bold text-black">Snitcher's data is just better. <br></br><span>See it for yourself.</span></h2>
+            <h2 className="text-4xl leading-[44px] font-bold text-black">Snitcher&apos;s data is just better. <br></br><span>See it for yourself.</span></h2>
              
             <p className="text-[#475467] text-lg mt-4">We believe great data is at the heart of growth. So we made it our mission to continually evolve our identification rates and quality to give you the edge to win more customers.<br/>
             <span className="block pt-6">Fill sales pipelines and supercharge your marketing machine today!</span></p>
@@ -133,7 +133,7 @@ export default function LeadGen() {
         <div className="flex items-start gap-4 max-w-[80%] mt-14">
         <Image src={manLead} alt="man" width={48} height={48} className="object-contain" />
         <div className="text-xs font-semibold">
-            <p className="italic text-[#eaecf0] ">"The software design is great - It&apos;s an ideal tool for Account Based Marketing and helps to gather new leads."</p>
+            <p className="italic text-[#eaecf0] ">&quot;The software design is great - It&apos;s an ideal tool for Account Based Marketing and helps to gather new leads.&quot;</p>
             <p className="text-[#b9c0d4] flex gap-2 items-center pt-3">Marc-Antoine C.<span><div className="w-[15px] bg-[#98a2b3] h-[2px] -mt-[2px]"></div></span> <span className="text-[#7d89b0]">Marketing and Sales Coordinator</span></p>
         </div>
         </div>
@@ -177,7 +177,7 @@ export default function LeadGen() {
         <div className="flex items-start gap-4 max-w-[80%] mt-10">
         <Image src={manTest} alt="man" width={48} height={48} className="object-contain" />
         <div className="text-xs font-semibold">
-            <p className="italic text-[#344054] ">"We could find the contact information with a few clicks and reach out to possible deals"</p>
+            <p className="italic text-[#344054] ">&quot;We could find the contact information with a few clicks and reach out to possible deals&quot;</p>
             <p className="text-[#101828] flex gap-2 items-center pt-3">Vencel M.<span><div className="w-[15px] bg-[#98a2b3] h-[2px] -mt-[2px]"></div></span> <span className="text-[#667085]">Head of Growth, Partner</span></p>
         </div>
         </div>
