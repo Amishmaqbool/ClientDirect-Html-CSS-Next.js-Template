@@ -1,8 +1,6 @@
 import HeroSection from "@/components/home/HeroSection";
 import LogoGrid from "@/components/home/LogosGrid";
 import TextBlock from "@/components/common/TextBlock";
-import CloseDeal from "@/assets/images/workfaster-sales.png";
-
 export default function Home() {
   const mainHeading = "Give sales the edge to find and close more deals";
   const subHeading =
@@ -29,8 +27,6 @@ export default function Home() {
     author: "Tyler E.",
     role: "Founder and CEO",
   };
-
-  const mainImage = CloseDeal;
 
   return (
     <div className="">
