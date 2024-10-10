@@ -31,9 +31,9 @@ export default function LeadGen() {
           backgroundPosition: 'center',
         }}>
         <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center">
-          <div className="flex flex-col gap-16 mb-24 pt-[100px]">
-            <div className="flex gap-20">
-              <div className="w-1/2">
+          <div className="flex flex-col gap-16 max-md:gap-6 mb-24 pt-[100px] max-md:pt-14 px-4">
+            <div className="flex gap-20 max-md:flex-col max-md:gap-12">
+              <div className="w-1/2 max-md:w-full pb-8">
                 <h2 className="text-4xl leading-[44px] font-bold text-black">
                   Snitcher&apos;s data is just better. <br /><span>See it for yourself.</span>
                 </h2>
@@ -47,8 +47,8 @@ export default function LeadGen() {
                   </svg>
                 </button>
               </div>
-              <div className="w-1/2">
-                <Image alt="snitcher" src={jumpLead} width={560} height={363} />
+              <div className="w-1/2 max-md:w-full max-md:flex max-md:justify-center">
+                <Image alt="snitcher" src={jumpLead} width={560} height={363} className="max-md:w-full" />
               </div>
             </div>
 
@@ -61,13 +61,13 @@ export default function LeadGen() {
         <IdentifySection />
       </div>
 
-      <div className="px-4 max-w-[1200px] mx-auto flex flex-col justify-center items-center pt-20 pb-8">
+      <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center pt-20 pb-8">
         <SegmentSection />
         <ProsSection />
       </div>
 
 
-      <div className="px-4 max-w-[1200px] mx-auto flex flex-col justify-center items-center pt-32 pb-8">
+      <div className="px-4 max-w-[1200px] mx-auto flex flex-col justify-center items-center pt-20 lg:pt-32 pb-8">
         <DataSection />
       </div>
     </>

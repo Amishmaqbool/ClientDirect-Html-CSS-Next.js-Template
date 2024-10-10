@@ -5,8 +5,8 @@ import ManReview from "@/assets/images/man2.webp";
 
 const SegmentSection = () => {
   return (
-    <div className="px-4 max-w-[1200px] mx-auto flex flex-col justify-center items-center pt-20 pb-8">
-      <div className="px-32 flex flex-col items-center pb-20">
+    <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center xl:pt-20 pb-8">
+      <div className="lg:px-32 max-lg:px-4 max-md:px-3 flex flex-col items-center max-md:pb-14 md:pb-20">
         <div className="inline-block rounded-2xl bg-[#d1e0ff] border border-[#d1e0ff] pt-1 pb-[2px] px-4 text-xs font-bold text-center text-[#0040c1]">
           Segment
         </div>
@@ -16,8 +16,8 @@ const SegmentSection = () => {
         </p>
       </div>
 
-      <div className="flex gap-2">
-        <div className="w-2/6">
+      <div className="flex gap-2 max-md:flex-col">
+        <div className="w-2/6 max-md:w-full max-xl:px-4">
           <Image alt="filter" src={Filter} width={48} height={48} className="object-contain" />
           <div className="mt-8">
             <h2 className="text-[#344054] font-bold text-2xl">Score</h2>
@@ -34,7 +34,14 @@ const SegmentSection = () => {
             </svg>
           </button>
 
-          <div className="flex items-start gap-4 max-w-[80%] mt-10">
+          <div
+              className="w-full h-[1px] mt-8"
+              style={{
+                background: 'repeating-linear-gradient(110.65deg, #0000 1.16%, #00000026 51.09%, #0000)',
+              }}>
+            </div>
+
+          <div className="flex max-md:flex-col items-start gap-4 max-w-[75%] md:max-w-[80%] mt-10 max-md:mt-8 max-md:pb-20">
             <Image src={ManReview} alt="man" width={48} height={48} className="object-contain" />
             <div className="text-xs font-semibold">
               <p className="italic text-[#344054]">
@@ -48,7 +55,7 @@ const SegmentSection = () => {
           </div>
         </div>
 
-        <div className="w-4/6">
+        <div className="w-4/6 max-md:w-full">
           <Image alt="Invision" src={Invision} width={790} height={552} className="object-contain" />
         </div>
       </div>

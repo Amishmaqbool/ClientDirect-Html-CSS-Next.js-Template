@@ -15,13 +15,13 @@ const imageMap: { [key: string]: StaticImageData } = {
 
 const ProsSection = () => {
     return (
-      <div className="flex gap-5 items-center justify-center mt-10">
+      <div className="flex max-md:flex-col gap-5 items-center justify-center mt-8 md:mt-10 px-4">
         {pros.map((item) => (
           <div key={item.id} className="flex flex-col gap-5 items-center justify-center">
             <Image src={imageMap[item.image]} alt={item.title} width={80} height={80} className="object-contain" />
             <div className="text-center">
               <h2 className="text-xl leading-8 text-[#344054] font-semibold">{item.title}</h2>
-              <p className="text-[#667085] mt-2 text-lg">{item.description}</p>
+              <p className="text-[#667085] mt-2 text-sm">{item.description}</p>
             </div>
           </div>
         ))}
