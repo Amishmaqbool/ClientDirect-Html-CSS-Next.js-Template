@@ -16,12 +16,12 @@ const SegmentSection = () => {
         </p>
       </div>
 
-      <div className="flex gap-2 max-md:flex-col">
-        <div className="w-2/6 max-md:w-full max-xl:px-4">
+      <div className="flex gap-0 max-md:flex-col">
+        <div className="w-[38%] max-md:w-full max-xl:px-4">
           <Image alt="filter" src={Filter} width={48} height={48} className="object-contain" />
           <div className="mt-8">
             <h2 className="text-[#344054] font-bold text-2xl">Score</h2>
-            <p className="text-[#667085] text-base leading-7 tracking-wide">
+            <p className="text-[#667085] text-base leading-7 tracking-wide md:pr-6">
               Define company attributes and behaviours to configure lead scoring. Trigger automations and manage your website traffic intelligently.
               <span className="block pt-4">Collect great fit leads on autopilot so you can spend more time retargeting and selling to buyers, not browsers.</span>
             </p>
@@ -55,8 +55,8 @@ const SegmentSection = () => {
           </div>
         </div>
 
-        <div className="w-4/6 max-md:w-full">
-          <Image alt="Invision" src={Invision} width={790} height={552} className="object-contain" />
+        <div className="w-[62%] max-md:w-full">
+          <Image alt="Invision" src={Invision} width={800} height={580} className="object-contain" />
         </div>
       </div>
     </div>

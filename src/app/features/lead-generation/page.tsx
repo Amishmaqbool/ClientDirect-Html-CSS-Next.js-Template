@@ -31,9 +31,9 @@ export default function LeadGen() {
           backgroundPosition: 'center',
         }}>
         <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center">
-          <div className="flex flex-col gap-16 max-md:gap-6 mb-24 pt-[100px] max-md:pt-14 px-4">
+          <div className="flex flex-col gap-16 max-md:gap-6 mb-24 pt-16 max-md:pt-14 px-4">
             <div className="flex gap-20 max-md:flex-col max-md:gap-12">
-              <div className="w-1/2 max-md:w-full pb-8">
+              <div className="w-1/2 max-md:w-full pb-8 pt-9">
                 <h2 className="text-4xl leading-[44px] font-bold text-black">
                   Snitcher&apos;s data is just better. <br /><span>See it for yourself.</span>
                 </h2>

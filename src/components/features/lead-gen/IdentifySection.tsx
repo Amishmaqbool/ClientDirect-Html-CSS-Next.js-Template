@@ -8,18 +8,21 @@ import manLead from "@/assets/images/man-lead.webp"
 
 const IdentifySection = () => {
   return (
-      <div className="px-4 max-w-[1200px] mx-auto flex flex-col md:justify-center md:items-center pt-20 text-white">
+      <div className="px-4 max-w-[1200px] mx-auto flex flex-col md:justify-center md:items-center pt-24 text-white">
         <div className="xl:px-48 max-md:px-4 flex flex-col items-center pb-12 md:pb-20">
           <div className="inline-block rounded-2xl bg-[#ffffff1a] border border-[#ffffff1a] pt-1 pb-[2px] px-2 text-xs font-semibold text-center">Identify</div>
           <h2 className="text-center text-4xl font-bold tracking-[-1px] pt-10">Capture and close anonymous visitors</h2>
           <p className="text-[#7d89b0] text-lg text-center pt-5">
           Identify turns your anonymous website traffic into actionable leads and information in real-time. So you can make the most of every marketing dollar and close more deals.          </p>
-          <button className="mt-4 flex items-center justify-center gap-2 rounded-full pt-2 pb-[6px] pl-4 pr-3 text-white bg-[#ffffff1a] border-[1.5px] border-[#ffffff1a] text-sm">
+          <button className="mt-[18px] flex items-center justify-center gap-2 rounded-full pt-2 pb-[6px] pl-4 pr-3 text-white bg-[#ffffff1a] border-[1.5px] border-[#ffffff1a] text-sm">
             Start 14-Day Free Trial
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <path d="M3.33301 10.6196H16.6663M16.6663 10.6196L11.6663 5.61963M16.6663 10.6196L11.6663 15.6196" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
           </button>
         </div>
 
-        <div className="flex gap-2 max-md:gap-8 pb-28 max-md:flex-col">
+        <div className="flex gap-20 max-md:gap-8 pb-28 max-md:flex-col">
           <div className="hidden md:block md:w-1/2 w-full">
             <Image alt="Asana" src={Asana} width={540} height={448} />
           </div>
@@ -33,7 +36,7 @@ const IdentifySection = () => {
               <Image src={Enrichment} alt="enrichment" width={50} height={50} className="object-contain" />
               <div>
                 <h2 className="text-lg font-semibold">Enrichment</h2>
-                <p className="text-[#7d89b0] text-lg">Enrich each identified company with detailed information.</p>
+                <p className="text-[#7d89b0] text-base mt-[2px]">Enrich each identified company with detailed information.</p>
               </div>
             </div>
 
@@ -41,7 +44,7 @@ const IdentifySection = () => {
               <Image src={Visitor} alt="visitor" width={50} height={50} className="object-contain" />
               <div>
                 <h2 className="text-lg font-semibold">Visitor behavior</h2>
-                <p className="text-[#7d89b0] text-lg">Follow lead journeys from source to close.</p>
+                <p className="text-[#7d89b0] text-base mt-[2px]">Follow lead journeys from source to close.</p>
               </div>
             </div>
 
@@ -49,7 +52,7 @@ const IdentifySection = () => {
               <Image src={Prospect} alt="prospect" width={50} height={50} className="object-contain" />
               <div>
                 <h2 className="text-lg font-semibold">Prospect</h2>
-                <p className="text-[#7d89b0] text-lg">Use key pieces of information to select the right decision maker.</p>
+                <p className="text-[#7d89b0] text-base mt-[2px]">Use key pieces of information to select the right decision maker.</p>
               </div>
             </div>
 
@@ -64,7 +67,7 @@ const IdentifySection = () => {
                 <Image src={manLead} alt="man" width={48} height={48} className="object-contain" />
                 <div className="text-xs font-semibold">
                   <p className="italic text-[#eaecf0] ">&quot;The software design is great - It&apos;s an ideal tool for Account Based Marketing and helps to gather new leads.&quot;</p>
-                  <p className="text-[#b9c0d4] flex gap-2 items-center pt-3">Marc-Antoine C.<span><div className="w-[15px] bg-[#98a2b3] h-[2px] -mt-[2px]"></div></span> <span className="text-[#7d89b0]">Marketing and Sales Coordinator</span></p>
+                  <p className="text-[#b9c0d4] flex gap-2 items-center pt-[14px]">Marc-Antoine C.<span><div className="w-[15px] bg-[#98a2b3] h-[2px] -mt-[2px]"></div></span> <span className="text-[#7d89b0]">Marketing and Sales Coordinator</span></p>
                 </div>
               </div>
 

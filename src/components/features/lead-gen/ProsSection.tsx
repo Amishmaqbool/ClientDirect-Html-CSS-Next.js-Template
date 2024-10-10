@@ -18,8 +18,8 @@ const ProsSection = () => {
       <div className="flex max-md:flex-col gap-5 items-center justify-center mt-8 md:mt-10 px-4">
         {pros.map((item) => (
           <div key={item.id} className="flex flex-col gap-5 items-center justify-center">
-            <Image src={imageMap[item.image]} alt={item.title} width={80} height={80} className="object-contain" />
-            <div className="text-center">
+            <Image src={imageMap[item.image]} alt={item.title} width={70} height={70} className="object-contain" />
+            <div className="text-center -mt-4">
               <h2 className="text-xl leading-8 text-[#344054] font-semibold">{item.title}</h2>
               <p className="text-[#667085] mt-2 text-sm">{item.description}</p>
             </div>
