@@ -41,7 +41,6 @@ interface HeroSectionProps {
     headingLineBreaks?: number[];
     paragraphText?: string;
     paragraphLineBreaks?: number[];
-    paragraphColor?: string;
     maxWidth?: string;
     bgColor?: string;
 }
@@ -51,7 +50,6 @@ export default function HeroSection({
     headingLineBreaks = [3, 5],
     paragraphText = "Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights.",
     paragraphLineBreaks = [],
-    paragraphColor = "white",
     maxWidth = "900px",
     bgColor = "#070b18",
 
