@@ -7,15 +7,15 @@ export default function Panel() {
   return (
     <div>
       <div className="relative max-w-[1216px] -mt-28 mx-auto z-10 bg-[#3257ff] rounded-2xl py-[96px] text-center text-white overflow-hidden -mb-[295px]">
-        <div className="max-w-[1000px] mx-auto px-10 relative z-20">
+        <div className="max-w-[1000px] mx-auto px-5 lg:px-10 relative z-20">
 
-          <h2 className="text-5xl font-bold -tracking-[2px] leading-[60px]">
-            Still waiting for conversions? your competitors aren&apos;t...
+          <h2 className="text-[33px] lg:text-5xl font-bold -tracking-[2px] leading-[39px] lg:leading-[60px]">
+          Struggling to see what $48 out of every $50 buys you?
           </h2>
 
 
           <p className="text-lg mb-[30px] mt-4 text-[#d1e0ff]">
-            Your target audiences is comparing providers, beat the competition <br />
+            Your target audiences is comparing providers, beat the competition <br className='max-lg:hidden' />
             to the sale by identifying and capturing them first.
           </p>
 

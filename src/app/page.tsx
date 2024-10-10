@@ -34,7 +34,6 @@ export default function Home() {
         headingText="Know who’s on your website, drive more revenue."
         headingLineBreaks={[2, 5]}
         paragraphText="Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights."
-        paragraphColor="white"
         maxWidth="960px"
         bgColor="#070b18"
       />

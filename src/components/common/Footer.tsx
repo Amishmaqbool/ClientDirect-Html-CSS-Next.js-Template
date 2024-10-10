@@ -17,7 +17,7 @@ export default function Footer() {
 
             <Panel />
             <div className='bg-[#101726] relative'>
-                <div className='max-w-[1216px] mx-auto pb-16 pt-[348px] flex justify-between gap-32'>
+                <div className='max-w-[1216px] max-lg:px-4 mx-auto pb-16 pt-[348px] flex max-lg:flex-col justify-between gap-32'>
                     <div className='flex flex-col'>
                         <div>
                             <Image
@@ -46,7 +46,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-4 gap-x-5 text-white text-sm'>
+                    <div className='grid max-lg:gap-y-8 lg:grid-cols-4 lg:gap-x-5 text-white text-sm'>
                         <div>
                             <p className='font-semibold mb-4 text-[#667085]'>Product</p>
                             <ul className='space-y-3'>

@@ -41,7 +41,6 @@ interface HeroSectionProps {
     headingLineBreaks?: number[];
     paragraphText?: string;
     paragraphLineBreaks?: number[];
-    paragraphColor?: string;
     maxWidth?: string;
     bgColor?: string;
 }
@@ -51,7 +50,6 @@ export default function HeroSection({
     headingLineBreaks = [3, 5],
     paragraphText = "Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights.",
     paragraphLineBreaks = [],
-    paragraphColor = "white",
     maxWidth = "900px",
     bgColor = "#070b18",
 
@@ -61,7 +59,7 @@ export default function HeroSection({
         return words.map((word, index) => (
             <React.Fragment key={index}>
                 {word}{' '}
-                {lineBreakIndices.includes(Number(index) + 1) && <br />}
+                {lineBreakIndices.includes(Number(index) + 1) && <br className='max-lg:hidden' />}
             </React.Fragment>
         ));
     };
@@ -97,11 +95,11 @@ export default function HeroSection({
                         priority
                     />
 
-                    <div style={{ maxWidth }} className="mx-auto 2xl:pt-24">
-                        <h1 className="text-[72px] text-center text-white font-bold leading-[92px]">
+                    <div style={{ maxWidth }} className="mx-auto 2xl:pt-24 max-md:px-4 max-lg:px-10">
+                        <h1 className="text-[30px] md:text-[48px] lg:text-[72px] text-center text-white font-bold leading-[40px] md:leading-[60px] lg:leading-[92px]">
                             {formatTextWithLineBreaks(headingText, headingLineBreaks)}
                         </h1>
-                        <p style={{ color: paragraphColor }} className="text-center pt-2 leading-6">
+                        <p className="text-center pt-2 leading-6 text-[#d0d5ddb3]">
                             {formatTextWithLineBreaks(paragraphText, paragraphLineBreaks)}
                         </p>
                         <div className="flex flex-col items-center gap-2 pt-6">
