@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@heroicons/react": "latest",
+    "@lottiefiles/dotlottie-react": "^0.9.1",
     "next": "14.2.14",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-lottie-player": "^2.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",

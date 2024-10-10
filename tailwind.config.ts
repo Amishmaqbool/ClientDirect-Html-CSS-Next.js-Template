@@ -11,12 +11,23 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customBlue: "#3257ff",
       },
       fontFamily: {
         soleil: "var(--font-soleil)",
+      },
+      keyframes: {
+        boxBounce: {
+          '0%, 100%': { boxShadow: '0 0 5px 2px rgba(50, 87, 255, 0.5)' },
+          '50%': { boxShadow: '0 0 20px 10px rgba(50, 87, 255, 0.8)' },
+        },
+      },
+      animation: {
+        boxBounce: 'boxBounce 1.5s ease-in-out infinite',
       },
     },
   },
   plugins: [],
 };
+
 export default config;
