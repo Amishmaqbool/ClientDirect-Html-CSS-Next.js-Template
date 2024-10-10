@@ -5,7 +5,7 @@ import halfStars from "@/assets/images/four-five-stars.webp";
 import reviewIcon from "@/assets/images/review-icon.webp";
 
 const ReviewSection = () => {
-  const renderStars = (rating: any) => {
+  const renderStars = (rating: number) => {
     if (rating === 5) {
       return <Image src={fullStars} alt="Five Stars" width={110} height={22} />;
     } else if (rating === 4.5) {
