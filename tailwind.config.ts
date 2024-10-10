@@ -17,9 +17,15 @@ const config: Config = {
       },
       screens:{
         'max-xl':{'max':'1280px'},
+        'max-lg':{'max':'1080px'},
         'max-md': {'max': '990px'},
-        'max-sm':{'max':'768px'}
-      }
+        'max-sm':{'max':'768px'},
+        'max-xs':{'max':'480px'},
+        'max-xxs':{'max':'400px'}
+      },
+      inset: {
+        '-187px': '-187px',
+      },
     },
   },
   plugins: [],
