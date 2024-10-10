@@ -6,7 +6,7 @@ import ManReview from "@/assets/images/man2.webp";
 const SegmentSection = () => {
   return (
     <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center xl:pt-20 pb-8">
-      <div className="lg:px-32 max-lg:px-4 max-md:px-3 flex flex-col items-center max-md:pb-14 md:pb-20">
+      <div className="max-w-[790px] max-md:px-2 flex flex-col items-center max-md:pb-14 md:pb-20">
         <div className="inline-block rounded-2xl bg-[#d1e0ff] border border-[#d1e0ff] pt-1 pb-[2px] px-4 text-xs font-bold text-center text-[#0040c1]">
           Segment
         </div>

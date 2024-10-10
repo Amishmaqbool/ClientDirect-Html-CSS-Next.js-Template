@@ -4,7 +4,7 @@ import { data } from "@/constants/features/lead-generation";
 const DataSection = () => {
   return (
     <>
-    <div className="lg:px-40 max-lg:px-4 flex flex-col items-center pb-10 md:pb-32">
+    <div className="max-w-[790px] flex flex-col items-center pb-10 md:pb-32">
         <div className="inline-block rounded-2xl bg-[#d1e0ff] border border-[#d1e0ff] pt-1 pb-[2px] px-4 text-xs font-bold text-center text-[#0040c1]">
           Automate
         </div>

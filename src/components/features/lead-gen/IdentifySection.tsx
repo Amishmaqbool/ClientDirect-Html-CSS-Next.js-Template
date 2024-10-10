@@ -9,7 +9,7 @@ import manLead from "@/assets/images/man-lead.webp"
 const IdentifySection = () => {
   return (
       <div className="px-4 max-w-[1200px] mx-auto flex flex-col md:justify-center md:items-center pt-24 text-white">
-        <div className="xl:px-48 max-md:px-4 flex flex-col items-center pb-12 md:pb-20">
+        <div className="max-w-[790px] flex flex-col items-center pb-12 md:pb-20">
           <div className="inline-block rounded-2xl bg-[#ffffff1a] border border-[#ffffff1a] pt-1 pb-[2px] px-2 text-xs font-semibold text-center">Identify</div>
           <h2 className="text-center text-4xl font-bold tracking-[-1px] pt-10">Capture and close anonymous visitors</h2>
           <p className="text-[#7d89b0] text-lg text-center pt-5">
