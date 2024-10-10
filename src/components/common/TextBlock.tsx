@@ -13,8 +13,8 @@ interface SalesSectionProps {
     ctaText: string;
     secondaryCtaText: string;
     testimonial: Testimonial;
-    lottieUrl: string; // New prop for Lottie animation URL
-    isReversed?: boolean; // Optional prop to reverse the layout
+    lottieUrl: string; 
+    isReversed?: boolean; 
 }
 
 const TextBlock: React.FC<SalesSectionProps> = ({

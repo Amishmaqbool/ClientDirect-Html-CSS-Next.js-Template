@@ -5,7 +5,7 @@ import BackgroundImage from "../../../public/images/background-customer-stories-
 import HeroSection from "@/components/home/HeroSection";
 import Arrow from "@/assets/svgs/arrow.svg";
 
-export const caseStudies = [
+const caseStudies = [
   {
     title:
       "How Usersnap gained critical visibility into marketing campaigns with Snitcher",

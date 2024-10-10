@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ChevronDownIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import marketingDropdown from "@/assets/svgs/marketing-dropdown.svg";
@@ -64,6 +65,8 @@ export default function Header() {
                   <ul>
 
                     <li className='flex items-center p-2 hover:bg-[#2c2e33] rounded-lg'>
+                     <Link href="/features/lead-generation" passHref>
+                      <div className='flex'>
                       <Image
                         src={IdentifyDropdown}
                         alt='Identify'
@@ -76,6 +79,8 @@ export default function Header() {
                           Turn your anonymous website traffic into actionable leads.
                         </p>
                       </div>
+                      </div>
+                      </Link>
                     </li>
 
                     <li className='flex items-center p-2 hover:bg-[#2c2e33] rounded-lg'>
