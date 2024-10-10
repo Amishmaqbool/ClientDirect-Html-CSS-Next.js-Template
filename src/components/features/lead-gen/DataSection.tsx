@@ -17,7 +17,7 @@ const DataSection = () => {
     </div>
     
     <div className="flex max-md:flex-wrap justify-center gap-6 mt-10 max-xl:px-4 max-md:px-0">
-    {data.map((item, index) => (
+    {data.map((item) => (
         <div
         key={item.id}
         className={`relative w-[384px] h-[346px] max-md:h-[450px] max-md:w-full max-xl:w-2/6 rounded-xl overflow-hidden shadow-lg flex-shrink-0`}
