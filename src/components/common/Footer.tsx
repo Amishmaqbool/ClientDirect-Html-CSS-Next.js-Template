@@ -12,9 +12,40 @@ import LinkedinIcon from '@/assets/svgs/linkedin-icon.svg';
 import logo from '../../assets/svgs/logo.svg'
 
 export default function Footer() {
+    const footerLinks=[{
+        id:0,
+        title:"Product",
+        link_one:"Visitor Identification",
+        link_two:"Google Analytics enrichment",
+        link_three:"Real-Time API"
+    },
+    {
+        id:1,
+        title:"Solutions",
+        link_one:"For Sales",
+        link_two:"For Marketing",
+        link_three:"For Agencies"
+    },
+    {
+        id:2,
+        title:"Resources",
+        link_one:"Help Center",
+        link_two:"Customer Stories",
+        link_three:"FAQ",
+        link_four:"Affiliate Program",
+        link_five:"Snitcher's guide for B2B Lead Generation",
+        link_six:"B2B Marketing Blueprint",
+    },
+    {
+        id:3,
+        title:"Legal",
+        link_one:"Terms & Condition",
+        link_two:"Privacy Policy",
+        link_three:"Security"
+    }
+]
     return (
-        <div>
-            
+        <div>            
             <div className='bg-[#101726] relative '>            
             <div className='-mb-[132px] -top-[185px] right-0 left-0 relative max-md:-mb-[120px]'>
             <Panel/>
@@ -37,8 +68,7 @@ export default function Footer() {
                             <Image src={highPerformerAsia} loading="lazy" alt="Asia Pacific High Performer" width={68} height={88.25} className='z-30 max-xs:w-[23.33vw]'/>
                             <Image src={highPerformerEmea} loading="lazy" alt="EMEA High Performer" width={68} height={88.25} className='z-20 max-xs:w-[23.33vw]'/>
                             <Image src={highPerformerUk} loading="lazy" alt="United Kingdom High Performer" width={68} height={88.25} className='z-10 max-xs:w-[23.33vw]'/>
-                        </div>
-                        
+                        </div>                        
                         <div>
                             <button className='bg-[#ffffff1a] text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center'>
                     <p className='-mb-[2px]'>
@@ -54,46 +84,24 @@ export default function Footer() {
                 strokeLinejoin="round"
               ></path>
             </svg>
-                            </button>
+                    </button>
                         </div>
                     </div>
                     {/* gap-x-5 */}
-                    <div className='grid grid-cols-4 text-white text-sm gap-5 max-xl:grid-cols-2 max-md:grid-cols-4 max-md:gap-0 max-sm:grid-cols-1 max-s'>
+                    <div className='grid grid-cols-4 text-white text-sm gap-5 max-xl:grid-cols-2 max-md:grid-cols-4 max-md:gap-0 max-sm:grid-cols-1 max-sm:gap-[44px]'>
+                    {footerLinks.map((el)=>(
                         <div className='max-md:pl-5'>
-                            <p className='font-semibold mb-4 text-[#667085]'>Product</p>
+                            <p className='font-semibold mb-4 text-[#667085]'>{el.title}</p>
                             <ul className='space-y-3'>
-                                <li className='cursor-pointer tracking-[0.1px]'>Visitor Identification</li>
-                                <li className='cursor-pointer tracking-[0.1px]'>Google Analytics enrichment</li>
-                                <li className='cursor-pointer tracking-[0.1px]'>Real-Time API</li>
+                                <li className='cursor-pointer tracking-[0.1px]'>{el.link_one}</li>
+                                <li className='cursor-pointer tracking-[0.1px]'>{el.link_two}</li>
+                                <li className='cursor-pointer tracking-[0.1px]'>{el.link_three}</li>
+                                <li className={` cursor-pointer tracking-[0.1px]`}>{el.link_four}</li>
+                                <li className={`  cursor-pointer tracking-[0.1px]`}>{el.link_five}</li>
+                                <li className={` cursor-pointer tracking-[0.1px]`}>{el.link_six}</li>
                             </ul>
                         </div>
-                        <div className='max-md:pl-5'>
-                            <p className='font-semibold mb-4 text-[#667085]'>Solutions</p>
-                            <ul className='space-y-3'>
-                                <li className='cursor-pointer tracking-[0.1px]'>For Sales</li>
-                                <li className='cursor-pointer tracking-[0.1px]'>For Marketing</li>
-                                <li className='cursor-pointer tracking-[0.1px]'>For Agencies</li>
-                            </ul>
-                        </div>
-                        <div className='max-md:pl-5'>
-                            <p className='font-semibold mb-4 text-[#667085]'>Resources</p>
-                            <ul className='space-y-3'>
-                                <li className='cursor-pointer tracking-[0.1px]'>Help Center</li>
-                                <li className='cursor-pointer tracking-[0.1px]'>Customer Stories</li>
-                                <li className='cursor-pointer tracking-[0.1px]'>FAQ</li>
-                                <li className='cursor-pointer tracking-[0.1px]'>Affiliate Program</li>
-                                <li className='cursor-pointer tracking-[0.1px]'>Snitcher&apos;s guide for B2B Lead Generation</li>
-                                <li className='cursor-pointer'>B2B Marketing Blueprint</li>
-                            </ul>
-                        </div>
-                        <div className='max-md:pl-5'>
-                            <p className='font-semibold mb-4 text-[#667085]'>Legal</p>
-                            <ul className='space-y-3'>
-                                <li className='cursor-pointer '>Terms & Conditions</li>
-                                <li className='cursor-pointer'>Privacy Policy</li>
-                                <li className='cursor-pointer'>Security</li>
-                            </ul>
-                        </div>
+                    ))}                        
                     </div>
                 </div>
 
