@@ -15,7 +15,7 @@ import Filter from "@/assets/images/filter.webp";
 import Invision from "@/assets/images/lead-gen-four.webp";
 import manTest from "@/assets/images/man2.webp";
 import Image from "next/image";
-
+import HeroSection from "@/components/home/HeroSection";
 export default function LeadGen() {
     const renderStars = (rating: number) => {
         if (rating === 5) {
@@ -28,6 +28,15 @@ export default function LeadGen() {
 
     return (
         <>
+           <HeroSection
+                headingText="Capture leads from your website you didn’t know you had."
+                headingLineBreaks={[3, 7]}
+                paragraphText="Snitcher reveals who’s behind your anonymous traffic to turn your website into your most valuable asset!"
+                paragraphLineBreaks={[7]}
+                paragraphColor="#d0d5dd"
+                maxWidth="900px"
+                bgColor="#070b18"
+            />
         <div
         className="w-full"
         style={{

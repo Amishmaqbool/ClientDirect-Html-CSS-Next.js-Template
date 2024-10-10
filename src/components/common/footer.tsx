@@ -1,15 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
-import Panel from '../panel'
-import arrow from '../../assets/svgs/arrow.svg'
-import highPerformerSummer from '../../assets/svgs/high-performer-summer.svg'
-import momentumLeader from '../../assets/svgs/momentum-leader.svg'
-import highPerformerBussiness from '../../assets/svgs/high-performer-small-bussiness.svg'
-import highPerformerAsia from '../../assets/svgs/high-performer-asia.svg'
-import highPerformerEmea from '../../assets/svgs/high-performer-emea.svg'
-import highPerformerUk from '../../assets/svgs/high-performer-uk.svg'
+import Panel from '../Panel'
+import arrow from '@/assets/svgs/arrow.svg'
+import highPerformerSummer from '@/assets/svgs/high-performer-summer.svg'
+import momentumLeader from '@/assets/svgs/momentum-leader.svg'
+import highPerformerBussiness from '@/assets/svgs/high-performer-small-bussiness.svg'
+import highPerformerAsia from '@/assets/svgs/high-performer-asia.svg'
+import highPerformerEmea from '@/assets/svgs/high-performer-emea.svg'
+import highPerformerUk from '@/assets/svgs/high-performer-uk.svg'
 import LinkedinIcon from '@/assets/svgs/linkedin-icon.svg';
-import logo from '../../assets/svgs/logo.svg'
+import logo from '@/assets/svgs/logo.svg'
 
 export default function Footer() {
     return (

@@ -16,14 +16,14 @@ body {
 
 .hero-noise-png {
   opacity: 0.14;
-  object-fit: cover;
-  background-image: url(https://cdn.prod.website-files.com/64084df…/641c304…_noiseTile.png);
-  background-position: 0 0;
-  background-size: auto;
+  background-image: url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/641c3042046d40dbf1cabd3c_noiseTile.png);
+  background-position: top left;
+  background-size: cover;
   background-attachment: scroll;
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  display: block;
   position: absolute;
   inset: 0% auto auto 0%;
+  z-index: 9999;
 }
