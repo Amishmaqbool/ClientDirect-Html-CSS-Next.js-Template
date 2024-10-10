@@ -77,8 +77,8 @@ export default function HeroSection({
 
     return (
         <div className="relative overflow-hidden">
-            <div className="my-8 relative">
-                <div style={{ backgroundColor: bgColor }} className="w-full pt-20 pb-40 relative z-10">
+            <div className="mb-8 relative">
+                <div style={{ backgroundColor: bgColor }} className="w-full pt-28 pb-40 relative z-10">
                     <Image
                         src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
                         alt="Hero Gradient 2"
