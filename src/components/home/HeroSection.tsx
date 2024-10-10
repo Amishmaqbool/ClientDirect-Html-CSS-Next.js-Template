@@ -5,7 +5,6 @@ import Button from '../common/Button';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-// Define types for the cards data
 interface CardData {
     title: string;
     description: string;
@@ -37,6 +36,15 @@ const cardsData: CardData[] = [
         gradient: "aqua"
     }
 ];
+interface HeroSectionProps {
+    headingText?: string;
+    headingLineBreaks?: number[];
+    paragraphText?: string;
+    paragraphLineBreaks?: number[];
+    paragraphColor?: string;
+    maxWidth?: string;
+    bgColor?: string;
+}
 
 export default function HeroSection({
     headingText = "Know who’s on your website, drive more revenue.",
@@ -46,7 +54,8 @@ export default function HeroSection({
     paragraphColor = "white",
     maxWidth = "900px",
     bgColor = "#070b18",
-}) {
+
+}: HeroSectionProps) {
     const formatTextWithLineBreaks = (text: string, lineBreakIndices: number[]) => {
         const words = text.split(' ');
         return words.map((word, index) => (
@@ -63,7 +72,7 @@ export default function HeroSection({
     const gradientClasses: Record<'purple' | 'blue' | 'aqua', string> = {
         purple: 'from-[#7f56d9] to-[#9e77ed]',
         blue: 'from-[#41a7f0] to-[#1b61d1]',
-        aqua: 'from-[#54edf0] to-[#30a9d9]'
+        aqua: 'from-[#54edf0] to-[#30a9d9]',
     };
 
     return (
