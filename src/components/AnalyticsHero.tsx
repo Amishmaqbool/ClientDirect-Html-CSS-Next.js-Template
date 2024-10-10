@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import RectangleImage from "../assets/images/Rectangle.jpg"
-import { HeaderData } from "../constants/features/GoogleAnalytics"
 
 export default function AnalyticsHero() {
   return (
@@ -23,10 +22,6 @@ export default function AnalyticsHero() {
             turn Google Analytics into an account based analytics solution.
           </p>
         </div>
-      </div>
-
-      <div>
-        {}
       </div>
     </div>
   );
