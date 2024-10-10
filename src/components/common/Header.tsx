@@ -30,8 +30,8 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='bg-[#3f4046] fixed top-0 w-full z-50'>
-      <div className='max-w-[1280px] mx-auto px-6 py-4 flex justify-between items-center'>
+    <header className='backdrop-blur-md fixed top-0 w-full z-50' style={{background: 'rgb(7 11 24 / 80%)'}}>
+      <div className='max-w-[1280px] mx-auto p-6 flex justify-between items-center'>
 
         <div className='flex items-center'>
           <Image
@@ -372,7 +372,10 @@ export default function Header() {
             <button className='font-semibold'>Log in</button>
           </li>
         </ul>
+
       </div>
+      
+      <div className='max-w-[1236px] mx-auto px-6 border-b border-[#243643]'></div>
     </header>
   );
 }
