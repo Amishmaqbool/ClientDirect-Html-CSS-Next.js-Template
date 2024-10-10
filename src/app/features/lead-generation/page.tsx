@@ -33,7 +33,6 @@ export default function LeadGen() {
         headingLineBreaks={[3, 7]}
         paragraphText="Snitcher reveals who’s behind your anonymous traffic to turn your website into your most valuable asset!"
         paragraphLineBreaks={[7]}
-        paragraphColor="#d0d5dd"
         maxWidth="900px"
         bgColor="#070b18"
       />

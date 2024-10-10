@@ -99,7 +99,6 @@ export default function LeadGen() {
         headingLineBreaks={[3, 7]}
         paragraphText="Instantly reveal the company operating behind any IP address. Enriched with accurate firmographic data, all in real-time."
         paragraphLineBreaks={[10]}
-        paragraphColor="#d0d5dd"
         maxWidth="900px"
         bgColor="#070b18"
       />
