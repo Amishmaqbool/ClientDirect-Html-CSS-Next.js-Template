@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/common/header";
-import Footer from "@/components/common/footer";
-// Importing Soleil fonts
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 const soleil = localFont({
   src: [
     {
@@ -47,7 +46,7 @@ export default function RootLayout({
         className={`${soleil.variable} antialiased`}
       >
         <Header />
-        {children}
+        <div  className="pb-40">{children}</div>
         <Footer />
       </body>
     </html>
