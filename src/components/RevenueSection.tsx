@@ -1,14 +1,15 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Button from "./common/Button";
 import { revenueSectionData } from "@/constants/features";
-import RevenueCard from "../assets/svgs/revenue-card.svg";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function RevenueSection() {
   return (
     <div className="section-gray25-bg background-gradient-4 bg-[#fcfcfd]">
       <div className="relative max-w-[1280px] mx-auto px-6 border-b border-[#eaecf0]">
-        <div className="py-24 flex flex-col items-center">
+        <div className="max-sm:py-16 py-24 flex flex-col items-center">
           <div className="mb-3 py-1 px-4 border border-[#ffffff4d] rounded-full bg-[#d1e0ff]">
             <p className="font-bold text-xs text-[#0040c1]">Analyze</p>
           </div>
@@ -30,7 +31,7 @@ export default function RevenueSection() {
             buttonText="Start 14-Day Free Trial"
           />
 
-          <div className="mt-16 grid gap-[77px] grid-cols-1 md:grid-cols-[1fr_1.75fr_1fr] place-items-center">
+          <div className="mt-16 grid max-sm:gap-8 gap-[77px] grid-cols-1 md:grid-cols-[1fr_1.75fr_1fr] place-items-center">
             <div className="col-span-1 row-span-1">
               {revenueSectionData.slice(0, 2).map((item, index) => (
                 <div key={index} className="mb-12 flex flex-col items-start">
@@ -56,18 +57,14 @@ export default function RevenueSection() {
 
             <div
               className="col-span-1 row-span-1"
-              data-w-id="df3fe0d1-f472-a227-fd45-149cc234acbf"
-              data-is-ix2-target="1"
-              data-animation-type="lottie"
-              data-src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6424237f7f51692e252c422d_Sec_18.json"
-              data-loop="0"
-              data-direction="1"
-              data-autoplay="0"
-              data-renderer="svg"
-              data-default-duration="4.041666666666667"
-              data-duration="0"
             >
-              <Image className="w-full" src={RevenueCard} alt="Revenue Card" />
+              <DotLottieReact
+                src="https://lottie.host/bc851360-09dc-4058-9c28-dcc27d2ced47/lgVIJlJXXt.json"
+                autoplay
+                loop
+                width={496}
+                height={396}
+              />
             </div>
 
             <div className="col-span-1 row-span-1">

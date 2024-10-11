@@ -1,14 +1,15 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Button from "./common/Button";
 import { OptimizeCardData } from "@/constants/features";
-import OptimizeCard from "../assets/svgs/optimize-card.svg";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function OptimizeSection() {
   return (
-    <div className=" bg-[#fcfcfd]">
+    <div className="">
       <div className="relative max-w-[1280px] mx-auto px-6">
-        <div className="py-24 flex flex-col items-center">
+        <div className="pt-24 max-md:pb-0 pb-[94px] flex flex-col items-center">
           <div className="mb-3 py-1 px-4 border border-[#ffffff4d] rounded-full bg-[#d1e0ff]">
             <p className="font-bold text-xs text-[#0040c1]">Optimize</p>
           </div>
@@ -29,7 +30,7 @@ export default function OptimizeSection() {
             buttonText="Start 14-Day Free Trial"
           />
 
-          <div className="mt-16 grid gap-[77px] grid-cols-1 md:grid-cols-2">
+          <div className="mt-16 grid max-md:gap-0 gap-[77px] grid-cols-1 md:grid-cols-2">
             <div className="col-span-1 row-span-1">
               {OptimizeCardData.map((item, index) => (
                 <div
@@ -81,19 +82,13 @@ export default function OptimizeSection() {
             </div>
 
             <div
-              className="col-span-1 row-span-1"
-              data-w-id="df3fe0d1-f472-a227-fd45-149cc234acbf"
-              data-is-ix2-target="1"
-              data-animation-type="lottie"
-              data-src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6424237f3a427b22dd8e4144_Sec_10.json"
-              data-loop="0"
-              data-direction="1"
-              data-autoplay="0"
-              data-renderer="svg"
-              data-default-duration="4.3333333333333333"
-              data-duration="0"
+              className="col-span-1 row-span-1 max-lg:aspect-square w-full h-full"
             >
-              <Image src={OptimizeCard} alt="Optimize Card" />
+              <DotLottieReact 
+                src="https://lottie.host/230858b8-ad22-494c-a41b-9776915dfbda/SO03zYR87i.lottie"
+                autoplay
+                loop
+              />
             </div>
           </div>
         </div>
