@@ -42,7 +42,7 @@ export default function googleAnalytics() {
           isReversed={true}
         />
 
-        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 auto-rows-auto gap-8 mt-8">
           {analyticsReviewsCards.map((review, index) => (
             <div key={index}>
               <RatingCards

@@ -38,7 +38,7 @@ const RatingCards: React.FC<RatingCardProps> = ({
       <div className="review-lead--card flex flex-col justify-between py-6 px-[17.5px] rounded-[10px] bg-white">
         <div>
           <div className="flex items-center mb-3.5">{renderStars(rating)}</div>
-          <h3 className="lg:min-h-[48px] xl:min-h-0 text-base font-bold mb-2.5 text-black">{reviewBy}</h3>
+          <h3 className="text-base font-bold mb-2.5 text-black">{reviewBy}</h3>
           <p className="text-[#475467] font-normal text-xs">{content}</p>
         </div>
         <div className="mt-3.5 flex items-center gap-3">
