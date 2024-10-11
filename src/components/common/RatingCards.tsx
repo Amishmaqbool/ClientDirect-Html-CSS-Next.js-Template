@@ -9,6 +9,8 @@ interface RatingCardProps {
   reviewBy: string;
   content: string;
   reviewer: string;
+  hasCardClass?: boolean;
+  hasBorder?: boolean;
 }
 
 const RatingCards: React.FC<RatingCardProps> = ({
@@ -16,6 +18,8 @@ const RatingCards: React.FC<RatingCardProps> = ({
   reviewBy,
   content,
   reviewer,
+  hasCardClass = true,
+  hasBorder = false,
 }) => {
   const renderStars = (rating: number) => {
     if (rating === 5) {
@@ -34,8 +38,16 @@ const RatingCards: React.FC<RatingCardProps> = ({
   };
 
   return (
-    <div className="md:flex justify-between gap-6 md:mt-8 max-md:w-full md:h-full">
-      <div className="review-lead--card flex flex-col justify-between py-6 px-[17.5px] rounded-[10px] bg-white">
+    <div
+      className={`md:flex justify-between gap-6 md:mt-8 max-md:w-full md:h-full ${
+        hasBorder ? "border rounded-[10px] border-[#eff1f3]" : ""
+      }`}
+    >
+      <div
+        className={`flex flex-col justify-between py-6 px-[17.5px] rounded-[10px] bg-white ${
+          hasCardClass ? "review-lead--card" : ""
+        }`}
+      >
         <div>
           <div className="flex items-center mb-3.5">{renderStars(rating)}</div>
           <h3 className="text-base font-bold mb-2.5 text-black">{reviewBy}</h3>

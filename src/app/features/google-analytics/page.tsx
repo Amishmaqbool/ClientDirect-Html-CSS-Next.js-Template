@@ -4,14 +4,14 @@ import {
   analyticsReviewsCards,
   analyticsHeroData,
   MarketingSectionData,
-  analyticsFaqList
+  analyticsFaqList,
 } from "@/constants/features";
 import RatingCards from "@/components/common/RatingCards";
 import HeroSection from "@/components/home/HeroSection";
 import MarketingSection from "@/components/common/MarketingComponent";
 import FaqSection from "@/components/features/FaqSection";
 import RevenueSection from "@/components/RevenueSection";
-import OptimizeSection from "../../../components/OptimizeSection"
+import OptimizeSection from "../../../components/OptimizeSection";
 
 export default function googleAnalytics() {
   return (
@@ -50,6 +50,8 @@ export default function googleAnalytics() {
                 reviewBy={review.reviewBy}
                 content={review.content}
                 reviewer={review.reviewer}
+                hasCardClass={true}
+                hasBorder={false}
               />
             </div>
           ))}

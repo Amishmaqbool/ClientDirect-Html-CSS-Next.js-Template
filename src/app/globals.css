@@ -55,3 +55,30 @@ body {
 .review-lead--card {
   background: linear-gradient(110.65deg, #FFFFFF 1.16%, rgba(255, 255, 255, 0.2) 100%) !important;
 }
+.c-review-cards {
+  background-image: url(https://cdn.prod.website-files.com/64084df…/640f474…_Group%202295%20.png);
+  background-position: 50%;
+  background-size: cover;
+  margin-top: 64px;
+  position: relative;
+}
+.review-gradient {
+  z-index: 9;
+  background-image: linear-gradient(#fcfcfd, #fcfcfd1a);
+  height: 128px;
+  position: absolute;
+  inset: 0% 0% auto;
+}
+.review-gradient.is--bot {
+  background-image: linear-gradient(#fcfcfd 20%, #fcfcfd1a);
+  inset: auto 0% 0%;
+  transform: rotate(180deg);
+}
+.animate-scroll {
+  animation: scroll 2360ms linear infinite;
+}
+@keyframes scroll {
+  100% {
+    transform: translateY(-50%);
+}
+}
