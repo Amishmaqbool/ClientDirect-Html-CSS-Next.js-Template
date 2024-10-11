@@ -7,7 +7,7 @@ import momentumLeader from '@/assets/svgs/momentum-leader.svg'
 import highPerformerBussiness from '@/assets/svgs/high-performer-small-bussiness.svg'
 import highPerformerAsia from '@/assets/svgs/high-performer-asia.svg'
 import highPerformerEmea from '@/assets/svgs/high-performer-emea.svg'
-import highPerformerUk from '@/assets/svgs/high-performer-uk.svg'
+import highPerformerUk from '@/assets/svgs/high-uk.svg'
 import LinkedinIcon from '@/assets/svgs/linkedin-icon.svg';
 import logo from '@/assets/svgs/logo.svg'
 

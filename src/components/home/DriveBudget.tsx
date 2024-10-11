@@ -1,17 +1,17 @@
-import exp from "constants";
 import React from "react";
+import BadgeCarousel from "./BadgeCarousel";
 
 const DriveBudget = () =>{
     return (
         <>
-        <div className="max-w-[790px] max-md:px-2 flex flex-col items-center max-md:pb-14 md:pb-20">
-        {/* moving image elements */}
-        <div className="">
+        <div className="w-full max-w-[900px] mx-auto flex flex-col items-center justify-center">
+          <BadgeCarousel />
         </div>
-
-        <h2 className="text-center text-4xl font-bold tracking-[-1px] pt-10">Drive more revenue from your existing budget</h2>
         
-        <p className="text-lg text-center pt-5 text-[#475467]">
+        <div className="max-w-[790px] max-md:px-2 flex flex-col items-center max-md:pb-14 md:pb-20">
+        <h2 className="text-center max-lg:text-[32px] text-4xl font-bold tracking-[-1px]">Drive more revenue from your existing budget</h2>
+        
+        <p className="text-xl max-lg:text-lg text-center pt-5 text-[#475467]">
         Snitcher supplies thousands of B2B sales and marketing teams worldwide with the insights they need to drive more revenue from their existing budgets.
         </p>
 
