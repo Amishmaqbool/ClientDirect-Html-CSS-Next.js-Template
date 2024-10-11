@@ -38,9 +38,9 @@ const TextBlock: React.FC<SalesSectionProps> = ({
         } justify-between items-center flex-`}
       >
         <div className="w-full lg:w-[50%]">
-          <h1 className="text-4xl font-bold mb-4">{mainHeading}</h1>
-          <p className="text-lg mb-6 text-gray-600">{subHeading}</p>
-          <p className="text-lg mb-6 text-gray-600">{description}</p>
+          <h1 className="text-2xl sm:text-4xl font-bold mb-4">{mainHeading}</h1>
+          <p className="text-base sm:text-lg mb-6 text-gray-600">{subHeading}</p>
+          <p className="text-base sm:text-lg mb-6 text-gray-600">{description}</p>
           <div className="flex justify-start gap-4 mb-8">
             <button className="bg-black rounded-full text-white px-6 py-3 text-sm">
               {ctaText}
@@ -67,12 +67,13 @@ const TextBlock: React.FC<SalesSectionProps> = ({
             )}
         </div>
 
-        <div className="relative flex justify-end items-center w-full lg:w-[50%] h-96">
+        <div className="sm:pb-40 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-auto sm:h-96">
           <DotLottieReact
             src={lottieUrl}
             autoplay
             loop
-            style={{ height: "855px", width: "744px" }}
+            width={855}
+            height={744}
           />
         </div>
       </div>

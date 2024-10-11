@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type FAQItem = {
   question: string;
-  answer: string;
+  answer: string | string[]; // Allow either a string or an array of strings
 };
 
 type FAQProps = {
@@ -13,8 +13,12 @@ type FAQProps = {
 
 const FAQ: React.FC<FAQProps> = ({ faqList }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [mounted, setMounted] = useState(false); 
 
-  // Toggle the active FAQ item
+  useEffect(() => {
+    setMounted(true); 
+  }, []);
+
   const toggleFAQ = (index: number) => {
     if (activeIndex === index) {
       setActiveIndex(null);
@@ -22,6 +26,8 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
       setActiveIndex(index);
     }
   };
+
+  if (!mounted) return null;
 
   return (
     <div className="faq-section lg:max-w-[720px] mx-auto mt-28 max-lg:mx-4">
@@ -39,7 +45,6 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
           >
             <h3 className="text-[18px] font-bold">{faq.question}</h3>
             <span>
-              {" "}
               <Image
                 src={
                   activeIndex === index
@@ -55,15 +60,32 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
           </div>
           {activeIndex === index && (
             <div className="faq-answer mb-[24px] mt-[-10px] text-[#333] text-[16px] leading-[20px]">
-              <p className="max-w-[90%] leading-[24px]">{faq.answer}</p>
+              {typeof faq.answer === "string" ? (
+                <p className="max-w-[90%] leading-[24px]">{faq.answer}</p>
+              ) : (
+                <div className="max-w-[90%] leading-[24px]">
+                  <p>{faq.answer[0]}</p>
+                  <ul className="list-none pl-5 mt-2">
+                    {faq.answer.slice(1).map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           )}
         </div>
       ))}
       <div className="faq-footer text-center">
-        <h4 className="text-[#101828] text-[20px] leading-[30px] font-[600]">Still have questions?</h4>
-        <p className="mt-[8px] mb-[32px] text-[#475467] max-w-[790px] leading-[28px] text-[18px]">Can’t find the answer you’re looking for? Shoot us a message.</p>
-        <button className="faq-chat-button px-[20px] text-[14px] py-[12px] bg-black text-white rounded-full h-fit">Start a chat</button>
+        <h4 className="text-[#101828] text-[20px] leading-[30px] font-[600]">
+          Still have questions?
+        </h4>
+        <p className="mt-[8px] mb-[32px] text-[#475467] max-w-[790px] leading-[28px] text-[18px]">
+          Can’t find the answer you’re looking for? Shoot us a message.
+        </p>
+        <button className="faq-chat-button px-[20px] text-[14px] py-[12px] bg-black text-white rounded-full h-fit">
+          Start a chat
+        </button>
       </div>
     </div>
   );
