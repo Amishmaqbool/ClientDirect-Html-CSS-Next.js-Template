@@ -43,7 +43,7 @@ export default function googleAnalytics() {
         />
 
         <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          {analyticsReviewsCards.map((review: any, index: any) => (
+          {analyticsReviewsCards.map((review, index) => (
             <div key={index}>
               <RatingCards
                 rating={review.rating}

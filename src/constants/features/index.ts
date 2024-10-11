@@ -1,3 +1,7 @@
+import BackdropImage from "../../assets/svgs/backdrop.svg"
+import AutoViewerImage from "../../assets/svgs/auto-viewer.svg"
+import ThreeCircles from "../../assets/svgs/three-circles.svg"
+
 export const reviews = [
   {
     id: 1,
@@ -133,19 +137,19 @@ export const revenueSectionData = [
 
 export const OptimizeCardData = [
   {
-    icon: require('../../assets/svgs/backdrop.svg'),
+    icon: BackdropImage,
     heading: "Test",
     description:
       "Get immediate feedback on your tests and reach statistical relevance without spending while you wait for conversions.",
   },
   {
-    icon: require('../../assets/svgs/auto-viewer.svg'),
+    icon: AutoViewerImage,
     heading: "Optimize",
     description:
       "Make better decisions with the full picture on how each of your actions perform at driving visitors in your target market.",
   },
   {
-    icon: require("../../assets/svgs/three-circles.svg"),
+    icon: ThreeCircles,
     heading: "Dashboard",
     description:
       "Build custom dashboards in Google Data Studio or use our templates",

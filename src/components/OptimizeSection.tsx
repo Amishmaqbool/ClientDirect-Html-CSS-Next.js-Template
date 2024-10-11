@@ -31,7 +31,7 @@ export default function OptimizeSection() {
 
           <div className="mt-16 grid gap-[77px] grid-cols-1 md:grid-cols-2">
             <div className="col-span-1 row-span-1">
-              {OptimizeCardData.map((item: any, index: any) => (
+              {OptimizeCardData.map((item, index) => (
                 <div
                   key={index}
                   className={`pb-9 flex ${

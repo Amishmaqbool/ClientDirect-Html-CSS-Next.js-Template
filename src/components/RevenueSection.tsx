@@ -32,7 +32,7 @@ export default function RevenueSection() {
 
           <div className="mt-16 grid gap-[77px] grid-cols-1 md:grid-cols-[1fr_1.75fr_1fr] place-items-center">
             <div className="col-span-1 row-span-1">
-              {revenueSectionData.slice(0, 2).map((item: any, index: any) => (
+              {revenueSectionData.slice(0, 2).map((item, index) => (
                 <div key={index} className="mb-12 flex flex-col items-start">
                   <div>
                     <div className="flex justify-center md:justify-start">
@@ -71,7 +71,7 @@ export default function RevenueSection() {
             </div>
 
             <div className="col-span-1 row-span-1">
-              {revenueSectionData.slice(2).map((item: any, index: any) => (
+              {revenueSectionData.slice(2).map((item, index) => (
                 <div key={index} className="mb-12 flex flex-col items-start">
                   <div>
                     <div className="flex justify-center md:justify-start">
