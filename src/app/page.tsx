@@ -3,6 +3,7 @@ import LogoGrid from "@/components/home/LogosGrid";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
+import DriveBudget from "@/components/home/DriveBudget";
 
 export default function Home() {
   const mainHeading = "Give sales the edge to find and close more deals";
@@ -12,7 +13,7 @@ export default function Home() {
   const secondaryCtaText = "Explore Snitcher for Sales";
   const FirstTestimonial = {
     quote:
-      "I consistently recommend Snitcher – in our testing they not only gathered insights on a higher number of leads than its competitors, but also had more detailed information about those leads.",
+      "I consistently recommend Snitcher - in our testing they not only gathered insights on a higher number of leads than its competitors, but also had more detailed information about those leads.",
     author: "David G.",
     role: "Head of Sales",
   };
@@ -35,7 +36,7 @@ export default function Home() {
     <>
     <div className="">
       <HeroSection
-        headingText="Know who’s on your website, drive more revenue."
+        headingText="Know who's on your website, drive more revenue."
         headingLineBreaks={[2, 5]}
         paragraphText="Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights."
         maxWidth="960px"
@@ -73,9 +74,15 @@ export default function Home() {
         isReversed={false}
       />
     </div>
-    <div className="max-w-full bg-[#101828]" style={{ backgroundImage: `url(${gradientPurple})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: 'center' }}>
+
+    <div className="max-w-full bg-[#101828] pb-24" style={{ backgroundImage: `url(${gradientPurple})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: 'center' }}>
     <IntegrationSection />
     </div>
+
+    <div className="max-w-[1200px] mx-auto px-4 flex flex-col justify-center items-center">
+    <DriveBudget />
+    </div>
+
    </>
   );
 }

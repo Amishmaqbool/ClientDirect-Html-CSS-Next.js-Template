@@ -74,19 +74,20 @@ const LogoGrid: React.FC = () => {
     const secondRowLogos = logos.slice(6);
 
     return (
-        <div className="flex flex-col items-center justify-center container mx-auto my-16">
+        <div className="flex flex-col items-center justify-center w-full max-w-full px-4 md:px-0 my-16 overflow-hidden">
             <h3 className="text-[#475467] text-center font-semibold text-base leading-6 mb-8">
                 Trusted by thousands of B2B sales and marketing teams worldwide
             </h3>
 
-            <div className="flex justify-center items-center gap-12 mb-8">
+            {/* First Row of Logos */}
+            <div className="flex justify-center items-center flex-wrap gap-8 md:gap-12 mb-8 max-w-full">
                 {firstRowLogos.map((logo, index) => (
                     <div key={index} className="relative" style={{ width: logo.width, height: 'auto' }}>
                         <Image
                             src={logo.src}
                             alt={logo.alt}
                             width={logo.width}
-                            height={50} 
+                            height={50}
                             objectFit="contain"
                             loading="lazy"
                         />
@@ -94,7 +95,8 @@ const LogoGrid: React.FC = () => {
                 ))}
             </div>
 
-            <div className="flex justify-center items-center gap-12">
+            {/* Second Row of Logos */}
+            <div className="flex justify-center items-center flex-wrap gap-8 md:gap-12 max-w-full">
                 {secondRowLogos.map((logo, index) => (
                     <div key={index} className="relative" style={{ width: logo.width, height: 'auto' }}>
                         <Image
