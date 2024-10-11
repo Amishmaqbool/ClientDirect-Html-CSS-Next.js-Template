@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Ripple1 from "@/assets/images/ripple-1.webp";
 import Ripple2 from "@/assets/images/ripple-2.webp";
@@ -21,6 +21,16 @@ import GoogleAIcon from "@/assets/images/google-analytics-logo.webp";
 import RealIcon from "@/assets/images/real-icon.webp";
 
 const IntegrationSection = () => {
+  const [animationKey, setAnimationKey] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimationKey((prevKey: number) => prevKey + 1);
+    }, 4000); 
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <div className="flex flex-col justify-center items-center mx-auto max-w-[1200px] overflow-x-hidden">
@@ -56,7 +66,7 @@ const IntegrationSection = () => {
             {/* Ripple Container */}
             <div className="absolute inset-0 flex justify-center items-center">
               {/* Ripple 1 */}
-              <div
+              <div key={`ripple1-${animationKey}`}
                 className="ripple ripple1 absolute transform -translate-x-1/2 -translate-y-1/2 max-xs:w-[240px] max-xs:h-[240px]"
                 style={{
                   width: '280px',
@@ -72,7 +82,7 @@ const IntegrationSection = () => {
               </div>
 
               {/* Ripple 2 */}
-              <div
+              <div key={`ripple2-${animationKey}`}
                 className="ripple ripple2 absolute transform -translate-x-1/2 -translate-y-1/2 max-xs:w-[350px] max-xs:h-[350px]"
                 style={{
                   width: '390px',
@@ -88,7 +98,7 @@ const IntegrationSection = () => {
               </div>
 
               {/* Ripple 3 */}
-              <div
+              <div key={`ripple3-${animationKey}`}
                 className="ripple ripple3 absolute transform -translate-x-1/2 -translate-y-1/2 max-xs:w-[440px] max-xs:h-[440px]"
                 style={{
                   width: '500px',
