@@ -67,13 +67,13 @@ const TextBlock: React.FC<SalesSectionProps> = ({
             )}
         </div>
 
-        <div className="sm:pb-40 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-auto sm:h-96">
+        <div className="sm:pb-40 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-96">
           <DotLottieReact
             src={lottieUrl}
             autoplay
             loop
             width={855}
-            height={744}
+            height={844}
           />
         </div>
       </div>

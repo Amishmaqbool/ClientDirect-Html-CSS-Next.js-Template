@@ -34,14 +34,14 @@ const RatingCards: React.FC<RatingCardProps> = ({
   };
 
   return (
-    <div className="flex justify-between gap-6 mt-8">
+    <div className="md:flex justify-between gap-6 md:mt-8 max-md:w-full md:h-full">
       <div className="review-lead--card flex flex-col justify-between py-6 px-[17.5px] rounded-[10px] bg-white">
         <div>
           <div className="flex items-center mb-3.5">{renderStars(rating)}</div>
           <h3 className="text-base font-bold mb-2.5 text-black">{reviewBy}</h3>
           <p className="text-[#475467] font-normal text-xs">{content}</p>
         </div>
-        <div className="mt-3.5 flex items-center gap-3">
+        <div className="mt-3.5 md:-mt-4 flex items-center gap-3">
           <Image src={ReviewIcon} alt="Reviewer Icon" width={24} height={24} />
           <div className="bg-[#475467] w-[15px] h-[2px]"></div>
           <p className="ml-2 text-black text-sm font-semibold">{reviewer}</p>
