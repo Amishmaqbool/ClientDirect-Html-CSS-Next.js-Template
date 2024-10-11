@@ -1,5 +1,7 @@
 import Image from "next/image";
 import React from "react";
+import BackgroundOne from "../../../../public/images/background-blueprint.png";
+import BackgroundTwo from "../../../../public/images/background-blueprint2.png";
 
 const sectionData = [
   {
@@ -418,32 +420,34 @@ const sectionData = [
 
 const MarketingBlueprint = () => {
   return (
-    <div className="relative bg-[#070b18]">
-      <div className="p-8 max-w-[780px] mx-auto z-[10000] bg-[#070b18]">
-        <h1 className="text-[#fff] text-center max-w-[680px] my-[10px] mx-auto text-[2.5rem] leading-[1.4em] font-bold">
+    <div className="relative bg-[#070b18] max-lg:-mb-40 lg:-mb-60 max-lg:pb-36 lg:pb-72">
+      <Image src={BackgroundOne} alt="BackgroundOne" className="absolute object-fill block inset-0 h-[500px] w-[700px] mr-40 ml-auto z-[0]"/>
+      <Image src={BackgroundTwo} alt="BackgroundTwo" className="absolute top-0 left-[43%] translate-x-[-50%] z-[0] object-fill"/>
+      <div className="py-8 pb-0 lg:pt-24 lg:w-[780px] mx-auto z-[10000] bg-[#070b18]">
+        <h1 className="text-[#fff] text-center max-lg:mx-8 relative z-0 lg:w-[680px] my-[10px] mx-auto text-[24px] lg:text-[2.5rem] leading-[1.4em] font-bold">
           B2B Marketing Blueprint
         </h1>
-        <p className="text-[#9ca0ab] text-center max-w-[620px] mx-auto text-[16px] mb-[48px] leading-[28px]">
+        <p className="text-[#9ca0ab] text-center max-lg:mx-12 relative z-0 lg:max-w-[620px] mx-auto text-[12px] lg:text-[16px] mb-[28px] leading-[20px] lg:leading-[28px]">
         A carefully curated collection of tactical modules to drive your business growth. Each collection encapsulates key marketing strategies, concepts, and best practices, distilled from industry-leading books into actionable steps. Explore the Collections and Modules within this blueprint to develop a powerful and effective B2B marketing strategy.
         </p>
-
+        <div className="relative z-0">
         {sectionData.map((section, index) => (
           <div
             key={index}
-            className={`bg-[#101828] border border-gray-800 ${section.sectionBorderColor} text-white rounded-[12px] mb-[24px]`}
+            className={`bg-[#101828] border z-[1000]  max-lg:mx-4 border-gray-800 ${section.sectionBorderColor} text-white rounded-[12px] mb-[32px]`}
           >
             <h2
-              className={`text-[#ffffffb3] ${section.sectionColor} rounded-t-[12px] text-center text-[14px] py-[8px] px-[12px] font-bold uppercase`}
+              className={`text-[#ffffffb3] ${section.sectionColor} tracking-wider rounded-t-[12px] text-center text-[14px] py-[8px] px-[12px] font-bold uppercase`}
             >
               {section.sectionTitle}
             </h2>
-            <div className="space-y-4 p-[1rem] px-[2rem]">
+            <div className="p-[1rem] px-[1rem]">
               {section.data.map((item) => (
                 <div
                   key={item.id}
-                  className={`flex gap-[16px] text-white items-center justify-between py-4 border-b border-gray-800 ${item.status === 'comingSoon' ? 'opacity-50' : ''}`}
+                  className={`flex gap-[16px] max-lg:flex-col text-white items-center justify-between p-4 rounded-2xl border-b border-gray-800 last:border-b-0 ${item.status === 'comingSoon' ? 'opacity-50' : ''}  cursor-pointer hover:bg-slate-800`}
                 >
-                  <div className="flex items-center space-x-4">
+                  <div className="flex max-lg:flex-col max-lg:gap-[16px] max-lg:text-center items-center space-x-4">
                     <Image src={item.icon} alt={item.icon} width={68} height={68} />
                     <div>
                       <h3 className="text-lg font-semibold">{item.title}</h3>
@@ -466,6 +470,7 @@ const MarketingBlueprint = () => {
             </div>
           </div>
         ))}
+        </div>
       </div>
     </div>
   );
