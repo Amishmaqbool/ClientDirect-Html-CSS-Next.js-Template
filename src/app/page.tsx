@@ -1,6 +1,9 @@
 import HeroSection from "@/components/home/HeroSection";
 import LogoGrid from "@/components/home/LogosGrid";
 import TextBlock from "@/components/common/TextBlock";
+import gradientPurple from "@/assets/images/img-second-leadgen.webp";
+import IntegrationSection from "@/components/home/IntegrationsSection";
+
 export default function Home() {
   const mainHeading = "Give sales the edge to find and close more deals";
   const subHeading =
@@ -29,6 +32,7 @@ export default function Home() {
   };
 
   return (
+    <>
     <div className="">
       <HeroSection
         headingText="Know who’s on your website, drive more revenue."
@@ -69,5 +73,9 @@ export default function Home() {
         isReversed={false}
       />
     </div>
+    <div className="max-w-full bg-[#101828]" style={{ backgroundImage: `url(${gradientPurple})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: 'center' }}>
+    <IntegrationSection />
+    </div>
+   </>
   );
 }
