@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+
 const logos = [
     {
         src: "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/64086395eddd7ac132745c2a_zenefits.svg",
@@ -76,30 +78,34 @@ const LogoGrid: React.FC = () => {
             <h3 className="text-[#475467] text-center font-semibold text-base leading-6 mb-8">
                 Trusted by thousands of B2B sales and marketing teams worldwide
             </h3>
-            
+
             <div className="flex justify-center items-center gap-12 mb-8">
                 {firstRowLogos.map((logo, index) => (
-                    <img
-                        key={index}
-                        src={logo.src}
-                        alt={logo.alt}
-                        width={logo.width}
-                        loading="lazy"
-                        className="h-auto"
-                    />
+                    <div key={index} className="relative" style={{ width: logo.width, height: 'auto' }}>
+                        <Image
+                            src={logo.src}
+                            alt={logo.alt}
+                            width={logo.width}
+                            height={50} 
+                            objectFit="contain"
+                            loading="lazy"
+                        />
+                    </div>
                 ))}
             </div>
 
             <div className="flex justify-center items-center gap-12">
                 {secondRowLogos.map((logo, index) => (
-                    <img
-                        key={index}
-                        src={logo.src}
-                        alt={logo.alt}
-                        width={logo.width}
-                        loading="lazy"
-                        className="h-auto"
-                    />
+                    <div key={index} className="relative" style={{ width: logo.width, height: 'auto' }}>
+                        <Image
+                            src={logo.src}
+                            alt={logo.alt}
+                            width={logo.width}
+                            height={50}
+                            objectFit="contain"
+                            loading="lazy"
+                        />
+                    </div>
                 ))}
             </div>
         </div>

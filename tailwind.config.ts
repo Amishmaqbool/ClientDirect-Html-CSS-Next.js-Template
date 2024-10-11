@@ -1,10 +1,12 @@
 import type { Config } from "tailwindcss";
+import typography from '@tailwindcss/typography';
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./contents/**/*.mdx"
   ],
   theme: {
     extend: {
@@ -27,7 +29,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    typography, // Updated to use the imported variable
+  ],
 };
 
 export default config;
