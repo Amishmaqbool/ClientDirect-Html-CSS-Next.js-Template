@@ -31,7 +31,7 @@ const MarketingSection: React.FC<CardsProps> = ({
           <div className="mb-3 px-2 py-[2px] border rounded-2xl border-[#ffffff4d] bg-[#ffffff4d]">
             <p className="font-semibold text-xs text-white">{tag}</p>
           </div>
-          <h1 className="font-bold text-2xl sm:text-4xl tracking-[-1px] text-center text-white">
+          <h1 className="font-bold text-4xl tracking-[-1px] text-center text-white">
             {heading}
           </h1>
 
@@ -100,7 +100,7 @@ const MarketingSection: React.FC<CardsProps> = ({
           alt=""
           width={654}
           height={393}
-          className="absolute top-0 bottom-auto left-[25%]"
+          className="absolute top-0 bottom-auto lg:left-[25%]"
         />
         <Image
           src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/640b39e6e5569e48875a414c_home7.svg"

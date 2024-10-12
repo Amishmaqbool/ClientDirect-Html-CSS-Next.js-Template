@@ -1,5 +1,7 @@
 "use client";
+import Image from "next/image";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import RightArrow from "../../assets/svgs/right-arrow.svg"
 
 interface Testimonial {
   quote: string;
@@ -42,8 +44,9 @@ const TextBlock: React.FC<SalesSectionProps> = ({
           <p className="text-base sm:text-lg mb-6 text-gray-600">{subHeading}</p>
           <p className="text-base sm:text-lg mb-6 text-gray-600">{description}</p>
           <div className="flex justify-start gap-4 mb-8">
-            <button className="bg-black rounded-full text-white px-6 py-3 text-sm">
-              {ctaText}
+            <button className="flex gap-2 items-center bg-black rounded-full text-white px-6 py-3 text-sm">
+              <p>{ctaText}</p>
+              <Image src={RightArrow} alt="Right Arrow"/>
             </button>
             {secondaryCtaText && (
               <button className="border border-gray-300 px-6 py-3 rounded-full text-sm">

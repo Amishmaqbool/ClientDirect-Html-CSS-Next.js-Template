@@ -106,7 +106,7 @@ export default function HeroSection({
       <div className="mb-8 relative">
         <div
           style={{ backgroundColor: bgColor }}
-          className="w-full pt-[200px] 2xl:pt-28 pb-[58px] relative z-10"
+          className="w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 pb-[58px] relative z-10"
         >
           <Image
             src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
@@ -114,7 +114,7 @@ export default function HeroSection({
             width={500}
             height={500}
             priority
-            className="absolute top-8 left-1/2 z-[20]"
+            className="absolute top-8 sm:left-1/2 z-[20]"
           />
 
           <Image
@@ -122,7 +122,7 @@ export default function HeroSection({
             alt="Hero Gradient 1"
             width={650}
             height={500}
-            className="absolute top-0 right-[35%] z-[20]"
+            className="absolute top-0 sm:right-[35%] z-[20]"
             priority
           />
 
@@ -130,7 +130,7 @@ export default function HeroSection({
             style={{ maxWidth }}
             className="mx-auto 2xl:pt-24 max-md:px-4 max-lg:px-10"
           >
-            <h1 className="max-md:max-w-[459px] mx-auto text-[30px] md:text-[48px] lg:text-[72px] text-center text-white font-bold leading-[40px] md:leading-[60px] lg:leading-[92px]">
+            <h1 className="max-sm:max-w-[459px] max-w-[550px] lg:max-w-full mx-auto text-[30px] sm:text-[48px] lg:text-[72px] text-center text-white font-semibold leading-[40px] sm:leading-[60px] lg:leading-[92px]">
               {formatTextWithLineBreaks(headingText, headingLineBreaks)}
             </h1>
             <p className="max-md:max-w-[541px] mx-auto text-center pt-2 leading-6 text-[#d0d5ddb3]">
@@ -141,11 +141,11 @@ export default function HeroSection({
                 bgColor="bg-customBlue"
                 textColor="text-white"
                 borderRadius="rounded-[100px]"
-                showChevron={true}
+                showChevron={isHomePage}
                 chevronColor="text-white"
                 buttonText="Try Snitcher for Free"
               />
-              <span className="text-[#667085]">No credit card required</span>
+              <span className="text-[#667085] text-sm">No credit card required</span>
             </div>
           </div>
 
