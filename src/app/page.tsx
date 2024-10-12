@@ -14,7 +14,7 @@ export default function Home() {
   const secondaryCtaText = "Explore Snitcher for Sales";
   const FirstTestimonial = {
     quote:
-      "I consistently recommend Snitcher – in our testing they not only gathered insights on a higher number of leads than its competitors, but also had more detailed information about those leads.",
+      "I consistently recommend Snitcher - in our testing they not only gathered insights on a higher number of leads than its competitors, but also had more detailed information about those leads.",
     author: "David G.",
     role: "Head of Sales",
   };
