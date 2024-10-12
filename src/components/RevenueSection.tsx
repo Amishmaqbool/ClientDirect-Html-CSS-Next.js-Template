@@ -11,9 +11,9 @@ export default function RevenueSection() {
       <div className="relative max-w-[1280px] mx-auto px-6 border-b border-[#eaecf0]">
         <div className="max-sm:py-16 py-24 flex flex-col items-center">
           <div className="mb-3 py-1 px-4 border border-[#ffffff4d] rounded-full bg-[#d1e0ff]">
-            <p className="font-bold text-xs text-[#0040c1]">Analyze</p>
+            <p className="font-bold text-xs text-[#0040c1]">Analyse</p>
           </div>
-          <h1 className="max-w-[768px] my-0 font-bold text-2xl sm:text-4xl text-center tracking-[-1px] text-[#000]">
+          <h1 className="max-w-[768px] my-0 font-bold text-4xl text-center tracking-[-1px] text-[#000]">
             Get to the bottom of which actions actually drive revenue, without
             the guess work.
           </h1>

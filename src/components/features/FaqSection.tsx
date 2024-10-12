@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
+import MessageIcon from "../../assets/svgs/message-icon.svg"
 import React, { useState, useEffect } from "react";
 
 type FAQItem = {
   question: string;
-  answer: string | string[]; // Allow either a string or an array of strings
+  answer: string | string[];
 };
 
 type FAQProps = {
@@ -30,14 +31,14 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
   if (!mounted) return null;
 
   return (
-    <div className="faq-section lg:max-w-[720px] mx-auto mt-28 max-lg:mx-4">
+    <div className="faq-section lg:max-w-[720px] mx-auto mt-16 sm:mt-28 max-lg:mx-4">
       <h2 className="faq-heading text-4xl mb-16 font-black text-center">
         Frequently asked questions
       </h2>
       {faqList.map((faq, index) => (
         <div
           key={index}
-          className="faq-item max-lg:px-[24px] border-b border-[#eaecf0] mb-[24px]"
+          className="faq-item px-2 sm:px-[24px] lg:px-0 border-b border-[#eaecf0] mb-[24px]"
         >
           <div
             className="faq-question flex justify-between cursor-pointer mb-[24px]"
@@ -84,7 +85,8 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
           Can’t find the answer you’re looking for? Shoot us a message.
         </p>
         <button className="faq-chat-button px-[20px] text-[14px] py-[12px] bg-black text-white rounded-full h-fit">
-          Start a chat
+          <Image src={MessageIcon} alt="Message Icon" />
+          <p>Start a chat</p>
         </button>
       </div>
     </div>

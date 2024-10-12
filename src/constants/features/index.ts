@@ -1,6 +1,6 @@
-import BackdropImage from "../../assets/svgs/backdrop.svg"
-import AutoViewerImage from "../../assets/svgs/auto-viewer.svg"
-import ThreeCircles from "../../assets/svgs/three-circles.svg"
+import BackdropImage from "../../../src/assets/svgs/backdrop.svg"
+import AutoViewerImage from "../../../src/assets/svgs/auto-viewer.svg"
+import ThreeCircles from "../../../src/assets/svgs/three-circles.svg"
 
 export const reviews = [
   {
@@ -203,5 +203,94 @@ export const analyticsFaqList = [
     question: "What if I need help building reports and dashboards?",
     answer:
       "We have pre-built Looker Studio (GDS) dashboards for you that include website overviews, paid and organic marketing reports along with account based reporting dashboards.",
+  },
+];
+
+export const landingReviewCardsColumn1 = [
+  {
+    id: 1,
+    rating: 5,
+    reviewBy: "A great tool to add to your marketing toolbox",
+    content:
+      "The team at Snitcher is not only easy to work with, but they have designed an intuitive and efficient platform. Snitcher helps us better understand the traffic on our website. We appreciate the ease of use and analytics. It also integrates into our CRM which is the cherry on top.",
+    reviewer: "Germans F.",
+  },
+  {
+    id: 2,
+    rating: 4.5,
+    reviewBy: "Best platform to find the right leads",
+    content:
+      "Its better than google analytics and adobe and give us more information about the right traffic, so we are in touch with the leads faster with their contact details provided by Snitcher.",
+    reviewer: "Marsha H.",
+  },
+  {
+    id: 3,
+    rating: 5,
+    reviewBy: "Good Data Quality Compared to Price",
+    content:
+      "Very good data quality compared to price. Customer support is very responsive and is always ready to go the extra mile to help solve a challenge. It is a developing software solution that launches new features frequently and is always open for feedback.",
+    reviewer: "Germans F.",
+  },
+]
+
+export const landingReviewCardsColumn2 = [
+  {
+    id: 1,
+    rating: 5,
+    reviewBy: "Good Data Quality Compared to Price",
+    content:
+      "Out of all the tools we put through a trial phase, Snitcher outperformed them all in relation to how many companies it found and what kind of additional information we could glean from the data it pulled from the companies visiting our website. For example – other vendors which provide similar data detect (on average) about 60-70% fewer companies than Snitcher.",
+    reviewer: "Germans F.",
+  },
+  {
+    id: 2,
+    rating: 4.5,
+    reviewBy: "Took action and got some initial wins",
+    content:
+      "Easy to set up. And the data provided inside is fairly rich. We could find the contact information with a few clicks and reach out to possible deals within minutes.",
+    reviewer: "Vencel M.",
+  },
+  {
+    id: 3,
+    rating: 5,
+    reviewBy: "Good Data Quality Compared to Price",
+    content:
+      "Out of all the tools we put through a trial phase, Snitcher outperformed them all in relation to how many companies it found and what kind of additional information we could glean from the data it pulled from the companies visiting our website. For example – other vendors which provide similar data detect (on average) about 60-70% fewer companies than Snitcher.",
+    reviewer: "Inga B.",
+  },
+  {
+    id: 4,
+    rating: 5,
+    reviewBy: "Hidden Gem",
+    content:
+      "I accidentally stumbled upon Snitcher while looking for another tool but I am very glad I did! Being in B2B, this is a hidden gem to see what companies are visiting your website. This helps us identify what channels are effective at bringing in traffic and also supplements our cold email strategy.",
+    reviewer: "Lesya L.",
+  },
+]
+
+export const landingReviewCardsColumn3 = [
+  {
+    id: 1,
+    rating: 5,
+    reviewBy: "Great insights, easy setup, friendly and responsive support team",
+    content:
+      "I like the easy setup, data quality that's coming through, and self-serve capabilities to manage things on my own for the most part. They have great documentation and are happy to answer questions quickly and comprehensively.",
+    reviewer: "Hisham I.",
+  },
+  {
+    id: 2,
+    rating: 5,
+    reviewBy: "Very effective tool for sourcing leads",
+    content:
+      "Snitcher is not only a great tool to keep track of website visitors and understand who potential leads are, but it's also straightforward to install. Our team had it up and running in 10 minutes and got results.",
+    reviewer: "Verified user in Computer Sofware",
+  },
+  {
+    id: 3,
+    rating: 5,
+    reviewBy: "Great for visitor identification and segmenting companies in Google Analytics",
+    content:
+      "I like the great features and data it has of identifying leads that were not filling out our form. We also like the Google Analytics integration where we can see the lead details right in Google Analytics.",
+    reviewer: "Verified user in Computer Software",
   },
 ];

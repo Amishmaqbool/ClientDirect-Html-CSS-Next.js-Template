@@ -4,14 +4,14 @@ import {
   analyticsReviewsCards,
   analyticsHeroData,
   MarketingSectionData,
-  analyticsFaqList
+  analyticsFaqList,
 } from "@/constants/features";
 import RatingCards from "@/components/common/RatingCards";
 import HeroSection from "@/components/home/HeroSection";
 import MarketingSection from "@/components/common/MarketingComponent";
 import FaqSection from "@/components/features/FaqSection";
 import RevenueSection from "@/components/RevenueSection";
-import OptimizeSection from "../../../components/OptimizeSection"
+import OptimizeSection from "../../../components/OptimizeSection";
 
 export default function googleAnalytics() {
   return (
@@ -42,7 +42,7 @@ export default function googleAnalytics() {
           isReversed={true}
         />
 
-        <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 ">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 sm:mt-8 ">
           {analyticsReviewsCards.map((review, index) => (
             <div key={index}>
               <RatingCards
@@ -50,6 +50,14 @@ export default function googleAnalytics() {
                 reviewBy={review.reviewBy}
                 content={review.content}
                 reviewer={review.reviewer}
+                hasCardClass={true}
+                hasBorder={false}
+                textSize={{
+                  title: "text-base",   
+                  content: "text-xs", 
+                  reviewer: "text-sm" 
+                }}
+                marginClass = "mt-3.5 md:-mt-4"
               />
             </div>
           ))}

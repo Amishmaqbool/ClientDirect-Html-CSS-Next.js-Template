@@ -29,11 +29,14 @@ export default function Header() {
   }, []);
   return (
     <header
-      className="backdrop-blur-md sticky top-0 w-full z-50"
-      style={{ background: "#070b18" }}>
+      className="backdrop-blur-md sticky top-0 w-full z-[9999]"
+      style={{ background: "rgb(7 11 24 / 80%)" }}
+    >
       <div className="max-w-[1280px] mx-auto p-6 flex justify-between items-center">
         <div className="flex items-center">
-          <Image src={logo} height={35} width={125} alt="Logo" />
+          <Link href="/">
+            <Image src={logo} height={35} width={125} alt="Logo" />
+          </Link>
         </div>
         <nav className="hidden lg:block">
           <ul className="flex gap-x-[37px] text-white text-sm">
@@ -50,11 +53,11 @@ export default function Header() {
                 <ChevronDownIcon />
               </button>
               {openDropdown === "products" && (
-                <div className="absolute top-5 left-1/2 transform -translate-x-1/2 mt-2 bg-[#1b1c1f] p-5 rounded-lg shadow-lg w-[350px]">
+                <div className="absolute top-5 left-1/2 transform -translate-x-1/2 mt-2 p-5 rounded-[14px] shadow-lg w-[350px] border border-[#ffffff26] bg-[#070b18]">
                   <ul>
-                    <li className="flex items-center p-2 hover:bg-[#2c2e33] cursor-pointer rounded-lg">
+                    <li className="flex items-center p-2 hover:opacity-80 cursor-pointer rounded-lg">
                       <Link href="/features/lead-generation" passHref>
-                        <div className="flex">
+                        <div className="flex items-start">
                           <Image
                             src={IdentifyDropdown}
                             alt="Identify"
@@ -71,41 +74,41 @@ export default function Header() {
                         </div>
                       </Link>
                     </li>
-                    <li className="flex items-center p-2 hover:bg-[#2c2e33] cursor-pointer rounded-lg">
-                    <Link href="/features/google-analytics" passHref>
-                    <div className="flex">
-                      <Image
-                        src={GoogleAnalytics}
-                        alt="Google Analytics"
-                        width={50}
-                        height={50}
-                      />
-                      <div className="ml-4">
-                        <p className="font-semibold">
-                          Google Analytics Enricher
-                        </p>
-                        <p className="text-sm text-gray-400 pt-2">
-                          Turn Google Analytics into a platform made for B2B
-                          analytics.
-                        </p>
+                    <Link href="/features/google-analytics">
+                      <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
+                        <Image
+                          src={GoogleAnalytics}
+                          alt="Google Analytics"
+                          width={50}
+                          height={50}
+                        />
+                        <div className="ml-4">
+                          <p className="font-semibold">
+                            Google Analytics Enricher
+                          </p>
+                          <p className="text-sm text-gray-400 pt-2">
+                            Turn Google Analytics into a platform made for B2B
+                            analytics.
+                          </p>
                         </div>
-                      </div>
-                      </Link>
-                    </li>
-                    <li className="flex items-center p-2 hover:bg-[#2c2e33] cursor-pointer rounded-lg">
-                      <Image
-                        src={IdentifyDropdown}
-                        alt="Spotter"
-                        width={50}
-                        height={50}
-                      />
-                      <div className="ml-4">
-                        <p className="font-semibold">Spotter</p>
-                        <p className="text-sm text-gray-400 pt-2">
-                          Real-time visitor identification API.
-                        </p>
-                      </div>
-                    </li>
+                      </li>
+                    </Link>
+                    <Link href="/features/real-time-identification-api">
+                      <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
+                        <Image
+                          src={IdentifyDropdown}
+                          alt="Spotter"
+                          width={40}
+                          height={40}
+                        />
+                        <div className="ml-4">
+                          <p className="font-semibold">Spotter</p>
+                          <p className="text-sm text-gray-400 pt-2">
+                            Real-time visitor identification API.
+                          </p>
+                        </div>
+                      </li>
+                    </Link>
                   </ul>
                 </div>
               )}
@@ -123,50 +126,56 @@ export default function Header() {
                 <ChevronDownIcon />
               </button>
               {openDropdown === "solutions" && (
-                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 mt-2 bg-[#1b1c1f] p-5 rounded-lg shadow-lg w-[350px]">
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 mt-2 p-5 rounded-[14px] shadow-lg w-[350px] border border-[#ffffff26] bg-[#070b18]">
                   <ul>
-                    <li className="flex items-center p-2 hover:bg-[#2c2e33] cursor-pointer rounded-lg">
-                      <Image
-                        src={AgenciesDropdown}
-                        alt="For Sales"
-                        width={50}
-                        height={50}
-                      />
-                      <div className="ml-4">
-                        <p className="font-semibold">For Sales</p>
-                        <p className="text-sm text-gray-400 pt-2">
-                          Qualify and prioritize high-intent leads.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-center p-2 hover:bg-[#2c2e33] cursor-pointer rounded-lg">
-                      <Image
-                        src={marketingDropdown}
-                        alt="For Marketing"
-                        width={50}
-                        height={50}
-                      />
-                      <div className="ml-4">
-                        <p className="font-semibold">For Marketing</p>
-                        <p className="text-sm text-gray-400 pt-2">
-                          Reduce waste and improve retargeting.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-center p-2 hover:bg-[#2c2e33] cursor-pointer rounded-lg">
-                      <Image
-                        src={marketingDropdown}
-                        alt="For Agencies"
-                        width={50}
-                        height={50}
-                      />
-                      <div className="ml-4">
-                        <p className="font-semibold">For Agencies</p>
-                        <p className="text-sm text-gray-400 pt-2">
-                          Drive more qualified leads for your clients.
-                        </p>
-                      </div>
-                    </li>
+                    <Link href="/">
+                      <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
+                        <Image
+                          src={AgenciesDropdown}
+                          alt="For Sales"
+                          width={50}
+                          height={50}
+                        />
+                        <div className="ml-4">
+                          <p className="font-semibold">For Sales</p>
+                          <p className="text-sm text-gray-400 pt-2">
+                            Qualify and prioritize high-intent leads.
+                          </p>
+                        </div>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
+                        <Image
+                          src={marketingDropdown}
+                          alt="For Marketing"
+                          width={50}
+                          height={50}
+                        />
+                        <div className="ml-4">
+                          <p className="font-semibold">For Marketing</p>
+                          <p className="text-sm text-gray-400 pt-2">
+                            Reduce waste and improve retargeting.
+                          </p>
+                        </div>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
+                        <Image
+                          src={marketingDropdown}
+                          alt="For Agencies"
+                          width={50}
+                          height={50}
+                        />
+                        <div className="ml-4">
+                          <p className="font-semibold">For Agencies</p>
+                          <p className="text-sm text-gray-400 pt-2">
+                            Drive more qualified leads for your clients.
+                          </p>
+                        </div>
+                      </li>
+                    </Link>
                   </ul>
                 </div>
               )}
@@ -184,53 +193,61 @@ export default function Header() {
                 <ChevronDownIcon />
               </button>
               {openDropdown === "resources" && (
-                <div className="absolute top-3 left-1/2 transform -translate-x-1/2 bg-[#1b1c1f] mt-4 p-3 pb-8 rounded-lg shadow-lg w-[280px]">
+                <div className="absolute top-3 left-1/2 transform -translate-x-1/2 mt-4 p-3 pb-8 rounded-[14px] shadow-lg w-[280px] border border-[#ffffff26] bg-[#070b18]">
                   <ul>
-                    <li className="flex items-center hover:bg-[#2c2e33] cursor-pointer rounded-lg pt-5">
-                      <div className="ml-3">
-                        <p className="font-semibold text-base">Help Center</p>
-                        <p className="text-sm text-gray-400 pt-2">
-                          Advice, best practices and answers from the Snitchers
-                          Team.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-center hover:bg-[#2c2e33] cursor-pointer rounded-lg pt-7">
-                      <div className="ml-3">
-                        <p className="font-semibold text-base">
-                          Customer Stories
-                        </p>
-                        <p className="text-sm text-gray-400 pt-2">
-                          Discover how businesses like yours use Snitchers to
-                          identify, engage and acquire new customers.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-center hover:bg-[#2c2e33] cursor-pointer rounded-lg pt-7">
-                      <div className="ml-3">
-                        <p className="font-semibold text-base">
-                          B2B Marketing Blueprint
-                        </p>
-                        <p className="text-sm text-gray-400 pt-2">
-                          Tactical modules for B2B marketing growth, based on
-                          the industry&apos;s best practices.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-center hover:bg-[#2c2e33] cursor-pointer rounded-lg pt-7">
-                      <div className="ml-3">
-                        <p className="font-semibold text-base">Guides</p>
-                        <div className="pt-2">
-                          <Image
-                            src={Guides}
-                            alt="Guides Img"
-                            width={232}
-                            height={116}
-                            className="rounded-lg"
-                          />
+                    <Link href="/">
+                      <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-5">
+                        <div className="ml-3">
+                          <p className="font-semibold text-base">Help Center</p>
+                          <p className="text-sm text-gray-400 pt-2">
+                            Advice, best practices and answers from the
+                            Snitchers Team.
+                          </p>
                         </div>
-                      </div>
-                    </li>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-7">
+                        <div className="ml-3">
+                          <p className="font-semibold text-base">
+                            Customer Stories
+                          </p>
+                          <p className="text-sm text-gray-400 pt-2">
+                            Discover how businesses like yours use Snitchers to
+                            identify, engage and acquire new customers.
+                          </p>
+                        </div>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-7">
+                        <div className="ml-3">
+                          <p className="font-semibold text-base">
+                            B2B Marketing Blueprint
+                          </p>
+                          <p className="text-sm text-gray-400 pt-2">
+                            Tactical modules for B2B marketing growth, based on
+                            the industry&apos;s best practices.
+                          </p>
+                        </div>
+                      </li>
+                    </Link>
+                    <Link href="/">
+                      <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-7">
+                        <div className="ml-3">
+                          <p className="font-semibold text-base">Guides</p>
+                          <div className="pt-2">
+                            <Image
+                              src={Guides}
+                              alt="Guides Img"
+                              width={232}
+                              height={116}
+                              className="rounded-lg"
+                            />
+                          </div>
+                        </div>
+                      </li>
+                    </Link>
                   </ul>
                 </div>
               )}
@@ -243,11 +260,15 @@ export default function Header() {
           </ul>
         </nav>
         <div className="hidden lg:flex justify-center items-center gap-8 text-sm text-white">
-          <button className="font-semibold">Log in</button>
-          <button className="rounded-full bg-[#3257ff] pt-[7px] pb-[6px] pl-4 pr-2 flex items-center gap-1 hover:bg-blue-600">
-            <p>Start Now</p>
-            <ChevronRightIcon className="h-5 w-5 -mt-[2px]" />
-          </button>
+          <Link href="/">
+            <button className="font-semibold">Log in</button>
+          </Link>
+          <Link href="/">
+            <button className="rounded-full bg-[#3257ff] pt-[7px] pb-[6px] pl-4 pr-2 flex items-center gap-1 hover:bg-blue-600">
+              <p>Start Now</p>
+              <ChevronRightIcon className="h-5 w-5 -mt-[2px]" />
+            </button>
+          </Link>
         </div>
         <div className="lg:hidden flex items-center">
           <button
@@ -258,9 +279,8 @@ export default function Header() {
           </button>
         </div>
       </div>
-      {/* Mobile part */}
       <div
-        className={`lg:hidden bg-[#3f4046] overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
+        className={`lg:hidden bg-[#070b18] overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
           isMobileMenuOpen
             ? "max-h-screen opacity-100 scale-y-100"
             : "max-h-0 opacity-0 scale-y-0"
@@ -279,15 +299,21 @@ export default function Header() {
             </button>
             {openDropdown === "products" && (
               <ul className="py-4 space-y-2 text-gray-300">
-                <li className="pt-2">
-                  <p className="text-base">Identify</p>
-                </li>
-                <li className="pt-2">
-                  <p className="text-base">Google Analytics Enricher</p>
-                </li>
-                <li className="pt-2">
-                  <p className="text-base">Spotter</p>
-                </li>
+                <Link href="/features/lead-generation">
+                  <li className="pt-2">
+                    <p className="text-base">Identify</p>
+                  </li>
+                </Link>
+                <Link href="/features/google-analytics">
+                  <li className="pt-2">
+                    <p className="text-base">Google Analytics Enricher</p>
+                  </li>
+                </Link>
+                <Link href="/features/real-time-identification-api">
+                  <li className="pt-2">
+                    <p className="text-base">Spotter</p>
+                  </li>
+                </Link>
               </ul>
             )}
           </li>

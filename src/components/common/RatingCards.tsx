@@ -9,6 +9,14 @@ interface RatingCardProps {
   reviewBy: string;
   content: string;
   reviewer: string;
+  hasCardClass?: boolean;
+  hasBorder?: boolean;
+  textSize?: {
+    title?: string;
+    content?: string;
+    reviewer?: string; 
+  };
+  marginClass?: string;
 }
 
 const RatingCards: React.FC<RatingCardProps> = ({
@@ -16,6 +24,10 @@ const RatingCards: React.FC<RatingCardProps> = ({
   reviewBy,
   content,
   reviewer,
+  hasCardClass = true,
+  hasBorder = false,
+  textSize = { title: "text-base", content: "text-xs", reviewer: "text-sm" }, 
+  marginClass = "mt-3.5 md:-mt-4",
 }) => {
   const renderStars = (rating: number) => {
     if (rating === 5) {
@@ -34,17 +46,35 @@ const RatingCards: React.FC<RatingCardProps> = ({
   };
 
   return (
-    <div className="md:flex justify-between gap-6 md:mt-8 max-md:w-full md:h-full">
-      <div className="review-lead--card flex flex-col justify-between py-6 px-[17.5px] rounded-[10px] bg-white">
+    <div
+      className={`md:flex justify-between gap-6 md:mt-8 max-md:w-full md:h-full ${
+        hasBorder ? "border rounded-[10px] border-[#eaecf0]" : ""
+      }`}
+    >
+      <div
+        className={`flex flex-col justify-between py-6 px-[17.5px] rounded-[10px] bg-white ${
+          hasCardClass ? "review-lead--card" : ""
+        }`}
+      >
         <div>
           <div className="flex items-center mb-3.5">{renderStars(rating)}</div>
-          <h3 className="text-base font-bold mb-2.5 text-black">{reviewBy}</h3>
-          <p className="text-[#475467] font-normal text-xs">{content}</p>
+
+          <h3 className={`${textSize?.title} font-bold mb-2.5 text-black`}>
+            {reviewBy}
+          </h3>
+
+          <p className={`text-[#475467] font-normal ${textSize?.content}`}>
+            {content}
+          </p>
         </div>
-        <div className="mt-3.5 md:-mt-4 flex items-center gap-3">
+
+        <div className={`${marginClass} flex items-center gap-3`}>
           <Image src={ReviewIcon} alt="Reviewer Icon" width={24} height={24} />
           <div className="bg-[#475467] w-[15px] h-[2px]"></div>
-          <p className="ml-2 text-black text-sm font-semibold">{reviewer}</p>
+
+          <p className={`ml-2 text-black font-semibold ${textSize?.reviewer}`}>
+            {reviewer}
+          </p>
         </div>
       </div>
     </div>

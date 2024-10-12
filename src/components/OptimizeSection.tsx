@@ -8,12 +8,12 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 export default function OptimizeSection() {
   return (
     <div className="">
-      <div className="relative max-w-[1280px] mx-auto px-6">
+      <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6">
         <div className="pt-24 max-md:pb-0 pb-[94px] flex flex-col items-center">
           <div className="mb-3 py-1 px-4 border border-[#ffffff4d] rounded-full bg-[#d1e0ff]">
             <p className="font-bold text-xs text-[#0040c1]">Optimize</p>
           </div>
-          <h1 className="max-w-[768px] my-0 font-bold text-2xl sm:text-4xl text-center tracking-[-1px] text-[#000]">
+          <h1 className="max-w-[768px] my-0 font-bold text-4xl text-center tracking-[-1px] text-[#000]">
             Run more tests and hit your target sooner.
           </h1>
           <p className="max-w-[790px] py-5 text-center text-base sm:text-lg leading-[28px] text-[#475467]">
@@ -40,7 +40,7 @@ export default function OptimizeSection() {
                   }`}
                 >
                   <div className="flex gap-[18px] items-start">
-                    <div className="w-[72px] h-[72px] aspect-square">
+                    <div className="w-11 sm:w-[72px] h-11 sm:h-[72px] aspect-square">
                       <Image
                         src={item.icon}
                         alt="Image"
@@ -60,7 +60,7 @@ export default function OptimizeSection() {
                 </div>
               ))}
 
-              <div className="pt-9 flex gap-4 items-start">
+              <div className="pt-9 flex flex-col sm:flex-row gap-4 items-start">
                 <Image
                   src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b04ac602fefb63e60c56_Avatar.svg"
                   alt="Avatar"
