@@ -30,8 +30,7 @@ export default function Header() {
   return (
     <header
       className="backdrop-blur-md sticky top-0 w-full z-50"
-      style={{ background: "#070b18" }}
-    >
+      style={{ background: "#070b18" }}>
       <div className="max-w-[1280px] mx-auto p-6 flex justify-between items-center">
         <div className="flex items-center">
           <Image src={logo} height={35} width={125} alt="Logo" />
@@ -73,6 +72,8 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="flex items-center p-2 hover:bg-[#2c2e33] cursor-pointer rounded-lg">
+                    <Link href="/features/google-analytics" passHref>
+                    <div className="flex">
                       <Image
                         src={GoogleAnalytics}
                         alt="Google Analytics"
@@ -87,7 +88,9 @@ export default function Header() {
                           Turn Google Analytics into a platform made for B2B
                           analytics.
                         </p>
+                        </div>
                       </div>
+                      </Link>
                     </li>
                     <li className="flex items-center p-2 hover:bg-[#2c2e33] cursor-pointer rounded-lg">
                       <Image
