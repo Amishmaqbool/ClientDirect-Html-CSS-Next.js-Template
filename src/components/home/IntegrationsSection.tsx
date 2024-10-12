@@ -155,7 +155,7 @@ const IntegrationSection = () => {
           
           <div className="w-1/2 max-md:flex-col max-lg:w-full md:h-44 flex justify-center items-center gap-2 p-6 rounded-lg bg-[#ffffff17] border border-[#ffffff26]">  
             <div className="flex flex-col gap-4">
-              <div className="flex gap-3 h-11">
+              <div className="flex gap-3">
                 <Image src={RealIcon} alt="Real-Time" width={28.35} height={28.84} className="max-xl:h-7"/>
                 <p className="text-lg text-white">Real-time identification API</p>
               </div>
