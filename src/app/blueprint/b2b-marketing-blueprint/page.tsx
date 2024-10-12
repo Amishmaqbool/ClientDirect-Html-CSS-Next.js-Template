@@ -20,11 +20,9 @@ const MarketingBlueprint = () => {
         {sectionData.map((section, index) => (
           <div
             key={index}
-            className={`bg-[#101828] border z-[1000] max-lg:mx-4 max-xs:mx-2 border-gray-800 ${section.sectionBorderColor} text-white rounded-[12px] mb-[32px]`}
-          >
+            className={`bg-[#101828] border z-[1000] max-lg:mx-4 max-xs:mx-2 border-gray-800 ${section.sectionBorderColor} text-white rounded-[12px] mb-[32px]`}>
             <h2
-              className={`text-[#ffffffb3] ${section.sectionColor} tracking-wider rounded-t-[12px] text-center text-[14px] py-[8px] px-[12px] font-bold uppercase`}
-            >
+              className={`text-[#ffffffb3] ${section.sectionColor} tracking-wider rounded-t-[12px] text-center text-[14px] py-[8px] px-[12px] font-bold uppercase`}>
               {section.sectionTitle}
             </h2>
             <div className="p-[1rem] px-[1rem]">
