@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import RightArrow from "../../assets/svgs/right-arrow.svg"
 
 interface ContentList {
   image: string;
@@ -40,10 +41,11 @@ const MarketingSection: React.FC<CardsProps> = ({
 
           <Link
             href="/"
-            className="py-2 px-3.5 flex items-center border rounded-full border-[#0000] backdrop-blur whitespace-nowrap bg-[#ffffff1a]"
+            className="py-2 px-3.5 flex items-center border rounded-full border-[#0000] backdrop-blur whitespace-nowrap bg-[#ffffff1a] cursor-pointer"
           >
-            <button className="mr-2 font-semibold text-sm text-white">
-              {ctaButton}
+            <button className="flex gap-3 items-center mr-2 font-semibold text-sm text-white cursor-pointer">
+              <p>{ctaButton}</p>
+              <Image src={RightArrow} alt="Right Arrow"/>
             </button>
           </Link>
 
@@ -74,7 +76,7 @@ const MarketingSection: React.FC<CardsProps> = ({
         </div>
       </div>
 
-      <div className="absolute z-10 inset-0 overflow-hidden">
+      <div className="-z-10 inset-0 overflow-hidden">
         <div className="hero-noise-png"></div>
         <Image
           src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/640b347a17d12b9b0b6ceb9c_home4.svg"

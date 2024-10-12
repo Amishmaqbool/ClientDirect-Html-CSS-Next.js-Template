@@ -4,13 +4,14 @@ import Image from "next/image";
 import Button from "../common/Button";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import RightArrow from "../../assets/svgs/right-arrow.svg"
 
 interface CardData {
   title: string;
   description: string;
   linkText: string;
   linkUrl: string;
-  gradient: "purple" | "blue" | "aqua";
+  gradient: "#926ae5" | "#3189e3" | "#44cfe6";
 }
 
 const cardsData: CardData[] = [
@@ -20,7 +21,7 @@ const cardsData: CardData[] = [
       "Discover, qualify and prioritize high intent target leads with real-time notifications and beat the competition to the chase.",
     linkText: "Fill your pipeline",
     linkUrl: "/",
-    gradient: "purple",
+    gradient: "#926ae5",
   },
   {
     title: "For Marketing",
@@ -28,7 +29,7 @@ const cardsData: CardData[] = [
       "Focus on accounts, not individuals. See what engages your target audience, personalise website journeys and improve re-targeting.",
     linkText: "Drive more conversions",
     linkUrl: "/",
-    gradient: "blue",
+    gradient: "#3189e3",
   },
   {
     title: "For Agencies",
@@ -36,7 +37,7 @@ const cardsData: CardData[] = [
       "Get insights earlier, add revenue streams and drive more qualified leads for your clients with our white-label solution.",
     linkText: "Increase client ROI",
     linkUrl: "/",
-    gradient: "aqua",
+    gradient: "#44cfe6",
   },
 ];
 
@@ -53,6 +54,18 @@ interface HeroSectionProps {
   bgColor?: string;
   featureContents?: FeatureContent[];
 }
+
+const gradientColorMap: Record<string, "purple" | "blue" | "aqua"> = {
+  "#926ae5": "purple",
+  "#3189e3": "blue",
+  "#44cfe6": "aqua",
+};
+
+const gradientClasses: Record<"purple" | "blue" | "aqua", string> = {
+  purple: "bg-gradient-to-r from-[#7f56d9] to-[#9e77ed]",
+  blue: "bg-gradient-to-r from-[#41a7f0] to-[#1b61d1]",
+  aqua: "bg-gradient-to-r from-[#54edf0] to-[#30a9d9]",
+};
 
 export default function HeroSection({
   headingText = "Know who’s on your website, drive more revenue.",
@@ -87,12 +100,6 @@ export default function HeroSection({
   ];
 
   const isFeaturePage = featurePaths.includes(pathname);
-
-  const gradientClasses: Record<"purple" | "blue" | "aqua", string> = {
-    purple: "from-[#7f56d9] to-[#9e77ed]",
-    blue: "from-[#41a7f0] to-[#1b61d1]",
-    aqua: "from-[#54edf0] to-[#30a9d9]",
-  };
 
   return (
     <div className="relative overflow-hidden">
@@ -168,37 +175,23 @@ export default function HeroSection({
             {cardsData.map((card, index) => (
               <div
                 key={index}
-                className="relative p-6 rounded-lg text-white shadow-lg w-1/3 bg-[#101828] max-w-[384px] z-[9999] overflow-hidden"
+                className="relative rounded-2xl text-white shadow-lg w-1/3 max-w-[384px] z-[9999] overflow-hidden bg-[#101828]"
               >
-                <div
-                  className={`absolute top-0 left-0 w-full h-[8px] bg-gradient-to-r ${
-                    gradientClasses[card.gradient]
-                  }`}
-                ></div>
-
-                <div
-                  className="absolute inset-0 opacity-100 mix-blend-normal bg-cover bg-right-top h-full"
-                  style={{
-                    backgroundImage:
-                      "url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/64185a1271eb87048332b503_fic-violet.png)",
-                    backgroundPosition: "100% 0%",
-                  }}
-                ></div>
-
-                <div className="relative z-10">
+                <div className={`h-2 ${gradientClasses[gradientColorMap[card.gradient]]}`}></div>
+                <div className="relative z-10 px-6 py-5">
                   <h2
-                    className="text-lg font-semibold"
-                    style={{
-                      color: gradientClasses[card.gradient].split(" ")[0],
-                    }}
+                    className={`text-lg font-semibold text-transparent bg-clip-text ${
+                      gradientClasses[gradientColorMap[card.gradient]]
+                    }`}
                   >
                     {card.title}
                   </h2>
-                  <p className="mt-2 text-[#E4E7EC] text-sm">
+                  <p className="mt-2 text-[#667085] font-normal text-[13px]">
                     {card.description}
                   </p>
-                  <Link className="text-white text-sm" href={card.linkUrl}>
-                    {card.linkText}
+                  <Link className="pt-3 flex gap-2 items-center text-[#d0d5dd] hover:text-white text-sm" href={card.linkUrl}>
+                    <p>{card.linkText}</p>
+                    <div><Image src={RightArrow} alt="Right Arrow"/></div>
                   </Link>
                 </div>
               </div>
