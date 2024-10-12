@@ -52,6 +52,7 @@ interface HeroSectionProps {
   maxWidth?: string;
   bgColor?: string;
   featureContents?: FeatureContent[];
+  buttonVisible?: boolean;
 }
 
 export default function HeroSection({
@@ -62,6 +63,7 @@ export default function HeroSection({
   maxWidth = "900px",
   bgColor = "#070b18",
   featureContents = [],
+  buttonVisible = true,
 }: HeroSectionProps) {
   const formatTextWithLineBreaks = (
     text: string,
@@ -96,7 +98,7 @@ export default function HeroSection({
 
   return (
     <div className="relative overflow-hidden">
-      <div className="mb-8 relative">
+      <div className="mb-2 relative">
         <div
           style={{ backgroundColor: bgColor }}
           className="w-full pt-28 pb-[58px] relative z-10"
@@ -126,20 +128,22 @@ export default function HeroSection({
             <h1 className="max-md:max-w-[459px] mx-auto text-[30px] md:text-[48px] lg:text-[72px] text-center text-white font-bold leading-[40px] md:leading-[60px] lg:leading-[92px]">
               {formatTextWithLineBreaks(headingText, headingLineBreaks)}
             </h1>
-            <p className="max-md:max-w-[541px] mx-auto text-center pt-2 leading-6 text-[#d0d5ddb3]">
+            <p className="max-w-[540px] mx-auto text-center pt-2 leading-[1.9em] text-[#9499a1] text-lg">
               {formatTextWithLineBreaks(paragraphText, paragraphLineBreaks)}
             </p>
-            <div className="flex flex-col items-center gap-2 pt-8">
-              <Button
-                bgColor="bg-customBlue"
-                textColor="text-white"
-                borderRadius="rounded-[100px]"
-                showChevron={true}
-                chevronColor="text-white"
-                buttonText="Try Snitcher for Free"
-              />
-              <span className="text-[#667085]">No credit card required</span>
-            </div>
+            {buttonVisible && (
+              <div className="flex flex-col items-center gap-2 pt-8">
+                <Button
+                  bgColor="bg-customBlue"
+                  textColor="text-white"
+                  borderRadius="rounded-[100px]"
+                  showChevron={isHomePage}
+                  chevronColor="text-white"
+                  buttonText="Try Snitcher for Free"
+                />
+                <span className="text-[#667085]">No credit card required</span>
+              </div>
+            )}
           </div>
 
           <div className="max-md:flex justify-center pt-[104px] max-w-[1280px] mx-auto px-6">
@@ -168,12 +172,10 @@ export default function HeroSection({
             {cardsData.map((card, index) => (
               <div
                 key={index}
-                className="relative p-6 rounded-lg text-white shadow-lg w-1/3 bg-[#101828] max-w-[384px] z-[9999] overflow-hidden"
+                className="relative p-6 rounded-2xl text-white shadow-lg w-1/3 bg-[#101828] max-w-[384px] z-[9999] overflow-hidden"
               >
                 <div
-                  className={`absolute top-0 left-0 w-full h-[8px] bg-gradient-to-r ${
-                    gradientClasses[card.gradient]
-                  }`}
+                  className={`absolute top-0 left-0 w-full h-[8px] bg-gradient-to-r ${gradientClasses[card.gradient]}`}
                 ></div>
 
                 <div
@@ -194,11 +196,27 @@ export default function HeroSection({
                   >
                     {card.title}
                   </h2>
-                  <p className="mt-2 text-[#E4E7EC] text-sm">
+                  <p className="mt-2 text-[#667085] text-sm">
                     {card.description}
                   </p>
-                  <Link className="text-white text-sm" href={card.linkUrl}>
+                  <Link className="text-white text-sm flex item-center pt-2" href={card.linkUrl}>
                     {card.linkText}
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="ml-2 mt-[2px]"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+
                   </Link>
                 </div>
               </div>
