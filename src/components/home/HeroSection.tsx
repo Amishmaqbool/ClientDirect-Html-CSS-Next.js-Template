@@ -4,7 +4,7 @@ import Image from "next/image";
 import Button from "../common/Button";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import RightArrow from "../../assets/svgs/right-arrow.svg"
+import RightArrow from "../../assets/svgs/right-arrow.svg";
 
 interface CardData {
   title: string;
@@ -102,11 +102,11 @@ export default function HeroSection({
   const isFeaturePage = featurePaths.includes(pathname);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden mt-[-88px]">
       <div className="mb-8 relative">
         <div
           style={{ backgroundColor: bgColor }}
-          className="w-full pt-28 pb-[58px] relative z-10"
+          className="w-full pt-[200px] 2xl:pt-28 pb-[58px] relative z-10"
         >
           <Image
             src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
@@ -171,27 +171,39 @@ export default function HeroSection({
         </div>
 
         {isHomePage && (
-          <div className="flex justify-center items-center -mt-24 space-x-6 container mx-auto">
+          <div className="max-w-[1280px] mx-auto px-6 flex flex-col sm:flex-row justify-center items-center -mt-24 sm:space-x-4 md:space-x-6">
             {cardsData.map((card, index) => (
               <div
                 key={index}
-                className="relative rounded-2xl text-white shadow-lg w-1/3 max-w-[384px] z-[9999] overflow-hidden bg-[#101828]"
+                className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg w-full sm:w-1/3 sm:max-w-[384px] z-10 overflow-hidden bg-[#101828]"
               >
-                <div className={`h-2 ${gradientClasses[gradientColorMap[card.gradient]]}`}></div>
-                <div className="relative z-10 px-6 py-5">
-                  <h2
-                    className={`text-lg font-semibold text-transparent bg-clip-text ${
-                      gradientClasses[gradientColorMap[card.gradient]]
-                    }`}
+                <div
+                  className={`h-2 ${
+                    gradientClasses[gradientColorMap[card.gradient]]
+                  }`}
+                ></div>
+
+                <div className="flex flex-col justify-between">
+                  <div className="relative z-10 px-4 md:px-6 py-5">
+                    <h2
+                      className={`text-lg font-semibold text-transparent bg-clip-text ${
+                        gradientClasses[gradientColorMap[card.gradient]]
+                      }`}
+                    >
+                      {card.title}
+                    </h2>
+                    <p className="mt-2 text-[#667085] font-normal text-[13px]">
+                      {card.description}
+                    </p>
+                  </div>
+                  <Link
+                    className="px-4 md:px-6 pb-5 flex gap-2 items-center text-[#d0d5dd] hover:text-white text-sm"
+                    href={card.linkUrl}
                   >
-                    {card.title}
-                  </h2>
-                  <p className="mt-2 text-[#667085] font-normal text-[13px]">
-                    {card.description}
-                  </p>
-                  <Link className="pt-3 flex gap-2 items-center text-[#d0d5dd] hover:text-white text-sm" href={card.linkUrl}>
                     <p>{card.linkText}</p>
-                    <div><Image src={RightArrow} alt="Right Arrow"/></div>
+                    <div>
+                      <Image src={RightArrow} alt="Right Arrow" />
+                    </div>
                   </Link>
                 </div>
               </div>
