@@ -52,6 +52,12 @@ export default function googleAnalytics() {
                 reviewer={review.reviewer}
                 hasCardClass={true}
                 hasBorder={false}
+                textSize={{
+                  title: "text-base",   
+                  content: "text-xs", 
+                  reviewer: "text-sm" 
+                }}
+                marginClass = "mt-3.5 md:-mt-4"
               />
             </div>
           ))}

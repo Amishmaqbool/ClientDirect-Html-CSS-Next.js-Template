@@ -3,8 +3,7 @@ import LogoGrid from "@/components/home/LogosGrid";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
-import { landingReviewsCards } from "@/constants/features";
-import RatingCards from "@/components/common/RatingCards";
+import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 
 export default function Home() {
   const mainHeading = "Give sales the edge to find and close more deals";
@@ -91,25 +90,7 @@ export default function Home() {
         }}
       >
         <IntegrationSection />
-
-        <div className="c-review-cards">
-          <div className="absolute inset-x-0 top-0 bottom-auto h-32 z-[9]"></div>
-          <div className="review-gradient is--bot"></div>
-          <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            {landingReviewsCards.map((review, index) => (
-              <div key={index} className="animate-scroll">
-                <RatingCards
-                  rating={review.rating}
-                  reviewBy={review.reviewBy}
-                  content={review.content}
-                  reviewer={review.reviewer}
-                  hasCardClass={false}
-                  hasBorder={true}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <CardsScrollAnimation />
       </div>
     </>
   );

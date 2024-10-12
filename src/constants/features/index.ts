@@ -206,7 +206,7 @@ export const analyticsFaqList = [
   },
 ];
 
-export const landingReviewsCards = [
+export const landingReviewCardsColumn1 = [
   {
     id: 1,
     rating: 5,
@@ -217,6 +217,25 @@ export const landingReviewsCards = [
   },
   {
     id: 2,
+    rating: 4.5,
+    reviewBy: "Best platform to find the right leads",
+    content:
+      "Its better than google analytics and adobe and give us more information about the right traffic, so we are in touch with the leads faster with their contact details provided by Snitcher.",
+    reviewer: "Marsha H.",
+  },
+  {
+    id: 3,
+    rating: 5,
+    reviewBy: "Good Data Quality Compared to Price",
+    content:
+      "Very good data quality compared to price. Customer support is very responsive and is always ready to go the extra mile to help solve a challenge. It is a developing software solution that launches new features frequently and is always open for feedback.",
+    reviewer: "Germans F.",
+  },
+]
+
+export const landingReviewCardsColumn2 = [
+  {
+    id: 1,
     rating: 5,
     reviewBy: "Good Data Quality Compared to Price",
     content:
@@ -224,7 +243,34 @@ export const landingReviewsCards = [
     reviewer: "Germans F.",
   },
   {
+    id: 2,
+    rating: 4.5,
+    reviewBy: "Took action and got some initial wins",
+    content:
+      "Easy to set up. And the data provided inside is fairly rich. We could find the contact information with a few clicks and reach out to possible deals within minutes.",
+    reviewer: "Vencel M.",
+  },
+  {
     id: 3,
+    rating: 5,
+    reviewBy: "Good Data Quality Compared to Price",
+    content:
+      "Out of all the tools we put through a trial phase, Snitcher outperformed them all in relation to how many companies it found and what kind of additional information we could glean from the data it pulled from the companies visiting our website. For example – other vendors which provide similar data detect (on average) about 60-70% fewer companies than Snitcher.",
+    reviewer: "Inga B.",
+  },
+  {
+    id: 4,
+    rating: 5,
+    reviewBy: "Hidden Gem",
+    content:
+      "I accidentally stumbled upon Snitcher while looking for another tool but I am very glad I did! Being in B2B, this is a hidden gem to see what companies are visiting your website. This helps us identify what channels are effective at bringing in traffic and also supplements our cold email strategy.",
+    reviewer: "Lesya L.",
+  },
+]
+
+export const landingReviewCardsColumn3 = [
+  {
+    id: 1,
     rating: 5,
     reviewBy: "Great insights, easy setup, friendly and responsive support team",
     content:
@@ -232,23 +278,7 @@ export const landingReviewsCards = [
     reviewer: "Hisham I.",
   },
   {
-    id: 4,
-    rating: 5,
-    reviewBy: "Best platform to find the right leads",
-    content:
-      "Its better than google analytics and adobe and give us more information about the right traffic, so we are in touch with the leads faster with their contact details provided by Snitcher.",
-    reviewer: "Marsha H.",
-  },
-  {
-    id: 5,
-    rating: 5,
-    reviewBy: "Hidden Gem",
-    content:
-      "I accidentally stumbled upon Snitcher while looking for another tool but I am very glad I did! Being in B2B, this is a hidden gem to see what companies are visiting your website. This helps us identify what channels are effective at bringing in traffic and also supplements our cold email strategy.",
-    reviewer: "Vencel M.",
-  },
-  {
-    id: 6,
+    id: 2,
     rating: 5,
     reviewBy: "Very effective tool for sourcing leads",
     content:
@@ -256,23 +286,7 @@ export const landingReviewsCards = [
     reviewer: "Verified user in Computer Sofware",
   },
   {
-    id: 7,
-    rating: 5,
-    reviewBy: "Good Data Quality Compared to Price",
-    content:
-      "Very good data quality compared to price. Customer support is very responsive and is always ready to go the extra mile to help solve a challenge. It is a developing software solution that launches new features frequently and is always open for feedback.",
-    reviewer: "Germans F.",
-  },
-  {
-    id: 8,
-    rating: 5,
-    reviewBy: "Good Data Quality Compared to Price",
-    content:
-      "Out of all the tools we put through a trial phase, Snitcher outperformed them all in relation to how many companies it found and what kind of additional information we could glean from the data it pulled from the companies visiting our website. For example – other vendors which provide similar data detect (on average) about 60-70% fewer companies than Snitcher.",
-    reviewer: "Lesya L.",
-  },
-  {
-    id: 9,
+    id: 3,
     rating: 5,
     reviewBy: "Great for visitor identification and segmenting companies in Google Analytics",
     content:
