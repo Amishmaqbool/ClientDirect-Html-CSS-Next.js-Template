@@ -57,39 +57,48 @@ const CaseStudyList = () => {
   return (
     <div>
       <HeroSection
-      headingText="Customer Stories"
-      headingLineBreaks={[2, 5]}
-      paragraphText="Discover how businesses like yours use Snitcher to identify, engage, and acquire new customers."
-      maxWidth="960px"
-      bgColor="#070b18"
+        headingText="Customer Stories"
+        headingLineBreaks={[2, 5]}
+        paragraphText="Discover how businesses like yours use Snitcher to identify, engage, and acquire new customers."
+        maxWidth="960px"
+        bgColor="#070b18"
       />
-    <div className="relative max-lg:px-4">
-      <Image
-        src={BackgroundImage}
-        alt="BackgroundImage"
-        width={300}
-        height={300}
-        className="absolute inset-0 w-full z-[-1] object-fill h-full"
-      />
-      <div className="case-study-list grid gap-[64px] lg:px-24 mb-[32px] z-[10000] max-w-[1280px] mx-auto p-[20px] lg:grid-cols-2">
-        {caseStudies.map((caseStudy, index) => (
-          <div key={index} className="case-study-item max-w-[512px] max-lg:mb-[32px]">
-            <Image
-              src={caseStudy.logo}
-              alt={caseStudy.title}
-              className="case-study-logo"
-              width={100}
-              height={100}
-            />
-            <h3 className="mt-[24px] mb-[16px] text-[24px] leading-[28px] tracking-[-.48px] font-bold min-h-[55px]">{caseStudy.title}</h3>
-            <p className="mb-[24px] text-[#667085] text-[16px] leading-[28px]">{caseStudy.description}</p>
-            <a href={caseStudy.link} className="learn-more-button flex w-fit gap-2 items-end bg-[#101828] border border-[#00000026] text-[14px] leading-[20px] py-[10px] h-fit px-[16px] text-white rounded-full">
-              <p className="self-end">Learn More</p><Image src={Arrow} alt="Arrow"/>
-            </a>
-          </div>
-        ))}
+      <div
+        className="relative max-lg:px-4"
+        style={{
+          backgroundImage: `url(${BackgroundImage.src})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}>
+        <div className="case-study-list grid gap-[64px] lg:px-24 mb-[32px] z-[1] max-w-[1280px] -mt-8 pt-16 mx-auto p-[20px] max-base:px-1 max-xs:px-6 md:grid-cols-2">
+          {caseStudies.map((caseStudy, index) => (
+            <div
+              key={index}
+              className="case-study-item max-w-full md:max-w-[512px] max-lg:mb-[32px]">
+              <Image
+                src={caseStudy.logo}
+                alt={caseStudy.title}
+                className="case-study-logo"
+                width={100}
+                height={100}
+              />
+              <h3 className="mt-[24px] mb-[16px] text-[24px] leading-[28px] tracking-[-.48px] font-bold min-h-[55px]">
+                {caseStudy.title}
+              </h3>
+              <p className="mb-[24px] text-[#667085] text-[16px] leading-[28px]">
+                {caseStudy.description}
+              </p>
+              <a
+                href={caseStudy.link}
+                className="learn-more-button flex w-fit gap-2 items-end bg-[#101828] border border-[#00000026] text-[14px] leading-[20px] py-[10px] h-fit px-[16px] text-white rounded-full">
+                <p className="self-end">Learn More</p>
+                <Image src={Arrow} alt="Arrow" />
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

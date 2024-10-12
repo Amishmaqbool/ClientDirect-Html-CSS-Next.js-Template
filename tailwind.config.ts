@@ -12,6 +12,7 @@ const config: Config = {
     extend: {
       screens: {
         'xs': '480px', 
+        'base': '990px'
       },
       colors: {
         background: "var(--background)",
