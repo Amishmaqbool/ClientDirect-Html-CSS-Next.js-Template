@@ -8,18 +8,16 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 export default function OptimizeSection() {
   return (
     <div className="">
-      <div className="relative max-w-[1280px] mx-auto px-6">
+      <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6">
         <div className="pt-24 max-md:pb-0 pb-[94px] flex flex-col items-center">
           <div className="mb-3 py-1 px-4 border border-[#ffffff4d] rounded-full bg-[#d1e0ff]">
-            <p className="font-bold text-xs text-[#0040c1]">Optimize</p>
+            <p className="font-bold text-xs text-[#0040c1]">Optimizează</p>
           </div>
-          <h1 className="max-w-[768px] my-0 font-bold text-2xl sm:text-4xl text-center tracking-[-1px] text-[#000]">
-            Run more tests and hit your target sooner.
+          <h1 className="max-w-[768px] my-0 font-bold text-4xl text-center tracking-[-1px] text-[#000]">
+          Rulează mai multe teste și atinge-ți obiectivul mai repede.
           </h1>
           <p className="max-w-[790px] py-5 text-center text-base sm:text-lg leading-[28px] text-[#475467]">
-            Track the changes you make without needing to wait for conversions,
-            so you can test more with less risk and make sure you hit you number
-            within budget.
+          Urmărește schimbările pe care le faci fără să aștepți conversii, astfel încât să poți testa mai mult cu riscuri mai mici și să te asiguri că îți atingi obiectivul în limitele bugetului.
           </p>
           <Button
             bgColor="bg-[#101828]"
@@ -27,7 +25,7 @@ export default function OptimizeSection() {
             borderRadius="rounded-[100px]"
             showChevron={true}
             chevronColor="text-white"
-            buttonText="Start 14-Day Free Trial"
+            buttonText="Începe perioada de probă gratuită de 14 zile"
           />
 
           <div className="mt-16 grid max-md:gap-0 gap-[77px] grid-cols-1 md:grid-cols-2">
@@ -40,7 +38,7 @@ export default function OptimizeSection() {
                   }`}
                 >
                   <div className="flex gap-[18px] items-start">
-                    <div className="w-[72px] h-[72px] aspect-square">
+                    <div className="w-11 sm:w-[72px] h-11 sm:h-[72px] aspect-square">
                       <Image
                         src={item.icon}
                         alt="Image"
@@ -60,7 +58,7 @@ export default function OptimizeSection() {
                 </div>
               ))}
 
-              <div className="pt-9 flex gap-4 items-start">
+              <div className="pt-9 flex flex-col sm:flex-row gap-4 items-start">
                 <Image
                   src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b04ac602fefb63e60c56_Avatar.svg"
                   alt="Avatar"
@@ -69,13 +67,10 @@ export default function OptimizeSection() {
                 />
                 <div className="testimonial text-left max-w-lg w-full lg:w-full mb-8">
                   <blockquote className="text-gray-700 italic text-sm">
-                    &quot;Snitcher with our Google Analytics account gives our
-                    web team more information about our audience and how
-                    specific types of users interact with our site.&quot;
+                  &quot;Snitcher, împreună cu contul nostru de Google Analytics, oferă echipei noastre web mai multe informații despre audiența noastră și despre cum interacționează anumite tipuri de utilizatori cu site-ul nostru.&quot;
                   </blockquote>
                   <cite className="text-xs text-gray-500 not-italic">
-                    <span className="text-black">Becca R</span> - Director Of
-                    Software Development
+                    <span className="text-black">Becca R</span> - Director Dezvoltare Software
                   </cite>
                 </div>
               </div>

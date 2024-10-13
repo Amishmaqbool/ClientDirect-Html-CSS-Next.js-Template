@@ -3,7 +3,7 @@ import LogoGrid from "@/components/home/LogosGrid";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
-import DriveBudget from "@/components/home/DriveBudget";
+import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 
 export default function Home() {
   const mainHeading = "Give sales the edge to find and close more deals";
@@ -34,55 +34,64 @@ export default function Home() {
 
   return (
     <>
-    <div className="">
-      <HeroSection
-        headingText="Know who's on your website, drive more revenue."
-        headingLineBreaks={[2, 5]}
-        paragraphText="Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights."
-        maxWidth="960px"
-        bgColor="#070b18"
-      />
+      <div className="">
+        <HeroSection
+          headingText="Know who’s on your website, drive more revenue."
+          headingLineBreaks={[2, 5]}
+          paragraphText="Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights."
+          maxWidth="960px"
+          bgColor="#070b18"
+        />
 
-      <LogoGrid />
+        <LogoGrid />
 
-      <TextBlock
-        mainHeading={mainHeading}
-        subHeading={subHeading}
-        ctaText={ctaText}
-        secondaryCtaText={secondaryCtaText}
-        testimonial={FirstTestimonial}
-        lottieUrl="https://lottie.host/67c29b1c-f8f5-4262-9529-d7d089de0a37/ZooYErX6nm.json"
-        isReversed={false}
-      />
+        <TextBlock
+          mainHeading={mainHeading}
+          subHeading={subHeading}
+          ctaText={ctaText}
+          secondaryCtaText={secondaryCtaText}
+          testimonial={FirstTestimonial}
+          lottieUrl="https://lottie.host/67c29b1c-f8f5-4262-9529-d7d089de0a37/ZooYErX6nm.json"
+          isReversed={false}
+        />
 
-      <TextBlock
-        mainHeading={'Reduce wasted ad-spend and convert more target visitors'}
-        subHeading={'Re-target or exclude visitors to continually improve your campaign performance. Personalize journeys and serve relevant content to your audience at the right time'}
-        ctaText={'Start Free Trial'}
-        secondaryCtaText={'Explore Snitcher for Marketing'}
-        testimonial={SecondTestimonial}
-        lottieUrl="https://lottie.host/e7e6bfef-6fd9-4b22-8825-dc67d973bfb9/1diB1j1H81.json"
-        isReversed={true}
-      />
-      <TextBlock
-        mainHeading={'Understand what your target audience actually wants'}
-        subHeading={'Get much deeper insights on what’s attracting, engaging and converting your ideal visitors. Stop investing in ads and content with a poor ROI and start optimizing for revenue.'}
-        ctaText={'Start Free Trial'}
-        secondaryCtaText={'Explore Snitcher for Marketing'}
-        testimonial={ThirdTestimonial}
-        lottieUrl="https://lottie.host/ade35443-289d-416d-98a7-12f616efb5bd/GxNxOf0TXi.json"
-        isReversed={false}
-      />
-    </div>
-
-    <div className="max-w-full bg-[#101828] pb-24" style={{ backgroundImage: `url(${gradientPurple})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: 'center' }}>
-    <IntegrationSection />
-    </div>
-
-    <div className="max-w-[1200px] mx-auto px-4 flex flex-col justify-center items-center">
-    <DriveBudget />
-    </div>
-
-   </>
+        <TextBlock
+          mainHeading={
+            "Reduce wasted ad-spend and convert more target visitors"
+          }
+          subHeading={
+            "Re-target or exclude visitors to continually improve your campaign performance. Personalize journeys and serve relevant content to your audience at the right time"
+          }
+          ctaText={"Start Free Trial"}
+          secondaryCtaText={"Explore Snitcher for Marketing"}
+          testimonial={SecondTestimonial}
+          lottieUrl="https://lottie.host/e7e6bfef-6fd9-4b22-8825-dc67d973bfb9/1diB1j1H81.json"
+          isReversed={true}
+        />
+        <TextBlock
+          mainHeading={"Understand what your target audience actually wants"}
+          subHeading={
+            "Get much deeper insights on what’s attracting, engaging and converting your ideal visitors. Stop investing in ads and content with a poor ROI and start optimizing for revenue."
+          }
+          ctaText={"Start Free Trial"}
+          secondaryCtaText={"Explore Snitcher for Marketing"}
+          testimonial={ThirdTestimonial}
+          lottieUrl="https://lottie.host/ade35443-289d-416d-98a7-12f616efb5bd/GxNxOf0TXi.json"
+          isReversed={false}
+        />
+      </div>
+      <div
+        className="max-w-full bg-[#101828]"
+        style={{
+          backgroundImage: `url(${gradientPurple})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <IntegrationSection />
+        <CardsScrollAnimation />
+      </div>
+    </>
   );
 }

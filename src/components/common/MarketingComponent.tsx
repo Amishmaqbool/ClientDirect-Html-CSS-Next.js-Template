@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import RightArrow from "../../assets/svgs/right-arrow.svg"
 
 interface ContentList {
   image: string;
@@ -30,7 +31,7 @@ const MarketingSection: React.FC<CardsProps> = ({
           <div className="mb-3 px-2 py-[2px] border rounded-2xl border-[#ffffff4d] bg-[#ffffff4d]">
             <p className="font-semibold text-xs text-white">{tag}</p>
           </div>
-          <h1 className="font-bold text-2xl sm:text-4xl tracking-[-1px] text-center text-white">
+          <h1 className="font-bold text-4xl tracking-[-1px] text-center text-white">
             {heading}
           </h1>
 
@@ -40,10 +41,11 @@ const MarketingSection: React.FC<CardsProps> = ({
 
           <Link
             href="/"
-            className="py-2 px-3.5 flex items-center border rounded-full border-[#0000] backdrop-blur whitespace-nowrap bg-[#ffffff1a]"
+            className="py-2 px-3.5 flex items-center border rounded-full border-[#0000] backdrop-blur whitespace-nowrap bg-[#ffffff1a] cursor-pointer"
           >
-            <button className="mr-2 font-semibold text-sm text-white">
-              {ctaButton}
+            <button className="flex gap-3 items-center mr-2 font-semibold text-sm text-white cursor-pointer">
+              <p>{ctaButton}</p>
+              <Image src={RightArrow} alt="Right Arrow"/>
             </button>
           </Link>
 
@@ -74,7 +76,7 @@ const MarketingSection: React.FC<CardsProps> = ({
         </div>
       </div>
 
-      <div className="absolute z-10 inset-0 overflow-hidden">
+      <div className="-z-10 inset-0 overflow-hidden">
         <div className="hero-noise-png"></div>
         <Image
           src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/640b347a17d12b9b0b6ceb9c_home4.svg"
@@ -98,7 +100,7 @@ const MarketingSection: React.FC<CardsProps> = ({
           alt=""
           width={654}
           height={393}
-          className="absolute top-0 bottom-auto left-[25%]"
+          className="absolute top-0 bottom-auto lg:left-[25%]"
         />
         <Image
           src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/640b39e6e5569e48875a414c_home7.svg"
