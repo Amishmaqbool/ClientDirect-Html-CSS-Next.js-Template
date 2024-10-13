@@ -8,50 +8,50 @@ import Arrow from "@/assets/svgs/arrow.svg";
 const caseStudies = [
   {
     title:
-      "How Usersnap gained critical visibility into marketing campaigns with Snitcher",
+      "Cum Usersnap a obținut vizibilitate critică asupra campaniilor de marketing cu Snitcher",
     description:
-      "Usersnap optimises their marketing and sales campaigns with Snitcher, gaining critical insights into visitor segmentation and industry trends, leading to more targeted and effective strategies that resonate with their enterprise audience.",
+      "Usersnap își optimizează campaniile de marketing și vânzări cu Snitcher, obținând informații critice despre segmentarea vizitatorilor și tendințele din industrie, ceea ce duce la strategii mai bine țintite și mai eficiente, care rezonează cu audiența lor corporativă.",
     logo: "/images/customer-stories-image.png",
     link: "/",
   },
   {
-    title: "How Waylay increased conversion rates by 4,7%",
+    title: "Cum Waylay a crescut ratele de conversie cu 4,7%",
     description:
-      "Waylay harnesses Snitcher's accurate data and integration capabilities to power their lead-generation and sales processes, achieving a 4.7% increase in conversion rates while streamlining their engagement with targets personas.",
+      "Waylay folosește datele precise și capacitățile de integrare ale Snitcher pentru a-și alimenta procesele de generare de lead-uri și vânzări, realizând o creștere de 4,7% a ratelor de conversie și optimizându-și interacțiunile cu persona țintă.",
     logo: "/images/customer-stories-image2.png",
     link: "/",
   },
   {
-    title: "How Fleetdm grew revenue with 70 new accounts from Snitcher",
+    title: "Cum Fleetdm a crescut veniturile cu 70 de conturi noi de la Snitcher",
     description:
-      "Fleetdm efficiently grows their pipeline with 70 new accounts by implementing Snitcher, enhancing their lead qualification and sales engagement process, and ensuring targeted outreach to interested prospects, leading to a substantial increase in revenue.",
+      "Fleetdm își crește eficient pipeline-ul cu 70 de conturi noi implementând Snitcher, îmbunătățind procesul de calificare a lead-urilor și interacțiunea în vânzări, asigurând astfel o abordare țintită către prospecte interesate, ceea ce duce la o creștere semnificativă a veniturilor.",
     logo: "/images/customer-stories-image3.png",
     link: "/",
   },
   {
-    title:
-      "How TalentDesk won a high value client within 30 days of using Snitcher",
+    title: "Cum TalentDesk a câștigat un client valoros în 30 de zile de la utilizarea Snitcher",
     description:
-      "TalentDesk wins a high-value client within 30 days of starting with Snitcher, fueling their marketing strategies and sales processes to effectively target and convert leads previously overlooked in their digital campaigns and sales processes.",
+      "TalentDesk câștigă un client valoros în 30 de zile de la începutul utilizării Snitcher, alimentându-și strategiile de marketing și procesele de vânzări pentru a ținti și converti eficient lead-uri care anterior erau trecute cu vederea în campaniile digitale și procesele de vânzări.",
     logo: "/images/customer-stories-image4.png",
     link: "/",
   },
   {
-    title: "Adacta uncovers the dark funnel by identifying 500% more companies",
+    title: "Adacta descoperă funnel-ul ascuns identificând cu 500% mai multe companii",
     description:
-      "Adacta dramatically increased visibility into their website traffic, seamlessly integrating Snitcher into their teck stack to deeply understand their buyer's journey and power targeted ABM campaigns.",
+      "Adacta a crescut dramatic vizibilitatea traficului de pe site-ul lor web, integrând fără efort Snitcher în stack-ul lor tehnologic pentru a înțelege în profunzime călătoria cumpărătorului și pentru a alimenta campaniile ABM țintite.",
     logo: "/images/customer-stories-image5.png",
     link: "/",
   },
   {
     title:
-      "How Influential Software closed $10k MRR in 6 weeks and improved win rates by 5%",
+      "Cum Influential Software a închis $10k MRR în 6 săptămâni și a îmbunătățit ratele de succes cu 5%",
     description:
-      "In just six weeks, Influential Software dramatically improves their sales efficiency and lead identification, resulting in higher win rates and strong revenue growth, thanks to the strategic implementation of Snitcher.",
+      "În doar șase săptămâni, Influential Software își îmbunătățește dramatic eficiența în vânzări și identificarea lead-urilor, rezultând într-o creștere a ratei de succes și o creștere puternică a veniturilor, datorită implementării strategice a Snitcher.",
     logo: "/images/customer-stories-image6.png",
     link: "/",
   },
 ];
+
 
 const CaseStudyList = () => {
   return (
@@ -59,7 +59,7 @@ const CaseStudyList = () => {
       <HeroSection
         headingText="Customer Stories"
         headingLineBreaks={[2, 5]}
-        paragraphText="Discover how businesses like yours use Snitcher to identify, engage, and acquire new customers."
+        paragraphText="Descoperă cum afaceri ca a ta folosesc Snitcher pentru a identifica, implica și achiziționa noi clienți."
         maxWidth="960px"
         bgColor="#070b18"
         buttonVisible = {false}

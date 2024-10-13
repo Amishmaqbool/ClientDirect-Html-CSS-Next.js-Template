@@ -13,7 +13,7 @@
 			</feGaussianBlur>
 			<feOffset dx="9.967400298260306e-16" dy="16.278" in="filter_result_0_drop_shadow_1" result="filter_result_0_drop_shadow_2">
 			</feOffset>
-			<feFlood flood-color="#15151d" flood-opacity="0.3" result="filter_result_0_drop_shadow_3">
+			<feFlood flood-color="#15151d" floodOpacity="0.3" result="filter_result_0_drop_shadow_3">
 			</feFlood>
 			<feComposite in="filter_result_0_drop_shadow_3" in2="filter_result_0_drop_shadow_2" operator="in" result="filter_result_0_drop_shadow_4">
 			</feComposite>

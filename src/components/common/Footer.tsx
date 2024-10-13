@@ -29,20 +29,20 @@ export default function Footer() {
                 width={68}
                 height={88.25}
                 loading="lazy"
-                alt="High Performer Summer"
+                alt="Performant de top vara"
                 className="z-10"
               />
               <Image
                 src={momentumLeader}
                 loading="lazy"
-                alt="Momentum Leader"
+                alt="Lider de momentum"
                 width={68}
                 height={88.25}
               />
               <Image
                 src={highPerformerBussiness}
                 loading="lazy"
-                alt="Momentum Leader"
+                alt="Performant de top pentru afaceri mici"
                 width={68}
                 height={88.25}
                 className="z-40"
@@ -50,7 +50,7 @@ export default function Footer() {
               <Image
                 src={highPerformerAsia}
                 loading="lazy"
-                alt="Asia Pacific High Performer"
+                alt="Performant de top Asia Pacific"
                 width={68}
                 height={88.25}
                 className="z-30"
@@ -58,7 +58,7 @@ export default function Footer() {
               <Image
                 src={highPerformerEmea}
                 loading="lazy"
-                alt="EMEA High Performer"
+                alt="Performant de top EMEA"
                 width={68}
                 height={88.25}
                 className="z-20"
@@ -66,7 +66,7 @@ export default function Footer() {
               <Image
                 src={highPerformerUk}
                 loading="lazy"
-                alt="United Kingdom High Performer"
+                alt="Performant de top Regatul Unit"
                 width={68}
                 height={88.25}
                 className="z-10"
@@ -75,10 +75,10 @@ export default function Footer() {
 
             <div>
               <button className="bg-[#ffffff1a] text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center">
-                Start 14-Day Free Trial
+                Începe perioada de probă gratuită de 14 zile
                 <Image
                   src={arrow}
-                  alt="arrow"
+                  alt="săgeată"
                   width={20}
                   height={21}
                   className="ml-2"
@@ -89,40 +89,40 @@ export default function Footer() {
 
           <div className="grid max-lg:gap-y-8 lg:grid-cols-4 lg:gap-x-5 text-white text-sm">
             <div>
-              <p className="font-semibold mb-4 text-[#667085]">Product</p>
+              <p className="font-semibold mb-4 text-[#667085]">Produs</p>
               <ul className="space-y-3">
-                <li className="cursor-pointer">Visitor Identification</li>
-                <li className="cursor-pointer">Google Analytics Enrichment</li>
-                <li className="cursor-pointer">Real-Time API</li>
+                <li className="cursor-pointer">Identificarea vizitatorilor</li>
+                <li className="cursor-pointer">Îmbogățirea Google Analytics</li>
+                <li className="cursor-pointer">API în timp real</li>
               </ul>
             </div>
             <div>
-              <p className="font-semibold mb-4 text-[#667085]">Solutions</p>
+              <p className="font-semibold mb-4 text-[#667085]">Soluții</p>
               <ul className="space-y-3">
-                <li className="cursor-pointer">For Sales</li>
-                <li className="cursor-pointer">For Marketing</li>
-                <li className="cursor-pointer">For Agencies</li>
+                <li className="cursor-pointer">Pentru vânzări</li>
+                <li className="cursor-pointer">Pentru marketing</li>
+                <li className="cursor-pointer">Pentru agenții</li>
               </ul>
             </div>
             <div>
-              <p className="font-semibold mb-4 text-[#667085]">Resources</p>
+              <p className="font-semibold mb-4 text-[#667085]">Resurse</p>
               <ul className="space-y-3">
-                <li className="cursor-pointer">Help Center</li>
-                <li className="cursor-pointer">Customer Stories</li>
-                <li className="cursor-pointer">FAQ</li>
-                <li className="cursor-pointer">Affiliate Program</li>
+                <li className="cursor-pointer">Centru de ajutor</li>
+                <li className="cursor-pointer">Povești ale clienților</li>
+                <li className="cursor-pointer">Întrebări frecvente</li>
+                <li className="cursor-pointer">Program de afiliere</li>
                 <li className="cursor-pointer">
-                  Snitcher&apos;s Guide for B2B Lead Generation
+                  Ghidul Snitcher pentru generarea de lead-uri B2B
                 </li>
-                <li className="cursor-pointer">B2B Marketing Blueprint</li>
+                <li className="cursor-pointer">Planul de marketing B2B</li>
               </ul>
             </div>
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Legal</p>
               <ul className="space-y-3">
-                <li className="cursor-pointer">Terms & Conditions</li>
-                <li className="cursor-pointer">Privacy Policy</li>
-                <li className="cursor-pointer">Security</li>
+                <li className="cursor-pointer">Termeni și condiții</li>
+                <li className="cursor-pointer">Politica de confidențialitate</li>
+                <li className="cursor-pointer">Securitate</li>
               </ul>
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-10"></div>
         <div className="max-w-[1216px] mx-auto py-8 flex justify-between items-center text-gray-400 text-sm">
-          <p>© Copyright 2015-2024 Snitcher B.V., all rights reserved.</p>
+          <p>© Copyright 2015-2024 Snitcher B.V., toate drepturile rezervate.</p>
           <div className="flex space-x-4">
             <a href="#">
               <Image src={LinkedinIcon} alt="LinkedIn" width={24} height={24} />

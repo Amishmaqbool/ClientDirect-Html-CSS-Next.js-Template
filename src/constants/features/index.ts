@@ -29,6 +29,7 @@ export const reviews = [
   },
 ];
 
+
 export const analyticsReviewsCards = [
   {
     id: 1,
@@ -49,9 +50,9 @@ export const analyticsReviewsCards = [
   {
     id: 3,
     rating: 4.5,
-    reviewBy: "“Snitcher face treaba!”",
+    reviewBy: "„Snitcher își face treaba!”",
     content:
-      "“Google Analytics nu era suficient, așa că aveam nevoie de mai multe informații, iar Snitcher face asta în timp real pentru mine.”",
+      "„Google Analytics nu era suficient, așa că aveam nevoie de mai multe informații, iar Snitcher mi le oferă în timp real”",
     reviewer: "Sean D.",
   },
 ];
@@ -60,19 +61,19 @@ export const analyticsHeroData = [
   {
     imageSrc:
       "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409aa5ec602fe3124e5cbaa_icons.svg",
-    altText: "Imaginea unu",
+    altText: "Imaginea Unu",
     description: "Îmbogățește traficul anonim din GA cu date detaliate despre companii",
   },
   {
     imageSrc:
       "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409aa67142ec437e0a29fb5_icons.svg",
-    altText: "Imaginea doi",
-    description: "Analizează acțiunile de marketing în context, cu încredere",
+    altText: "Imaginea Doi",
+    description: "Analizează acțiunile de marketing în context cu încredere",
   },
   {
     imageSrc:
       "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6408aa2be0e5f454083a1979_icons.svg",
-    altText: "Imaginea trei",
+    altText: "Imaginea Trei",
     description: "Optimizează și testează pentru a atinge obiective mai mari",
   },
 ];
@@ -89,10 +90,10 @@ export const MarketingSectionData = [
   {
     image:
       "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/64253fdb0acd1707e2869897_chatbots.png",
-    alt: "Imaginea doi",
+    alt: "Imaginea Doi",
     title: "Dimensiuni personalizate puternice",
     content:
-      "Accesează numele companiilor, dimensiunile, industriile și altele în Google Analytics folosind dimensiuni personalizate.",
+      "Accesați numele companiilor, dimensiunile, industriile și multe altele prin Google Analytics cu dimensiuni personalizate.",
   },
   {
     image:
@@ -108,9 +109,9 @@ export const revenueSectionData = [
   {
     image:
       "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409a4352b71f3dc806fead5_Featured%20icon.svg",
-    heading: "Segmentare",
+    heading: "Segmentează",
     subHeading:
-      "Folosește filtre firmografice ale companiilor pentru a crea segmente formate din vizitatori care corespund profilului tău ideal de client.",
+      "Folosește filtre firmografice ale companiei pentru a crea segmente formate din vizitatori care corespund profilului tău ideal de client.",
   },
   {
     image:
@@ -124,7 +125,7 @@ export const revenueSectionData = [
       "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409a46a15a31d4987483764_Featured%20icon.svg",
     heading: "Analizează",
     subHeading:
-      "Mapează comportamentul și activitățile în raport cu profilul tău ideal de client pentru a înțelege ce funcționează și ce irosește bugetul.",
+      "Mapează comportamentul și activitățile în funcție de profilul ideal al clientului pentru a înțelege ce funcționează și ce irosește bugetul.",
   },
   {
     image:
@@ -140,7 +141,7 @@ export const OptimizeCardData = [
     icon: BackdropImage,
     heading: "Testează",
     description:
-      "Obține feedback imediat pentru testele tale și atinge relevanța statistică fără a cheltui în timp ce aștepți conversii.",
+      "Obține feedback imediat asupra testelor tale și atinge relevanța statistică fără a cheltui în timp ce aștepți conversiile.",
   },
   {
     icon: AutoViewerImage,
@@ -198,12 +199,12 @@ export const analyticsFaqList = [
   {
     question: "Cum funcționează prețurile?",
     answer:
-      "Poți testa integrarea în timpul perioadei de probă gratuită. Pentru a utiliza îmbogățirea datelor din Google Analytics după terminarea perioadei de probă, va trebui să începi un abonament la noi. Integrarea este inclusă în costul abonamentului contului tău, iar în pagina de prețuri poți vedea nivelurile de tarifare.",
+      "Poți testa integrarea prin proba gratuită. Pentru a utiliza îmbogățirea Google Analytics după încheierea perioadei de probă, va trebui să începi un abonament cu noi. Integrarea este inclusă în costul abonamentului contului tău și poți vedea diferitele nivele de prețuri pentru a vedea cât va costa.",
   },
   {
-    question: "Ce fac dacă am nevoie de ajutor pentru construirea rapoartelor și a tablourilor de bord?",
+    question: "Ce fac dacă am nevoie de ajutor pentru construirea de rapoarte și tablouri de bord?",
     answer:
-      "Avem tablouri de bord Looker Studio (GDS) pre-construite pentru tine, care includ prezentări generale ale site-ului web, rapoarte de marketing plătit și organic, precum și tablouri de bord pentru raportarea bazată pe conturi.",
+      "Avem tablouri de bord predefinite în Looker Studio (GDS) pentru tine, care includ prezentări generale ale site-ului, rapoarte de marketing plătit și organic, precum și tablouri de bord pentru raportarea bazată pe conturi.",
   },
 ];
 
@@ -211,25 +212,25 @@ export const landingReviewCardsColumn1 = [
   {
     id: 1,
     rating: 5,
-    reviewBy: "A great tool to add to your marketing toolbox",
+    reviewBy: "Un instrument grozav de adăugat în trusa ta de marketing",
     content:
-      "The team at Snitcher is not only easy to work with, but they have designed an intuitive and efficient platform. Snitcher helps us better understand the traffic on our website. We appreciate the ease of use and analytics. It also integrates into our CRM which is the cherry on top.",
+      "Echipa de la Snitcher nu doar că este ușor de lucrat cu ea, dar au proiectat o platformă intuitivă și eficientă. Snitcher ne ajută să înțelegem mai bine traficul de pe site-ul nostru. Apreciem ușurința de utilizare și analizele. De asemenea, se integrează în CRM-ul nostru, ceea ce este cireașa de pe tort.",
     reviewer: "Germans F.",
   },
   {
     id: 2,
     rating: 4.5,
-    reviewBy: "Best platform to find the right leads",
+    reviewBy: "Cea mai bună platformă pentru a găsi lead-uri potrivite",
     content:
-      "Its better than google analytics and adobe and give us more information about the right traffic, so we are in touch with the leads faster with their contact details provided by Snitcher.",
+      "Este mai bună decât Google Analytics și Adobe și ne oferă mai multe informații despre traficul potrivit, astfel încât suntem în contact mai rapid cu lead-urile, cu detaliile de contact furnizate de Snitcher.",
     reviewer: "Marsha H.",
   },
   {
     id: 3,
     rating: 5,
-    reviewBy: "Good Data Quality Compared to Price",
+    reviewBy: "Calitate bună a datelor comparativ cu prețul",
     content:
-      "Very good data quality compared to price. Customer support is very responsive and is always ready to go the extra mile to help solve a challenge. It is a developing software solution that launches new features frequently and is always open for feedback.",
+      "Calitatea datelor este foarte bună în raport cu prețul. Suportul pentru clienți este foarte receptiv și întotdeauna gata să facă un efort suplimentar pentru a rezolva o problemă. Este o soluție software în dezvoltare care lansează frecvent funcții noi și este mereu deschisă la feedback.",
     reviewer: "Germans F.",
   },
 ]
@@ -238,33 +239,33 @@ export const landingReviewCardsColumn2 = [
   {
     id: 1,
     rating: 5,
-    reviewBy: "Good Data Quality Compared to Price",
+    reviewBy: "Calitate bună a datelor comparativ cu prețul",
     content:
-      "Out of all the tools we put through a trial phase, Snitcher outperformed them all in relation to how many companies it found and what kind of additional information we could glean from the data it pulled from the companies visiting our website. For example – other vendors which provide similar data detect (on average) about 60-70% fewer companies than Snitcher.",
+      "Dintre toate instrumentele pe care le-am testat, Snitcher i-a depășit pe toți în ceea ce privește câte companii a găsit și ce fel de informații suplimentare am putut extrage din datele pe care le-a obținut de la companiile care ne-au vizitat site-ul. De exemplu – alți furnizori care oferă date similare detectează (în medie) cu aproximativ 60-70% mai puține companii decât Snitcher.",
     reviewer: "Germans F.",
   },
   {
     id: 2,
     rating: 4.5,
-    reviewBy: "Took action and got some initial wins",
+    reviewBy: "Am acționat și am obținut câteva succese inițiale",
     content:
-      "Easy to set up. And the data provided inside is fairly rich. We could find the contact information with a few clicks and reach out to possible deals within minutes.",
+      "Ușor de configurat. Iar datele furnizate sunt destul de bogate. Am putut găsi informații de contact cu câteva clicuri și am luat legătura cu posibile afaceri în câteva minute.",
     reviewer: "Vencel M.",
   },
   {
     id: 3,
     rating: 5,
-    reviewBy: "Good Data Quality Compared to Price",
+    reviewBy: "Calitate bună a datelor comparativ cu prețul",
     content:
-      "Out of all the tools we put through a trial phase, Snitcher outperformed them all in relation to how many companies it found and what kind of additional information we could glean from the data it pulled from the companies visiting our website. For example – other vendors which provide similar data detect (on average) about 60-70% fewer companies than Snitcher.",
+      "Dintre toate instrumentele pe care le-am testat, Snitcher i-a depășit pe toți în ceea ce privește câte companii a găsit și ce fel de informații suplimentare am putut extrage din datele pe care le-a obținut de la companiile care ne-au vizitat site-ul. De exemplu – alți furnizori care oferă date similare detectează (în medie) cu aproximativ 60-70% mai puține companii decât Snitcher.",
     reviewer: "Inga B.",
   },
   {
     id: 4,
     rating: 5,
-    reviewBy: "Hidden Gem",
+    reviewBy: "Comoară ascunsă",
     content:
-      "I accidentally stumbled upon Snitcher while looking for another tool but I am very glad I did! Being in B2B, this is a hidden gem to see what companies are visiting your website. This helps us identify what channels are effective at bringing in traffic and also supplements our cold email strategy.",
+      "Am dat din greșeală peste Snitcher căutând un alt instrument, dar sunt foarte bucuros că am făcut-o! Fiind în B2B, acesta este o comoară ascunsă pentru a vedea ce companii vizitează site-ul tău. Acest lucru ne ajută să identificăm ce canale sunt eficiente în atragerea traficului și, de asemenea, completează strategia noastră de emailuri reci.",
     reviewer: "Lesya L.",
   },
 ]
@@ -273,25 +274,25 @@ export const landingReviewCardsColumn3 = [
   {
     id: 1,
     rating: 5,
-    reviewBy: "Great insights, easy setup, friendly and responsive support team",
+    reviewBy: "Informații valoroase, configurare ușoară, echipă de suport prietenoasă și receptivă",
     content:
-      "I like the easy setup, data quality that's coming through, and self-serve capabilities to manage things on my own for the most part. They have great documentation and are happy to answer questions quickly and comprehensively.",
+      "Îmi place configurarea ușoară, calitatea datelor care apar și capacitatea de a gestiona lucrurile pe cont propriu. Au o documentație excelentă și sunt fericiți să răspundă rapid și cuprinzător la întrebări.",
     reviewer: "Hisham I.",
   },
   {
     id: 2,
     rating: 5,
-    reviewBy: "Very effective tool for sourcing leads",
+    reviewBy: "Instrument foarte eficient pentru identificarea lead-urilor",
     content:
-      "Snitcher is not only a great tool to keep track of website visitors and understand who potential leads are, but it's also straightforward to install. Our team had it up and running in 10 minutes and got results.",
-    reviewer: "Verified user in Computer Sofware",
+      "Snitcher nu este doar un instrument excelent pentru a urmări vizitatorii site-ului și a înțelege cine sunt potențialii clienți, dar este și ușor de instalat. Echipa noastră l-a configurat în 10 minute și a obținut rezultate.",
+    reviewer: "Utilizator verificat din software pentru calculatoare",
   },
   {
     id: 3,
     rating: 5,
-    reviewBy: "Great for visitor identification and segmenting companies in Google Analytics",
+    reviewBy: "Groza pentru identificarea vizitatorilor și segmentarea companiilor în Google Analytics",
     content:
-      "I like the great features and data it has of identifying leads that were not filling out our form. We also like the Google Analytics integration where we can see the lead details right in Google Analytics.",
-    reviewer: "Verified user in Computer Software",
+      "Îmi plac caracteristicile excelente și datele pe care le are pentru identificarea lead-urilor care nu completau formularul nostru. Ne place și integrarea cu Google Analytics, unde putem vedea detaliile lead-urilor direct în Google Analytics.",
+    reviewer: "Utilizator verificat din software pentru calculatoare",
   },
 ];

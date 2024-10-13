@@ -6,7 +6,7 @@ export default function Button({
     borderRadius = 'rounded-[100px]',
     showChevron = false,
     chevronColor = 'text-white',
-    buttonText = 'Try Snitcher for free' 
+    buttonText = 'Încearcă Snitcher gratuit' 
 }) {
     return (
         <button

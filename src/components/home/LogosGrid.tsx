@@ -76,7 +76,7 @@ const LogoGrid: React.FC = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full max-w-full px-4 md:px-0 my-16 overflow-hidden">
             <h3 className="text-[#475467] text-center font-semibold text-base leading-6 mb-8">
-                Trusted by thousands of B2B sales and marketing teams worldwide
+                De încredere de mii de echipe de vânzări și marketing B2B din întreaga lume
             </h3>
 
             {/* First Row of Logos */}

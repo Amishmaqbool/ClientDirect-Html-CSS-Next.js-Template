@@ -16,26 +16,26 @@ interface CardData {
 
 const cardsData: CardData[] = [
   {
-    title: "For Sales",
+    title: "Pentru vânzări",
     description:
-      "Discover, qualify and prioritize high intent target leads with real-time notifications and beat the competition to the chase.",
-    linkText: "Fill your pipeline",
+      "Descoperiți, calificați și prioritizați clienții potențiali cu intenții ridicate cu notificări în timp real și învingeți concurența până la urmă.",
+    linkText: "Umpleți conducta",
     linkUrl: "/",
     gradient: "#926ae5",
   },
   {
-    title: "For Marketing",
+    title: "Pentru Marketing",
     description:
-      "Focus on accounts, not individuals. See what engages your target audience, personalise website journeys and improve re-targeting.",
-    linkText: "Drive more conversions",
+      "Concentrați-vă pe conturi, nu pe indivizi. Vedeți ce vă implică publicul țintă, personalizați călătoriile pe site și îmbunătățiți redirecționarea.",
+    linkText: "Generați mai multe conversii",
     linkUrl: "/",
     gradient: "#3189e3",
   },
   {
-    title: "For Agencies",
+    title: "Pentru Agenții",
     description:
-      "Get insights earlier, add revenue streams and drive more qualified leads for your clients with our white-label solution.",
-    linkText: "Increase client ROI",
+      "Obțineți informații mai devreme, adăugați fluxuri de venituri și generați clienți potențiali mai calificați pentru clienții dvs. cu soluția noastră cu etichetă albă.",
+    linkText: "Creșteți rentabilitatea investiției clientului",
     linkUrl: "/",
     gradient: "#44cfe6",
   },
@@ -181,12 +181,16 @@ export default function HeroSection({
                 key={index}
                 className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg w-full sm:w-1/3 sm:max-w-[384px] z-10 overflow-hidden bg-[#101828]"
               >
-              <div className="flex flex-col justify-between">
+                <div
+                  className={`h-2 ${gradientClasses[gradientColorMap[card.gradient]]
+                    }`}
+                ></div>
+
+                <div className="flex flex-col justify-between">
                   <div className="relative z-10 px-4 md:px-6 py-5">
                     <h2
-                      className={`text-lg font-semibold text-transparent bg-clip-text ${
-                        gradientClasses[gradientColorMap[card.gradient]]
-                      }`}
+                      className={`text-lg font-semibold text-transparent bg-clip-text ${gradientClasses[gradientColorMap[card.gradient]]
+                        }`}
                     >
                       {card.title}
                     </h2>
