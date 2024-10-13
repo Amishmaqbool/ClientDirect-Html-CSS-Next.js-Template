@@ -20,7 +20,7 @@ const ReviewSection = () => {
         <div key={review.id} className="bg-white py-6 px-[17.5px] border-black border rounded-lg w-full md:max-w-md">
           <div className="flex items-center mb-4">{renderStars(review.rating)}</div>
           <h3 className="text-base font-semibold mb-4 text-black">{`"${review.review}"`}</h3>
-          <p className="text-[#475467] font-xs mb-4">{review.content}</p>
+          <p className="text-[#475467] text-xs mb-4">{review.content}</p>
           <div className="flex items-center gap-3">
             <Image src={reviewIcon} alt="Reviewer Icon" width={24} height={24} />
             <div className="bg-[#475467] w-[15px] h-[2px]"></div>

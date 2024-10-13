@@ -139,9 +139,9 @@ export default function HeroSection({
                   borderRadius="rounded-[100px]"
                   showChevron={isHomePage}
                   chevronColor="text-white"
-                  buttonText="Try Snitcher for Free"
+                  buttonText="Încearcă Snitcher gratuit"
                 />
-                <span className="text-[#667085]">No credit card required</span>
+                <span className="text-[#667085]">Nu este necesar un card de credit</span>
               </div>
             )}
           </div>
