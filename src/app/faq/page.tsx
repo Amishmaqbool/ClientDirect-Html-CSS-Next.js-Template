@@ -2,10 +2,8 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-
 // Define the directory where your MDX files are located
 const articlesDirectory = path.resolve('src/contents/articles');
-
 // Function to read and parse MDX files
 const getArticles = () => {
     const files = fs.readdirSync(articlesDirectory);
@@ -21,10 +19,8 @@ const getArticles = () => {
     });
     return articles;
 };
-
 // Fetch articles
 const articles = getArticles();
-
 const FAQ: React.FC = () => {
     return (
         <div className="faq-container">
@@ -40,5 +36,4 @@ const FAQ: React.FC = () => {
         </div>
     );
 };
-
 export default FAQ;
