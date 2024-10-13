@@ -62,6 +62,7 @@ const CaseStudyList = () => {
         paragraphText="Discover how businesses like yours use Snitcher to identify, engage, and acquire new customers."
         maxWidth="960px"
         bgColor="#070b18"
+        buttonVisible = {false}
       />
       <div
         className="relative max-lg:px-4"

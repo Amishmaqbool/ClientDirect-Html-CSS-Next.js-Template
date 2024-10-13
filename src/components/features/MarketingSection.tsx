@@ -11,11 +11,9 @@ type PageProps = {
 };
 
 const ContentPage: React.FC<PageProps> = ({ contentList }) => {
-  const Heading =
-    "Fuel marketing, sales, support and revenue operations, your way.";
-  const Paragraph =
-    "Deploy Snitcher’s identification layer to add vital context wherever you need it.";
-  const Button = "Start 14-Day Free Trial";
+  const Heading = "Alimentează operațiunile de marketing, vânzări, suport și venituri, în felul tău.";
+  const Paragraph = "Implementează stratul de identificare al Snitcher pentru a adăuga context vital acolo unde ai nevoie.";
+  const Button = "Începe perioada de probă gratuită de 14 zile";
   return (
     <div className="relative bg-[#101828]">
       <div className=""></div>

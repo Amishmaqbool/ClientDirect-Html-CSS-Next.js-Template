@@ -11,16 +11,13 @@ export default function RevenueSection() {
       <div className="relative max-w-[1280px] mx-auto px-6 border-b border-[#eaecf0]">
         <div className="max-sm:py-16 py-24 flex flex-col items-center">
           <div className="mb-3 py-1 px-4 border border-[#ffffff4d] rounded-full bg-[#d1e0ff]">
-            <p className="font-bold text-xs text-[#0040c1]">Analyse</p>
+            <p className="font-bold text-xs text-[#0040c1]">Analizează</p>
           </div>
           <h1 className="max-w-[768px] my-0 font-bold text-4xl text-center tracking-[-1px] text-[#000]">
-            Get to the bottom of which actions actually drive revenue, without
-            the guess work.
+          Află care acțiuni generează cu adevărat venituri, fără presupuneri.
           </h1>
           <p className="max-w-[790px] py-5 text-center text-base sm:text-lg leading-[28px] text-[#475467]">
-            Filter paid and organic marketing actions by the amount of target
-            company traffic they drive, so you can cut costs with confidence and
-            double down on winners.
+          Filtrează acțiunile de marketing plătit și organic după cantitatea de trafic al companiilor țintă pe care o generează, astfel încât să poți reduce costurile cu încredere și să te concentrezi pe câștigători.
           </p>
           <Button
             bgColor="bg-[#101828]"
@@ -28,7 +25,7 @@ export default function RevenueSection() {
             borderRadius="rounded-[100px]"
             showChevron={true}
             chevronColor="text-white"
-            buttonText="Start 14-Day Free Trial"
+            buttonText="Începe perioada de probă gratuită de 14 zile"
           />
 
           <div className="mt-16 grid max-sm:gap-8 gap-[77px] grid-cols-1 md:grid-cols-[1fr_1.75fr_1fr] place-items-center">

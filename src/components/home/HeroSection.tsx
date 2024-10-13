@@ -53,6 +53,7 @@ interface HeroSectionProps {
   maxWidth?: string;
   bgColor?: string;
   featureContents?: FeatureContent[];
+  buttonVisible?: boolean;
 }
 
 const gradientColorMap: Record<string, "purple" | "blue" | "aqua"> = {
@@ -75,6 +76,7 @@ export default function HeroSection({
   maxWidth = "900px",
   bgColor = "#070b18",
   featureContents = [],
+  buttonVisible = true,
 }: HeroSectionProps) {
   const formatTextWithLineBreaks = (
     text: string,
@@ -133,20 +135,22 @@ export default function HeroSection({
             <h1 className="max-sm:max-w-[459px] max-w-[550px] lg:max-w-full mx-auto text-[30px] sm:text-[48px] lg:text-[72px] text-center text-white font-semibold leading-[40px] sm:leading-[60px] lg:leading-[92px]">
               {formatTextWithLineBreaks(headingText, headingLineBreaks)}
             </h1>
-            <p className="max-md:max-w-[541px] mx-auto text-center pt-2 leading-6 text-[#d0d5ddb3]">
+            <p className="max-w-[540px] mx-auto text-center pt-2 leading-[1.9em] text-[#9499a1] text-lg">
               {formatTextWithLineBreaks(paragraphText, paragraphLineBreaks)}
             </p>
-            <div className="flex flex-col items-center gap-2 pt-8">
-              <Button
-                bgColor="bg-customBlue"
-                textColor="text-white"
-                borderRadius="rounded-[100px]"
-                showChevron={isHomePage}
-                chevronColor="text-white"
-                buttonText="Try Snitcher for Free"
-              />
-              <span className="text-[#667085] text-sm">No credit card required</span>
-            </div>
+            {buttonVisible && (
+              <div className="flex flex-col items-center gap-2 pt-8">
+                <Button
+                  bgColor="bg-customBlue"
+                  textColor="text-white"
+                  borderRadius="rounded-[100px]"
+                  showChevron={isHomePage}
+                  chevronColor="text-white"
+                  buttonText="Încearcă Snitcher gratuit"
+                />
+                <span className="text-[#667085]">Nu este necesar un card de credit</span>
+              </div>
+            )}
           </div>
 
           <div className="max-md:flex justify-center pt-[104px] max-w-[1280px] mx-auto px-6">
@@ -177,13 +181,7 @@ export default function HeroSection({
                 key={index}
                 className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg w-full sm:w-1/3 sm:max-w-[384px] z-10 overflow-hidden bg-[#101828]"
               >
-                <div
-                  className={`h-2 ${
-                    gradientClasses[gradientColorMap[card.gradient]]
-                  }`}
-                ></div>
-
-                <div className="flex flex-col justify-between">
+              <div className="flex flex-col justify-between">
                   <div className="relative z-10 px-4 md:px-6 py-5">
                     <h2
                       className={`text-lg font-semibold text-transparent bg-clip-text ${
