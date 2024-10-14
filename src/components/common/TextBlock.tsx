@@ -43,7 +43,7 @@ const TextBlock: React.FC<SalesSectionProps> = ({
           <h1 className="text-2xl sm:text-4xl font-bold mb-4">{mainHeading}</h1>
           <p className="text-base sm:text-lg mb-6 text-gray-600">{subHeading}</p>
           <p className="text-base sm:text-lg mb-6 text-gray-600">{description}</p>
-          <div className="flex justify-start gap-4 mb-8">
+          <div className="flex flex-wrap justify-start gap-4 mb-8">
             <button className="flex gap-2 items-center bg-black rounded-full text-white px-6 py-3 text-sm">
               <p>{ctaText}</p>
               <Image src={RightArrow} alt="Right Arrow"/>

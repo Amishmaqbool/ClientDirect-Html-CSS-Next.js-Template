@@ -1,4 +1,3 @@
-// CaseStudyList.tsx
 import Image from "next/image";
 import React from "react";
 import BackgroundImage from "../../../public/images/background-customer-stories-image.png";
@@ -57,7 +56,7 @@ const CaseStudyList = () => {
   return (
     <div>
       <HeroSection
-        headingText="Customer Stories"
+        headingText="Poveștile clienților"
         headingLineBreaks={[2, 5]}
         paragraphText="Descoperă cum afaceri ca a ta folosesc Snitcher pentru a identifica, implica și achiziționa noi clienți."
         maxWidth="960px"

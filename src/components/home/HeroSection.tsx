@@ -141,30 +141,34 @@ export default function HeroSection({
                   chevronColor="text-white"
                   buttonText="Încearcă Snitcher gratuit"
                 />
-                <span className="text-[#667085]">Nu este necesar un card de credit</span>
+                <span className="text-[#667085]">
+                  Nu este necesar un card de credit
+                </span>
               </div>
             )}
           </div>
 
-          <div className="max-md:flex justify-center pt-[104px] max-w-[1280px] mx-auto px-6">
-            {featureContents.length > 0 && (
-              <div className="z-[1000] grid grid-cols-1 md:grid-cols-3 gap-5">
-                {featureContents.map((content, index) => (
-                  <div key={index} className="flex items-center gap-5">
-                    <Image
-                      src={content.imageSrc}
-                      alt={`Image ${index + 1}`}
-                      width={70}
-                      height={70}
-                    />
-                    <p className="text-white max-w-xs text-[16px] max-lg:leading-[30px] lg:text-xl">
-                      {content.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          {featureContents.length >=1 && (
+            <div className="max-md:flex justify-center pt-[104px] max-w-[1280px] mx-auto px-6">
+              {featureContents.length > 0 && (
+                <div className="z-[1000] grid grid-cols-1 md:grid-cols-3 gap-5">
+                  {featureContents.map((content, index) => (
+                    <div key={index} className="flex items-center gap-5">
+                      <Image
+                        src={content.imageSrc}
+                        alt={`Image ${index + 1}`}
+                        width={70}
+                        height={70}
+                      />
+                      <p className="text-white max-w-xs text-[16px] max-lg:leading-[30px] lg:text-xl">
+                        {content.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {isHomePage && (
@@ -175,15 +179,17 @@ export default function HeroSection({
                 className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg w-full sm:w-1/3 sm:max-w-[384px] z-10 overflow-hidden bg-[#101828]"
               >
                 <div
-                  className={`h-2 ${gradientClasses[gradientColorMap[card.gradient]]
-                    }`}
+                  className={`h-2 ${
+                    gradientClasses[gradientColorMap[card.gradient]]
+                  }`}
                 ></div>
 
                 <div className="flex flex-col justify-between">
                   <div className="relative z-10 px-4 md:px-6 py-5">
                     <h2
-                      className={`text-lg font-semibold text-transparent bg-clip-text ${gradientClasses[gradientColorMap[card.gradient]]
-                        }`}
+                      className={`text-lg font-semibold text-transparent bg-clip-text ${
+                        gradientClasses[gradientColorMap[card.gradient]]
+                      }`}
                     >
                       {card.title}
                     </h2>

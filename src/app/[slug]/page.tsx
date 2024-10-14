@@ -40,7 +40,7 @@ const DetailsPage = ({ params }: Props) => {
   }, [slug]);
   const title =
     slug === 'privacy-policy'
-      ? 'Privacy Policy'
+      ? 'Politica de confidențialitate'
       : 'Terms & Conditions';
 
   const paragraphText =
