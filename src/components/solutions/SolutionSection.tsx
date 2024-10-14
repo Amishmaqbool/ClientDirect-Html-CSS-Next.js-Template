@@ -17,9 +17,9 @@ interface SolutionSectionProps {
     titleLineBreakIndices?: number[];
     descriptionLineBreakIndices?: number[];
     paragraphLineBreakIndices?: { [index: number]: number[] };
-    lottieUrl?: string;  // Lottie URL for animation
-    flexDirection?: "row" | "row-reverse";  // Control flex direction
-    gradientColors?: string[];  // Gradient colors for the background
+    lottieUrl?: string; 
+    flexDirection?: "row" | "row-reverse";
+    gradientColors?: string[];
 }
 
 export default function SolutionSection({
@@ -32,9 +32,9 @@ export default function SolutionSection({
     titleLineBreakIndices = [],
     descriptionLineBreakIndices = [],
     paragraphLineBreakIndices = {},
-    lottieUrl = "",  // Default is no animation
-    flexDirection = "row",  // Default is normal flex row
-    gradientColors = ["#41a7f0", "#1b61d1"],  // Default gradient colors
+    lottieUrl = "",
+    flexDirection = "row",
+    gradientColors = ["#41a7f0", "#1b61d1"],
 }: SolutionSectionProps) {
     const formatTextWithLineBreaks = (text: string, lineBreakIndices: number[]) => {
         const words = text.split(" ");
@@ -49,9 +49,9 @@ export default function SolutionSection({
     };
 
     return (
-        <div className="relative bg-white text-black py-16">
-            <div className={`container mx-auto flex-${flexDirection} flex justify-between items-center`}>
-                <div className="md:w-1/2">
+        <div className="relative bg-white text-black py-5">
+            <div className={`max-w-[1280px] mx-auto flex-${flexDirection} flex gap-[64px] items-center`}>
+                <div className="md:w-1/2 px-4">
                     <h1 className="text-4xl font-bold leading-tight">
                         {formatTextWithLineBreaks(title, titleLineBreakIndices)}
                     </h1>
@@ -70,7 +70,7 @@ export default function SolutionSection({
                         ))}
 
                     {listItems.length > 0 && (
-                        <ul className="mt-4 space-y-2 text-lg text-gray-600 list-disc pl-5">
+                        <ul className="mt-4 space-y-2 text-lg text-gray-600 list-disc pl-1">
                             {listItems.map((item, index) => (
                                 <li key={index} className="flex items-start gap-2">
                                     <Image src={Tick} alt="Tick Icon" className="pt-1" width={20} height={20} />
@@ -80,8 +80,8 @@ export default function SolutionSection({
                         </ul>
                     )}
 
-                    <div className="mt-8 flex gap-4">
-                        <button className="bg-black text-white px-4 rounded-full font-medium flex gap-[1px] items-center py-1">
+                    <div className="mt-8 flex gap-4 ">
+                        <button className="bg-black text-white px-4 rounded-full font-medium flex text-sm gap-[1px] items-center py-2">
                             {buttonPrimaryText}
                             <span className={`ml-2 white`}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
@@ -90,7 +90,7 @@ export default function SolutionSection({
                             </span>
                         </button>
 
-                        <button className="bg-white border border-gray-300 text-black px-4 flex gap-[2px] items-center py-1 rounded-full font-medium">
+                        <button className="bg-white border border-gray-300 text-black px-4 flex gap-[2px]  text-sm items-center py-2 rounded-full font-medium">
                             <Image src={Coin} width={20} height={20} alt="coin" />
                             {buttonSecondaryText}
                         </button>
