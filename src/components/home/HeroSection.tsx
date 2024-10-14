@@ -70,28 +70,22 @@ const gradientClasses: Record<"purple" | "blue" | "aqua", string> = {
 
 export default function HeroSection({
   headingText = "Know who’s on your website, drive more revenue.",
-  headingLineBreaks = [3, 5],
   paragraphText = "Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights.",
-  paragraphLineBreaks = [],
   maxWidth = "900px",
   bgColor = "#070b18",
   featureContents = [],
   buttonVisible = true,
 }: HeroSectionProps) {
-  const formatTextWithLineBreaks = (
-    text: string,
-    lineBreakIndices: number[]
-  ) => {
-    const words = text.split(" ");
-    return words.map((word, index) => (
+  const formatTextWithLineBreaks = (text: string) => {
+    const lines = text.split("\n");
+    return lines.map((line, index) => (
       <React.Fragment key={index}>
-        {word}{" "}
-        {lineBreakIndices.includes(Number(index) + 1) && (
-          <br className="max-lg:hidden" />
-        )}
+        {line}
+        {index < lines.length - 1 && <br />} 
       </React.Fragment>
     ));
   };
+
 
   const pathname = usePathname();
   const isHomePage = pathname === "/";
@@ -101,9 +95,7 @@ export default function HeroSection({
       <div className="mb-8 relative">
         <div
           style={{ backgroundColor: bgColor }}
-          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28  relative z-10 ${
-            isHomePage ? "pb-40" : "pb-[58px]"
-          }`}
+          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28  relative z-10 ${isHomePage ? "pb-40" : "pb-[58px]"}`}
         >
           <Image
             src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
@@ -128,10 +120,10 @@ export default function HeroSection({
             className="mx-auto 2xl:pt-24 max-md:px-4 max-lg:px-10"
           >
             <h1 className="max-sm:max-w-[459px] max-w-[550px] lg:max-w-full mx-auto text-[30px] sm:text-[48px] lg:text-[72px] text-center text-white font-semibold leading-[40px] sm:leading-[60px] lg:leading-[92px]">
-              {formatTextWithLineBreaks(headingText, headingLineBreaks)}
+              {formatTextWithLineBreaks(headingText)}
             </h1>
             <p className="max-w-0px] mx-auto text-center pt-2 leading-[1.7em] text-[#9499a1] text-lg">
-              {formatTextWithLineBreaks(paragraphText, paragraphLineBreaks)}
+              {formatTextWithLineBreaks(paragraphText)}
             </p>
             {buttonVisible && (
               <div className="flex flex-col items-center gap-2 pt-8">
@@ -174,42 +166,39 @@ export default function HeroSection({
         </div>
 
         {isHomePage && (
-          <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center -mt-24 gap-4 md:gap-6">
+          <div className="max-w-[1280px] mx-auto px-6 flex flex-col sm:flex-row justify-center items-center -mt-24 sm:space-x-4 md:space-x-6">
             {cardsData.map((card, index) => (
               <div
                 key={index}
-                className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg z-10 overflow-hidden bg-[#101828] h-full"
+                className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg w-full sm:w-1/3 sm:max-w-[384px] z-10 overflow-hidden bg-[#101828]"
               >
                 <div
-                  className={`h-2 ${
-                    gradientClasses[gradientColorMap[card.gradient]]
-                  }`}
+                  className={`h-2 ${gradientClasses[gradientColorMap[card.gradient]]
+                    }`}
                 ></div>
 
-                  <div className="px-4 md:px-6 pt-4 md:pt-6">
+                <div className="flex flex-col justify-between">
+                  <div className="relative z-10 px-4 md:px-6 py-5">
                     <h2
-                      className={`text-lg font-semibold text-transparent bg-clip-text ${
-                        gradientClasses[gradientColorMap[card.gradient]]
-                      }`}
+                      className={`text-lg font-semibold text-transparent bg-clip-text ${gradientClasses[gradientColorMap[card.gradient]]
+                        }`}
                     >
                       {card.title}
                     </h2>
-                    <p className="md:min-h-[136px] lg:min-h-[86px] xl:min-h-0 mt-2 text-[#667085] font-normal text-[13px]">
+                    <p className="mt-2 text-[#667085] font-normal text-[13px]">
                       {card.description}
                     </p>
                   </div>
-
-                  <div className="px-4 md:px-6 pb-4 md:pb-6">
-                    <Link
-                      className="mt-5 md:mt-0 lg:mt-5 flex gap-2 items-center text-[#d0d5dd] hover:text-white text-sm"
-                      href={card.linkUrl}
-                    >
-                      <p className="md:max-w-[160px] lg:max-w-full">{card.linkText}</p>
-                      <div className="w-max">
-                        <Image className="w-fit" src={RightArrow} alt="Right Arrow" width={20} height={20}/>
-                      </div>
-                    </Link>
-                  </div>
+                  <Link
+                    className="px-4 md:px-6 pb-5 flex gap-2 items-center text-[#d0d5dd] hover:text-white text-sm"
+                    href={card.linkUrl}
+                  >
+                    <p>{card.linkText}</p>
+                    <div>
+                      <Image src={RightArrow} alt="Right Arrow" />
+                    </div>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>

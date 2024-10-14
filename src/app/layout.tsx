@@ -7,6 +7,7 @@ import Footer from "@/components/common/Footer";
 import FaqHeader from "@/components/common/FaqHeader";
 import FaqFooter from "@/components/common/FaqFooter";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const soleil = localFont({
   src: [
@@ -40,18 +41,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [isFaqPage, setIsFaqPage] = useState<boolean | null>(null);
+  const pathname = usePathname();
+  const isCustomerStoriesPage = pathname === '/customer-stories';
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const path = window.location.pathname;
-      if (path === "/faq" || path.startsWith("/articles/")) {
-        setIsFaqPage(true);
-      } else {
-        setIsFaqPage(false);
-      }
+    if (pathname === "/faq" || pathname.startsWith("/articles/")) {
+      setIsFaqPage(true);
+    } else {
+      setIsFaqPage(false);
     }
-  }, []);
-
+  }, [pathname]);
+  
   if (isFaqPage === null) {
     return (
       <html lang="en">
@@ -66,10 +66,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${soleil.variable} antialiased`}>
         {isFaqPage ? <FaqHeader /> : <Header />}
-        <div className="pb-20 sm:pb-40">{children}</div>
+        <div className={`pb-20 ${!isCustomerStoriesPage ? 'sm:pb-40' : ''}`}>
+          {children}
+        </div>
         {isFaqPage ? <FaqFooter /> : <Footer />}
       </body>
     </html>
   );
-}
 
+}
