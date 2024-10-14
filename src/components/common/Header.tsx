@@ -142,7 +142,7 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/solutions/marketing">
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={marketingDropdown}
@@ -158,7 +158,7 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/solutions/agency">
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={marketingDropdown}
