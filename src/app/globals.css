@@ -99,9 +99,9 @@ body {
   }
 }
 
-.faq-item:hover {
+/* .faq-item:hover {
   background-color: hsla(222, 73%, 52%, 0.1);
-}
+} */
 .faq-header{
   background-image: url(https://downloads.intercomcdn.com/i/o/329719/bcdede782cc186635e6725a8/79d95fb059a21dcc31d5cd424ac2afe3.png);
   background-position: center;
