@@ -51,7 +51,7 @@ export default function RootLayout({
       setIsFaqPage(false);
     }
   }, [pathname]);
-  
+
   if (isFaqPage === null) {
     return (
       <html lang="en">
