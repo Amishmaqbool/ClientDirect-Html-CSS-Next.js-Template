@@ -57,7 +57,7 @@ const FAQ: React.FC = () => {
           {articles.map((article) => (
             <a key={article.slug} href={`/articles/${article.slug}`}>
               <div
-                className="faq-item group flex justify-between items-center rounded-md cursor-pointer transition-all duration-300 p-3"
+                className="faq-item article-section group flex justify-between items-center rounded-md cursor-pointer transition-all duration-300 p-3"
                 key={article.slug}
               >
                 <div className="max-w-[800px]">

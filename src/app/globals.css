@@ -157,7 +157,7 @@ select:focus {
   outline: none;
 }
 
-.faq-item:hover {
+.article-section:hover {
   background: hsl(222deg 73% 52% / 10%);
 }
 
