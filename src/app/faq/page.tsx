@@ -1,7 +1,4 @@
-import Image from "next/image";
 import React from "react";
-// import ChatIcon from "../../assets/svgs/chat.svg";
-// import ChevronRight from "../../assets/svgs/chevron-right.svg";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";

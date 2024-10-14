@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroSection from '@/components/home/HeroSection'
 import { salesHeroData } from '@/constants/solutions/sales'
-import TextBlock from '@/components/common/TextBlock'
+// import TextBlock from '@/components/common/TextBlock'
 export default function page() {
     return (
         <div>

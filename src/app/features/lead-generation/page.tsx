@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "@/components/home/HeroSection";
-import ReviewSection from "@/components/features/lead-gen/ReviewsSection";
 import ProsSection from "@/components/features/lead-gen/ProsSection";
 import DataSection from "@/components/features/lead-gen/DataSection";
 import IdentifySection from "@/components/features/lead-gen/IdentifySection";

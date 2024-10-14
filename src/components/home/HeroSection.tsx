@@ -95,13 +95,6 @@ export default function HeroSection({
 
   const pathname = usePathname();
   const isHomePage = pathname === "/";
-  const featurePaths = [
-    "/features/google-analytics",
-    "/features/lead-generation",
-    // "/features/real-time-identification-api",
-  ];
-
-  const isFeaturePage = featurePaths.includes(pathname);
 
   return (
     <div className="relative overflow-hidden mt-[-88px]">
