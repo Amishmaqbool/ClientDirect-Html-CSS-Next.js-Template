@@ -3,8 +3,9 @@ import LogoGrid from "@/components/home/LogosGrid";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
-import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 import { Metadata } from 'next';
+import DriveBudget from "@/components/home/DriveBudget";
+
 export const metadata: Metadata = {
   title: 'Snitcher | Visitor identification for Agencies | Free Trial',
   description: 'Offer your clients a powerful whitelabel visitor identification solution with Snitcher. Drive revenue, generate leads, and support existing services.',
@@ -42,7 +43,6 @@ export default function Home() {
       <div className="">
         <HeroSection
           headingText="Aflați cine se află pe site-ul dvs. și obțineți mai multe venituri."
-          headingLineBreaks={[5]}
           paragraphText="Snitcher dă putere echipelor B2B să înțeleagă, să implice și să transforme vizitatorii anonimi ai site-ului web în potențiali clienți potențiali, utilizând tehnologia de ultimă oră de identificare, urmărirea în timp real a vizitatorilor și informații despre public bazate pe date."
           maxWidth="960px"
           bgColor="#070b18"
@@ -94,8 +94,10 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        <IntegrationSection />
-        <CardsScrollAnimation />
+      <IntegrationSection />
+      </div>
+      <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto">
+      <DriveBudget />
       </div>
     </>
   );

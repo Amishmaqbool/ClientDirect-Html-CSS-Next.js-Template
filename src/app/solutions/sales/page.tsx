@@ -9,7 +9,7 @@ export default function page() {
             <HeroSection
                 headingText={"Convertește traficul în pipeline."}
                 headingLineBreaks={[3, 5]}
-                paragraphText={"Te străduiești să generezi suficiente lead-uri de calitate pentru a-ți atinge obiectivele? Sau prospectarea la rece pur și simplu nu aduce rezultatele de care ai nevoie? Obține leaduri acționabile din traficul anonim de pe site-ul tău."}
+                paragraphText={"Te străduiești să generezi suficiente lead-uri de calitate pentru a-ți atinge obiectivele? Sau prospectarea la rece pur și simplu nu aduce rezultatele de care ai nevoie? \n \n Obține leaduri acționabile din traficul anonim de pe site-ul tău."}
                 paragraphLineBreaks={[10, 26]}
                 featureContents={salesHeroData}
                 maxWidth="900px"
