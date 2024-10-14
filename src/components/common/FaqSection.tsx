@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 
 type FAQItem = {
   question: string;
-  answer: string | string[]; // The answer can be either a string or an array of strings
+  answer: string | string[];
 };
 
 type FAQProps = {

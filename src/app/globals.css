@@ -25,12 +25,14 @@ body {
   height: 100%;
   inset: 0% auto auto 0%;
 }
+
 .bacground-gradient-2 {
   background-image: url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6410418e268519401c97144f_image%2012.svg);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .hero-noise-png {
   opacity: .14;
   object-fit: cover;
@@ -44,15 +46,18 @@ body {
   position: absolute;
   inset: 0% auto auto 0%;
 }
+
 .section-gray25-bg.background-gradient-4 {
   background-image: url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6410594415fa7b862eacd8b9_Features%20section-img.png);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .review-lead--card {
   background: linear-gradient(110.65deg, #FFFFFF 1.16%, rgba(255, 255, 255, 0.2) 100%) !important;
 }
+
 .c-review-cards {
   background-image: url("../assets/svgs/background.svg");
   background-position: 50%;
@@ -94,6 +99,7 @@ body {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-50%);
   }
@@ -102,12 +108,13 @@ body {
 /* .faq-item:hover {
   background-color: hsla(222, 73%, 52%, 0.1);
 } */
-.faq-header{
+.faq-header {
   background-image: url(https://downloads.intercomcdn.com/i/o/329719/bcdede782cc186635e6725a8/79d95fb059a21dcc31d5cd424ac2afe3.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .custom-select-wrapper {
   position: relative;
   display: inline-block;
@@ -119,11 +126,11 @@ select {
   padding: 5px;
   font-size: 16px;
   color: white;
-  outline: none; 
+  outline: none;
 }
 
 select:focus {
-  outline: none; 
+  outline: none;
 }
 
 .custom-select-wrapper::after {
@@ -134,20 +141,37 @@ select:focus {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none; 
+  pointer-events: none;
 }
+
 #search-input {
   background-color: transparent;
   border: none;
   outline: none;
-  padding: 8px; 
-  font-size: 16px; 
+  padding: 8px;
+  font-size: 16px;
 }
 
 #search-input:focus {
   border: none;
   outline: none;
 }
-.faq-item:hover{
+
+.faq-item:hover {
   background: hsl(222deg 73% 52% / 10%);
+}
+
+.c-cta--call-pricing {
+  background-color: #101828;
+  background-image: url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/641c3d98ce1efeb11ed5ca20_gridPattern.png);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 16px;
+  padding-top: 56px;
+  padding-bottom: 0;
+  padding-left: 48px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
 }
