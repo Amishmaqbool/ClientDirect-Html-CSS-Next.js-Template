@@ -55,9 +55,6 @@ export default function RootLayout({
   if (isFaqPage === null) {
     return (
       <html lang="en">
-        <Head>
-        <link href="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/642c412ea608891f6f5adc11_615ac86221d37e3c48a815de_favicon-32x32.png" rel="shortcut icon" type="image/x-icon" /> 
-        </Head>
         <body className={`${soleil.variable} antialiased`}>
           <div className="pb-36">{children}</div>
         </body>
