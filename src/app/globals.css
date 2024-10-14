@@ -157,7 +157,7 @@ select:focus {
   outline: none;
 }
 
-.faq-item:hover {
+.article-section:hover {
   background: hsl(222deg 73% 52% / 10%);
 }
 
@@ -174,4 +174,33 @@ select:focus {
   display: flex;
   position: relative;
   overflow: hidden;
+}.marquee-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-scroll {
+  display: flex;
+  gap: 2rem; 
+  animation: marquee-scroll 30s linear infinite;
+  width: max-content; 
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); 
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .marquee-scroll {
+    display: flex;
+    gap: 1rem; 
+    animation: marquee-scroll 30s linear infinite;
+    width: max-content; 
+  }
 }

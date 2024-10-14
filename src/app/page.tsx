@@ -3,16 +3,19 @@ import LogoGrid from "@/components/home/LogosGrid";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
-import { Metadata } from 'next';
+import { Metadata } from "next";
 import DriveBudget from "@/components/home/DriveBudget";
+import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 
 export const metadata: Metadata = {
-  title: 'Snitcher | Visitor identification for Agencies | Free Trial',
-  description: 'Offer your clients a powerful whitelabel visitor identification solution with Snitcher. Drive revenue, generate leads, and support existing services.',
-  metadataBase: new URL('https://snitchers.vercel.app/'),
+  title: "Snitcher | Visitor identification for Agencies | Free Trial",
+  description:
+    "Offer your clients a powerful whitelabel visitor identification solution with Snitcher. Drive revenue, generate leads, and support existing services.",
+  metadataBase: new URL("https://snitchers.vercel.app/"),
 };
 export default function Home() {
-  const mainHeading = "Oferă vânzărilor avantajul pentru a găsi și a încheia mai multe oferte";
+  const mainHeading =
+    "Oferă vânzărilor avantajul pentru a găsi și a încheia mai multe oferte";
   const subHeading =
     "Primiți notificări atunci când companiile țintă vă vizitează site-ul web și vedeți ce le interesează. Ajutați echipele să înceapă și să țină conversații mai relevante pe parcursul ciclului de vânzări.";
   const ctaText = "Începeți proba gratuită";
@@ -86,7 +89,7 @@ export default function Home() {
         />
       </div>
       <div
-        className="max-w-full bg-[#101828]"
+        className="max-w-full bg-[#101828] pb-[97px]"
         style={{
           backgroundImage: `url(${gradientPurple})`,
           backgroundRepeat: "no-repeat",
@@ -94,10 +97,11 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-      <IntegrationSection />
+        <IntegrationSection />
       </div>
       <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto">
-      <DriveBudget />
+        <DriveBudget />
+        <CardsScrollAnimation />
       </div>
     </>
   );

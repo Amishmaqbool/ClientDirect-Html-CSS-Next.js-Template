@@ -1,5 +1,4 @@
 import React from "react";
-import Marquee from "react-fast-marquee";
 import Image from "next/image";
 import HighPerformSmallSummer from "@/assets/svgs/high-perform-small-summer-orange.svg";
 import HighEMEA from "@/assets/svgs/high-emea.svg";
@@ -20,30 +19,47 @@ const badges = [
 
 const BadgeCarousel = () => {
   return (
-    <div className="relative flex justify-center items-center pt-24 pb-8 bg-white">
-      <div className="absolute z-10">
-        <Image src={HighPerformSummer} alt="Snitcher Logo" width={128} height={166} className="max-md:w-[98px] max-md:h-[122px]" />
-      </div>
+    <div className="bg-white w-full">
+      <div className="max-w-[1280px] mx-auto px-6 relative flex justify-center items-center pt-24 pb-8">
+        <div className="fade-left"></div>
+        <div className="fade-right"></div>
 
-      <div className="w-full grayscale hover:grayscale-0 transition duration-300">
-        <Marquee gradient={true} speed={40} loop={0}>
-          <div className="flex gap-4 items-center">
-            {badges.concat(badges).map((badge, index) => (
-              <div
-                key={index}
-                className={`flex-shrink-0 ${index === 0 ? 'ml-4' : ''}`}>
-                <Image
-                  src={badge.src}
-                  alt={badge.alt}
-                  width={90}
-                  height={116}
-                  objectFit="contain"
-                  loading="lazy"
-                />
-              </div>
-            ))}
+        <div className="absolute z-50">
+          <Image
+            src={HighPerformSummer}
+            alt="Snitcher Logo"
+            width={128}
+            height={166}
+            className="max-md:w-[98px] max-md:h-[122px]"
+          />
+        </div>
+
+        <div className="w-full lg:max-w-[900px] overflow-hidden relative z-20">
+          <div className="marquee-container">
+            <div className="marquee-scroll">
+              {badges
+                .concat(badges)
+                .concat(badges)
+                .map((badge, index) => (
+                  <div
+                    key={index}
+                    className={`inline-block flex-shrink-0 px-2 ${
+                      index === 0 ? "ml-4" : ""
+                    }`}
+                  >
+                    <Image
+                      src={badge.src}
+                      alt={badge.alt}
+                      width={90}
+                      height={116}
+                      objectFit="contain"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+            </div>
           </div>
-        </Marquee>
+        </div>
       </div>
     </div>
   );

@@ -143,7 +143,7 @@ export default function HeroSection({
           </div>
 
           {featureContents.length >= 1 && (
-            <div className="max-md:flex justify-center pt-[104px] max-w-[1280px] mx-auto px-6">
+            <div className="max-md:flex justify-center pt-16 md:pt-[104px] max-w-[1280px] mx-auto px-6">
               {featureContents.length > 0 && (
                 <div className="z-[1000] grid grid-cols-1 md:grid-cols-3 gap-5">
                   {featureContents.map((content, index) => (

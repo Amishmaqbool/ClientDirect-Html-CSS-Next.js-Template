@@ -12,6 +12,26 @@ interface Props {
   };
 }
 
+const articlesDirectory = path.join(process.cwd(), 'src', 'app', 'content', 'articles');
+
+// Function to get all articles asynchronously
+const getArticles = async () => {
+  const files = await fs.readdir(articlesDirectory);
+  const articles = await Promise.all(
+    files.map(async (file) => {
+      const filePath = path.join(articlesDirectory, file);
+      const fileContent = await fs.readFile(filePath, "utf-8"); // Replacing readFileSync with async readFile
+      const { data } = matter(fileContent);
+      return {
+        title: data.title,
+        description: data.description,
+        slug: file.replace(".mdx", ""),
+      };
+    })
+  );
+  return articles;
+};
+
 export async function generateStaticParams() {
   const articlesPath = path.join(process.cwd(), 'src', 'app', 'content', 'articles');
   console.log('Reading files from path:', articlesPath);
@@ -38,6 +58,9 @@ export default async function ArticlePage({ params }: Props) {
 
     const formattedSlug = slug.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
 
+    // Fetch all articles to display in the "Related Articles" section
+    const articles = await getArticles();
+
     return (
       <div className="article-container max-w-[650px] mx-auto px-6" style={{ fontFamily: "system-ui" }}>
         
@@ -51,6 +74,34 @@ export default async function ArticlePage({ params }: Props) {
 
         <h3 className="font-bold text-[22px] text-[#1a1a1a]">Related Articles</h3>
 
+        <div className="mt-5 px-3 py-4 border rounded-lg border-[#E6E6E6]">
+          {articles.slice(0, 5).map((article) => (
+            <a key={article.slug} href={`/articles/${article.slug}`}>
+              <div
+                className="faq-item article-section group flex justify-between items-center rounded-md cursor-pointer transition-all duration-300 p-3"
+                key={article.slug}
+              >
+                <div className="max-w-[510px]">
+                  <h2 className="font-normal text-base text-[#1a1a1a] group-hover:text-[#2B61DE] transition-colors duration-300">
+                    {article.title}
+                  </h2>
+                  <p className="pt-2 font-normal text-base text-[#737373] transition-colors duration-300">
+                    {article.description}
+                  </p>
+                </div>
+                <div className="transition-colors duration-300">
+                  <Image
+                    className="transition-colors duration-300"
+                    src={SmallAngle}  
+                    alt="Chevron Right"
+                    style={{marginLeft: '20px'}}
+                  />
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+        
         <div className="p-3 -mb-4 -ml-4 -mr-4 mt-6 rounded-card sm:-mb-2 sm:-ml-1 sm:-mr-1 sm:mt-8 rounded-lg bg-[#f2f2f2]">
           <div className="pt-2.5 pb-1 text-center">
             Did this answer your question?

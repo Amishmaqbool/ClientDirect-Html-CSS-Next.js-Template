@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Button from "./common/Button";
@@ -14,15 +14,18 @@ export default function OptimizeSection() {
             <p className="font-bold text-xs text-[#0040c1]">Optimizează</p>
           </div>
           <h1 className="max-w-[768px] my-0 font-bold text-4xl text-center tracking-[-1px] text-[#000]">
-          Rulează mai multe teste și atinge-ți obiectivul mai repede.
+            Rulează mai multe teste și atinge-ți obiectivul mai repede.
           </h1>
           <p className="max-w-[790px] py-5 text-center text-base sm:text-lg leading-[28px] text-[#475467]">
-          Urmărește schimbările pe care le faci fără să aștepți conversii, astfel încât să poți testa mai mult cu riscuri mai mici și să te asiguri că îți atingi obiectivul în limitele bugetului.
+            Urmărește schimbările pe care le faci fără să aștepți conversii,
+            astfel încât să poți testa mai mult cu riscuri mai mici și să te
+            asiguri că îți atingi obiectivul în limitele bugetului.
           </p>
           <Button
             bgColor="bg-[#101828]"
             textColor="text-white"
             borderRadius="rounded-[100px]"
+            className="max-[420px]:text-xs text-sm border border-[#ffffff1a]"
             showChevron={true}
             chevronColor="text-white"
             buttonText="Începe perioada de probă gratuită de 14 zile"
@@ -67,19 +70,21 @@ export default function OptimizeSection() {
                 />
                 <div className="testimonial text-left max-w-lg w-full lg:w-full mb-8">
                   <blockquote className="text-gray-700 italic text-sm">
-                  &quot;Snitcher, împreună cu contul nostru de Google Analytics, oferă echipei noastre web mai multe informații despre audiența noastră și despre cum interacționează anumite tipuri de utilizatori cu site-ul nostru.&quot;
+                    &quot;Snitcher, împreună cu contul nostru de Google
+                    Analytics, oferă echipei noastre web mai multe informații
+                    despre audiența noastră și despre cum interacționează
+                    anumite tipuri de utilizatori cu site-ul nostru.&quot;
                   </blockquote>
                   <cite className="text-xs text-gray-500 not-italic">
-                    <span className="text-black">Becca R</span> - Director Dezvoltare Software
+                    <span className="text-black">Becca R</span> - Director
+                    Dezvoltare Software
                   </cite>
                 </div>
               </div>
             </div>
 
-            <div
-              className="col-span-1 row-span-1 max-lg:aspect-square w-full h-full"
-            >
-              <DotLottieReact 
+            <div className="col-span-1 row-span-1 max-lg:aspect-square w-full h-full">
+              <DotLottieReact
                 src="https://lottie.host/230858b8-ad22-494c-a41b-9776915dfbda/SO03zYR87i.lottie"
                 autoplay
                 loop
