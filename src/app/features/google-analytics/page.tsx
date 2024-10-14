@@ -9,7 +9,7 @@ import {
 import RatingCards from "@/components/common/RatingCards";
 import HeroSection from "@/components/home/HeroSection";
 import MarketingSection from "@/components/common/MarketingComponent";
-import FaqSection from "@/components/features/FaqSection";
+import FaqSection from "@/components/common/FaqSection";
 import RevenueSection from "@/components/RevenueSection";
 import OptimizeSection from "../../../components/OptimizeSection";
 
