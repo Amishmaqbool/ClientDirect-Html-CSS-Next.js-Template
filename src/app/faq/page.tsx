@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import ChatIcon from "../../assets/svgs/chat.svg";
 import ChevronRight from "../../assets/svgs/chevron-right.svg";
+import Avatar from "../../assets/images/avatar.jpg";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -39,18 +40,17 @@ const FAQ: React.FC = () => {
           Get answers to all the questions you have about Snitcher.
         </p>
 
-        <div className="flex gap-2 items-center">
+        <div className="pt-5 flex gap-2 items-center">
           <Image
-            src="https://static.intercomassets.com/avatars/40541/square_128/social_media_icon_-_2023_01_20_Snitcher_-_Studio_Gijs_de_Koning_-_5246_%281%29-1676632880.jpg"
+            src={Avatar}
             alt="Jerre"
             className="rounded-full"
-            width={36}
-            height={36}
+            width={24}
+            height={24}
           />
-          <div>
-            <p>Scris de Jerre</p> 
-            <p>Actualizat acum peste o săptămână</p>
-          </div>
+          <p className="flex items-center font-normal text-sm text-[#737373]">
+            De Jerre <span className="px-2 text-2xl"> · </span> 11 articole
+          </p>
         </div>
 
         <div className="mt-10 px-3 py-4 border rounded-lg border-[#E6E6E6]">

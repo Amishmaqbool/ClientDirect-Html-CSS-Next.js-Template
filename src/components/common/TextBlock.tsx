@@ -31,12 +31,12 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   isReversed = false,
 }) => {
   return (
-    <section className="py-12">
+    <section className="lg:py-12">
       <div
         className={`max-w-[1280px] mx-auto p-4 flex ${
           isReversed
             ? "flex-col-reverse lg:flex-row-reverse"
-            : "flex-col lg:flex-row"
+            : "flex-col-reverse lg:flex-row"
         } justify-between items-center flex-`}
       >
         <div className="w-full lg:w-[50%]">
@@ -70,7 +70,7 @@ const TextBlock: React.FC<SalesSectionProps> = ({
             )}
         </div>
 
-        <div className="md:pb-40 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-96">
+        <div className="md:pb-10 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-96">
           <DotLottieReact
             src={lottieUrl}
             autoplay
