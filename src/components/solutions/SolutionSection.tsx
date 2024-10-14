@@ -5,7 +5,6 @@ import Image from "next/image";
 import Tick from "@/assets/svgs/tick.svg";
 import Coin from "@/assets/svgs/line-chart.svg";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-
 interface SolutionSectionProps {
     title: string;
     description: string;
