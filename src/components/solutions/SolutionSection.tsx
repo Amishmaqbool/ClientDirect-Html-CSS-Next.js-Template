@@ -33,7 +33,6 @@ export default function SolutionSection({
     paragraphLineBreakIndices = {},
     lottieUrl = "",
     flexDirection = "row",
-    gradientColors = ["#41a7f0", "#1b61d1"],
 }: SolutionSectionProps) {
     const formatTextWithLineBreaks = (text: string, lineBreakIndices: number[]) => {
         const words = text.split(" ");

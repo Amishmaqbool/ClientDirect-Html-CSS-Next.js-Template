@@ -148,3 +148,6 @@ select:focus {
   border: none;
   outline: none;
 }
+.faq-item:hover{
+  background: hsl(222deg 73% 52% / 10%);
+}

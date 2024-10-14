@@ -91,38 +91,38 @@ export default function Footer() {
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Produs</p>
               <ul className="space-y-3">
-                <li className="cursor-pointer">Identificarea vizitatorilor</li>
-                <li className="cursor-pointer">Îmbogățirea Google Analytics</li>
-                <li className="cursor-pointer">API în timp real</li>
+                <Link href="/features/lead-generation"><li className="cursor-pointer">Identificarea vizitatorilor</li></Link>
+                <Link href="/features/google-analytics"><li className="pt-3 cursor-pointer">Îmbogățirea Google Analytics</li></Link>
+                {/* <li className="cursor-pointer">API în timp real</li> */}
               </ul>
             </div>
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Soluții</p>
               <ul className="space-y-3">
-                <li className="cursor-pointer">Pentru vânzări</li>
-                <li className="cursor-pointer">Pentru marketing</li>
-                <li className="cursor-pointer">Pentru agenții</li>
+                <Link href="/solutions/sales"><li className="cursor-pointer">Pentru vânzări</li></Link>
+                <Link href="/solutions/marketing"><li className="pt-3 cursor-pointer">Pentru marketing</li></Link>
+                <Link href="/solutions/agency"><li className="pt-3 cursor-pointer">Pentru agenții</li></Link>
               </ul>
             </div>
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Resurse</p>
               <ul className="space-y-3">
-                <li className="cursor-pointer">Centru de ajutor</li>
-                <li className="cursor-pointer">Povești ale clienților</li>
-                <li className="cursor-pointer">Întrebări frecvente</li>
-                <li className="cursor-pointer">Program de afiliere</li>
-                <li className="cursor-pointer">
+                <Link href=""><li className="cursor-pointer">Centru de ajutor</li></Link>
+                <Link href="/customer-stories"><li className="pt-3 cursor-pointer">Povești ale clienților</li></Link>
+                <Link href="/faq"><li className="pt-3 cursor-pointer">Întrebări frecvente</li></Link>
+                <Link href=""><li className="pt-3 cursor-pointer">Program de afiliere</li></Link>
+                <Link href=""><li className="pt-3 cursor-pointer">
                   Ghidul Snitcher pentru generarea de lead-uri B2B
-                </li>
-                <li className="cursor-pointer">Planul de marketing B2B</li>
+                </li></Link>
+                <Link href="/blueprint/b2b-marketing-blueprint"><li className="pt-3 cursor-pointer">Planul de marketing B2B</li></Link>
               </ul>
             </div>
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Legal</p>
               <ul className="space-y-3">
-                <li className="cursor-pointer">Termeni și condiții</li>
-                <li className="cursor-pointer">Politica de confidențialitate</li>
-                <li className="cursor-pointer">Securitate</li>
+                <Link href="/terms-conditions"><li className="cursor-pointer">Termeni și condiții</li></Link>
+                <Link href="/privacy-policy"><li className="pt-3 cursor-pointer">Politica de confidențialitate</li></Link>
+                <Link href="#"><li className="pt-3 cursor-pointer">Securitate</li></Link>
               </ul>
             </div>
           </div>
