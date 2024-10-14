@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import MessageIcon from "../../assets/svgs/message-icon.svg"
+import MessageIcon from "../../assets/svgs/message-icon.svg";
 import React, { useState, useEffect } from "react";
 
 type FAQItem = {
   question: string;
-  answer: string | string[];
+  answer: string | string[]; // The answer can be either a string or an array of strings
 };
 
 type FAQProps = {
@@ -41,7 +41,7 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
           className="faq-item px-2 sm:px-[24px] lg:px-0 border-b border-[#eaecf0] mb-[24px]"
         >
           <div
-            className="faq-question flex justify-between cursor-pointer mb-[24px]"
+            className="faq- flex justify-between cursor-pointer mb-[24px]"
             onClick={() => toggleFAQ(index)}
           >
             <h3 className="text-[18px] font-bold">{faq.question}</h3>
@@ -61,17 +61,14 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
           </div>
           {activeIndex === index && (
             <div className="faq-answer mb-[24px] mt-[-10px] text-[#333] text-[16px] leading-[20px]">
-              {typeof faq.answer === "string" ? (
-                <p className="max-w-[90%] leading-[24px]">{faq.answer}</p>
+              {Array.isArray(faq.answer) ? (
+                faq.answer.map((ans, ansIndex) => (
+                  <p key={ansIndex} className="mt-2 leading-[24px]">
+                    {ans}
+                  </p>
+                ))
               ) : (
-                <div className="max-w-[90%] leading-[24px]">
-                  <p>{faq.answer[0]}</p>
-                  <ul className="list-none pl-5 mt-2">
-                    {faq.answer.slice(1).map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
+                <p className="leading-[24px]">{faq.answer}</p>
               )}
             </div>
           )}

@@ -1,16 +1,27 @@
 import React from 'react';
 
+interface ButtonProps {
+    bgColor?: string;
+    textColor?: string;
+    borderRadius?: string;
+    showChevron?: boolean;
+    chevronColor?: string;
+    buttonText?: string;
+    className?: string;
+}
+
 export default function Button({
     bgColor = 'bg-customBlue',
-    textColor = 'text-white', 
+    textColor = 'text-white',
     borderRadius = 'rounded-[100px]',
     showChevron = false,
     chevronColor = 'text-white',
-    buttonText = 'Încearcă Snitcher gratuit' 
-}) {
+    buttonText = 'Încearcă Snitcher gratuit',
+    className = '',
+}: ButtonProps) {
     return (
         <button
-            className={`${bgColor} ${textColor} flex justify-center px-[17px] py-[9px] text-base leading-6 ${borderRadius} items-center`}
+            className={`${bgColor} ${textColor} flex items-center justify-center px-[17px] py-[9px] text-base leading-6 ${borderRadius} ${className}`}
         >
             {buttonText}
             {showChevron && (
