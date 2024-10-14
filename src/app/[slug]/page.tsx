@@ -1,10 +1,8 @@
 "use client";
-
 import React, { useEffect, useState } from 'react';
 import { redirect } from 'next/navigation';
 import { MDXProvider } from '@mdx-js/react';
 import HeroSection from '@/components/home/HeroSection';
-
 const fetchMDXContent = async (slug: string) => {
   try {
     const content = await import(`../content/${slug}.mdx`);
@@ -13,11 +11,9 @@ const fetchMDXContent = async (slug: string) => {
     throw new Error(`Could not fetch MDX file: ${slug}`);
   }
 };
-
 interface Props {
   params: { slug: string };
 }
-
 const DetailsPage = ({ params }: Props) => {
   const { slug } = params;
   const [Content, setContent] = useState<React.ComponentType | null>(null);
@@ -45,13 +41,13 @@ const DetailsPage = ({ params }: Props) => {
 
   const paragraphText =
     slug === 'privacy-policy'
-      ? 'Last updated: October 13, 2023'
-      : 'Last updated: October 13, 2023';
+      ? 'Ultima actualizare: 13 octombrie 2024'
+      : 'Ultima actualizare: 13 octombrie 2024';
 
   if (!Content) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-[80vh] w-full md:gap-5" style={{fontFamily: "system-ui"}}>
+    <div className="min-h-[80vh] w-full md:gap-5" style={{ fontFamily: "system-ui" }}>
       <HeroSection
         headingText={title}
         headingLineBreaks={[3, 5]}

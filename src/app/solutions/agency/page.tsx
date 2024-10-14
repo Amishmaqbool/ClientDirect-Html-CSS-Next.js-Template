@@ -3,7 +3,7 @@ import HeroSection from "@/components/home/HeroSection";
 import { agencyHeroData, faqList } from "@/constants/solutions/agency";
 import FaqSection from "@/components/common/FaqSection";
 import SolutionSection from "@/components/solutions/SolutionSection";
-
+import CallToActionSection from '@/components/solutions/CallToActionSection';
 export default function page() {
   return (
     <div>
@@ -57,6 +57,7 @@ export default function page() {
         lottieUrl="https://lottie.host/71525d32-3e1e-40a5-9c2a-762a999e498b/saCSwu80fh.json"
       />
 
+      <CallToActionSection />
       <FaqSection faqList={faqList} />
     </div>
   );

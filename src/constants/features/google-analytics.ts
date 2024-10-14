@@ -1,6 +1,4 @@
-import BackdropImage from "../../../src/assets/svgs/backdrop.svg"
-import AutoViewerImage from "../../../src/assets/svgs/auto-viewer.svg"
-import ThreeCircles from "../../../src/assets/svgs/three-circles.svg"
+
 
 export const reviews = [
   {
