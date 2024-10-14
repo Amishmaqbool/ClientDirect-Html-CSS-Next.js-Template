@@ -36,7 +36,7 @@ const BadgeCarousel = () => {
 
         <div className="w-full lg:max-w-[900px] overflow-hidden relative z-20">
           <div className="marquee-container">
-            <div className="marquee-scroll">
+            <div className="marquee-scroll grayscale hover:grayscale-0">
               {badges
                 .concat(badges)
                 .concat(badges)
