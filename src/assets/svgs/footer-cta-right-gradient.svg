@@ -1,4 +1,4 @@
-<svg width="721" height="475" viewBox="0 0 721 475" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="721" height="475" viewBox="0 0 721 475" fill="none"><script xmlns="" src="chrome-extension://hoklmmgfnpapgjgcpechhaamimifchmp/frame_ant/frame_ant.js"/>
 <g clip-path="url(#clip0_119_99823)" filter="url(#filter0_f_119_99823)">
 <path d="M1185.46 176.669C1205.34 164.342 1205.34 144.104 1185.46 131.778L845.343 -79.1809C825.468 -91.5069 792.953 -91.5069 772.995 -79.1809L432.959 131.778C413.084 144.104 413.084 164.342 432.959 176.669L809.169 410.115L1185.38 176.669H1185.46Z" fill="url(#paint0_linear_119_99823)"/>
 <path d="M1185.46 352.149C1205.34 339.822 1205.34 319.584 1185.46 307.258L845.343 96.2991C825.468 83.973 792.953 83.973 772.995 96.2991L432.959 307.258C413.084 319.584 413.084 339.822 432.959 352.149L809.169 585.594L1185.38 352.149H1185.46Z" fill="url(#paint1_linear_119_99823)" fill-opacity="0.5"/>
@@ -25,5 +25,5 @@
 <clipPath id="clip0_119_99823">
 <rect width="1143.34" height="1143.34" fill="white" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 809 1120.16)"/>
 </clipPath>
-</defs>
+</defs><script xmlns="" type="module" src="chrome-extension://ocolkjnalnkdaclepjmkigefcgngkadb/assets/detector.d8bf3127.js"/>
 </svg>

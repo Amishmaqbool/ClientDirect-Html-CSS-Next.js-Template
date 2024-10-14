@@ -10,13 +10,13 @@ export default function Panel() {
         <div className="max-w-[1000px] mx-auto px-5 lg:px-10 relative z-20">
 
           <h2 className="text-[33px] lg:text-5xl font-bold -tracking-[2px] leading-[39px] lg:leading-[60px]">
-          Struggling to see what $48 out of every $50 buys you?
+            Te chinui să vezi ce îți oferă 48 de dolari din fiecare 50?
           </h2>
 
 
           <p className="text-lg mb-[30px] mt-4 text-[#d1e0ff]">
-            Your target audiences is comparing providers, beat the competition <br className='max-lg:hidden' />
-            to the sale by identifying and capturing them first.
+            Publicul tău țintă compară furnizorii – depășește competiția și încheie vânzarea  <br className='max-lg:hidden' />
+            prin identificarea și captarea lor primul.
           </p>
 
 
@@ -25,7 +25,7 @@ export default function Panel() {
             className="inline-flex items-center justify-center bg-black text-white px-7 py-[15px] rounded-full font-semibold hover:bg-gray-900"
           >
             <p className='leading-[28px] text-[18px]'>
-              Try Snitcher For Free
+              Încearcă Snitcher gratuit
             </p>
             <div>
               <Image src={arrow} alt='footer button arrow' className='ml-3' />

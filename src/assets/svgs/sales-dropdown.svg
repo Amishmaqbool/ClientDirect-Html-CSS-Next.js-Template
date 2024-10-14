@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="73" height="72" viewBox="0 0 73 72" fill="none"><script xmlns="" src="chrome-extension://hoklmmgfnpapgjgcpechhaamimifchmp/frame_ant/frame_ant.js"/>
-<path d="M8.3335 64L8.3335 51.5C8.3335 46.2533 12.5868 42 17.8335 42V42C23.0802 42 27.3335 46.2533 27.3335 51.5L27.3335 64" stroke="url(#paint0_linear_1_46727)" stroke-width="3"/>
-<path d="M27.3335 64L27.3335 44C27.3335 39.0294 31.3629 35 36.3335 35V35C41.3041 35 45.3335 39.0294 45.3335 44L45.3335 64" stroke="url(#paint1_linear_1_46727)" stroke-width="3"/>
-<path d="M45.3335 64L45.3335 37.5C45.3335 32.2533 49.5868 28 54.8335 28V28C60.0802 28 64.3335 32.2533 64.3335 37.5L64.3335 64" stroke="url(#paint2_linear_1_46727)" stroke-width="3"/>
+<path d="M8.3335 64L8.3335 51.5C8.3335 46.2533 12.5868 42 17.8335 42V42C23.0802 42 27.3335 46.2533 27.3335 51.5L27.3335 64" stroke="url(#paint0_linear_1_46727)" strokeWidth="3"/>
+<path d="M27.3335 64L27.3335 44C27.3335 39.0294 31.3629 35 36.3335 35V35C41.3041 35 45.3335 39.0294 45.3335 44L45.3335 64" stroke="url(#paint1_linear_1_46727)" strokeWidth="3"/>
+<path d="M45.3335 64L45.3335 37.5C45.3335 32.2533 49.5868 28 54.8335 28V28C60.0802 28 64.3335 32.2533 64.3335 37.5L64.3335 64" stroke="url(#paint2_linear_1_46727)" strokeWidth="3"/>
 <ellipse cx="8" cy="8" rx="8" ry="8" transform="matrix(-4.37114e-08 1 1 4.37114e-08 47.3335 5)" fill="url(#paint3_radial_1_46727)"/>
 <ellipse cx="36.3335" cy="21" rx="4" ry="4" transform="rotate(-90 36.3335 21)" fill="url(#paint4_radial_1_46727)"/>
 <ellipse cx="18.3335" cy="31" rx="4" ry="4" transform="rotate(-90 18.3335 31)" fill="url(#paint5_radial_1_46727)"/>

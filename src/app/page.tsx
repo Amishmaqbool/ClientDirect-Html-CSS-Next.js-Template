@@ -6,28 +6,28 @@ import IntegrationSection from "@/components/home/IntegrationsSection";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 
 export default function Home() {
-  const mainHeading = "Give sales the edge to find and close more deals";
+  const mainHeading = "Oferă vânzărilor avantajul pentru a găsi și a încheia mai multe oferte";
   const subHeading =
-    "Get notified when target companies visit your website and see what they are interested in. Help teams start and hold more relevant conversations throughout the sales cycle.";
-  const ctaText = "Start Free Trial";
-  const secondaryCtaText = "Explore Snitcher for Sales";
+    "Primiți notificări atunci când companiile țintă vă vizitează site-ul web și vedeți ce le interesează. Ajutați echipele să înceapă și să țină conversații mai relevante pe parcursul ciclului de vânzări.";
+  const ctaText = "Începeți proba gratuită";
+  const secondaryCtaText = "Explorați Snitcher pentru vânzări";
   const FirstTestimonial = {
     quote:
-      "I consistently recommend Snitcher - in our testing they not only gathered insights on a higher number of leads than its competitors, but also had more detailed information about those leads.",
+      "Recomand în mod constant Snitcher - în testarea noastră, ei nu numai că au adunat informații despre un număr mai mare de clienți potențiali decât concurenții săi, dar au avut și informații mai detaliate despre acești clienți potențiali.",
     author: "David G.",
     role: "Head of Sales",
   };
 
   const SecondTestimonial = {
     quote:
-      "Snitcher allowed us to know which businesses were visiting our website. It's an ideal tool for Account Based Marketing and helps to gather new leads.",
+      "Snitcher ne-a permis să știm ce companii ne vizitează site-ul web. Este un instrument ideal pentru marketing bazat pe cont și ajută la adunarea de noi clienți potențiali.",
     author: "Marc-Antoine C.",
     role: "Marketing and Sales Coordinator",
   };
 
   const ThirdTestimonial = {
     quote:
-      "People are browsing our marketplace and Snitcher is the mechanism by which we're able to understand who's looking for our products and why.",
+      "Oamenii navighează pe piața noastră, iar Snitcher este mecanismul prin care putem înțelege cine caută produsele noastre și de ce.",
     author: "Tyler E.",
     role: "Founder and CEO",
   };
@@ -36,9 +36,9 @@ export default function Home() {
     <>
       <div className="">
         <HeroSection
-          headingText="Know who’s on your website, drive more revenue."
-          headingLineBreaks={[2, 5]}
-          paragraphText="Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights."
+          headingText="Aflați cine se află pe site-ul dvs. și obțineți mai multe venituri."
+          headingLineBreaks={[5]}
+          paragraphText="Snitcher dă putere echipelor B2B să înțeleagă, să implice și să transforme vizitatorii anonimi ai site-ului web în potențiali clienți potențiali, utilizând tehnologia de ultimă oră de identificare, urmărirea în timp real a vizitatorilor și informații despre public bazate pe date."
           maxWidth="960px"
           bgColor="#070b18"
         />
@@ -57,24 +57,24 @@ export default function Home() {
 
         <TextBlock
           mainHeading={
-            "Reduce wasted ad-spend and convert more target visitors"
+            "Reduceți cheltuielile publicitare risipite și convertiți mai mulți vizitatori vizați"
           }
           subHeading={
-            "Re-target or exclude visitors to continually improve your campaign performance. Personalize journeys and serve relevant content to your audience at the right time"
+            "Redirecționați sau excludeți vizitatori pentru a îmbunătăți continuu performanța campaniei dvs. Personalizați călătoriile și difuzați conținut relevant publicului dvs. la momentul potrivit"
           }
-          ctaText={"Start Free Trial"}
-          secondaryCtaText={"Explore Snitcher for Marketing"}
+          ctaText={"Începeți proba gratuită"}
+          secondaryCtaText={"Explorați Snitcher pentru vânzări"}
           testimonial={SecondTestimonial}
           lottieUrl="https://lottie.host/e7e6bfef-6fd9-4b22-8825-dc67d973bfb9/1diB1j1H81.json"
           isReversed={true}
         />
         <TextBlock
-          mainHeading={"Understand what your target audience actually wants"}
+          mainHeading={"Înțelegeți ce își dorește de fapt publicul țintă"}
           subHeading={
-            "Get much deeper insights on what’s attracting, engaging and converting your ideal visitors. Stop investing in ads and content with a poor ROI and start optimizing for revenue."
+            "Obțineți informații mult mai profunde despre ceea ce atrage, antrenează și convertește vizitatorii dvs. ideali. Nu mai investiți în reclame și conținut cu un ROI scăzut și începeți să optimizați pentru venituri."
           }
-          ctaText={"Start Free Trial"}
-          secondaryCtaText={"Explore Snitcher for Marketing"}
+          ctaText={"Începeți proba gratuită"}
+          secondaryCtaText={"Explorați Snitcher pentru vânzări"}
           testimonial={ThirdTestimonial}
           lottieUrl="https://lottie.host/ade35443-289d-416d-98a7-12f616efb5bd/GxNxOf0TXi.json"
           isReversed={false}

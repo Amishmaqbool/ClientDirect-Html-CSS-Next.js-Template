@@ -26,7 +26,7 @@ const IntegrationSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setAnimationKey((prevKey: number) => prevKey + 1);
-    }, 4000); 
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -37,18 +37,16 @@ const IntegrationSection = () => {
         <div className="relative flex flex-col items-center text-white py-24">
           <div className="max-w-[790px] max-lg:max-w-[750px] max-lg:px-2 flex flex-col items-center pb-24 max-xs:pb-3">
             <div className="inline-block rounded-2xl bg-[#ffffff1a] border border-[#ffffff1a] pt-1 pb-[2px] px-2 text-xs font-semibold text-center">
-              Integrations
+              Integrari
             </div>
             <h2 className="text-center text-4xl font-bold tracking-[-1px] pt-10">
-              The Stack within your Stack
+              Stiva din Stack-ul tău
             </h2>
             <p className="text-[#7d89b0] text-lg text-center pt-5">
-              Enrich campaigns and fill sales pipelines by integrating with the
-              products you know and love. With over 5,000+ apps already available,
-              your team&apos;s favourite tools are just a click away.
+              Îmbogățiți campaniile și umpleți conductele de vânzări prin integrarea cu produsele pe care le cunoașteți și le iubiți. Cu peste 5.000 de aplicații deja disponibile, instrumentele preferate ale echipei tale sunt la doar un clic distanță.
             </p>
             <button className="mt-7 flex items-center justify-center gap-2 rounded-full pt-2 pb-[6px] pl-4 pr-3 text-white bg-[#ffffff1a] border-[1.5px] border-[#ffffff1a] text-sm">
-              Try Snitcher for Free
+              Încearcă Snitcher gratuit
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -115,7 +113,7 @@ const IntegrationSection = () => {
             </div>
 
             <div className="absolute z-10">
-              <Image src={Snitcher} alt="Central Icon" width={162} height={162} className="max-xs:w-24 max-xs:h-24"/>
+              <Image src={Snitcher} alt="Central Icon" width={162} height={162} className="max-xs:w-24 max-xs:h-24" />
             </div>
 
             <div className="absolute w-full h-full z-10 flex max-lg:flex-col justify-between items-center max-xl:gap-6">
@@ -136,7 +134,7 @@ const IntegrationSection = () => {
               {/* Right group icons */}
               <div className="flex flex-col gap-[30px] xl:-mr-36 max-lg:top-16">
                 <div className="flex gap-6 justify-center md:mr-4">
-                  <Image src={Home7} alt="Home 7" width={87} height={88} className="max-xs:w-[59.31px] max-xs:h-[60px]"/>
+                  <Image src={Home7} alt="Home 7" width={87} height={88} className="max-xs:w-[59.31px] max-xs:h-[60px]" />
                   <Image src={Home8} alt="Home 8" width={87} height={88} className="max-xs:w-[59.31px] max-xs:h-[60px]" />
                   <Image src={Home9} alt="Home 9" width={87} height={88} className="max-xs:w-[59.31px] max-xs:h-[60px]" />
                 </div>
@@ -152,23 +150,21 @@ const IntegrationSection = () => {
 
         {/* Bottom Section */}
         <div className="flex max-lg:flex-col gap-7 justify-center items-center max-w-full max-lg:max-w-[90%] mt-28 max-xl:px-4 max-lg:px-8 max-md:px-0 max-md:max-w-[95%] max-lg:mt-56 max-lg:pt-10 max-sm:pt-4 max-xs:pb-0 max-xs:mt-36">
-          
-          <div className="w-1/2 max-md:flex-col max-lg:w-full md:h-44 flex justify-center items-center gap-2 p-6 rounded-lg bg-[#ffffff17] border border-[#ffffff26]">  
+
+          <div className="w-1/2 max-md:flex-col max-lg:w-full md:h-44 flex justify-center items-center gap-2 p-6 rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
             <div className="flex flex-col gap-4">
               <div className="flex gap-3">
-                <Image src={RealIcon} alt="Real-Time" width={28.35} height={28.84} className="max-xl:h-7"/>
-                <p className="text-lg text-white">Real-time identification API</p>
+                <Image src={RealIcon} alt="Real-Time" width={28.35} height={28.84} className="max-xl:h-7" />
+                <p className="text-lg text-white">API de identificare în timp real</p>
               </div>
               <p className="text-[#98a2b3] w-full text-sm">
-                Want the full power in your own hands? Pipe company identification
-                data wherever you need it with Spotter, our real-time identification
-                API.
+                Vrei puterea deplină în propriile mâini? Transmiteți datele de identificare ale companiei oriunde aveți nevoie de ele cu Spotter, API-ul nostru de identificare în timp real.
               </p>
             </div>
 
             <div className="w-full flex md:justify-end">
               <button className="flex items-center justify-center gap-2 rounded-full pt-[7px] pb-1 pl-[14px] pr-3 text-white bg-[#3257ff] border-[3px] border-[#0000] text-sm">
-                Learn More
+                Află mai multe
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -190,17 +186,18 @@ const IntegrationSection = () => {
             <div className="flex flex-col gap-4">
               <div className="flex gap-3">
                 <Image src={GoogleAIcon} alt="Google Analytics" width={28.35} height={28.84} className="max-xl:h-7" />
-                <p className="text-lg text-white">Google Analytics Enricher</p>
+                <p className="text-lg text-white">Îmbogățitor Google Analytics</p>
               </div>
               <p className="text-[#98a2b3] w-full text-sm">
-                Google Analytics just wasn&apos;t made for B2B - you sell to businesses, not
-                individuals. Turn GA into an account based analytics solution and get
-                the full picture.
+                Google Analytics pur și simplu nu a fost creat pentru B2B - vindeți companiilor, nu
+                indivizii. Transformați GA într-o soluție de analiză bazată pe cont și obțineți
+                poza completă.
               </p>
+
             </div>
             <div className="w-full flex md:justify-end">
               <button className="flex items-center justify-center gap-2 rounded-full pt-[7px] pb-1 pl-[14px] pr-3 text-white bg-[#3257ff] border-[3px] border-[#0000] text-sm">
-                Learn More
+                Află mai multe
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
