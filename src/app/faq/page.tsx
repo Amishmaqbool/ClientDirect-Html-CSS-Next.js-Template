@@ -37,10 +37,9 @@ const FAQ: React.FC = () => {
                 </p>
                 <div className="mt-10 px-3 py-4 border rounded-lg border-[#E6E6E6]">
                     {articles.map((article) => (
-                        <a href={`/articles/${article.slug}`}>
+                        <a href={`/articles/${article.slug}`} key={article.slug}> {/* Key should be on the outermost element */}
                             <div
                                 className="faq-item group flex justify-between items-center rounded-md cursor-pointer transition-all duration-300 p-3"
-                                key={article.slug}
                             >
                                 <div className="max-w-[845px]">
                                     <h2 className="font-normal text-base text-[#1a1a1a] group-hover:text-[#2B61DE] transition-colors duration-300">
@@ -52,14 +51,15 @@ const FAQ: React.FC = () => {
                                 </div>
                                 <div className="p-3 group-hover:bg-custom-hover transition-colors duration-300">
                                     {/* <Image
-                                        className="transition-colors duration-300"
-                                        src={ChevronRight}
-                                        alt="Chevron Right"
-                                    /> */}
+          className="transition-colors duration-300"
+          src={ChevronRight}
+          alt="Chevron Right"
+        /> */}
                                 </div>
                             </div>
                         </a>
                     ))}
+
                 </div>
             </div>
         </div>
