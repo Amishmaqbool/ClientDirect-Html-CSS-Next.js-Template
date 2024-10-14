@@ -36,7 +36,7 @@ const SalesSection: React.FC<SalesSectionProps> = ({
   mainImage,
 }) => {
   return (
-    <section className="sales-section py-12">
+    <section className="sales-section py-12 px-12">
       <div className="container mx-auto flex gap-0 max-w-[1280px] text-left">
         <div className='max-w-[40%]'>
         <h1 className="text-4xl font-bold mb-4">{mainHeading}</h1>
