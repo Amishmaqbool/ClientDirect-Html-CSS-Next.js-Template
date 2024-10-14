@@ -1,17 +1,38 @@
 import React from 'react';
 
+interface ButtonProps {
+    bgColor?: string;
+    textColor?: string;
+    borderRadius?: string;
+    showChevron?: boolean;
+    chevronColor?: string;
+    buttonText?: string;
+    className?: string;
+    icon?: React.ReactNode; // New prop to accept an icon (SVG or any React component)
+    iconPosition?: 'left' | 'right'; // To control icon position (before or after text)
+}
+
 export default function Button({
     bgColor = 'bg-customBlue',
-    textColor = 'text-white', 
+    textColor = 'text-white',
     borderRadius = 'rounded-[100px]',
     showChevron = false,
     chevronColor = 'text-white',
-    buttonText = 'Încearcă Snitcher gratuit' 
-}) {
+    buttonText = 'Încearcă Snitcher gratuit',
+    className = '',
+    icon, // Icon prop
+    iconPosition = 'right', // Default position for icon is after the text
+}: ButtonProps) {
     return (
         <button
-            className={`${bgColor} ${textColor} flex justify-center px-[17px] py-[9px] text-base leading-6 ${borderRadius} items-center`}
+            className={`${bgColor} ${textColor} flex items-center ${iconPosition === 'right' ? 'flex-row' : 'flex-row-reverse'
+                } justify-center px-[17px] py-[9px] text-base leading-6 ${borderRadius} ${className}`}
         >
+            {icon && (
+                <span className={`ml-2 ${iconPosition === 'left' ? 'mr-2' : 'ml-2'}`}>
+                    {icon}
+                </span>
+            )}
             {buttonText}
             {showChevron && (
                 <span className={`ml-2 ${chevronColor}`}>
