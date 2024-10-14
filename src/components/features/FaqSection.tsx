@@ -14,10 +14,10 @@ type FAQProps = {
 
 const FAQ: React.FC<FAQProps> = ({ faqList }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [mounted, setMounted] = useState(false); 
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true); 
+    setMounted(true);
   }, []);
 
   const toggleFAQ = (index: number) => {
@@ -33,7 +33,7 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
   return (
     <div className="faq-section lg:max-w-[720px] mx-auto mt-16 sm:mt-28 max-lg:mx-4">
       <h2 className="faq-heading text-4xl mb-16 font-black text-center">
-      Întrebări frecvente
+        Întrebări frecvente
       </h2>
       {faqList.map((faq, index) => (
         <div
@@ -79,15 +79,17 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
       ))}
       <div className="faq-footer text-center">
         <h4 className="text-[#101828] text-[20px] leading-[30px] font-[600]">
-        Ai încă întrebări?
+          Ai încă întrebări?
         </h4>
         <p className="mt-[8px] mb-[32px] text-[#475467] max-w-[790px] leading-[28px] text-[18px]">
-        Nu găsești răspunsul pe care îl cauți? Trimite-ne un mesaj.
+          Nu găsești răspunsul pe care îl cauți? Trimite-ne un mesaj.
         </p>
-        <button className="faq-chat-button px-[20px] text-[14px] py-[12px] bg-black text-white rounded-full h-fit">
-          <Image src={MessageIcon} alt="Message Icon" />
-          <p>Începe un chat</p>
-        </button>
+        <div className="flex justify-center">
+          <button className="faq-chat-button px-[20px] text-[14px] py-[12px] bg-black text-white rounded-full h-fit flex gap-2 justify-center items-center">
+            <Image src={MessageIcon} alt="Message Icon" />
+            <p>Începe un chat</p>
+          </button>
+        </div>
       </div>
     </div>
   );

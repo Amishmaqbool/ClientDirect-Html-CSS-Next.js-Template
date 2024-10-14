@@ -2,14 +2,14 @@ import React from 'react';
 
 const ArrowIcon = () => (
 <svg className='ml-[10px] -mt-[1px]' width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_244_96088)">
+<g clipPath="url(#clip0_244_96088)">
 <g filter="url(#filter0_dd_244_96088)">
-<path d="M5 8L10 13L15 8" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" shape-rendering="crispEdges"/>
+<path d="M5 8L10 13L15 8" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round" shapeRendering="crispEdges"/>
 </g>
 </g>
 <defs>
-<filter id="filter0_dd_244_96088" x="0.166992" y="5.16675" width="21.666" height="16.6665" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_dd_244_96088" x="0.166992" y="5.16675" width="21.666" height="16.6665" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dx="2" dy="2"/>
 <feGaussianBlur stdDeviation="2"/>

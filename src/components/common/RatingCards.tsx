@@ -6,7 +6,7 @@ import HalfStars from "@/assets/images/four-five-stars.webp";
 
 interface RatingCardProps {
   rating: number;
-  reviewBy: string;
+  reviewBy?: string;
   content: string;
   reviewer: string;
   hasCardClass?: boolean;

@@ -6,21 +6,21 @@ export const reviews = [
   {
     id: 1,
     rating: 5, 
-    review: "Snitcher i-a întrecut pe toți",
+    reviewBy: "Snitcher i-a întrecut pe toți",
     content: "Dintre toate instrumentele similare pe care le-am testat, Snitcher i-a întrecut pe toți. Alți furnizori detectează cu aproximativ 60-70% mai puține companii.",
     reviewer: "Inga B.",
   },
   {
     id: 2,
     rating: 5,
-    review: "Date extrem de precise pentru un preț corect",
+    reviewBy: "Date extrem de precise pentru un preț corect",
     content: "Găsim jucătorii B2B care accesează site-ul nostru pentru a-i viza cu outreach rece – Date extrem de precise despre companii pentru un preț corect.",
     reviewer: "Courtenay F.",
   },
   {
     id: 3,
     rating: 4.5, 
-    review: "Generare de leaduri și urmărire a vizitatorilor clară și precisă",
+    revieBy: "Generare de leaduri și urmărire a vizitatorilor clară și precisă",
     content: "Nu sunt sigur cum fac asta, dar Snitcher a reușit să identifice cu precizie cel mai mare procent din traficul nostru.",
     reviewer: "Becca R.",
   }
@@ -71,5 +71,26 @@ export const data = [
     title: "Retargetează",
     description: "Rulează campanii de retargetare pe LinkedIn pentru leaduri potrivite și conectează-te cu Google Analytics pentru a crea audiențe pentru reclame.",
     image: Retarget,
+  },
+];
+
+export const leadHeroData = [
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6408a11352802956b0c0529f_i.svg",
+    altText: "Imaginea Unu",
+    description: "Identifică mai multe companii care vizitează site-ul tău web.",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6408a11db8c50cbb1e243ad0_icons.svg",
+    altText: "Imaginea Doi",
+    description: "Segmentează lead-urile în audiențe care convertesc.",
+  },
+  {
+    imageSrc:
+      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6408a12a6f91b114d2a0a24d_i.svg",
+    altText: "Imaginea Trei",
+    description: "Automatizează activitățile pe canale și aplicații.",
   },
 ];

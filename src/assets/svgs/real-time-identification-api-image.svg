@@ -1,8 +1,8 @@
 <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M30.0002 33.7293L58 25" stroke="url(#paint0_linear_94_95972)" stroke-width="3"/>
-<path d="M30.4111 39L57 46" stroke="url(#paint1_linear_94_95972)" stroke-width="3"/>
-<path d="M23.5887 27.7781L45 10" stroke="url(#paint2_linear_94_95972)" stroke-width="3"/>
-<path d="M24 44.9512L45 62" stroke="url(#paint3_linear_94_95972)" stroke-width="3"/>
+<path d="M30.0002 33.7293L58 25" stroke="url(#paint0_linear_94_95972)" strokeWidth="3"/>
+<path d="M30.4111 39L57 46" stroke="url(#paint1_linear_94_95972)" strokeWidth="3"/>
+<path d="M23.5887 27.7781L45 10" stroke="url(#paint2_linear_94_95972)" strokeWidth="3"/>
+<path d="M24 44.9512L45 62" stroke="url(#paint3_linear_94_95972)" strokeWidth="3"/>
 <ellipse cx="12" cy="12" rx="12" ry="12" transform="matrix(-4.37114e-08 1 1 4.37114e-08 7 24)" fill="url(#paint4_radial_94_95972)"/>
 <ellipse cx="45" cy="62" rx="4" ry="4" transform="rotate(-90 45 62)" fill="url(#paint5_radial_94_95972)"/>
 <ellipse cx="45" cy="10" rx="4" ry="4" transform="rotate(-90 45 10)" fill="url(#paint6_radial_94_95972)"/>
