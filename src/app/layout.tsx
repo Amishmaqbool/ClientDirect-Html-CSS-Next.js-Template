@@ -45,16 +45,13 @@ export default function RootLayout({
   const isCustomerStoriesPage = pathname === '/customer-stories';
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const path = window.location.pathname;
-      if (path === "/faq" || path.startsWith("/articles/")) {
-        setIsFaqPage(true);
-      } else {
-        setIsFaqPage(false);
-      }
+    if (pathname === "/faq" || pathname.startsWith("/articles/")) {
+      setIsFaqPage(true);
+    } else {
+      setIsFaqPage(false);
     }
-  }, []);
-
+  }, [pathname]);
+  
   if (isFaqPage === null) {
     return (
       <html lang="en">
