@@ -47,9 +47,9 @@ export default function Header() {
                     openDropdown === "products" ? null : "products"
                   )
                 }
-                className="hover:text-gray-300 font-bold flex items-center"
+                className="hover:text-gray-300 font-bold flex gap-2 items-center"
               >
-                Produse
+                <p>Produse</p>
                 <ChevronDownIcon />
               </button>
               {openDropdown === "products" && (
@@ -118,9 +118,9 @@ export default function Header() {
                     openDropdown === "solutions" ? null : "solutions"
                   )
                 }
-                className="hover:text-gray-300 font-bold flex items-center"
+                className="hover:text-gray-300 font-bold flex gap-2 items-center"
               >
-                Soluții
+                <p>Soluții</p>
                 <ChevronDownIcon />
               </button>
               {openDropdown === "solutions" && (
@@ -185,9 +185,9 @@ export default function Header() {
                     openDropdown === "resources" ? null : "resources"
                   )
                 }
-                className="hover:text-gray-300 font-bold flex items-center"
+                className="hover:text-gray-300 font-bold flex gap-2 items-center"
               >
-                Resurse
+                <p>Resurse</p>
                 <ChevronDownIcon />
               </button>
               {openDropdown === "resources" && (
@@ -203,7 +203,7 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/customer-stories">
                       <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-7">
                         <div className="ml-3">
                           <p className="font-semibold text-base">
@@ -215,7 +215,7 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    <Link href="/">
+                    <Link href="/blueprint/b2b-marketing-blueprint">
                       <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-7">
                         <div className="ml-3">
                           <p className="font-semibold text-base">

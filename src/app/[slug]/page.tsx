@@ -37,7 +37,7 @@ const DetailsPage = ({ params }: Props) => {
   const title =
     slug === 'privacy-policy'
       ? 'Politica de confidențialitate'
-      : 'Termeni și condiții';
+      : 'Terms & Conditions';
 
   const paragraphText =
     slug === 'privacy-policy'

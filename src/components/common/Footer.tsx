@@ -87,7 +87,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid max-lg:gap-y-8 lg:grid-cols-4 lg:gap-x-5 text-white text-sm">
+          <div className="grid max-lg:gap-y-8 max-lg:place-content-between sm:grid-cols-2 md:grid-cols-4 sm:gap-x-28 md:gap-x-5 text-white text-sm">
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Produs</p>
               <ul className="space-y-3">

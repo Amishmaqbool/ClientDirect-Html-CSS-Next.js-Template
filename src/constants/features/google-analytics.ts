@@ -1,6 +1,4 @@
-import BackdropImage from "../../../src/assets/svgs/backdrop.svg"
-import AutoViewerImage from "../../../src/assets/svgs/auto-viewer.svg"
-import ThreeCircles from "../../../src/assets/svgs/three-circles.svg"
+
 
 export const reviews = [
   {
@@ -138,19 +136,19 @@ export const revenueSectionData = [
 
 export const OptimizeCardData = [
   {
-    icon: BackdropImage,
+    icon: "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b03113f6c8786f539ce3_Featured%20icon.svg",
     heading: "Testează",
     description:
       "Obține feedback imediat asupra testelor tale și atinge relevanța statistică fără a cheltui în timp ce aștepți conversiile.",
   },
   {
-    icon: AutoViewerImage,
+    icon: "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b03a9b4d72ee5f6d1138_Featured%20icon.svg",
     heading: "Optimizează",
     description:
       "Ia decizii mai bune cu o imagine completă a modului în care fiecare dintre acțiunile tale performează în atragerea vizitatorilor din piața ta țintă.",
   },
   {
-    icon: ThreeCircles,
+    icon: "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b04215a31d83aa48f7e0_Featured%20icon.svg",
     heading: "Tablou de bord",
     description:
       "Creează tablouri de bord personalizate în Google Data Studio sau folosește șabloanele noastre.",

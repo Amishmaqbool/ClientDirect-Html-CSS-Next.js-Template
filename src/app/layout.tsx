@@ -7,7 +7,7 @@ import Footer from "@/components/common/Footer";
 import FaqHeader from "@/components/common/FaqHeader";
 import FaqFooter from "@/components/common/FaqFooter";
 import { useEffect, useState } from "react";
-import Head from "next/head";
+
 const soleil = localFont({
   src: [
     {

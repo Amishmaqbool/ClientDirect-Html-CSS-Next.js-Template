@@ -6,7 +6,7 @@ import { sectionData } from "@/constants/b2b/sectionData";
 
 const MarketingBlueprint = () => {
   return (
-    <div className="relative bg-[#070b18] max-lg:-mb-40 lg:-mb-60 max-lg:pb-36 lg:pb-72">
+    <div className="relative bg-[#070b18] max-lg:-mb-40 lg:-mb-60 max-lg:pb-36 lg:pb-72 overflow-x-hidden">
       <Image src={BackgroundOne} alt="BackgroundOne" className="absolute object-fill block inset-0 h-[500px] w-[700px] mr-32 ml-auto z-[0]" />
       <Image src={BackgroundTwo} alt="BackgroundTwo" className="absolute top-0 left-[43%] translate-x-[-50%] z-[0] object-fill" />
       <div className="py-8 pb-0 lg:pt-24 lg:w-[780px] mx-auto z-[10000] bg-[#070b18]">
