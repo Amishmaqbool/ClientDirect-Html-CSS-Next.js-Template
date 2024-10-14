@@ -101,7 +101,9 @@ export default function HeroSection({
       <div className="mb-8 relative">
         <div
           style={{ backgroundColor: bgColor }}
-          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28  relative z-10 ${isHomePage ? "pb-40" : "pb-[58px]"}`}
+          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28  relative z-10 ${
+            isHomePage ? "pb-40" : "pb-[58px]"
+          }`}
         >
           <Image
             src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
@@ -172,39 +174,42 @@ export default function HeroSection({
         </div>
 
         {isHomePage && (
-          <div className="max-w-[1280px] mx-auto px-6 flex flex-col sm:flex-row justify-center items-center -mt-24 sm:space-x-4 md:space-x-6">
+          <div className="max-w-[1280px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center items-center -mt-24 gap-4 md:gap-6">
             {cardsData.map((card, index) => (
               <div
                 key={index}
-                className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg w-full sm:w-1/3 sm:max-w-[384px] z-10 overflow-hidden bg-[#101828]"
+                className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg z-10 overflow-hidden bg-[#101828] h-full"
               >
                 <div
-                  className={`h-2 ${gradientClasses[gradientColorMap[card.gradient]]
-                    }`}
+                  className={`h-2 ${
+                    gradientClasses[gradientColorMap[card.gradient]]
+                  }`}
                 ></div>
 
-                <div className="flex flex-col justify-between">
-                  <div className="relative z-10 px-4 md:px-6 py-5">
+                  <div className="px-4 md:px-6 pt-4 md:pt-6">
                     <h2
-                      className={`text-lg font-semibold text-transparent bg-clip-text ${gradientClasses[gradientColorMap[card.gradient]]
-                        }`}
+                      className={`text-lg font-semibold text-transparent bg-clip-text ${
+                        gradientClasses[gradientColorMap[card.gradient]]
+                      }`}
                     >
                       {card.title}
                     </h2>
-                    <p className="mt-2 text-[#667085] font-normal text-[13px]">
+                    <p className="md:min-h-[136px] lg:min-h-[86px] xl:min-h-0 mt-2 text-[#667085] font-normal text-[13px]">
                       {card.description}
                     </p>
                   </div>
-                  <Link
-                    className="px-4 md:px-6 pb-5 flex gap-2 items-center text-[#d0d5dd] hover:text-white text-sm"
-                    href={card.linkUrl}
-                  >
-                    <p>{card.linkText}</p>
-                    <div>
-                      <Image src={RightArrow} alt="Right Arrow" />
-                    </div>
-                  </Link>
-                </div>
+
+                  <div className="px-4 md:px-6 pb-4 md:pb-6">
+                    <Link
+                      className="mt-5 md:mt-0 lg:mt-5 flex gap-2 items-center text-[#d0d5dd] hover:text-white text-sm"
+                      href={card.linkUrl}
+                    >
+                      <p className="md:max-w-[160px] lg:max-w-full">{card.linkText}</p>
+                      <div className="w-max">
+                        <Image className="w-fit" src={RightArrow} alt="Right Arrow" width={20} height={20}/>
+                      </div>
+                    </Link>
+                  </div>
               </div>
             ))}
           </div>
