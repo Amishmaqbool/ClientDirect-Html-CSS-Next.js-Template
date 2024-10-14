@@ -25,7 +25,7 @@ export default function page() {
                 buttonPrimaryText="Start Free Trial"
                 buttonSecondaryText="Learn More"
                 flexDirection='row-reverse'
-                lottieUrl="https://lottie.host/4034954f-25fe-4bf1-a097-e167d0a704b1/hkHD3PaOGg.json"
+                lottieUrl="https://lottie.host/4e38670a-55ad-4f80-abf3-2b04665f2f92/CDVLxeHZmc.json"
             />
 
 
@@ -39,9 +39,8 @@ export default function page() {
                 ]}
                 buttonPrimaryText="Start Free Trial"
                 buttonSecondaryText="Learn More"
-                lottieUrl="https://lottie.host/4e38670a-55ad-4f80-abf3-2b04665f2f92/CDVLxeHZmc.json"
+                lottieUrl="https://lottie.host/4034954f-25fe-4bf1-a097-e167d0a704b1/hkHD3PaOGg.json"
                 flexDirection='row'
-
             />
 
 
