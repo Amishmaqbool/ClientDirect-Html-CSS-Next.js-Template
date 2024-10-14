@@ -101,7 +101,7 @@ export default function HeroSection({
       <div className="mb-8 relative">
         <div
           style={{ backgroundColor: bgColor }}
-          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 pb-[58px] relative z-10 ${isHomePage ? "pb-40" : "pb-0"}`}
+          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28  relative z-10 ${isHomePage ? "pb-40" : "pb-[58px]"}`}
         >
           <Image
             src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
