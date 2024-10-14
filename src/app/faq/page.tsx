@@ -38,6 +38,21 @@ const FAQ: React.FC = () => {
         <p className="font-normal text-base text-[#1a1a1a]">
           Get answers to all the questions you have about Snitcher.
         </p>
+
+        <div className="flex gap-2 items-center">
+          <Image
+            src="https://static.intercomassets.com/avatars/40541/square_128/social_media_icon_-_2023_01_20_Snitcher_-_Studio_Gijs_de_Koning_-_5246_%281%29-1676632880.jpg"
+            alt="Jerre"
+            className="rounded-full"
+            width={36}
+            height={36}
+          />
+          <div>
+            <p>Scris de Jerre</p> 
+            <p>Actualizat acum peste o săptămână</p>
+          </div>
+        </div>
+
         <div className="mt-10 px-3 py-4 border rounded-lg border-[#E6E6E6]">
           {articles.map((article) => (
             <a key={article.slug} href={`/articles/${article.slug}`}>
