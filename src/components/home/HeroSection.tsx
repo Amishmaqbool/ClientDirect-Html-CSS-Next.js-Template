@@ -101,7 +101,7 @@ export default function HeroSection({
       <div className="mb-8 relative">
         <div
           style={{ backgroundColor: bgColor }}
-          className="w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 pb-[58px] relative z-10"
+          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28  relative z-10 ${isHomePage ? "pb-40" : "pb-[58px]"}`}
         >
           <Image
             src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
@@ -148,7 +148,7 @@ export default function HeroSection({
             )}
           </div>
 
-          {featureContents.length >=1 && (
+          {featureContents.length >= 1 && (
             <div className="max-md:flex justify-center pt-[104px] max-w-[1280px] mx-auto px-6">
               {featureContents.length > 0 && (
                 <div className="z-[1000] grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -179,17 +179,15 @@ export default function HeroSection({
                 className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg w-full sm:w-1/3 sm:max-w-[384px] z-10 overflow-hidden bg-[#101828]"
               >
                 <div
-                  className={`h-2 ${
-                    gradientClasses[gradientColorMap[card.gradient]]
-                  }`}
+                  className={`h-2 ${gradientClasses[gradientColorMap[card.gradient]]
+                    }`}
                 ></div>
 
                 <div className="flex flex-col justify-between">
                   <div className="relative z-10 px-4 md:px-6 py-5">
                     <h2
-                      className={`text-lg font-semibold text-transparent bg-clip-text ${
-                        gradientClasses[gradientColorMap[card.gradient]]
-                      }`}
+                      className={`text-lg font-semibold text-transparent bg-clip-text ${gradientClasses[gradientColorMap[card.gradient]]
+                        }`}
                     >
                       {card.title}
                     </h2>
