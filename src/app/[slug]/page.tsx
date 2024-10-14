@@ -51,7 +51,7 @@ const DetailsPage = ({ params }: Props) => {
   if (!Content) return <div>Loading...</div>;
 
   return (
-    <div className="min-h-[80vh] w-full md:gap-5">
+    <div className="min-h-[80vh] w-full md:gap-5" style={{fontFamily: "system-ui"}}>
       <HeroSection
         headingText={title}
         headingLineBreaks={[3, 5]}
