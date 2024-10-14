@@ -98,7 +98,7 @@ export default function SolutionSection({
                 </div>
 
                 <div className="md:w-1/2 mt-10 md:mt-0 relative">
-                    <div className="relative z-10 flex justify-center items-center w-[80%] h-[80%]">
+                    <div className="relative z-10 flex justify-center items-center">
                         {lottieUrl && (
                             <DotLottieReact
                                 src={lottieUrl}
