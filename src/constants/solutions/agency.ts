@@ -21,19 +21,26 @@ export const agencyHeroData = [
 
 export const faqList = [
     {
-      question: 'Is there a free trial available?',
-      answer: 'Yes, you can try us for free for 14 days. Our free trial includes access to the real-time identification API.',
+        question: 'Este disponibilă o perioadă de probă gratuită?',
+        answer: [
+            'Clienții nu pot accesa paginile de facturare, astfel că sunteți liber să vă stabiliți propriile prețuri pentru clienți.',
+            'Recomandăm fie să includeți prețul în cadrul serviciilor pe care le oferiți și care utilizează platforma și datele, fie să urmați o structură de preț similară cu a noastră pentru a vă asigura că obțineți o marjă consistentă.'
+        ],
     },
     {
-      question: 'How does the API pricing work?',
-      answer: '‘Unique company identifications’ are unique visits to your site by a single company. For example, if a company visited your site 25 times in one month, it’s still considered just one unique company identification; you’re not paying for multiple visits from the same company. Because Snitcher filters out ISPs and irrelevant traffic, you’re only paying for unique, quality identifications and always have the power to remove any irrelevant traffic so it’s not counted against your Snitcher credits.',
+        question: 'Voi primi suport și instruire?',
+        answer: [
+            'Da, lucrăm îndeaproape cu partenerii noștri din agenții și cu cei care folosesc soluția noastră White-label pentru a vă asigura că sunteți complet pregătit atât în utilizările de bază, cât și în cele mai detaliate ale Snitcher în procesele de marketing și vânzări.',
+            'Prin procesul de integrare, vom crea un plan scalabil personalizat pe care să-l folosiți cu clienții dvs. și ne vom asigura de succesul acestora cu platforma.',
+            'Suntem, de asemenea, bucuroși să lucrăm direct cu clienții atunci când este solicitat de parteneri pentru a configura sau oferi suport pentru cazuri de utilizare mai complexe.'
+        ]
     },
     {
-      question: 'Are there any rate limits?',
-      answer: 'Rate limits default to 100 requests per minute. Additionally, you are limited based on your monthly plan. See our pricing page for an overview. Feel free to reach out if your use-case requires higher limits!',
+        question: 'Trebuie să folosesc propriul meu branding?',
+        answer: 'Nu, puteți folosi și brandul „powered by Snitcher” dacă preferați.',
     },
     {
-      question: 'Do you have examples of integrations that can be built with this API?',
-      answer: 'You can find a list of examples integrations here.',
+        question: 'Cum funcționează perioadele de probă gratuită pentru clienții mei?',
+        answer: 'La fel ca perioadele de probă obișnuite, clienții dvs. pot începe o perioadă de probă gratuită de 14 zile, fără niciun angajament și cu acces complet, din contul dvs., fără costuri pentru dvs.',
     },
-  ];
+];
