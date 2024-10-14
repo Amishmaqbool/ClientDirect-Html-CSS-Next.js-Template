@@ -46,7 +46,7 @@ export default function SolutionSection({
   };
 
   return (
-    <div className="relative bg-white text-black py-10 md:py-4">
+    <div className="relative bg-white text-black py-10 md:py-4 max-2xl:px-4">
       <div
         className={`max-w-[1280px] mx-auto flex flex-col ${
           flexDirection === "row-reverse"
