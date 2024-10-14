@@ -98,7 +98,7 @@ export default function HeroSection({
   const featurePaths = [
     "/features/google-analytics",
     "/features/lead-generation",
-    "/features/real-time-identification-api",
+    // "/features/real-time-identification-api",
   ];
 
   const isFeaturePage = featurePaths.includes(pathname);
@@ -135,7 +135,7 @@ export default function HeroSection({
             <h1 className="max-sm:max-w-[459px] max-w-[550px] lg:max-w-full mx-auto text-[30px] sm:text-[48px] lg:text-[72px] text-center text-white font-semibold leading-[40px] sm:leading-[60px] lg:leading-[92px]">
               {formatTextWithLineBreaks(headingText, headingLineBreaks)}
             </h1>
-            <p className="max-w-[540px] mx-auto text-center pt-2 leading-[1.9em] text-[#9499a1] text-lg">
+            <p className="max-w-0px] mx-auto text-center pt-2 leading-[1.7em] text-[#9499a1] text-lg">
               {formatTextWithLineBreaks(paragraphText, paragraphLineBreaks)}
             </p>
             {buttonVisible && (
@@ -154,7 +154,7 @@ export default function HeroSection({
           </div>
 
           <div className="max-md:flex justify-center pt-[104px] max-w-[1280px] mx-auto px-6">
-            {isFeaturePage && featureContents.length > 0 && (
+            {featureContents.length > 0 && (
               <div className="z-[1000] grid grid-cols-1 md:grid-cols-3 gap-5">
                 {featureContents.map((content, index) => (
                   <div key={index} className="flex items-center gap-5">

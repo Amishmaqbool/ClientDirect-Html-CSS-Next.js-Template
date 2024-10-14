@@ -5,7 +5,7 @@ import {
   analyticsHeroData,
   MarketingSectionData,
   analyticsFaqList,
-} from "@/constants/features";
+} from "@/constants/features/google-analytics";
 import RatingCards from "@/components/common/RatingCards";
 import HeroSection from "@/components/home/HeroSection";
 import MarketingSection from "@/components/common/MarketingComponent";
@@ -19,9 +19,9 @@ export default function googleAnalytics() {
       <div className="">
         <HeroSection
           headingText="Transformă Google Analytics într-o platformă creată pentru analize B2B"
-          headingLineBreaks={[3, 7]}
+          headingLineBreaks={[5]}
           paragraphText="Depășește limitele numerelor din GA cu informații îmbogățite despre companii și preia controlul asupra bugetului tău de marketing."
-          paragraphLineBreaks={[10]}
+          paragraphLineBreaks={[20]}
           maxWidth="900px"
           bgColor="#070b18"
           featureContents={analyticsHeroData}

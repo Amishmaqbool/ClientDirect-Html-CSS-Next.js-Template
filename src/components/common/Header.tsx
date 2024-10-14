@@ -91,7 +91,7 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    <Link href="/features/real-time-identification-api">
+                    {/* <Link href="/features/real-time-identification-api">
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={IdentifyDropdown}
@@ -106,7 +106,7 @@ export default function Header() {
                           </p>
                         </div>
                       </li>
-                    </Link>
+                    </Link> */}
                   </ul>
                 </div>
               )}
@@ -126,7 +126,7 @@ export default function Header() {
               {openDropdown === "solutions" && (
                 <div className="absolute top-4 left-1/2 transform -translate-x-1/2 mt-2 p-5 rounded-[14px] shadow-lg w-[350px] border border-[#ffffff26] bg-[#070b18]">
                   <ul>
-                    <Link href="/">
+                    <Link href="/solutions/sales">
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={AgenciesDropdown}
@@ -276,8 +276,8 @@ export default function Header() {
       </div>
       <div
         className={`lg:hidden bg-[#070b18] overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${isMobileMenuOpen
-            ? "max-h-screen opacity-100 scale-y-100"
-            : "max-h-0 opacity-0 scale-y-0"
+          ? "max-h-screen opacity-100 scale-y-100"
+          : "max-h-0 opacity-0 scale-y-0"
           }`}
       >
         <ul className="px-6 py-4 space-y-4 text-white text-sm">
@@ -303,11 +303,11 @@ export default function Header() {
                     <p className="text-base">Îmbogățitor Google Analytics</p>
                   </li>
                 </Link>
-                <Link href="/features/real-time-identification-api">
+                {/* <Link href="/features/real-time-identification-api">
                   <li className="pt-2">
                     <p className="text-base">Spotter</p>
                   </li>
-                </Link>
+                </Link> */}
               </ul>
             )}
           </li>

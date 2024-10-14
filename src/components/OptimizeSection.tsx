@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Button from "./common/Button";
-import { OptimizeCardData } from "@/constants/features";
+import { OptimizeCardData } from "@/constants/features/google-analytics";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function OptimizeSection() {

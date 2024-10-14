@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Button from "./common/Button";
-import { revenueSectionData } from "@/constants/features";
+import { revenueSectionData } from "@/constants/features/google-analytics";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function RevenueSection() {

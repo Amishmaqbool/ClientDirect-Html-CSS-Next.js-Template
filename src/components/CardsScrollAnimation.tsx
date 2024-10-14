@@ -3,7 +3,7 @@ import {
   landingReviewCardsColumn1,
   landingReviewCardsColumn2,
   landingReviewCardsColumn3,
-} from "@/constants/features";
+} from "@/constants/features/google-analytics";
 import RatingCards from "./common/RatingCards";
 
 export default function CardsScrollAnimation() {
