@@ -17,13 +17,13 @@ export default function Footer() {
     <>
       <Panel />
       <div className="bg-[#101726] relative">
-        <div className="max-w-[1216px] max-lg:px-4 mx-auto pb-16 pt-[348px] flex max-lg:flex-col justify-between gap-32">
+        <div className="max-w-[1216px] max-lg:px-4 mx-auto pb-16 pt-[348px] flex max-lg:flex-col justify-between max-sm:gap-16 gap-32">
           <div className="flex flex-col">
             <Link href="/">
               <Image src={logo} height={35} width={125} alt="Logo" />
             </Link>
 
-            <div className="flex items-center -space-x-4 my-[18px]">
+            <div className="flex max-sm:flex-wrap items-center max-sm:gap-2 sm:-space-x-4 my-[18px]">
               <Image
                 src={highPerformerSummer}
                 width={68}
@@ -74,14 +74,14 @@ export default function Footer() {
             </div>
 
             <div>
-              <button className="bg-[#ffffff1a] text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center">
+              <button className="w-max bg-[#ffffff1a] max-[420px]:text-xs text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center">
                 Începe perioada de probă gratuită de 14 zile
                 <Image
                   src={arrow}
                   alt="săgeată"
                   width={20}
                   height={21}
-                  className="ml-2"
+                  className="max-[365px]:hidden ml-2"
                 />
               </button>
             </div>

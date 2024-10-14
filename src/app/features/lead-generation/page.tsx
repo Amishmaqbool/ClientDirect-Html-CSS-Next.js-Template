@@ -5,12 +5,10 @@ import ProsSection from "@/components/features/lead-gen/ProsSection";
 import DataSection from "@/components/features/lead-gen/DataSection";
 import IdentifySection from "@/components/features/lead-gen/IdentifySection";
 import SegmentSection from "@/components/features/lead-gen/SegmentSection";
-import Image from "next/image";
 import gradientImage from "@/assets/images/colours.webp";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import { leadHeroData, reviews } from "@/constants/features/lead-generation";
 import RatingCards from "@/components/common/RatingCards";
-import RightArrow from "../../../assets/svgs/right-arrow.svg";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Button from "@/components/common/Button";
 

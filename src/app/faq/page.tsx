@@ -53,14 +53,14 @@ const FAQ: React.FC = () => {
           </p>
         </div>
 
-        <div className="mt-10 px-3 py-4 border rounded-lg border-[#E6E6E6]">
+        <div className="mt-10 max-sm:pl-5 px-3 py-4 border rounded-lg border-[#E6E6E6]">
           {articles.map((article) => (
             <a key={article.slug} href={`/articles/${article.slug}`}>
               <div
-                className="faq-item article-section group flex justify-between items-center rounded-md cursor-pointer transition-all duration-300 p-3"
+                className="faq-item article-section group flex justify-between items-center rounded-md cursor-pointer transition-all duration-300 sm:p-3"
                 key={article.slug}
               >
-                <div className="max-w-[800px]">
+                <div className="max-sm:pt-3.5 max-w-[800px]">
                   <h2 className="font-normal text-base text-[#1a1a1a] group-hover:text-[#2B61DE] transition-colors duration-300">
                     {article.title}
                   </h2>
@@ -71,6 +71,7 @@ const FAQ: React.FC = () => {
                 <div className="p-3 group-hover:bg-custom-hover transition-colors duration-300">
                   <Image
                     className="transition-colors duration-300"
+                    style={{marginLeft: '20px'}}
                     src={ChevronRight}
                     alt="Chevron Right"
                   />

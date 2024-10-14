@@ -1,7 +1,7 @@
 export const sectionData = [
   {
     sectionTitle: "Persona Cumpărătorului",
-    sectionColor: "bg-[#ca8504]",
+    sectionColor: "#ca8504",
     sectionBorderColor: "border-[#ca8504]",
     data: [
       {
@@ -40,7 +40,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Strategie de Conținut",
-    sectionColor: "bg-[#e04f16]",
+    sectionColor: "#e04f16",
     sectionBorderColor: "",
     data: [
       {
@@ -79,7 +79,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Social Media",
-    sectionColor: "bg-[#e62e05]",
+    sectionColor: "#e62e05",
     sectionBorderColor: "",
     data: [
       {
@@ -118,7 +118,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Email Marketing",
-    sectionColor: "bg-[#e31b54]",
+    sectionColor: "#e31b54",
     sectionBorderColor: "",
     data: [
       {
@@ -157,7 +157,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Generarea de Lead-uri",
-    sectionColor: "bg-[#dd2590]",
+    sectionColor: "#dd2590",
     sectionBorderColor: "",
     data: [
       {
@@ -188,7 +188,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Alinierea Vânzărilor",
-    sectionColor: "bg-[#ba24d5]",
+    sectionColor: "#ba24d5",
     sectionBorderColor: "",
     data: [
       {
@@ -219,7 +219,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Retenția Clienților",
-    sectionColor: "bg-[#6938ef]",
+    sectionColor: "#6938ef",
     sectionBorderColor: "",
     data: [
       {
@@ -250,7 +250,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Analitică",
-    sectionColor: "bg-[#7839ee]",
+    sectionColor: "#7839ee",
     sectionBorderColor: "",
     data: [
       {
@@ -281,7 +281,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Marketing de Evenimente",
-    sectionColor: "bg-[#444ce7]",
+    sectionColor: "#444ce7",
     sectionBorderColor: "",
     data: [
       {
@@ -312,7 +312,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Marketing Bazat pe Conturi",
-    sectionColor: "bg-[#1570ef]",
+    sectionColor: "#1570ef",
     sectionBorderColor: "",
     data: [
       {
@@ -351,7 +351,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Pâlnia de Vânzări",
-    sectionColor: "bg-[#1570ef]",
+    sectionColor: "#1570ef",
     sectionBorderColor: "",
     data: [
       {
@@ -382,7 +382,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Optimizarea Ratelor de Conversie",
-    sectionColor: "bg-[#088ab2]",
+    sectionColor: "#088ab2",
     sectionBorderColor: "",
     data: [
       {

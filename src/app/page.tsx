@@ -5,6 +5,7 @@ import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 import { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: 'Snitcher | Visitor identification for Agencies | Free Trial',
   description: 'Offer your clients a powerful whitelabel visitor identification solution with Snitcher. Drive revenue, generate leads, and support existing services.',
