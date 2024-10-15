@@ -24,7 +24,10 @@ export default function InputField({
       <div className="flex justify-between pb-1 items-center">
         <div className="flex items-center">
           {label && (
-            <label className="text-start font-medium leading-[1.625em] text-[#020817] text-sm" htmlFor={id || name}>
+            <label
+              className="text-start font-medium leading-[1.625em] text-[#020817] text-sm"
+              htmlFor={id || name}
+            >
               {label}
             </label>
           )}

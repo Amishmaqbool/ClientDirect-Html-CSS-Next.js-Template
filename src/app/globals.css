@@ -222,13 +222,8 @@ select:focus {
   right: 0px;
   width: 150px;
 }
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.item {
+/* .item {
   width: 90px;
   height: 90px;
   display: flex;
@@ -251,4 +246,4 @@ select:focus {
 .radio:checked ~ span {
   filter: grayscale(100%);
   font-size: 3rem;
-}
+} */
