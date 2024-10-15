@@ -263,10 +263,10 @@ export default function Header() {
           </ul>
         </nav>
         <div className="hidden lg:flex justify-center items-center gap-8 text-sm text-white">
-          <Link href="/">
+          <Link href="/auth/login">
             <button className="font-semibold">Autentificare</button>
           </Link>
-          <Link href="/">
+          <Link href="/auth/register">
             <button className="rounded-full bg-[#3257ff] pt-[7px] pb-[6px] pl-4 pr-2 flex items-center gap-1 hover:bg-blue-600">
               <p>Începe acum</p>
               <ChevronRightIcon className="h-5 w-5 -mt-[2px]" />
