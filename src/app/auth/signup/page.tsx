@@ -1,16 +1,18 @@
-"use client";
-import React, {useState} from "react";
+// "use client";
+import React from "react";
 import Image from "next/image";
 import Snitcher from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
+import Google from "@/assets/images/google.webp";
+import Linkedin from "@/assets/images/linked.webp";
 
 export default function Signup (){
 
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [name, setName] = useState("");
-    const [phone, setPhone] = useState("");
-    const [errors, setErrors] = useState({});
+    // const [email, setEmail] = useState("");
+    // const [password, setPassword] = useState("");
+    // const [name, setName] = useState("");
+    // const [phone, setPhone] = useState("");
+    // const [errors, setErrors] = useState({});
 
     return(
         <>
@@ -26,52 +28,52 @@ export default function Signup (){
 
         <InputField
          label="Name"
-         value={name}
+         value={""}
          name="name"
          type="text" 
-         onChange={(e) => {
-            setName(e.target.value);
-            setErrors((prev) => ({ ...prev, name: "" }));
-        }}
+        //  onChange={(e) => {
+        //     setName(e.target.value);
+        //     setErrors((prev) => ({ ...prev, name: "" }));
+        // }}
         />
 
         <InputField
          label="Phone"
-         value={phone}
+         value={""}
          name="phone"
          type="tel" 
-         onChange={(e) => {
-           setPhone(e.target.value);
-           setErrors((prev) => ({ ...prev, phone: "" }));
-        }}
+        //  onChange={(e) => {
+        //    setPhone(e.target.value);
+        //    setErrors((prev) => ({ ...prev, phone: "" }));
+        // }}
         />
 
         <InputField
          label="Email"
-         value={email}
+         value={""}
          name="email"
          type="email" 
-         onChange={(e) => {
-           setEmail(e.target.value);
-           setErrors((prev) => ({ ...prev, email: "" }));
-        }}
+        //  onChange={(e) => {
+        //    setEmail(e.target.value);
+        //    setErrors((prev) => ({ ...prev, email: "" }));
+        // }}
         />
 
         <InputField
          label="Password"
-         value={password}
+         value={""}
          name="password"
          type="text" 
-         onChange={(e) => {
-            setPassword(e.target.value);
-            setErrors((prev) => ({ ...prev, password: "" }));
-        }}
+        //  onChange={(e) => {
+        //     setPassword(e.target.value);
+        //     setErrors((prev) => ({ ...prev, password: "" }));
+        // }}
         />
 
         <InputField
          label="Confirm Password"
-         value={password}
-         onChange={(e) => setPassword(e.target.value)}
+         value={""}
+         //onChange={(e) => setPassword(e.target.value)}
          name="password"
          type="password"
          />
@@ -83,6 +85,32 @@ export default function Signup (){
             <span className="px-2 text-gray-600 bg-white text-sm">OR</span>
             <hr className="w-full border-gray-300" />
         </div>
+
+        <button className="border border-gray-300 w-full max-w-[350px] py-2 font-medium text-sm text-gray-700 rounded-md flex items-center justify-center mb-3 hover:bg-gray-100">
+            <Image
+              src={Google} 
+              alt="Google"
+              width={20}
+              height={20}
+              className="mr-2"
+            />
+            Sign up with Google
+          </button>
+
+          <button className="border border-gray-300 w-full max-w-[350px] py-2 font-medium text-sm text-gray-700 rounded-md flex items-center justify-center hover:bg-gray-100">
+            <Image
+              src={Linkedin}
+              alt="LinkedIn"
+              width={20}
+              height={20}
+              className="mr-2"
+            />
+            Sign up with LinkedIn
+          </button>
+
+          <p className="py-8 text-sm text-[#020817]">
+            Already have an account? <a href="/auth/login" className="text-blue-600 hover:text-blue-500">Sign in</a>
+          </p>
 
 
         </form>
