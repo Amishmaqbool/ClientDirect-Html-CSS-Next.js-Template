@@ -6,16 +6,21 @@ import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
 
+interface Errors {
+  password?: string;
+  general?: string;
+}
+
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<Errors>({});
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -36,8 +41,8 @@ export default function Signup() {
         body: JSON.stringify({
           email: email,
           password: password,
-          firstname: name.split(" ")[0], // Assuming the first name is the first word of the name
-          lastname: name.split(" ")[1] || "", // Assuming the last name is the second word or empty
+          firstname: name.split(" ")[0], 
+          lastname: name.split(" ")[1] || "", 
           user_type: "tenant",
           status: "active",
           language: "de",
@@ -51,11 +56,15 @@ export default function Signup() {
 
       const data = await response.json();
       alert(JSON.stringify(data)); // Handle successful registration
-    } catch (err: any) {
-      setErrors((prev) => ({ ...prev, general: err.message || "Something went wrong" }));
-    } finally {
-      setLoading(false);
-    }
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setErrors((prev) => ({ ...prev, general: err.message }));
+        } else {
+          setErrors((prev) => ({ ...prev, general: "Something went wrong" }));
+        }
+      } finally {
+        setLoading(false);
+      }
   };
 
   return (
@@ -113,8 +122,8 @@ export default function Signup() {
           type="password"
         />
 
-        {/* {errors.password && <p className="text-red-500 mb-4">{errors.password}</p>}
-        {errors.general && <p className="text-red-500 mb-4">{errors.general}</p>} */}
+        {errors.password && <p className="text-red-500 mb-4">{errors.password}</p>}
+        {errors.general && <p className="text-red-500 mb-4">{errors.general}</p>} 
 
         <button
           type="submit"
