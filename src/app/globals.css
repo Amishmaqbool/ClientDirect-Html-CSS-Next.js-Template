@@ -174,33 +174,76 @@ select:focus {
   display: flex;
   position: relative;
   overflow: hidden;
-}.marquee-container {
+}
+.marquee-container {
   display: flex;
   overflow: hidden;
-  width: 100%;
+  position: relative;
 }
 
 .marquee-scroll {
   display: flex;
-  gap: 2rem; 
-  animation: marquee-scroll 30s linear infinite;
-  width: max-content; 
+  animation: marquee 20s linear infinite;
 }
 
-@keyframes marquee-scroll {
+@keyframes marquee {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); 
+    transform: translateX(-100%);
   }
+}
+
+.marquee-scroll .marquee-group {
+  display: flex;
 }
 
 @media screen and (max-width: 640px) {
   .marquee-scroll {
-    display: flex;
-    gap: 1rem; 
-    animation: marquee-scroll 30s linear infinite;
-    width: max-content; 
+    animation: marquee 20s linear infinite;
   }
 }
+
+.fade-left {
+  background-image: linear-gradient(to right, #fcfcfd, #fff0);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+}
+
+.fade-right {
+  background-image: linear-gradient(to right, #fff0, #fcfcfd);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0px;
+  width: 150px;
+}
+
+/* .item {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.radio {
+  display: none;
+}
+
+.radio ~ span {
+  font-size: 32px;
+  filter: grayscale(0%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.radio:checked ~ span {
+  filter: grayscale(100%);
+  font-size: 3rem;
+} */

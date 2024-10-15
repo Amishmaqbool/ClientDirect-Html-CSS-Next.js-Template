@@ -5,7 +5,7 @@ import footerCtaLeft from '@/assets/svgs/footer-cta-left-gradient.svg'
 import footerCtaRight from '@/assets/svgs/footer-cta-right-gradient.svg'
 export default function Panel() {
   return (
-    <div>
+    <div className='bg-[#fcfcfd]'>
       <div className="relative max-w-[1216px] -mt-28 mx-auto z-10 bg-[#3257ff] rounded-2xl py-[96px] text-center text-white overflow-hidden -mb-[295px]">
         <div className="max-w-[1000px] mx-auto px-5 lg:px-10 relative z-20">
 

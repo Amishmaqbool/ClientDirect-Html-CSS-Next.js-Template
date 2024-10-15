@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "./common/Button";
 import { OptimizeCardData } from "@/constants/features/google-analytics";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import WomenAvatar from "../assets/svgs/women-avatar.svg"
 
 export default function OptimizeSection() {
   return (
@@ -63,7 +64,7 @@ export default function OptimizeSection() {
 
               <div className="pt-9 flex flex-col sm:flex-row gap-4 items-start">
                 <Image
-                  src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b04ac602fefb63e60c56_Avatar.svg"
+                  src={WomenAvatar}
                   alt="Avatar"
                   width={48}
                   height={48}

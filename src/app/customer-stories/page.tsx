@@ -51,7 +51,6 @@ const caseStudies = [
   },
 ];
 
-
 const CaseStudyList = () => {
   return (
     <div>

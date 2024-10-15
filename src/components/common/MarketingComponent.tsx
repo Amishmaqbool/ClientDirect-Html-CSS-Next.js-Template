@@ -2,9 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import RightArrow from "../../assets/svgs/right-arrow.svg"
+import { StaticImageData } from 'next/image';
 
 interface ContentList {
-  image: string;
+  image: StaticImageData;
   title: string;
   content: string;
 }
