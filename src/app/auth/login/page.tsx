@@ -32,8 +32,10 @@ export default function Signup() {
             label="Email"
             value={""}
             name="email"
-            type="email"
-            //  onChange={(e) => {
+            type="email" 
+            // onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {
+            //   throw new Error("Function not implemented.");
+            // } }            //  onChange={(e) => {
             //    setEmail(e.target.value);
             //    setErrors((prev) => ({ ...prev, email: "" }));
             // }}
@@ -43,8 +45,10 @@ export default function Signup() {
             label="Password"
             value={""}
             name="password"
-            type="text"
-            //  onChange={(e) => {
+            type="text" 
+            // onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {
+            //   throw new Error("Function not implemented.");
+            // } }            //  onChange={(e) => {
             //     setPassword(e.target.value);
             //     setErrors((prev) => ({ ...prev, password: "" }));
             // }}

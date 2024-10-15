@@ -7,6 +7,9 @@ import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
 
 export default function Signup() {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+  console.log("API URL:", apiUrl);
   // const [email, setEmail] = useState("");
   // const [password, setPassword] = useState("");
   // const [name, setName] = useState("");
