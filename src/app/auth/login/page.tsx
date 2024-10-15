@@ -1,5 +1,5 @@
-// "use client";
-import React from "react";
+"use client";
+import React, {useState}  from "react";
 import Image from "next/image";
 import Snitcher from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
@@ -7,15 +7,34 @@ import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
 
 export default function Signup() {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [errors, setErrors] = useState({});
-  // const [rememberMe, setRememberMe] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
+  const [rememberMe, setRememberMe] = useState(false);
+
+  console.log(process.env.API_URL);
+
+  const handleSubmit = async () => {
+    let response = await fetch(`process.env.API_URL/auth/token`, {
+        method: "POST",
+        body: JSON.stringify({
+            email: email,
+            password: password,
+        }),
+        headers: {
+            'Content-type': 'application/json'
+        }
+    })
+
+    response = await response.json()
+
+    alert(JSON.stringify(response))
+}
 
   return (
     <>
       <div className="max-w-[352px] mx-auto">
-        <form className="max-[400px]:px-6 py-12 w-full">
+        <form className="max-[400px]:px-6 py-12 w-full" onSubmit={handleSubmit}>
           <div className="flex flex-col justify-center items-center mb-4">
             <Image src={Snitcher} alt="Snitcher-Logo" width={48} height={48} />
             <div className="mt-6 flex flex-col text-center">
@@ -30,28 +49,24 @@ export default function Signup() {
 
           <InputField
             label="Email"
-            value={""}
+            value={email}
             name="email"
-            type="email" 
-            // onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {
-            //   throw new Error("Function not implemented.");
-            // } }            //  onChange={(e) => {
-            //    setEmail(e.target.value);
-            //    setErrors((prev) => ({ ...prev, email: "" }));
-            // }}
+            type="email"
+             onChange={(e) => {
+               setEmail(e.target.value);
+               setErrors((prev) => ({ ...prev, email: "" }));
+            }}
           />
 
           <InputField
             label="Password"
-            value={""}
+            value={password}
             name="password"
-            type="text" 
-            // onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {
-            //   throw new Error("Function not implemented.");
-            // } }            //  onChange={(e) => {
-            //     setPassword(e.target.value);
-            //     setErrors((prev) => ({ ...prev, password: "" }));
-            // }}
+            type="text"
+             onChange={(e) => {
+                setPassword(e.target.value);
+                setErrors((prev) => ({ ...prev, password: "" }));
+            }}
           />
 
           <div className="flex justify-between items-center">
@@ -64,8 +79,8 @@ export default function Signup() {
                   type="checkbox"
                   id="rememberMe"
                   name="rememberMe"
-                  // checked={rememberMe}
-                  // onChange={(e) => setRememberMe(e.target.checked)}
+                  checked={rememberMe}
+                  onChange={(e) => setRememberMe(e.target.checked)}
                   className="text-gray-500"
                 />
                 <div className="custom-checkbox"></div>
@@ -81,7 +96,8 @@ export default function Signup() {
             </div>
           </div>
 
-          <button className="mt-[2px] border border-blue-700 bg-blue-600 align-middle py-2 font-medium text-sm w-full max-w-[350px] rounded-lg text-white cursor-pointer hover:bg-blue-700">
+          <button className="mt-[2px] border border-blue-700 bg-blue-600 align-middle py-2 font-medium text-sm w-full max-w-[350px] rounded-lg text-white cursor-pointer hover:bg-blue-700"
+          type="submit">
             Sign in
           </button>
 
