@@ -15,7 +15,7 @@ export default function Signup() {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -51,7 +51,7 @@ export default function Signup() {
 
       const data = await response.json();
       alert(JSON.stringify(data)); // Handle successful registration
-    } catch (err) {
+    } catch (err: any) {
       setErrors((prev) => ({ ...prev, general: err.message || "Something went wrong" }));
     } finally {
       setLoading(false);
@@ -113,8 +113,8 @@ export default function Signup() {
           type="password"
         />
 
-        {errors.password && <p className="text-red-500 mb-4">{errors.password}</p>}
-        {errors.general && <p className="text-red-500 mb-4">{errors.general}</p>}
+        {/* {errors.password && <p className="text-red-500 mb-4">{errors.password}</p>}
+        {errors.general && <p className="text-red-500 mb-4">{errors.general}</p>} */}
 
         <button
           type="submit"

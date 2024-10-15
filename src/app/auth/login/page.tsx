@@ -13,7 +13,7 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     setLoading(true);
     setError("");
@@ -35,8 +35,8 @@ export default function Signup() {
       }
 
       const data = await response.json();
-      alert(JSON.stringify(data));
-    } catch (err) {
+      alert(JSON.stringify(data)); 
+    } catch (err: any) {
       setError(err.message || "Something went wrong");
     } finally {
       setLoading(false);
@@ -45,7 +45,7 @@ export default function Signup() {
 
   return (
     <div className="max-w-[352px] mx-auto">
-      <form onSubmit={handleSubmit} className="max-[400px]:px-6 py-20 w-full">
+      <form onSubmit={handleSubmit} className="max-[400px]:px-6 py-12 w-full">
         <div className="flex flex-col justify-center items-center mb-4">
           <Image src={Snitcher} alt="Snitcher-Logo" width={48} height={48} />
           <div className="mt-6 flex flex-col text-center">
