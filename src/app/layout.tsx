@@ -42,7 +42,7 @@ export default function RootLayout({
 }>) {
   const [isFaqPage, setIsFaqPage] = useState<boolean | null>(null);
   const pathname = usePathname();
-  const isAuthPage =  pathname === "/auth/login" || pathname === "/auth/signup";
+  const isAuthPage =  pathname === "/auth/login" || pathname === "/auth/register";
   const isCustomerStoriesPage = pathname === '/customer-stories';
 
   useEffect(() => {
