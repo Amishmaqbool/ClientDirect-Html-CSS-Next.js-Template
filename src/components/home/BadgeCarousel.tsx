@@ -20,9 +20,9 @@ const badges = [
 const BadgeCarousel = () => {
   return (
     <div className="bg-white w-full">
-      <div className="max-w-[1280px] mx-auto px-6 relative flex justify-center items-center pt-24 pb-8">
-        <div className="fade-left"></div>
-        <div className="fade-right"></div>
+      <div className="max-w-[1280px] mx-auto sm:px-6 relative flex justify-center items-center pt-24 pb-8">
+        <div className="fade-left z-50"></div>
+        <div className="fade-right z-50"></div>
 
         <div className="absolute z-50">
           <Image

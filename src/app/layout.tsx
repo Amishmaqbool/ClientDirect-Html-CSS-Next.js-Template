@@ -66,7 +66,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${soleil.variable} antialiased`}>
         {isFaqPage ? <FaqHeader /> : <Header />}
-        <div className={`pb-20 ${!isCustomerStoriesPage ? 'sm:pb-40' : ''}`}>
+        <div className={`pb-20 bg-[#fcfcfd] ${!isCustomerStoriesPage ? 'sm:pb-40' : ''}`}>
           {children}
         </div>
         {isFaqPage ? <FaqFooter /> : <Footer />}

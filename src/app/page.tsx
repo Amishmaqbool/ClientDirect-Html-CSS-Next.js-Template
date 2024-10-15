@@ -99,9 +99,11 @@ export default function Home() {
       >
         <IntegrationSection />
       </div>
-      <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto">
-        <DriveBudget />
-        <CardsScrollAnimation />
+      <div className="bg-[#fcfcfd]">
+        <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto">
+          <DriveBudget />
+          <CardsScrollAnimation />
+        </div>
       </div>
     </>
   );

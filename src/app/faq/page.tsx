@@ -26,10 +26,9 @@ const getArticles = () => {
 const articles = getArticles();
 const FAQ: React.FC = () => {
   return (
-    <div className="faq-container" style={{ fontFamily: "system-ui" }}>
+    <div className="faq-container pt-9" style={{ fontFamily: "system-ui" }}>
       <div className="max-w-[960px] mx-auto px-6">
         <Image
-          className="pt-8"
           src={ChatIcon}
           alt="Chat Icon"
           width={40}
@@ -71,7 +70,7 @@ const FAQ: React.FC = () => {
                 <div className="p-3 group-hover:bg-custom-hover transition-colors duration-300">
                   <Image
                     className="transition-colors duration-300"
-                    style={{marginLeft: '20px'}}
+                    style={{ marginLeft: "20px" }}
                     src={ChevronRight}
                     alt="Chevron Right"
                   />

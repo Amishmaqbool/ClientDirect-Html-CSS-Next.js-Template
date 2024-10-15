@@ -14,13 +14,12 @@ interface Props {
 
 const articlesDirectory = path.join(process.cwd(), 'src', 'app', 'content', 'articles');
 
-// Function to get all articles asynchronously
 const getArticles = async () => {
   const files = await fs.readdir(articlesDirectory);
   const articles = await Promise.all(
     files.map(async (file) => {
       const filePath = path.join(articlesDirectory, file);
-      const fileContent = await fs.readFile(filePath, "utf-8"); // Replacing readFileSync with async readFile
+      const fileContent = await fs.readFile(filePath, "utf-8"); 
       const { data } = matter(fileContent);
       return {
         title: data.title,
@@ -58,11 +57,10 @@ export default async function ArticlePage({ params }: Props) {
 
     const formattedSlug = slug.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
 
-    // Fetch all articles to display in the "Related Articles" section
     const articles = await getArticles();
 
     return (
-      <div className="article-container max-w-[650px] mx-auto px-6" style={{ fontFamily: "system-ui" }}>
+      <div className="pt-9 article-container max-w-[650px] mx-auto px-6" style={{ fontFamily: "system-ui" }}>
         
         <nav className="flex gap-2 items-center text-sm mb-4">
           <Link href="/faq"><span className='hover:text-black text-gray-400 cursor-pointer'>FAQ</span></Link> <Image src={SmallAngle} alt="Small Angle"/> <span className="text-gray-400">{formattedSlug}</span>
@@ -103,21 +101,29 @@ export default async function ArticlePage({ params }: Props) {
         </div>
         
         <div className="p-3 -mb-4 -ml-4 -mr-4 mt-6 rounded-card sm:-mb-2 sm:-ml-1 sm:-mr-1 sm:mt-8 rounded-lg bg-[#f2f2f2]">
-          <div className="pt-2.5 pb-1 text-center">
-            Did this answer your question?
-          </div>
-          <div className="flex justify-center">
-            <button className="bg-none p-0 w-[50px] h-full inline-block text-center text-[32px] cursor-pointer transition-transform duration-[160ms] ease-[cubic-bezier(0.65,0.61,0.18,1.8)] delay-[20ms] origin-[50%_60%] hover:transform hover:scale-125">
-              <span title="Disappointed">😞</span>
-            </button>
-            <button className="bg-none p-0 w-[50px] h-full inline-block text-center text-[32px] cursor-pointer transition-transform duration-[160ms] ease-[cubic-bezier(0.65,0.61,0.18,1.8)] delay-[20ms] origin-[50%_60%] hover:transform hover:scale-125">
-              <span title="Neutral">😐</span>
-            </button>
-            <button className="bg-none p-0 w-[50px] h-full inline-block text-center text-[32px] cursor-pointer transition-transform duration-[160ms] ease-[cubic-bezier(0.65,0.61,0.18,1.8)] delay-[20ms] origin-[50%_60%] hover:transform hover:scale-125">
-              <span title="Smiley">😃</span>
-            </button>
+          <div className="pt-2.5 pb-1 text-center">Did this answer your question?</div>
+          <div className="container">
+            <div className="item">
+              <label htmlFor="0">
+                <input className="radio" type="radio" name="feedback" id="0" value="0" />
+                <span>😞</span>
+              </label>
+            </div>
+            <div className="item">
+              <label htmlFor="1">
+                <input className="radio" type="radio" name="feedback" id="1" value="1" />
+                <span>😐</span>
+              </label>
+            </div>
+            <div className="item">
+              <label htmlFor="2">
+                <input className="radio" type="radio" name="feedback" id="2" value="2" />
+                <span>😃</span>
+              </label>
+            </div>
           </div>
         </div>
+       
       </div>
     );
   } catch (error) {

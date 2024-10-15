@@ -4,7 +4,7 @@ import BadgeCarousel from "./BadgeCarousel";
 const DriveBudget = () =>{
     return (
         <>
-        <div className="w-full max-w-[900px] mx-auto flex flex-col items-center justify-center">
+        <div className="bg-black w-full max-w-[900px] mx-auto flex flex-col items-center justify-center">
           <BadgeCarousel />
         </div>
         

@@ -6,7 +6,7 @@ import IntercomIcon from "../../assets/svgs/intercom.svg";
 
 export default function FaqFooter() {
   return (
-    <div className="flex justify-center" style={{ fontFamily: "system-ui" }}>
+    <div className="bg-[#fcfcfd] flex justify-center" style={{ fontFamily: "system-ui" }}>
       <div>
         <a href="/faq">
           <div className="flex justify-center cursor-pointer">
