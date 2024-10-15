@@ -11,10 +11,18 @@ import AgenciesDropdown from "@/assets/svgs/agencies-dropdown.svg";
 import logo from "../../assets/svgs/logo.svg";
 import Guides from "@/assets/images/navbar-img.webp";
 import ChevronDownIcon from "../../../public/svgs/chevron-down";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setOpenDropdown(null);
+    setIsMobileMenuOpen(false); 
+  }, [pathname]);
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Element;
