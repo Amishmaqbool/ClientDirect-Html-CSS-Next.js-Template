@@ -42,6 +42,7 @@ export default function RootLayout({
 }>) {
   const [isFaqPage, setIsFaqPage] = useState<boolean | null>(null);
   const pathname = usePathname();
+  const isAuthPage =  pathname === "/auth/login" || pathname === "/auth/signup";
   const isCustomerStoriesPage = pathname === '/customer-stories';
 
   useEffect(() => {
@@ -51,6 +52,16 @@ export default function RootLayout({
       setIsFaqPage(false);
     }
   }, [pathname]);
+
+  if (isAuthPage) {
+    return (
+      <html lang="en">
+        <body className={`${soleil.variable} antialiased`}>
+          <div>{children}</div>
+        </body>
+      </html>
+    );
+  }
 
   if (isFaqPage === null) {
     return (
