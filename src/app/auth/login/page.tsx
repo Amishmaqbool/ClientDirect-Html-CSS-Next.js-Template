@@ -5,50 +5,118 @@ import Snitcher from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
-import { toast } from "react-toastify";
-import { useRouter } from 'next/navigation'; 
 
-export default function Login() {
+export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);  // Updated error state type
-  const router = useRouter();
+  const [googleLoading, setGoogleLoading] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [generalError, setGeneralError] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {  // Typed event
+  const validateEmail = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.trim()) {
+      setEmailError("Email is required.");
+    } else if (!emailRegex.test(email)) {
+      setEmailError("Please enter a valid email address.");
+    } else {
+      setEmailError("");
+    }
+  };
+
+  const validatePassword = () => {
+    if (!password.trim()) {
+      setPasswordError("Password is required.");
+    } else {
+      setPasswordError("");
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setError(null);
+    setGeneralError("");
+
+    validateEmail();
+    validatePassword();
+
+    if (emailError || passwordError) {
+      setLoading(false);
+      return;
+    }
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/token`, {
-        method: "POST",
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/token`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to login");
+      }
+
+      const data = await response.json();
+      alert(JSON.stringify(data));
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setGeneralError(err.message);
+      } else {
+        setGeneralError("Something went wrong");
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleGoogleLogin = async () => {
+    setGoogleLoading(true);
+    setGeneralError("");
+
+    try {
+      const redirectUrl = "/";
+
+      const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(redirectUrl)}`;
+
+      const response = await fetch(googleAuthUrl, {
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-        }),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to login");
+      if (response.ok) {
+        const data = await response.json();
+
+        if (data.authorization_url) {
+          window.location.href = data.authorization_url;
+        } else {
+          throw new Error("Authorization URL not found");
+        }
+      } else {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to fetch Google login URL");
       }
-      const data = await response.json();
-      console.log(data, "----daa");
-      localStorage.setItem("access_token", data.access_token);
-      toast.success("Login successful!");
-      setTimeout(() => {
-        router.push("/");
-      }, 1500);
-    } catch (err: unknown) {  // Typed error handling
-      const errorMessage = err instanceof Error ? err.message : "Something went wrong";
-      setError(errorMessage);
-      toast.error(errorMessage);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setGeneralError(err.message);
+      } else {
+        setGeneralError("Something went wrong");
+      }
     } finally {
-      setLoading(false);
+      setGoogleLoading(false);
     }
   };
 
@@ -72,18 +140,27 @@ export default function Login() {
           value={email}
           name="email"
           type="email"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            setEmailError("");
+          }}
         />
+        {emailError && <p className="text-sm text-red-500 pt-2">{emailError}</p>}
 
+        {/* Password Input */}
         <InputField
           label="Password"
           value={password}
           name="password"
           type="password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => {
+            setPassword(e.target.value);
+            setPasswordError("");
+          }}
         />
+        {passwordError && <p className="text-sm text-red-500 pt-2">{passwordError}</p>}
 
-        <div className="flex justify-between items-center mb-4">
+        <div className="pt-4 flex justify-between items-center mb-4">
           <label htmlFor="rememberMe" className="flex gap-1 items-center cursor-pointer">
             <input
               type="checkbox"
@@ -100,8 +177,6 @@ export default function Login() {
           </p>
         </div>
 
-        {error && <p className="text-red-500 mb-4">{error}</p>}
-
         <button
           type="submit"
           className="mt-[2px] border border-blue-700 bg-blue-600 align-middle py-2 font-medium text-sm w-full max-w-[350px] rounded-lg text-white cursor-pointer hover:bg-blue-700"
@@ -116,15 +191,26 @@ export default function Login() {
           <hr className="w-full border-gray-300" />
         </div>
 
-        <button className="border border-gray-300 w-full max-w-[350px] py-2 font-medium text-sm text-gray-700 rounded-md flex items-center justify-center mb-3 hover:bg-gray-100">
-          <Image
-            src={Google}
-            alt="Google"
-            width={20}
-            height={20}
-            className="mr-2"
-          />
-          Sign up with Google
+        <button
+          type="button"
+          onClick={handleGoogleLogin} 
+          className="border border-gray-300 w-full max-w-[350px] py-2 font-medium text-sm text-gray-700 rounded-md flex items-center justify-center mb-3 hover:bg-gray-100"
+          disabled={googleLoading}
+        >
+          {googleLoading ? (
+            "Redirecting..."
+          ) : (
+            <>
+              <Image
+                src={Google}
+                alt="Google"
+                width={20}
+                height={20}
+                className="mr-2"
+              />
+              Sign in with Google
+            </>
+          )}
         </button>
 
         <button className="border border-gray-300 w-full max-w-[350px] py-2 font-medium text-sm text-gray-700 rounded-md flex items-center justify-center hover:bg-gray-100">
@@ -135,7 +221,7 @@ export default function Login() {
             height={20}
             className="mr-2"
           />
-          Sign up with LinkedIn
+          Sign in with LinkedIn
         </button>
 
         <p className="text-center py-8 text-sm text-[#020817]">
