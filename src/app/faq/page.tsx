@@ -6,6 +6,14 @@ import Avatar from "../../assets/images/avatar.jpg";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FAQ | Snitcher Help Center",
+  description:
+    "Get answers to all the questions you have about Snitcher.",
+  metadataBase: new URL("https://snitchers.vercel.app/faq"),
+};
 
 const articlesDirectory = path.resolve("src/app/content/articles");
 

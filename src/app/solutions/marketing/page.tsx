@@ -2,6 +2,15 @@ import React from "react";
 import HeroSection from "@/components/home/HeroSection";
 import { marketingHeroData } from "@/constants/solutions/marketing";
 import SolutionSection from "@/components/solutions/SolutionSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Snitcher | Marketing solutions for B2B | Free Trial",
+  description:
+    "Convert your target audience into paying customers while cutting out wasted spend. Drive revenue! Try Snitcher for Free. No credit card required.",
+  metadataBase: new URL("https://snitchers.vercel.app/solutions/marketing"),
+};
+
 export default function page() {
   return (
     <div>

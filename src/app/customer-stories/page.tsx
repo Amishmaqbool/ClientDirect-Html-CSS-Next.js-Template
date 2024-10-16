@@ -3,6 +3,14 @@ import React from "react";
 import BackgroundImage from "../../../public/images/background-customer-stories-image.png";
 import HeroSection from "@/components/home/HeroSection";
 import Arrow from "@/assets/svgs/arrow.svg";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Customer Stories",
+  description:
+    "Discover how businesses like yours use Snitcher to identify, engage, and acquire new customers",
+  metadataBase: new URL("https://snitchers.vercel.app/customer-stories"),
+};
 
 const caseStudies = [
   {
