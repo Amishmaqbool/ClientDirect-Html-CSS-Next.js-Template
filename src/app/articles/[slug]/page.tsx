@@ -3,8 +3,9 @@ import Image from 'next/image';
 import { promises as fs } from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import SmallAngle from "../../../assets/svgs/small-angle.svg"
+import SmallAngle from "../../../assets/svgs/small-angle.svg";
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 interface Props {
   params: {
@@ -31,10 +32,22 @@ const getArticles = async () => {
   return articles;
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = params;
+
+  const formattedTitle = slug
+    .replace(/-/g, ' ')  
+    .replace(/\b\w/g, (char) => char.toUpperCase());  
+
+  return {
+    title: `${formattedTitle} | Snitcher Help Center`,
+    description: `Find all the information about ${formattedTitle} in the Snitcher Help Center. Get your questions answered about this topic.`,
+    metadataBase: new URL(`https://snitchers.vercel.app/faq/${slug}`),
+  };
+}
+
 export async function generateStaticParams() {
   const articlesPath = path.join(process.cwd(), 'src', 'app', 'content', 'articles');
-  console.log('Reading files from path:', articlesPath);
-
   try {
     const filenames = await fs.readdir(articlesPath);
     return filenames.map((filename) => ({
@@ -48,22 +61,20 @@ export async function generateStaticParams() {
 
 export default async function ArticlePage({ params }: Props) {
   const { slug } = params;
-  const filePath = path.join(process.cwd(), 'src', 'app', 'content', 'articles', `${slug}.mdx`);
-  console.log('Reading file from path:', filePath);
+  const filePath = path.join(articlesDirectory, `${slug}.mdx`);
 
   try {
     const fileContent = await fs.readFile(filePath, 'utf8');
     const { content } = matter(fileContent);
-
     const formattedSlug = slug.replace(/-/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
-
     const articles = await getArticles();
 
     return (
       <div className="pt-9 article-container max-w-[650px] mx-auto px-6" style={{ fontFamily: "system-ui" }}>
-        
         <nav className="flex gap-2 items-center text-sm mb-4">
-          <Link href="/faq"><span className='hover:text-black text-gray-400 cursor-pointer'>FAQ</span></Link> <Image src={SmallAngle} alt="Small Angle"/> <span className="text-gray-400">{formattedSlug}</span>
+          <Link href="/faq"><span className='hover:text-black text-gray-400 cursor-pointer'>FAQ</span></Link>
+          <Image src={SmallAngle} alt="Small Angle" />
+          <span className="text-gray-400">{formattedSlug}</span>
         </nav>
 
         <div className="prose-h2:mb-0 max-w-[720px] mb-10 prose-p:text-[16px] prose-h3:text-[16px] prose-h3:font-semibold prose-p:leading-[24px] prose-h5:text-sm max-md:px-4 max-xl:px-10 max-lg:px-4 prose mx-auto max-md:mt-12 mt-12 prose-li:-ml-2.5 prose-ul:text-[#475467] prose-li:text-[#475467] prose-ul:text-[16px] prose-p:text-[#475467] prose-h2:text-[32px] prose-h2:leading-[40px] prose-h2:text-[#1a1a1a] prose-ul:leading-[24px] prose-li:marker:text-base prose-a:underline prose-a:text-blue-600 prose-a:font-normal prose-li:marker:text-[#475467] prose-li:list-[lower-alpha] prose-li:my-0">
@@ -90,20 +101,18 @@ export default async function ArticlePage({ params }: Props) {
                 <div className="transition-colors duration-300">
                   <Image
                     className="transition-colors duration-300"
-                    src={SmallAngle}  
+                    src={SmallAngle}
                     alt="Chevron Right"
-                    style={{marginLeft: '20px'}}
+                    style={{ marginLeft: '20px' }}
                   />
                 </div>
               </div>
             </a>
           ))}
         </div>
-        
+
         <div className="p-3 -mb-4 -ml-4 -mr-4 mt-6 rounded-card sm:-mb-2 sm:-ml-1 sm:-mr-1 sm:mt-8 rounded-lg bg-[#f2f2f2]">
-          <div className="pt-2.5 pb-1 text-center">
-            Did this answer your question?
-          </div>
+          <div className="pt-2.5 pb-1 text-center">Did this answer your question?</div>
           <div className="flex justify-center">
             <button className="bg-none p-0 w-[50px] h-full inline-block text-center text-[32px] cursor-pointer transition-transform duration-[160ms] ease-[cubic-bezier(0.65,0.61,0.18,1.8)] delay-[20ms] origin-[50%_60%] hover:transform hover:scale-125">
               <span title="Disappointed">😞</span>

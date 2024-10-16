@@ -12,6 +12,14 @@ import MarketingSection from "@/components/common/MarketingComponent";
 import FaqSection from "@/components/common/FaqSection";
 import RevenueSection from "@/components/RevenueSection";
 import OptimizeSection from "../../../components/OptimizeSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Snitcher Supercharge Google Analytics for B2B | 14-Day Free Trial",
+  description:
+    "Transform Google Analytics for B2B with Snitcher! Enrich your data with company information, analyze marketing actions, and optimize your budget. Try our 14-day free trial, no credit card required, and unlock your website's full potential.",
+  metadataBase: new URL("https://snitchers.vercel.app/features/google-analytics"),
+};
 
 export default function googleAnalytics() {
   return (

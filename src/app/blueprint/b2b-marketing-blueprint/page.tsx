@@ -3,6 +3,14 @@ import React from "react";
 import BackgroundOne from "../../../../public/images/background-blueprint.png";
 import BackgroundTwo from "../../../../public/images/background-blueprint2.png";
 import { sectionData } from "@/constants/b2b/sectionData";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Snitcher",
+  description:
+    "Discover how businesses like yours use Snitcher to identify, engage, and acquire new customers",
+  metadataBase: new URL("https://snitchers.vercel.app/blueprint/b2b-marketing-blueprint"),
+};
 
 const MarketingBlueprint = () => {
   return (

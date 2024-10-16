@@ -14,7 +14,6 @@ export default function Signup() {
   const [googleLoading, setGoogleLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [generalError, setGeneralError] = useState("");
 
   const validateEmail = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -38,7 +37,6 @@ export default function Signup() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setGeneralError("");
 
     validateEmail();
     validatePassword();
@@ -72,9 +70,9 @@ export default function Signup() {
       alert(JSON.stringify(data));
     } catch (err: unknown) {
       if (err instanceof Error) {
-        setGeneralError(err.message);
+        console.error(err.message);
       } else {
-        setGeneralError("Something went wrong");
+        console.error("Something went wrong");
       }
     } finally {
       setLoading(false);
@@ -83,12 +81,13 @@ export default function Signup() {
 
   const handleGoogleLogin = async () => {
     setGoogleLoading(true);
-    setGeneralError("");
 
     try {
       const redirectUrl = "/";
 
-      const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(redirectUrl)}`;
+      const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(
+        redirectUrl
+      )}`;
 
       const response = await fetch(googleAuthUrl, {
         method: "GET",
@@ -111,9 +110,9 @@ export default function Signup() {
       }
     } catch (err: unknown) {
       if (err instanceof Error) {
-        setGeneralError(err.message);
+        console.error(err.message);
       } else {
-        setGeneralError("Something went wrong");
+        console.error("Something went wrong");
       }
     } finally {
       setGoogleLoading(false);
@@ -158,10 +157,15 @@ export default function Signup() {
             setPasswordError("");
           }}
         />
-        {passwordError && <p className="text-sm text-red-500 pt-2">{passwordError}</p>}
+        {passwordError && (
+          <p className="text-sm text-red-500 pt-2">{passwordError}</p>
+        )}
 
         <div className="pt-4 flex justify-between items-center mb-4">
-          <label htmlFor="rememberMe" className="flex gap-1 items-center cursor-pointer">
+          <label
+            htmlFor="rememberMe"
+            className="flex gap-1 items-center cursor-pointer"
+          >
             <input
               type="checkbox"
               id="rememberMe"
@@ -193,7 +197,7 @@ export default function Signup() {
 
         <button
           type="button"
-          onClick={handleGoogleLogin} 
+          onClick={handleGoogleLogin}
           className="border border-gray-300 w-full max-w-[350px] py-2 font-medium text-sm text-gray-700 rounded-md flex items-center justify-center mb-3 hover:bg-gray-100"
           disabled={googleLoading}
         >
@@ -226,7 +230,10 @@ export default function Signup() {
 
         <p className="text-center py-8 text-sm text-[#020817]">
           No account yet?{" "}
-          <a href="/auth/register" className="text-blue-600 hover:text-blue-500">
+          <a
+            href="/auth/register"
+            className="text-blue-600 hover:text-blue-500"
+          >
             Start your 14-day free trial
           </a>
         </p>
