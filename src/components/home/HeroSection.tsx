@@ -70,25 +70,18 @@ const gradientClasses: Record<"purple" | "blue" | "aqua", string> = {
 
 export default function HeroSection({
   headingText = "Know who’s on your website, drive more revenue.",
-  headingLineBreaks = [3, 5],
   paragraphText = "Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights.",
-  paragraphLineBreaks = [],
   maxWidth = "900px",
   bgColor = "#070b18",
   featureContents = [],
   buttonVisible = true,
 }: HeroSectionProps) {
-  const formatTextWithLineBreaks = (
-    text: string,
-    lineBreakIndices: number[]
-  ) => {
-    const words = text.split(" ");
-    return words.map((word, index) => (
+  const formatTextWithLineBreaks = (text: string) => {
+    const lines = text.split("\n");
+    return lines.map((line, index) => (
       <React.Fragment key={index}>
-        {word}{" "}
-        {lineBreakIndices.includes(Number(index) + 1) && (
-          <br className="max-lg:hidden" />
-        )}
+        {line}
+        {index < lines.length - 1 && <br />} 
       </React.Fragment>
     ));
   };
@@ -126,10 +119,10 @@ export default function HeroSection({
             className="mx-auto 2xl:pt-24 max-md:px-4 max-lg:px-10"
           >
             <h1 className="max-sm:max-w-[459px] max-w-[550px] lg:max-w-full mx-auto text-[30px] sm:text-[48px] lg:text-[72px] text-center text-white font-semibold leading-[40px] sm:leading-[60px] lg:leading-[92px]">
-              {formatTextWithLineBreaks(headingText, headingLineBreaks)}
+              {formatTextWithLineBreaks(headingText)}
             </h1>
             <p className="max-w-0px] mx-auto text-center pt-2 leading-[1.7em] text-[#9499a1] text-lg">
-              {formatTextWithLineBreaks(paragraphText, paragraphLineBreaks)}
+              {formatTextWithLineBreaks(paragraphText)}
             </p>
             {buttonVisible && (
               <div className="flex flex-col items-center gap-2 pt-8">
@@ -149,7 +142,7 @@ export default function HeroSection({
           </div>
 
           {featureContents.length >= 1 && (
-            <div className="max-md:flex justify-center pt-[104px] max-w-[1280px] mx-auto px-6">
+            <div className="max-md:flex justify-center pt-16 md:pt-[104px] max-w-[1280px] mx-auto px-6">
               {featureContents.length > 0 && (
                 <div className="z-[1000] grid grid-cols-1 md:grid-cols-3 gap-5">
                   {featureContents.map((content, index) => (

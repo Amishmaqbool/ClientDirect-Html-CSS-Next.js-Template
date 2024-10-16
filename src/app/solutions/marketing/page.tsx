@@ -6,11 +6,18 @@ export default function page() {
   return (
     <div>
       <HeroSection
+<<<<<<< HEAD
         headingText={"Generează venituri, nu clicuri."}
         headingLineBreaks={[3, 5]}
         paragraphText={
           "Ești obosit să vezi cum bugetul pentru reclame dispare în abisul vizitatorilor anonimi? Ce-ar fi dacă ai putea asocia un logo cu cifrele și să irosești mai puțin din buget?"
         }
+=======
+        headingText={"Generează venituri, nu doar clicuri."}
+        headingLineBreaks={[3, 5]}
+        paragraphText={
+          "Te-ai săturat să vezi cum bugetul pentru reclame dispare în abisul vizitatorilor anonimi? \n Ce-ar fi dacă ai putea asocia un logo cu cifrele și să irosești mai puțin din buget? \n \n Convertește mai mult din audiența ta țintă în clienți plătitori."}
+>>>>>>> c986dc8 (Auth updates)
         paragraphLineBreaks={[10]}
         featureContents={marketingHeroData}
         maxWidth="900px"
@@ -22,8 +29,13 @@ export default function page() {
         paragraphs={[
           "Îmbogățește analiza bazată pe cifre cu date despre companii, astfel încât să poți reduce cheltuielile inutile și să creezi conținutul pe care îl doresc clienții tăi.",
         ]}
+<<<<<<< HEAD
         buttonPrimaryText="Start Free Trial"
         buttonSecondaryText="Learn More"
+=======
+       buttonPrimaryText="Începe perioada de probă gratuită"
+       buttonSecondaryText="Află mai multe"
+>>>>>>> c986dc8 (Auth updates)
         flexDirection="row-reverse"
         lottieUrl="https://lottie.host/f6345aeb-07cc-46cb-95c4-8d53a6843776/6q267JMB8h.json"
       />
@@ -34,8 +46,13 @@ export default function page() {
         paragraphs={[
           "Urmărește comportamentul complet al contului astfel încât să poți construi audiențe țintă de companii și să convertești mai mult cu un buget mai mic.",
         ]}
+<<<<<<< HEAD
         buttonPrimaryText="Start Free Trial"
         buttonSecondaryText="Learn More"
+=======
+        buttonPrimaryText="Începe perioada de probă gratuită"
+        buttonSecondaryText="Află mai multe"
+>>>>>>> c986dc8 (Auth updates)
         lottieUrl="https://lottie.host/e4382fd0-b46d-400a-967b-6215228eb33a/fBaLWbHaYm.json"
         flexDirection="row"
       />
@@ -46,8 +63,13 @@ export default function page() {
         paragraphs={[
           "Asigură-te că găsesc conținutul despre care știi că va rezona cu ei înainte să iasă și să genereze conversii.",
         ]}
+<<<<<<< HEAD
         buttonPrimaryText="Start Free Trial"
         buttonSecondaryText="Learn More"
+=======
+        buttonPrimaryText="Începe perioada de probă gratuită"
+        buttonSecondaryText="Află mai multe"
+>>>>>>> c986dc8 (Auth updates)
         flexDirection="row-reverse"
         lottieUrl="https://lottie.host/a0823732-82a1-42cb-93ae-e24d198d5410/uakxoKutzx.json"
       />
@@ -58,8 +80,13 @@ export default function page() {
         paragraphs={[
           "Oferă echipei de vânzări ceea ce au nevoie pentru a menține traseele de vânzări pe drumul cel bun, chiar și atunci când conversiile sunt scăzute.",
         ]}
+<<<<<<< HEAD
         buttonPrimaryText="Start Free Trial"
         buttonSecondaryText="Learn More"
+=======
+        buttonPrimaryText="Începe perioada de probă gratuită"
+        buttonSecondaryText="Află mai multe"
+>>>>>>> c986dc8 (Auth updates)
         lottieUrl="https://lottie.host/99c99765-0406-472c-80cd-3bbea0bdd7e2/qbrPPDZWeX.json"
         flexDirection="row"
       />

@@ -1,5 +1,6 @@
 "use client";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/common/Header";
@@ -7,6 +8,7 @@ import Footer from "@/components/common/Footer";
 import FaqHeader from "@/components/common/FaqHeader";
 import FaqFooter from "@/components/common/FaqFooter";
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 const soleil = localFont({
   src: [
@@ -40,23 +42,45 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [isFaqPage, setIsFaqPage] = useState<boolean | null>(null);
+  const pathname = usePathname();
+  const router = useRouter();
+  const isAuthPage = pathname === "/auth/login" || pathname === "/auth/signup";
+  const isCustomerStoriesPage = pathname === '/customer-stories';
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const path = window.location.pathname;
-      if (path === "/faq" || path.startsWith("/articles/")) {
-        setIsFaqPage(true);
-      } else {
-        setIsFaqPage(false);
-      }
+    const token = localStorage.getItem("access_token"); // Check for access_token in localStorage
+
+    if (token && isAuthPage) {
+      // If token exists and user is trying to access auth pages, redirect to home
+      router.push("/");
     }
-  }, []);
+  }, [pathname, isAuthPage, router]);
+
+  useEffect(() => {
+    if (pathname === "/faq" || pathname.startsWith("/articles/")) {
+      setIsFaqPage(true);
+    } else {
+      setIsFaqPage(false);
+    }
+  }, [pathname]);
+
+  if (isAuthPage) {
+    return (
+      <html lang="en">
+        <body className={`${soleil.variable} antialiased`}>
+          <div>{children}</div>
+          <ToastContainer />
+        </body>
+      </html>
+    );
+  }
 
   if (isFaqPage === null) {
     return (
       <html lang="en">
         <body className={`${soleil.variable} antialiased`}>
           <div className="pb-36">{children}</div>
+          <ToastContainer />
         </body>
       </html>
     );
@@ -66,10 +90,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${soleil.variable} antialiased`}>
         {isFaqPage ? <FaqHeader /> : <Header />}
-        <div className="pb-20 sm:pb-40">{children}</div>
+        <div className={`pb-20 bg-[#fcfcfd] ${!isCustomerStoriesPage ? 'sm:pb-40' : ''}`}>
+          {children}
+        </div>
+        <ToastContainer />
         {isFaqPage ? <FaqFooter /> : <Footer />}
       </body>
     </html>
   );
 }
-

@@ -28,7 +28,11 @@ export default function googleAnalytics() {
         />
       </div>
 
+<<<<<<< HEAD
       <div className="bacground-gradient-2 py-24">
+=======
+      <div className="bacground-gradient-2 sm:pt-16 md:pt-24 pb-[90px]">
+>>>>>>> c986dc8 (Auth updates)
         <TextBlock
           mainHeading={"$48 din fiecare $50 pe care îi cheltuiești pe reclame sunt irosiți."}
           subHeading={
@@ -37,12 +41,20 @@ export default function googleAnalytics() {
           description={
             "Vinzi către companii, nu către vizitatori. Obține imaginea completă și transformă Google Analytics într-o soluție de analiză bazată pe conturi."
           }
+<<<<<<< HEAD
           ctaText={"Start 14-Day Free Trial"}
+=======
+          ctaText={"Începe perioada de probă gratuită de 14 zile"}
+>>>>>>> c986dc8 (Auth updates)
           lottieUrl="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/644678dde63efd7e77fe336e_Sec_17.json"
           isReversed={true}
         />
 
+<<<<<<< HEAD
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 sm:mt-8 ">
+=======
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 sm:mt-8">
+>>>>>>> c986dc8 (Auth updates)
           {analyticsReviewsCards.map((review, index) => (
             <div key={index}>
               <RatingCards

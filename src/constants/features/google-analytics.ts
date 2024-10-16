@@ -1,4 +1,16 @@
-
+import AnalyticsIcon1 from "../../assets/svgs/analytics-icon1.svg"
+import AnalyticsIcon2 from "../../assets/svgs/analytics-icon2.svg"
+import AnalyticsIcon3 from "../../assets/svgs/analytics-icon3.svg"
+import MarketingCard1 from "../../assets/images/marketing-card1.png"
+import MarketingCard2 from "../../assets/images/marketing-card2.png"
+import MarketingCard3 from "../../assets/images/marketing-card3.png"
+import RevenueIcon1 from "../../assets/svgs/revenue-icon1.svg"
+import RevenueIcon2 from "../../assets/svgs/revenue-icon2.svg"
+import RevenueIcon3 from "../../assets/svgs/revenue-icon3.svg"
+import RevenueIcon4 from "../../assets/svgs/revenue-icon4.svg"
+import OptimizedIcon1 from "../../assets/svgs/optimize-icon1.svg"
+import OptimizedIcon2 from "../../assets/svgs/optimized-icon2.svg"
+import OptimizedIcon3 from "../../assets/svgs/optimized-icon3.svg"
 
 export const reviews = [
   {
@@ -57,20 +69,17 @@ export const analyticsReviewsCards = [
 
 export const analyticsHeroData = [
   {
-    imageSrc:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409aa5ec602fe3124e5cbaa_icons.svg",
+    imageSrc: AnalyticsIcon1,
     altText: "Imaginea Unu",
     description: "Îmbogățește traficul anonim din GA cu date detaliate despre companii",
   },
   {
-    imageSrc:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409aa67142ec437e0a29fb5_icons.svg",
+    imageSrc: AnalyticsIcon2,
     altText: "Imaginea Doi",
     description: "Analizează acțiunile de marketing în context cu încredere",
   },
   {
-    imageSrc:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6408aa2be0e5f454083a1979_icons.svg",
+    imageSrc: AnalyticsIcon3,
     altText: "Imaginea Trei",
     description: "Optimizează și testează pentru a atinge obiective mai mari",
   },
@@ -78,24 +87,21 @@ export const analyticsHeroData = [
 
 export const MarketingSectionData = [
   {
-    image:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6425400853ab14e32d876c6b_marketplaces.png",
+    image: MarketingCard1,
     alt: "Imaginea unu",
     title: "De la numere la companii",
     content:
       "Folosind date de identificare în timp real, Snitcher adaugă nume de companii și informații firmografice la sesiuni, fără a se baza pe conversii.",
   },
   {
-    image:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/64253fdb0acd1707e2869897_chatbots.png",
+    image: MarketingCard2,
     alt: "Imaginea Doi",
     title: "Dimensiuni personalizate puternice",
     content:
       "Accesați numele companiilor, dimensiunile, industriile și multe altele prin Google Analytics cu dimensiuni personalizate.",
   },
   {
-    image:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/642540260946358de5caac12_saas.png",
+    image: MarketingCard3,
     alt: "Imaginea doi",
     title: "Parcurgeri complete ale cumpărătorilor",
     content:
@@ -105,29 +111,25 @@ export const MarketingSectionData = [
 
 export const revenueSectionData = [
   {
-    image:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409a4352b71f3dc806fead5_Featured%20icon.svg",
+    image: RevenueIcon1,
     heading: "Segmentează",
     subHeading:
       "Folosește filtre firmografice ale companiei pentru a crea segmente formate din vizitatori care corespund profilului tău ideal de client.",
   },
   {
-    image:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409a44e26e7bf5860d0f6d8_Featured%20icon.svg",
+    image: RevenueIcon2,
     heading: "Audiențe",
     subHeading:
       "Construiește audiențe din companiile care se transformă în clienți, astfel încât cheltuielile tale pentru reclame să nu se îndrepte către vizitatori care nu vor cumpăra niciodată.",
   },
   {
-    image:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409a46a15a31d4987483764_Featured%20icon.svg",
+    image: RevenueIcon3,
     heading: "Analizează",
     subHeading:
       "Mapează comportamentul și activitățile în funcție de profilul ideal al clientului pentru a înțelege ce funcționează și ce irosește bugetul.",
   },
   {
-    image:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409a48413f6c8004c52d716_Featured%20icon.svg",
+    image: RevenueIcon4,
     heading: "Retargetare",
     subHeading:
       "Retargetează doar companiile potrivite în căutare și afișare, excluzând vizitatorii nepotriviți din campaniile plătite viitoare.",
@@ -136,19 +138,19 @@ export const revenueSectionData = [
 
 export const OptimizeCardData = [
   {
-    icon: "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b03113f6c8786f539ce3_Featured%20icon.svg",
+    icon: OptimizedIcon1,
     heading: "Testează",
     description:
       "Obține feedback imediat asupra testelor tale și atinge relevanța statistică fără a cheltui în timp ce aștepți conversiile.",
   },
   {
-    icon: "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b03a9b4d72ee5f6d1138_Featured%20icon.svg",
+    icon: OptimizedIcon2,
     heading: "Optimizează",
     description:
       "Ia decizii mai bune cu o imagine completă a modului în care fiecare dintre acțiunile tale performează în atragerea vizitatorilor din piața ta țintă.",
   },
   {
-    icon: "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b04215a31d83aa48f7e0_Featured%20icon.svg",
+    icon: OptimizedIcon3,
     heading: "Tablou de bord",
     description:
       "Creează tablouri de bord personalizate în Google Data Studio sau folosește șabloanele noastre.",

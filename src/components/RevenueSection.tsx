@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 "use client"
+=======
+"use client";
+>>>>>>> c986dc8 (Auth updates)
 import React from "react";
 import Image from "next/image";
 import Button from "./common/Button";
@@ -14,15 +18,29 @@ export default function RevenueSection() {
             <p className="font-bold text-xs text-[#0040c1]">Analizează</p>
           </div>
           <h1 className="max-w-[768px] my-0 font-bold text-4xl text-center tracking-[-1px] text-[#000]">
+<<<<<<< HEAD
           Află care acțiuni generează cu adevărat venituri, fără presupuneri.
           </h1>
           <p className="max-w-[790px] py-5 text-center text-base sm:text-lg leading-[28px] text-[#475467]">
           Filtrează acțiunile de marketing plătit și organic după cantitatea de trafic al companiilor țintă pe care o generează, astfel încât să poți reduce costurile cu încredere și să te concentrezi pe câștigători.
+=======
+            Află care acțiuni generează cu adevărat venituri, fără presupuneri.
+          </h1>
+          <p className="max-w-[790px] py-5 text-center text-base sm:text-lg leading-[28px] text-[#475467]">
+            Filtrează acțiunile de marketing plătit și organic după cantitatea
+            de trafic al companiilor țintă pe care o generează, astfel încât să
+            poți reduce costurile cu încredere și să te concentrezi pe
+            câștigători.
+>>>>>>> c986dc8 (Auth updates)
           </p>
           <Button
             bgColor="bg-[#101828]"
             textColor="text-white"
             borderRadius="rounded-[100px]"
+<<<<<<< HEAD
+=======
+            className="max-[420px]:text-xs text-sm border border-[#ffffff1a]"
+>>>>>>> c986dc8 (Auth updates)
             showChevron={true}
             chevronColor="text-white"
             buttonText="Începe perioada de probă gratuită de 14 zile"
@@ -52,9 +70,13 @@ export default function RevenueSection() {
               ))}
             </div>
 
+<<<<<<< HEAD
             <div
               className="col-span-1 row-span-1"
             >
+=======
+            <div className="col-span-1 row-span-1">
+>>>>>>> c986dc8 (Auth updates)
               <DotLottieReact
                 src="https://lottie.host/bc851360-09dc-4058-9c28-dcc27d2ced47/lgVIJlJXXt.json"
                 autoplay

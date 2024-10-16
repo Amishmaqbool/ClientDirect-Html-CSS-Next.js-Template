@@ -2,6 +2,10 @@ import Image from "next/image";
 import React from "react";
 import ChatIcon from "../../assets/svgs/chat.svg";
 import ChevronRight from "../../assets/svgs/chevron-right.svg";
+<<<<<<< HEAD
+=======
+import Avatar from "../../assets/images/avatar.jpg";
+>>>>>>> c986dc8 (Auth updates)
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -25,10 +29,16 @@ const getArticles = () => {
 const articles = getArticles();
 const FAQ: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="faq-container" style={{ fontFamily: "system-ui" }}>
       <div className="max-w-[960px] mx-auto px-6">
         <Image
           className="pt-8"
+=======
+    <div className="faq-container pt-9" style={{ fontFamily: "system-ui" }}>
+      <div className="max-w-[960px] mx-auto px-6">
+        <Image
+>>>>>>> c986dc8 (Auth updates)
           src={ChatIcon}
           alt="Chat Icon"
           width={40}
@@ -38,6 +48,7 @@ const FAQ: React.FC = () => {
         <p className="font-normal text-base text-[#1a1a1a]">
           Get answers to all the questions you have about Snitcher.
         </p>
+<<<<<<< HEAD
         <div className="mt-10 px-3 py-4 border rounded-lg border-[#E6E6E6]">
           {articles.map((article) => (
             <a key={article.slug} href={`/articles/${article.slug}`}>
@@ -46,6 +57,30 @@ const FAQ: React.FC = () => {
                 key={article.slug}
               >
                 <div className="max-w-[800px]">
+=======
+
+        <div className="pt-5 flex gap-2 items-center">
+          <Image
+            src={Avatar}
+            alt="Jerre"
+            className="rounded-full"
+            width={24}
+            height={24}
+          />
+          <p className="flex items-center font-normal text-sm text-[#737373]">
+            De Jerre <span className="px-2 text-2xl"> · </span> 11 articole
+          </p>
+        </div>
+
+        <div className="mt-10 max-sm:pl-5 px-3 py-4 border rounded-lg border-[#E6E6E6]">
+          {articles.map((article) => (
+            <a key={article.slug} href={`/articles/${article.slug}`}>
+              <div
+                className="faq-item article-section group flex justify-between items-center rounded-md cursor-pointer transition-all duration-300 sm:p-3"
+                key={article.slug}
+              >
+                <div className="max-sm:pt-3.5 max-w-[800px]">
+>>>>>>> c986dc8 (Auth updates)
                   <h2 className="font-normal text-base text-[#1a1a1a] group-hover:text-[#2B61DE] transition-colors duration-300">
                     {article.title}
                   </h2>
@@ -56,6 +91,10 @@ const FAQ: React.FC = () => {
                 <div className="p-3 group-hover:bg-custom-hover transition-colors duration-300">
                   <Image
                     className="transition-colors duration-300"
+<<<<<<< HEAD
+=======
+                    style={{ marginLeft: "20px" }}
+>>>>>>> c986dc8 (Auth updates)
                     src={ChevronRight}
                     alt="Chevron Right"
                   />
