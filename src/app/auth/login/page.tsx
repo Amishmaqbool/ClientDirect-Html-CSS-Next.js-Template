@@ -8,18 +8,18 @@ import Linkedin from "@/assets/images/linked.webp";
 import { toast } from "react-toastify";
 import { useRouter } from 'next/navigation'; 
 
-export default function Signup() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState<string | null>(null);  // Updated error state type
   const router = useRouter();
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {  // Typed event
     e.preventDefault();
     setLoading(true);
-    setError("");
+    setError(null);
 
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/token`, {
@@ -37,15 +37,16 @@ export default function Signup() {
         throw new Error("Failed to login");
       }
       const data = await response.json();
-      console.log(data,"----daa");
-      localStorage.setItem("access_token", data.access_token)
+      console.log(data, "----daa");
+      localStorage.setItem("access_token", data.access_token);
       toast.success("Login successful!");
       setTimeout(() => {
         router.push("/");
       }, 1500);
-    } catch (err: any) {
-      setError(err.message || "Something went wrong");
-      toast.error(err.message || "Something went wrong");
+    } catch (err: unknown) {  // Typed error handling
+      const errorMessage = err instanceof Error ? err.message : "Something went wrong";
+      setError(errorMessage);
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }

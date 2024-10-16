@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-export const agencyHeroData = [
-    {
-        imageSrc:
-            "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409aa5ec602fe3124e5cbaa_icons.svg",
-=======
 import AgencyHeroIcon1 from "@/assets/svgs/agency-hero-icon1.svg"
 import AgencyHeroIcon2 from "@/assets/svgs/agency-hero-icon2.svg"
 import AgencyHeroIcon3 from "@/assets/svgs/agency-hero-icon3.svg"
@@ -11,27 +5,16 @@ import AgencyHeroIcon3 from "@/assets/svgs/agency-hero-icon3.svg"
 export const agencyHeroData = [
     {
         imageSrc: AgencyHeroIcon1,
->>>>>>> c986dc8 (Auth updates)
         altText: "Imaginea Unu",
         description: "Depășiți metricele de vanitate în analize, raportați asupra calității",
     },
     {
-<<<<<<< HEAD
-        imageSrc:
-            "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409aa67142ec437e0a29fb5_icons.svg",
-=======
         imageSrc: AgencyHeroIcon2,
->>>>>>> c986dc8 (Auth updates)
         altText: "Imaginea Doi",
         description: "Suportați serviciile existente și creșteți fluxuri noi de venituri",
     },
     {
-<<<<<<< HEAD
-        imageSrc:
-            "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6408aa2be0e5f454083a1979_icons.svg",
-=======
         imageSrc: AgencyHeroIcon3,
->>>>>>> c986dc8 (Auth updates)
         altText: "Imaginea Trei",
         description: "Alimentați echipele de vânzări cu leaduri bine potrivite și declanșați automatizări",
     },

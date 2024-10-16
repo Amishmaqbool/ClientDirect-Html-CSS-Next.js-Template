@@ -8,7 +8,7 @@ import Linkedin from "@/assets/images/linked.webp";
 import { toast } from "react-toastify";
 import { useRouter } from 'next/navigation';
 
-export default function Signup() {
+export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -18,7 +18,8 @@ export default function Signup() {
 
   const router = useRouter();
 
-  const handleSubmit = async (e: any) => {
+  // Correct type for form submission event
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -51,13 +52,16 @@ export default function Signup() {
         throw new Error("Failed to register");
       }
 
-      const data = await response.json();
+      // Removed unused 'data' variable
+      await response.json();
       toast.success("Registration successful!");
       setTimeout(() => {
         router.push("/auth/login");
       }, 1500);
-    } catch (err: any) {
-      toast.error(err.message || "Something went wrong");
+    } catch (err) {
+      // Typed error handling
+      const errorMessage = err instanceof Error ? err.message : "Something went wrong";
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
