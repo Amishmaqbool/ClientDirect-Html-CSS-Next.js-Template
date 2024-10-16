@@ -1,28 +1,16 @@
-<<<<<<< HEAD
-=======
 "use client";
->>>>>>> c986dc8 (Auth updates)
 import React from "react";
 import HeroSection from "@/components/home/HeroSection";
 import ProsSection from "@/components/features/lead-gen/ProsSection";
 import DataSection from "@/components/features/lead-gen/DataSection";
 import IdentifySection from "@/components/features/lead-gen/IdentifySection";
 import SegmentSection from "@/components/features/lead-gen/SegmentSection";
-<<<<<<< HEAD
-import Image from "next/image";
-import gradientImage from '@/assets/images/colours.webp';
-import gradientPurple from "@/assets/images/img-second-leadgen.webp";
-import jumpLead from "@/assets/images/jump-lead-gen.webp";
-import { leadHeroData, reviews } from "@/constants/features/lead-generation";
-import RatingCards from "@/components/common/RatingCards";
-=======
 import gradientImage from "@/assets/images/colours.webp";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import { leadHeroData, reviews } from "@/constants/features/lead-generation";
 import RatingCards from "@/components/common/RatingCards";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Button from "@/components/common/Button";
->>>>>>> c986dc8 (Auth updates)
 
 export default function LeadGen() {
   return (
@@ -41,36 +29,6 @@ export default function LeadGen() {
         className="w-full"
         style={{
           backgroundImage: `url(${gradientImage})`,
-<<<<<<< HEAD
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}>
-        <div className="bacground-gradient-2">
-          <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center">
-            <div className="flex flex-col gap-16 max-md:gap-6 mb-24 pt-16 max-md:pt-14 px-4">
-              <div className="flex gap-20 max-md:flex-col max-md:gap-12">
-                <div className="w-1/2 max-md:w-full pb-8 pt-9">
-                  <h2 className="text-4xl leading-[44px] font-bold text-black">
-                    Datele Snitcher sunt pur și simplu mai bune.<br /><span>Vezi cu ochii tăi.</span>
-                  </h2>
-                  <p className="text-[#475467] text-lg mt-4">
-                    Credem că datele de calitate sunt esențiale pentru creștere. De aceea, ne-am propus să evoluăm continuu ratele noastre de identificare și calitatea acestora pentru a-ți oferi avantajul de a câștiga mai mulți clienți.
-                    <span className="block pt-6">Umple canalele de vânzări și superchargează-ți mașina de marketing chiar astăzi!</span>
-                  </p>
-                  <button className="mt-7 flex items-center justify-center gap-2 font-semibold rounded-full py-2 pl-4 pr-3 text-white bg-[#101828] border-[1.5px] border-[#00000026] text-sm">
-                    Începe perioada de probă gratuită de 14 zile<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                      <path d="M3.33301 10.6196H16.6663M16.6663 10.6196L11.6663 5.61963M16.6663 10.6196L11.6663 15.6196" stroke="currentColor" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="w-1/2 max-md:w-full max-md:flex max-md:justify-center">
-                  <Image alt="snitcher" src={jumpLead} width={560} height={363} className="max-md:w-full" />
-                </div>
-              </div>
-
-              <div className="max-w-[1280px] mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 sm:mt-8 ">
-=======
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -119,7 +77,6 @@ export default function LeadGen() {
               </div>
 
               <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 sm:mt-8">
->>>>>>> c986dc8 (Auth updates)
                 {reviews.map((review, index) => (
                   <div key={index}>
                     <RatingCards
@@ -132,11 +89,7 @@ export default function LeadGen() {
                       textSize={{
                         title: "text-base",
                         content: "text-xs",
-<<<<<<< HEAD
-                        reviewer: "text-sm"
-=======
                         reviewer: "text-sm",
->>>>>>> c986dc8 (Auth updates)
                       }}
                       marginClass="mt-3.5 md:-mt-4"
                     />
@@ -148,9 +101,6 @@ export default function LeadGen() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      <div className="max-w-full bg-[#101828]" style={{ backgroundImage: `url(${gradientPurple})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: 'center' }}>
-=======
       <div
         className="max-w-full bg-[#101828]"
         style={{
@@ -160,7 +110,6 @@ export default function LeadGen() {
           backgroundPosition: "center",
         }}
       >
->>>>>>> c986dc8 (Auth updates)
         <IdentifySection />
       </div>
 
@@ -169,17 +118,9 @@ export default function LeadGen() {
         <ProsSection />
       </div>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c986dc8 (Auth updates)
       <div className="px-4 max-w-[1200px] mx-auto flex flex-col justify-center items-center pt-20 lg:pt-32 pb-8">
         <DataSection />
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c986dc8 (Auth updates)

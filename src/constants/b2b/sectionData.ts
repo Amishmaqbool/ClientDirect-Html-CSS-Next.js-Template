@@ -1,11 +1,7 @@
 export const sectionData = [
   {
     sectionTitle: "Persona Cumpărătorului",
-<<<<<<< HEAD
-    sectionColor: "bg-[#ca8504]",
-=======
     sectionColor: "#ca8504",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "border-[#ca8504]",
     data: [
       {
@@ -44,11 +40,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Strategie de Conținut",
-<<<<<<< HEAD
-    sectionColor: "bg-[#e04f16]",
-=======
     sectionColor: "#e04f16",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -87,11 +79,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Social Media",
-<<<<<<< HEAD
-    sectionColor: "bg-[#e62e05]",
-=======
     sectionColor: "#e62e05",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -130,11 +118,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Email Marketing",
-<<<<<<< HEAD
-    sectionColor: "bg-[#e31b54]",
-=======
     sectionColor: "#e31b54",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -173,11 +157,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Generarea de Lead-uri",
-<<<<<<< HEAD
-    sectionColor: "bg-[#dd2590]",
-=======
     sectionColor: "#dd2590",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -208,11 +188,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Alinierea Vânzărilor",
-<<<<<<< HEAD
-    sectionColor: "bg-[#ba24d5]",
-=======
     sectionColor: "#ba24d5",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -243,11 +219,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Retenția Clienților",
-<<<<<<< HEAD
-    sectionColor: "bg-[#6938ef]",
-=======
     sectionColor: "#6938ef",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -278,11 +250,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Analitică",
-<<<<<<< HEAD
-    sectionColor: "bg-[#7839ee]",
-=======
     sectionColor: "#7839ee",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -313,11 +281,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Marketing de Evenimente",
-<<<<<<< HEAD
-    sectionColor: "bg-[#444ce7]",
-=======
     sectionColor: "#444ce7",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -348,11 +312,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Marketing Bazat pe Conturi",
-<<<<<<< HEAD
-    sectionColor: "bg-[#1570ef]",
-=======
     sectionColor: "#1570ef",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -391,11 +351,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Pâlnia de Vânzări",
-<<<<<<< HEAD
-    sectionColor: "bg-[#1570ef]",
-=======
     sectionColor: "#1570ef",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -426,11 +382,7 @@ export const sectionData = [
   },
   {
     sectionTitle: "Optimizarea Ratelor de Conversie",
-<<<<<<< HEAD
-    sectionColor: "bg-[#088ab2]",
-=======
     sectionColor: "#088ab2",
->>>>>>> c986dc8 (Auth updates)
     sectionBorderColor: "",
     data: [
       {
@@ -459,8 +411,4 @@ export const sectionData = [
       },
     ],
   },
-<<<<<<< HEAD
 ];
-=======
-];
->>>>>>> c986dc8 (Auth updates)
