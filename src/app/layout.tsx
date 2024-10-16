@@ -1,5 +1,6 @@
 "use client";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/common/Header";
@@ -7,7 +8,7 @@ import Footer from "@/components/common/Footer";
 import FaqHeader from "@/components/common/FaqHeader";
 import FaqFooter from "@/components/common/FaqFooter";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const soleil = localFont({
   src: [
@@ -42,8 +43,16 @@ export default function RootLayout({
 }>) {
   const [isFaqPage, setIsFaqPage] = useState<boolean | null>(null);
   const pathname = usePathname();
-  const isAuthPage =  pathname === "/auth/login" || pathname === "/auth/register";
+  const router = useRouter();
+  const isAuthPage = pathname === "/auth/login" || pathname === "/auth/register";
   const isCustomerStoriesPage = pathname === '/customer-stories';
+  useEffect(() => {
+    const token = localStorage.getItem("access_token"); 
+
+    if (token && isAuthPage) {
+      router.push("/");
+    }
+  }, [pathname, isAuthPage, router]);
 
   useEffect(() => {
     if (pathname === "/faq" || pathname.startsWith("/articles/")) {
@@ -58,6 +67,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${soleil.variable} antialiased`}>
           <div>{children}</div>
+          <ToastContainer />
         </body>
       </html>
     );
@@ -68,6 +78,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${soleil.variable} antialiased`}>
           <div className="pb-36">{children}</div>
+          <ToastContainer />
         </body>
       </html>
     );
@@ -80,9 +91,9 @@ export default function RootLayout({
         <div className={`pb-20 bg-[#fcfcfd] ${!isCustomerStoriesPage ? 'sm:pb-40' : ''}`}>
           {children}
         </div>
+        <ToastContainer />
         {isFaqPage ? <FaqFooter /> : <Footer />}
       </body>
     </html>
   );
-
 }

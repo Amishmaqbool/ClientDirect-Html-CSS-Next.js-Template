@@ -1,22 +1,60 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Snitcher from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
+import { toast } from "react-toastify";
+import { useRouter } from 'next/navigation'; 
 
-export default function Signup() {
+interface FormErrors {
+  name?: string;
+  email?: string;
+  password?: string;
+  confirmPassword?: string;
+}
+
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] =  useState<FormErrors>({
+    email: "",
+    password: "",
+  });
 
-  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
+
+  const router = useRouter();
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors: FormErrors = {};
+
+    if (!email) {
+      newErrors.email = "The email field is required.";
+      valid = false;
+    }
+
+    if (!password) {
+      newErrors.password = "The password field is required.";
+      valid = false;
+    }
+
+    setError(newErrors);
+    return valid;
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {  
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setLoading(true);
-    setError("");
+    setError({ email: "", password: "" });
 
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/token`, {
@@ -33,18 +71,19 @@ export default function Signup() {
       if (!response.ok) {
         throw new Error("Failed to login");
       }
-
       const data = await response.json();
-      alert(JSON.stringify(data)); 
-      } catch (err: unknown) {
-        if (err instanceof Error) {
-          setError(err.message);
-        } else {
-          setError("Something went wrong");
-        }
-      } finally {
-        setLoading(false);
-      }
+      console.log(data, "----daa");
+      localStorage.setItem("access_token", data.access_token);
+      toast.success("Login successful!");
+      setTimeout(() => {
+        router.push("/");
+      }, 1500);
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : "Something went wrong";
+      toast.error(errorMessage);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -62,21 +101,37 @@ export default function Signup() {
           </div>
         </div>
 
-        <InputField
-          label="Email"
-          value={email}
-          name="email"
-          type="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <div className="flex flex-col w-full max-w-[350px] text-left">
+          <InputField
+            label="Email"
+            value={email}
+            name="email"
+            type="email"
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setError((prev) => ({ ...prev, email: "" }));
+            }}
+          />
+          {error.email && (
+            <p className="text-red-500 text-sm text-left mb-4 -mt-1">{error.email}</p>
+          )}
+        </div>
 
-        <InputField
-          label="Password"
-          value={password}
-          name="password"
-          type="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <div className="flex flex-col w-full max-w-[350px] text-left">
+          <InputField
+            label="Password"
+            value={password}
+            name="password"
+            type="password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setError((prev) => ({ ...prev, password: "" }));
+            }}
+          />
+          {error.password && (
+            <p className="text-red-500 text-sm text-left mb-4 -mt-1">{error.password}</p>
+          )}
+        </div>
 
         <div className="flex justify-between items-center mb-4">
           <label htmlFor="rememberMe" className="flex gap-1 items-center cursor-pointer">
@@ -94,8 +149,6 @@ export default function Signup() {
             Forgot your password?
           </p>
         </div>
-
-        {error && <p className="text-red-500 mb-4">{error}</p>}
 
         <button
           type="submit"
@@ -135,7 +188,7 @@ export default function Signup() {
 
         <p className="text-center py-8 text-sm text-[#020817]">
           No account yet?{" "}
-          <a href="/auth/signup" className="text-blue-600 hover:text-blue-500">
+          <a href="/auth/register" className="text-blue-600 hover:text-blue-500">
             Start your 14-day free trial
           </a>
         </p>

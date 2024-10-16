@@ -1,48 +1,91 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Snitcher from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
+import { toast } from "react-toastify";
+import { useRouter } from 'next/navigation';
 
-interface Errors {
+interface FormErrors {
+  name?: string;
+  email?: string;
   password?: string;
-  general?: string;
+  confirmPassword?: string;
 }
 
-export default function Signup() {
+export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [errors, setErrors] = useState<Errors>({});
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
 
-  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const router = useRouter();
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors: FormErrors = {};
+
+    if (!name) {
+      newErrors.name = "The fullname field is required.";
+      valid = false;
+    }
+
+    if (!email) {
+      newErrors.email = "The email field is required.";
+      valid = false;
+    }
+
+    if (!password) {
+      newErrors.password = "The password field is required.";
+      valid = false;
+    }
+
+    if (!confirmPassword) {
+      newErrors.confirmPassword = "The confirm password field is required.";
+      valid = false;
+    }
 
     if (password !== confirmPassword) {
-      setErrors((prev) => ({ ...prev, password: "Passwords do not match" }));
-      return;
+      newErrors.confirmPassword = "Passwords do not match.";
+      valid = false;
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return; 
     }
 
     setLoading(true);
-    setErrors({});
 
     try {
       const response = await fetch('https://api.clientidirect.com/auth/register', {
         method: "POST",
         headers: {
-          "accept": "application/json",
+          accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email: email,
           password: password,
-          firstname: name.split(" ")[0], 
-          lastname: name.split(" ")[1] || "", 
+          firstname: name.split(" ")[0],
+          lastname: name.split(" ")[1] || "",
           user_type: "tenant",
           status: "active",
           language: "de",
@@ -54,20 +97,19 @@ export default function Signup() {
         throw new Error("Failed to register");
       }
 
-      const data = await response.json();
-      alert(JSON.stringify(data)); // Handle successful registration
-      } catch (err: unknown) {
-        if (err instanceof Error) {
-          setErrors((prev) => ({ ...prev, general: err.message }));
-        } else {
-          setErrors((prev) => ({ ...prev, general: "Something went wrong" }));
-        }
-      } finally {
-        setLoading(false);
-      }
+      await response.json();
+      toast.success("Registration successful!");
+      setTimeout(() => {
+        router.push("/auth/login");
+      }, 1500);
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : "Something went wrong";
+      toast.error(errorMessage);
+    } finally {
+      setLoading(false);
+    }
   };
-
-  return (
+ return (
     <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center">
       <form onSubmit={handleSubmit} className="max-[400px]:px-6 py-12 w-full flex flex-col items-center">
         <div className="flex flex-col justify-center items-center mb-4">
@@ -82,14 +124,21 @@ export default function Signup() {
           </div>
         </div>
 
+        <div className="flex flex-col w-full max-w-[350px] text-left">
         <InputField
           label="Name"
           value={name}
           name="name"
           type="text"
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => {
+            setName(e.target.value);
+            setErrors((prev) => ({ ...prev, name: "" }));
+          }}
         />
+        {errors.name && <p className="text-red-500 text-sm text-left mb-4 -mt-1">{errors.name}</p>}
+        </div>
 
+        <div className="flex flex-col w-full max-w-[350px] text-left">
         <InputField
           label="Phone"
           value={phone}
@@ -97,33 +146,51 @@ export default function Signup() {
           type="tel"
           onChange={(e) => setPhone(e.target.value)}
         />
+        </div>
 
+        <div className="flex flex-col w-full max-w-[350px] text-left">
         <InputField
           label="Email"
           value={email}
           name="email"
           type="email"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            setErrors((prev) => ({ ...prev, email: "" }));
+          }}
         />
+        {errors.email && <p className="text-red-500 text-sm text-left mb-4 -mt-1">{errors.email}</p>}
+        </div>
 
+        <div className="flex flex-col w-full max-w-[350px] text-left">
         <InputField
           label="Password"
           value={password}
           name="password"
           type="password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => {
+            setPassword(e.target.value);
+            setErrors((prev) => ({ ...prev, password: "" }));
+          }}
         />
+        {errors.password && <p className="text-red-500 text-sm text-left mb-4 -mt-1">{errors.password}</p>}
+        </div>
 
+        <div className="flex flex-col w-full max-w-[350px] text-left">
         <InputField
           label="Confirm Password"
           value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
           name="confirmPassword"
           type="password"
+          onChange={(e) => {
+            setConfirmPassword(e.target.value);
+            setErrors((prev) => ({ ...prev, confirmPassword: "" }));
+          }}
         />
-
-        {errors.password && <p className="text-red-500 mb-4">{errors.password}</p>}
-        {errors.general && <p className="text-red-500 mb-4">{errors.general}</p>} 
+        {errors.confirmPassword && (
+          <p className="text-red-500 text-sm text-left mb-4 -mt-1">{errors.confirmPassword}</p>
+        )}
+        </div>
 
         <button
           type="submit"
