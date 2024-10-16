@@ -17,21 +17,13 @@ export default function Footer() {
     <>
       <Panel />
       <div className="bg-[#101726] relative">
-<<<<<<< HEAD
-        <div className="max-w-[1216px] max-lg:px-4 mx-auto pb-16 pt-[348px] flex max-lg:flex-col justify-between gap-32">
-=======
         <div className="max-w-[1216px] max-lg:px-4 mx-auto pb-16 pt-[348px] flex max-lg:flex-col justify-between max-sm:gap-16 gap-32">
->>>>>>> c986dc8 (Auth updates)
           <div className="flex flex-col">
             <Link href="/">
               <Image src={logo} height={35} width={125} alt="Logo" />
             </Link>
 
-<<<<<<< HEAD
-            <div className="flex items-center -space-x-4 my-[18px]">
-=======
             <div className="flex max-sm:flex-wrap items-center max-sm:gap-2 sm:-space-x-4 my-[18px]">
->>>>>>> c986dc8 (Auth updates)
               <Image
                 src={highPerformerSummer}
                 width={68}
@@ -82,22 +74,14 @@ export default function Footer() {
             </div>
 
             <div>
-<<<<<<< HEAD
-              <button className="bg-[#ffffff1a] text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center">
-=======
               <button className="w-max bg-[#ffffff1a] max-[420px]:text-xs text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center">
->>>>>>> c986dc8 (Auth updates)
                 Începe perioada de probă gratuită de 14 zile
                 <Image
                   src={arrow}
                   alt="săgeată"
                   width={20}
                   height={21}
-<<<<<<< HEAD
-                  className="ml-2"
-=======
                   className="max-[365px]:hidden ml-2"
->>>>>>> c986dc8 (Auth updates)
                 />
               </button>
             </div>
@@ -107,10 +91,6 @@ export default function Footer() {
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Produs</p>
               <ul className="space-y-3">
-<<<<<<< HEAD
-                <Link href="/features/lead-generation"><li className="cursor-pointer">Identificarea vizitatorilor</li></Link>
-                <Link href="/features/google-analytics"><li className="pt-3 cursor-pointer">Îmbogățirea Google Analytics</li></Link>
-=======
                 <Link href="/features/lead-generation">
                   <li className="cursor-pointer">
                     Identificarea vizitatorilor
@@ -121,18 +101,12 @@ export default function Footer() {
                     Îmbogățirea Google Analytics
                   </li>
                 </Link>
->>>>>>> c986dc8 (Auth updates)
                 {/* <li className="cursor-pointer">API în timp real</li> */}
               </ul>
             </div>
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Soluții</p>
               <ul className="space-y-3">
-<<<<<<< HEAD
-                <Link href="/solutions/sales"><li className="cursor-pointer">Pentru vânzări</li></Link>
-                <Link href="/solutions/marketing"><li className="pt-3 cursor-pointer">Pentru marketing</li></Link>
-                <Link href="/solutions/agency"><li className="pt-3 cursor-pointer">Pentru agenții</li></Link>
-=======
                 <Link href="/solutions/sales">
                   <li className="cursor-pointer">Pentru vânzări</li>
                 </Link>
@@ -142,22 +116,11 @@ export default function Footer() {
                 <Link href="/solutions/agency">
                   <li className="pt-3 cursor-pointer">Pentru agenții</li>
                 </Link>
->>>>>>> c986dc8 (Auth updates)
               </ul>
             </div>
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Resurse</p>
               <ul className="space-y-3">
-<<<<<<< HEAD
-                <Link href=""><li className="cursor-pointer">Centru de ajutor</li></Link>
-                <Link href="/customer-stories"><li className="pt-3 cursor-pointer">Povești ale clienților</li></Link>
-                <Link href="/faq"><li className="pt-3 cursor-pointer">Întrebări frecvente</li></Link>
-                <Link href=""><li className="pt-3 cursor-pointer">Program de afiliere</li></Link>
-                <Link href=""><li className="pt-3 cursor-pointer">
-                  Ghidul Snitcher pentru generarea de lead-uri B2B
-                </li></Link>
-                <Link href="/blueprint/b2b-marketing-blueprint"><li className="pt-3 cursor-pointer">Planul de marketing B2B</li></Link>
-=======
                 <Link href="">
                   <li className="cursor-pointer">Centru de ajutor</li>
                 </Link>
@@ -182,17 +145,11 @@ export default function Footer() {
                     Planul de marketing B2B
                   </li>
                 </Link>
->>>>>>> c986dc8 (Auth updates)
               </ul>
             </div>
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Legal</p>
               <ul className="space-y-3">
-<<<<<<< HEAD
-                <Link href="/terms-conditions"><li className="cursor-pointer">Termeni și condiții</li></Link>
-                <Link href="/privacy-policy"><li className="pt-3 cursor-pointer">Politica de confidențialitate</li></Link>
-                <Link href="#"><li className="pt-3 cursor-pointer">Securitate</li></Link>
-=======
                 <Link href="/terms-conditions">
                   <li className="cursor-pointer">Termeni și condiții</li>
                 </Link>
@@ -204,24 +161,17 @@ export default function Footer() {
                 <Link href="#">
                   <li className="pt-3 cursor-pointer">Securitate</li>
                 </Link>
->>>>>>> c986dc8 (Auth updates)
               </ul>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-10"></div>
-<<<<<<< HEAD
-        <div className="max-w-[1216px] mx-auto py-8 flex justify-between items-center text-gray-400 text-sm">
-          <p>© Copyright 2015-2024 Snitcher B.V., toate drepturile rezervate.</p>
-          <div className="flex space-x-4">
-=======
         <div className="max-w-[1280px] mx-auto px-6 py-8 flex max-[500px]:flex-col justify-between items-center text-gray-400 text-sm">
           <p className="max-[500px]:text-center">
             © Copyright 2015-2024 Snitcher B.V., toate drepturile rezervate.
           </p>
           <div className="max-[500px]:pt-5 flex space-x-4">
->>>>>>> c986dc8 (Auth updates)
             <a href="#">
               <Image src={LinkedinIcon} alt="LinkedIn" width={24} height={24} />
             </a>

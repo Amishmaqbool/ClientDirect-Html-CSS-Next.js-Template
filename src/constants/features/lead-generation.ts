@@ -1,12 +1,9 @@
 import Integrate from "@/assets/images/integrate.webp";
 import Notify from "@/assets/images/notify.webp";
 import Retarget from "@/assets/images/retarget.webp";
-<<<<<<< HEAD
-=======
 import LeadHeroIcon1 from "@/assets/svgs/lead-hero-icon1.svg"
 import LeadHeroIcon2 from "@/assets/svgs/lead-hero-icon2.svg"
 import LeadHeroIcon3 from "@/assets/svgs/lead-hero-icon3.svg"
->>>>>>> c986dc8 (Auth updates)
 
 export const reviews = [
   {
@@ -82,32 +79,17 @@ export const data = [
 
 export const leadHeroData = [
   {
-<<<<<<< HEAD
-    imageSrc:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6408a11352802956b0c0529f_i.svg",
-=======
     imageSrc: LeadHeroIcon1,
->>>>>>> c986dc8 (Auth updates)
     altText: "Imaginea Unu",
     description: "Identifică mai multe companii care vizitează site-ul tău web.",
   },
   {
-<<<<<<< HEAD
-    imageSrc:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6408a11db8c50cbb1e243ad0_icons.svg",
-=======
     imageSrc: LeadHeroIcon2,
->>>>>>> c986dc8 (Auth updates)
     altText: "Imaginea Doi",
     description: "Segmentează lead-urile în audiențe care convertesc.",
   },
   {
-<<<<<<< HEAD
-    imageSrc:
-      "https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6408a12a6f91b114d2a0a24d_i.svg",
-=======
     imageSrc: LeadHeroIcon3,
->>>>>>> c986dc8 (Auth updates)
     altText: "Imaginea Trei",
     description: "Automatizează activitățile pe canale și aplicații.",
   },
