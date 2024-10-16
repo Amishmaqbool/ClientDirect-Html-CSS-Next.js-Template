@@ -1,10 +1,12 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Snitcher from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
+import { toast } from "react-toastify";
+import { useRouter } from 'next/navigation'; 
 
 export default function Signup() {
   const [email, setEmail] = useState("");
@@ -12,8 +14,9 @@ export default function Signup() {
   const [rememberMe, setRememberMe] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const router = useRouter();
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setLoading(true);
     setError("");
@@ -33,11 +36,16 @@ export default function Signup() {
       if (!response.ok) {
         throw new Error("Failed to login");
       }
-
       const data = await response.json();
-      alert(JSON.stringify(data)); 
+      console.log(data,"----daa");
+      localStorage.setItem("access_token", data.access_token)
+      toast.success("Login successful!");
+      setTimeout(() => {
+        router.push("/");
+      }, 1500);
     } catch (err: any) {
       setError(err.message || "Something went wrong");
+      toast.error(err.message || "Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -131,7 +139,7 @@ export default function Signup() {
 
         <p className="text-center py-8 text-sm text-[#020817]">
           No account yet?{" "}
-          <a href="/auth/signup" className="text-blue-600 hover:text-blue-500">
+          <a href="/auth/register" className="text-blue-600 hover:text-blue-500">
             Start your 14-day free trial
           </a>
         </p>

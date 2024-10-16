@@ -1,10 +1,12 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import Snitcher from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
+import { toast } from "react-toastify";
+import { useRouter } from 'next/navigation';
 
 export default function Signup() {
   const [email, setEmail] = useState("");
@@ -12,32 +14,32 @@ export default function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e:any) => {
+  const router = useRouter();
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      setErrors((prev) => ({ ...prev, password: "Passwords do not match" }));
+      toast.error("Passwords do not match");
       return;
     }
 
     setLoading(true);
-    setErrors({});
 
     try {
       const response = await fetch('https://api.clientidirect.com/auth/register', {
         method: "POST",
         headers: {
-          "accept": "application/json",
+          accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           email: email,
           password: password,
-          firstname: name.split(" ")[0], // Assuming the first name is the first word of the name
-          lastname: name.split(" ")[1] || "", // Assuming the last name is the second word or empty
+          firstname: name.split(" ")[0],
+          lastname: name.split(" ")[1] || "",
           user_type: "tenant",
           status: "active",
           language: "de",
@@ -50,9 +52,12 @@ export default function Signup() {
       }
 
       const data = await response.json();
-      alert(JSON.stringify(data)); // Handle successful registration
+      toast.success("Registration successful!");
+      setTimeout(() => {
+        router.push("/auth/login");
+      }, 1500);
     } catch (err: any) {
-      setErrors((prev) => ({ ...prev, general: err.message || "Something went wrong" }));
+      toast.error(err.message || "Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -112,9 +117,6 @@ export default function Signup() {
           name="confirmPassword"
           type="password"
         />
-
-        {/* {errors.password && <p className="text-red-500 mb-4">{errors.password}</p>}
-        {errors.general && <p className="text-red-500 mb-4">{errors.general}</p>} */}
 
         <button
           type="submit"
