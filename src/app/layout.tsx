@@ -44,14 +44,13 @@ export default function RootLayout({
   const [isFaqPage, setIsFaqPage] = useState<boolean | null>(null);
   const pathname = usePathname();
   const router = useRouter();
-  const isAuthPage = pathname === "/auth/login" || pathname === "/auth/signup";
+  const isAuthPage = pathname === "/auth/login" || pathname === "/auth/register";
   const isCustomerStoriesPage = pathname === '/customer-stories';
 
   useEffect(() => {
-    const token = localStorage.getItem("access_token"); // Check for access_token in localStorage
+    const token = localStorage.getItem("access_token"); 
 
     if (token && isAuthPage) {
-      // If token exists and user is trying to access auth pages, redirect to home
       router.push("/");
     }
   }, [pathname, isAuthPage, router]);
