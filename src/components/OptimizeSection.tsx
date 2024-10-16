@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 "use client"
+=======
+"use client";
+>>>>>>> c986dc8 (Auth updates)
 import React from "react";
 import Image from "next/image";
 import Button from "./common/Button";
 import { OptimizeCardData } from "@/constants/features/google-analytics";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+<<<<<<< HEAD
+=======
+import WomenAvatar from "../assets/svgs/women-avatar.svg"
+>>>>>>> c986dc8 (Auth updates)
 
 export default function OptimizeSection() {
   return (
@@ -14,15 +22,28 @@ export default function OptimizeSection() {
             <p className="font-bold text-xs text-[#0040c1]">Optimizează</p>
           </div>
           <h1 className="max-w-[768px] my-0 font-bold text-4xl text-center tracking-[-1px] text-[#000]">
+<<<<<<< HEAD
           Rulează mai multe teste și atinge-ți obiectivul mai repede.
           </h1>
           <p className="max-w-[790px] py-5 text-center text-base sm:text-lg leading-[28px] text-[#475467]">
           Urmărește schimbările pe care le faci fără să aștepți conversii, astfel încât să poți testa mai mult cu riscuri mai mici și să te asiguri că îți atingi obiectivul în limitele bugetului.
+=======
+            Rulează mai multe teste și atinge-ți obiectivul mai repede.
+          </h1>
+          <p className="max-w-[790px] py-5 text-center text-base sm:text-lg leading-[28px] text-[#475467]">
+            Urmărește schimbările pe care le faci fără să aștepți conversii,
+            astfel încât să poți testa mai mult cu riscuri mai mici și să te
+            asiguri că îți atingi obiectivul în limitele bugetului.
+>>>>>>> c986dc8 (Auth updates)
           </p>
           <Button
             bgColor="bg-[#101828]"
             textColor="text-white"
             borderRadius="rounded-[100px]"
+<<<<<<< HEAD
+=======
+            className="max-[420px]:text-xs text-sm border border-[#ffffff1a]"
+>>>>>>> c986dc8 (Auth updates)
             showChevron={true}
             chevronColor="text-white"
             buttonText="Începe perioada de probă gratuită de 14 zile"
@@ -60,26 +81,46 @@ export default function OptimizeSection() {
 
               <div className="pt-9 flex flex-col sm:flex-row gap-4 items-start">
                 <Image
+<<<<<<< HEAD
                   src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6409b04ac602fefb63e60c56_Avatar.svg"
+=======
+                  src={WomenAvatar}
+>>>>>>> c986dc8 (Auth updates)
                   alt="Avatar"
                   width={48}
                   height={48}
                 />
                 <div className="testimonial text-left max-w-lg w-full lg:w-full mb-8">
                   <blockquote className="text-gray-700 italic text-sm">
+<<<<<<< HEAD
                   &quot;Snitcher, împreună cu contul nostru de Google Analytics, oferă echipei noastre web mai multe informații despre audiența noastră și despre cum interacționează anumite tipuri de utilizatori cu site-ul nostru.&quot;
                   </blockquote>
                   <cite className="text-xs text-gray-500 not-italic">
                     <span className="text-black">Becca R</span> - Director Dezvoltare Software
+=======
+                    &quot;Snitcher, împreună cu contul nostru de Google
+                    Analytics, oferă echipei noastre web mai multe informații
+                    despre audiența noastră și despre cum interacționează
+                    anumite tipuri de utilizatori cu site-ul nostru.&quot;
+                  </blockquote>
+                  <cite className="text-xs text-gray-500 not-italic">
+                    <span className="text-black">Becca R</span> - Director
+                    Dezvoltare Software
+>>>>>>> c986dc8 (Auth updates)
                   </cite>
                 </div>
               </div>
             </div>
 
+<<<<<<< HEAD
             <div
               className="col-span-1 row-span-1 max-lg:aspect-square w-full h-full"
             >
               <DotLottieReact 
+=======
+            <div className="col-span-1 row-span-1 max-lg:aspect-square w-full h-full">
+              <DotLottieReact
+>>>>>>> c986dc8 (Auth updates)
                 src="https://lottie.host/230858b8-ad22-494c-a41b-9776915dfbda/SO03zYR87i.lottie"
                 autoplay
                 loop

@@ -51,25 +51,41 @@ const caseStudies = [
   },
 ];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c986dc8 (Auth updates)
 const CaseStudyList = () => {
   return (
     <div>
       <HeroSection
+<<<<<<< HEAD
         headingText="Poveștile clienților"
         headingLineBreaks={[2, 5]}
         paragraphText="Descoperă cum afaceri ca a ta folosesc Snitcher pentru a identifica, implica și achiziționa noi clienți."
+=======
+        headingText={"Poveștile clienților \n"}
+        paragraphText={"Descoperă cum afaceri ca a ta folosesc Snitcher pentru a identifica, \n implica și achiziționa noi clienți."}
+>>>>>>> c986dc8 (Auth updates)
         maxWidth="960px"
         bgColor="#070b18"
         buttonVisible = {false}
       />
       <div
+<<<<<<< HEAD
         className="relative max-lg:px-4"
+=======
+        className="relative max-lg:px-4 pb-20"
+>>>>>>> c986dc8 (Auth updates)
         style={{
           backgroundImage: `url(${BackgroundImage.src})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+<<<<<<< HEAD
           backgroundRepeat: 'no-repeat',
+=======
+          backgroundRepeat: 'repeat',
+>>>>>>> c986dc8 (Auth updates)
         }}>
         <div className="case-study-list grid gap-[64px] lg:px-24 mb-[32px] z-[1] max-w-[1280px] -mt-8 pt-16 mx-auto p-[20px] max-base:px-1 max-xs:px-6 md:grid-cols-2">
           {caseStudies.map((caseStudy, index) => (
@@ -92,7 +108,11 @@ const CaseStudyList = () => {
               <a
                 href={caseStudy.link}
                 className="learn-more-button flex w-fit gap-2 items-end bg-[#101828] border border-[#00000026] text-[14px] leading-[20px] py-[10px] h-fit px-[16px] text-white rounded-full">
+<<<<<<< HEAD
                 <p className="self-end">Learn More</p>
+=======
+                <p className="self-end">Află mai multe</p>
+>>>>>>> c986dc8 (Auth updates)
                 <Image src={Arrow} alt="Arrow" />
               </a>
             </div>

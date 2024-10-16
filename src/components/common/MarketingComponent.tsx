@@ -2,9 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import RightArrow from "../../assets/svgs/right-arrow.svg"
+<<<<<<< HEAD
 
 interface ContentList {
   image: string;
+=======
+import { StaticImageData } from 'next/image';
+
+interface ContentList {
+  image: StaticImageData;
+>>>>>>> c986dc8 (Auth updates)
   title: string;
   content: string;
 }

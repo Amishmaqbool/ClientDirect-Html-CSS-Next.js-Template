@@ -8,12 +8,20 @@ export default function FaqHeader() {
   return (
     <div>
       <nav className="flex flex-col">
+<<<<<<< HEAD
         <div className="relative pb-9 mb-9 faq-header">
+=======
+        <div className="relative pb-9 faq-header">
+>>>>>>> c986dc8 (Auth updates)
           <div className="max-w-[960px] mx-auto px-6 flex flex-col h-full items-center">
             <div className="relative w-full mb-6 pb-6">
               <div className="pt-6 leading-none">
                 <div className="flex justify-between items-center">
+<<<<<<< HEAD
                   <Image src={Logo} alt="Logo" width={35} height={35} />
+=======
+                  <Image className="cursor-pointer" src={Logo} alt="Logo" width={35} height={35} />
+>>>>>>> c986dc8 (Auth updates)
                   <div className="flex gap-1 items-center">
                     <Image src={GlobeIcon} alt="Globe Icon" />
                     <select name="language" id="language-select">

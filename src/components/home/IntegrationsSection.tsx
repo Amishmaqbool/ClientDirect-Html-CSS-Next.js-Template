@@ -59,11 +59,16 @@ const IntegrationSection = () => {
             </button>
           </div>
 
+<<<<<<< HEAD
           {/* Ripple + Logo */}
           <div className="relative w-full max-w-full flex justify-center items-center mt-28 max-lg:mt-60">
             {/* Ripple Container */}
             <div className="absolute inset-0 flex justify-center items-center">
               {/* Ripple 1 */}
+=======
+          <div className="relative w-full max-w-full flex justify-center items-center mt-28 max-lg:mt-60">
+            <div className="absolute inset-0 flex justify-center items-center">
+>>>>>>> c986dc8 (Auth updates)
               <div key={`ripple1-${animationKey}`}
                 className="ripple ripple1 absolute transform -translate-x-1/2 -translate-y-1/2 max-xs:w-[240px] max-xs:h-[240px]"
                 style={{
@@ -79,7 +84,10 @@ const IntegrationSection = () => {
                 />
               </div>
 
+<<<<<<< HEAD
               {/* Ripple 2 */}
+=======
+>>>>>>> c986dc8 (Auth updates)
               <div key={`ripple2-${animationKey}`}
                 className="ripple ripple2 absolute transform -translate-x-1/2 -translate-y-1/2 max-xs:w-[350px] max-xs:h-[350px]"
                 style={{
@@ -95,7 +103,10 @@ const IntegrationSection = () => {
                 />
               </div>
 
+<<<<<<< HEAD
               {/* Ripple 3 */}
+=======
+>>>>>>> c986dc8 (Auth updates)
               <div key={`ripple3-${animationKey}`}
                 className="ripple ripple3 absolute transform -translate-x-1/2 -translate-y-1/2 max-xs:w-[440px] max-xs:h-[440px]"
                 style={{
@@ -117,7 +128,10 @@ const IntegrationSection = () => {
             </div>
 
             <div className="absolute w-full h-full z-10 flex max-lg:flex-col justify-between items-center max-xl:gap-6">
+<<<<<<< HEAD
               {/* Left group icons */}
+=======
+>>>>>>> c986dc8 (Auth updates)
               <div className="flex flex-col gap-[30px] xl:-ml-36 max-lg:mb-36 max-lg:-mt-72 max-xs:-mt-[200px] max-xs:mb-20">
                 <div className="flex gap-6 justify-center md:mr-4">
                   <Image src={Home1} alt="Home 1" width={87} height={88} className="max-xs:w-[59.31px] max-xs:h-[60px]" />
@@ -131,7 +145,10 @@ const IntegrationSection = () => {
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Right group icons */}
+=======
+>>>>>>> c986dc8 (Auth updates)
               <div className="flex flex-col gap-[30px] xl:-mr-36 max-lg:top-16">
                 <div className="flex gap-6 justify-center md:mr-4">
                   <Image src={Home7} alt="Home 7" width={87} height={88} className="max-xs:w-[59.31px] max-xs:h-[60px]" />
@@ -148,7 +165,10 @@ const IntegrationSection = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Bottom Section */}
+=======
+>>>>>>> c986dc8 (Auth updates)
         <div className="flex max-lg:flex-col gap-7 justify-center items-center max-w-full max-lg:max-w-[90%] mt-28 max-xl:px-4 max-lg:px-8 max-md:px-0 max-md:max-w-[95%] max-lg:mt-56 max-lg:pt-10 max-sm:pt-4 max-xs:pb-0 max-xs:mt-36">
 
           <div className="w-1/2 max-md:flex-col max-lg:w-full md:h-44 flex justify-center items-center gap-2 p-6 rounded-lg bg-[#ffffff17] border border-[#ffffff26]">

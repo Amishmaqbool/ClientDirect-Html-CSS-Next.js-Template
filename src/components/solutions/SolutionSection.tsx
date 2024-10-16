@@ -46,7 +46,11 @@ export default function SolutionSection({
   };
 
   return (
+<<<<<<< HEAD
     <div className="relative bg-white text-black py-10 md:py-4">
+=======
+    <div className="relative bg-white text-black py-10 md:py-4 max-2xl:px-4 mt-8 max-md:mt-4 max-lg:px-0">
+>>>>>>> c986dc8 (Auth updates)
       <div
         className={`max-w-[1280px] mx-auto flex flex-col ${
           flexDirection === "row-reverse"
@@ -92,8 +96,13 @@ export default function SolutionSection({
             </ul>
           )}
 
+<<<<<<< HEAD
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <button className="bg-black text-white px-4 rounded-full font-medium flex text-sm sm:text-base gap-[1px] items-center py-2">
+=======
+          <div className="mt-8 flex flex-col lg:flex-row gap-4">
+            <button className="bg-black text-white px-4 rounded-full max-md:w-7/12 max-lg:w-10/12 max-lg:justify-center font-medium flex text-sm max-sm:text-xs sm:text-base gap-[1px] items-center py-2">
+>>>>>>> c986dc8 (Auth updates)
               {buttonPrimaryText}
               <span className="ml-2">
                 <svg
@@ -114,7 +123,11 @@ export default function SolutionSection({
               </span>
             </button>
 
+<<<<<<< HEAD
             <button className="bg-white border border-gray-300 text-black px-4 flex gap-[2px] text-sm sm:text-base items-center py-2 rounded-full font-medium">
+=======
+            <button className="bg-white border border-gray-300 text-black px-4 flex gap-[2px] text-sm sm:text-base items-center py-2 rounded-full font-medium max-md:w-7/12 max-lg:w-10/12 max-lg:justify-center max-lg:gap-2">
+>>>>>>> c986dc8 (Auth updates)
               <Image src={Coin} width={20} height={20} alt="coin" />
               {buttonSecondaryText}
             </button>

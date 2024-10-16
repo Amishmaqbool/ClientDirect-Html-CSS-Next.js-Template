@@ -31,12 +31,20 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   isReversed = false,
 }) => {
   return (
+<<<<<<< HEAD
     <section className="py-12">
+=======
+    <section className="lg:py-12">
+>>>>>>> c986dc8 (Auth updates)
       <div
         className={`max-w-[1280px] mx-auto p-4 flex ${
           isReversed
             ? "flex-col-reverse lg:flex-row-reverse"
+<<<<<<< HEAD
             : "flex-col lg:flex-row"
+=======
+            : "flex-col-reverse lg:flex-row"
+>>>>>>> c986dc8 (Auth updates)
         } justify-between items-center flex-`}
       >
         <div className="w-full lg:w-[50%]">
@@ -44,9 +52,15 @@ const TextBlock: React.FC<SalesSectionProps> = ({
           <p className="text-base sm:text-lg mb-6 text-gray-600">{subHeading}</p>
           <p className="text-base sm:text-lg mb-6 text-gray-600">{description}</p>
           <div className="flex flex-wrap justify-start gap-4 mb-8">
+<<<<<<< HEAD
             <button className="flex gap-2 items-center bg-black rounded-full text-white px-6 py-3 text-sm">
               <p>{ctaText}</p>
               <Image src={RightArrow} alt="Right Arrow"/>
+=======
+            <button className="flex gap-2 items-center bg-black rounded-full text-white px-6 py-3 max-[420px]:text-xs text-sm">
+              <p>{ctaText}</p>
+              <Image className="max-[365px]:hidden" src={RightArrow} alt="Right Arrow"/>
+>>>>>>> c986dc8 (Auth updates)
             </button>
             {secondaryCtaText && (
               <button className="border border-gray-300 px-6 py-3 rounded-full text-sm">
@@ -70,7 +84,11 @@ const TextBlock: React.FC<SalesSectionProps> = ({
             )}
         </div>
 
+<<<<<<< HEAD
         <div className="md:pb-40 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-96">
+=======
+        <div className="md:pb-10 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-64 sm:h-96">
+>>>>>>> c986dc8 (Auth updates)
           <DotLottieReact
             src={lottieUrl}
             autoplay
