@@ -18,9 +18,9 @@ export default function InputField({
   id,
 }: InputFieldProps) {
   return (
-    <div className="flex mb-4 flex-col w-full max-w-[350px]">
+    <div className="flex flex-col w-full max-w-[350px]">
       <div className="flex justify-between pb-1 items-center">
-        <div className="flex items-center">
+        <div className="pt-4 flex items-center">
           {label && (
             <label
               className="text-start font-medium leading-[1.625em] text-[#020817] text-sm"
