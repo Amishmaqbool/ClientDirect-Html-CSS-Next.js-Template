@@ -24,6 +24,7 @@ export default function Signup() {
   const [errors, setErrors] = useState<Errors>({});
   const [loading, setLoading] = useState(false);
 
+
   const validateInputs = () => {
     const newErrors: Errors = {};
 
