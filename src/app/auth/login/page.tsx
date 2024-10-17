@@ -4,7 +4,7 @@ import Image from "next/image";
 import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
-import Linkedin from "@/assets/images/linked.webp";
+//import Linkedin from "@/assets/images/linked.webp";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 // import { Metadata } from "next";
