@@ -20,7 +20,7 @@ export default function Header() {
 
   useEffect(() => {
     setOpenDropdown(null);
-    setIsMobileMenuOpen(false); 
+    setIsMobileMenuOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -75,7 +75,8 @@ export default function Header() {
                           <div className="ml-4">
                             <p className="font-semibold">Identifică</p>
                             <p className="text-sm text-gray-400 pt-2">
-                              Transformă traficul anonim de pe site-ul tău în lead-uri acționabile.
+                              Transformă traficul anonim de pe site-ul tău în
+                              lead-uri acționabile.
                             </p>
                           </div>
                         </div>
@@ -94,7 +95,8 @@ export default function Header() {
                             Îmbogățitor Google Analytics
                           </p>
                           <p className="text-sm text-gray-400 pt-2">
-                            Transformă Google Analytics într-o platformă dedicată analizelor B2B.
+                            Transformă Google Analytics într-o platformă
+                            dedicată analizelor B2B.
                           </p>
                         </div>
                       </li>
@@ -145,7 +147,8 @@ export default function Header() {
                         <div className="ml-4">
                           <p className="font-semibold">Pentru vânzări</p>
                           <p className="text-sm text-gray-400 pt-2">
-                            Califică și prioritizează lead-urile cu intenție ridicată.
+                            Califică și prioritizează lead-urile cu intenție
+                            ridicată.
                           </p>
                         </div>
                       </li>
@@ -177,7 +180,8 @@ export default function Header() {
                         <div className="ml-4">
                           <p className="font-semibold">Pentru agenții</p>
                           <p className="text-sm text-gray-400 pt-2">
-                            Generează mai multe lead-uri calificate pentru clienții tăi.
+                            Generează mai multe lead-uri calificate pentru
+                            clienții tăi.
                           </p>
                         </div>
                       </li>
@@ -204,9 +208,12 @@ export default function Header() {
                     <Link href="/">
                       <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-5">
                         <div className="ml-3">
-                          <p className="font-semibold text-base">Centru de ajutor</p>
+                          <p className="font-semibold text-base">
+                            Centru de ajutor
+                          </p>
                           <p className="text-sm text-gray-400 pt-2">
-                            Sfaturi, bune practici și răspunsuri de la echipa Snitchers.
+                            Sfaturi, bune practici și răspunsuri de la echipa
+                            Snitchers.
                           </p>
                         </div>
                       </li>
@@ -218,7 +225,8 @@ export default function Header() {
                             Povești ale clienților
                           </p>
                           <p className="text-sm text-gray-400 pt-2">
-                            Află cum afaceri similare cu a ta folosesc Snitchers pentru a identifica, angaja și obține noi clienți.
+                            Află cum afaceri similare cu a ta folosesc Snitchers
+                            pentru a identifica, angaja și obține noi clienți.
                           </p>
                         </div>
                       </li>
@@ -230,7 +238,8 @@ export default function Header() {
                             Planul de marketing B2B
                           </p>
                           <p className="text-sm text-gray-400 pt-2">
-                            Module tactice pentru creșterea marketingului B2B, bazate pe cele mai bune practici din industrie.
+                            Module tactice pentru creșterea marketingului B2B,
+                            bazate pe cele mai bune practici din industrie.
                           </p>
                         </div>
                       </li>
@@ -283,10 +292,11 @@ export default function Header() {
         </div>
       </div>
       <div
-        className={`lg:hidden bg-[#070b18] overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${isMobileMenuOpen
-          ? "max-h-screen opacity-100 scale-y-100"
-          : "max-h-0 opacity-0 scale-y-0"
-          }`}
+        className={`lg:hidden bg-[#070b18] overflow-hidden transition-all duration-300 ease-in-out transform origin-top ${
+          isMobileMenuOpen
+            ? "max-h-screen opacity-100 scale-y-100"
+            : "max-h-0 opacity-0 scale-y-0"
+        }`}
       >
         <ul className="px-6 py-4 space-y-4 text-white text-sm">
           <li>
@@ -391,11 +401,15 @@ export default function Header() {
             </a>
           </li>
           <li className="flex items-center gap-4 mt-4 pt-4">
-            <button className="rounded-full bg-[#3257ff] py-[7px] pl-5 pr-3 flex items-center gap-1 hover:bg-blue-600">
-              Începe acum
-              <ChevronRightIcon className="h-5 w-5" />
-            </button>
-            <button className="font-semibold">Autentificare</button>
+            <Link href="/auth/register">
+              <button className="rounded-full bg-[#3257ff] py-[7px] pl-5 pr-3 flex items-center gap-1 hover:bg-blue-600">
+                Începe acum
+                <ChevronRightIcon className="h-5 w-5" />
+              </button>
+            </Link>
+            <Link href="/auth/login">
+              <button className="font-semibold">Autentificare</button>
+            </Link>
           </li>
         </ul>
       </div>

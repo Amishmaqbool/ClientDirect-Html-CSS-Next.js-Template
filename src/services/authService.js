@@ -28,7 +28,6 @@ const authService = {
     }
   },
 
-  // Existing Google Sign-In method (you may want to remove or update this)
   googleSignIn: async (idToken) => {
     try {
       const response = await axios.post(`${API_URL}/auth/google`, { idToken });
@@ -41,7 +40,6 @@ const authService = {
     }
   },
 
-  // Regular email/password login
   login: async (email, password) => {
     try {
       const response = await axios.post(`${API_URL}/auth/login`, {
