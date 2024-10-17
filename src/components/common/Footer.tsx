@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Panel from "../Panel";
 import arrow from "@/assets/svgs/arrow.svg";
-import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg";
+//import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg";
 import logo from "@/assets/svgs/logo.svg";
 
 export default function Footer() {

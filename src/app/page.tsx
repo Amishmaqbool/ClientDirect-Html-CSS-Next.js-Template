@@ -1,10 +1,10 @@
 import HeroSection from "@/components/home/HeroSection";
-import LogoGrid from "@/components/home/LogosGrid";
+//import LogoGrid from "@/components/home/LogosGrid";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
 import { Metadata } from "next";
-import DriveBudget from "@/components/home/DriveBudget";
+//import DriveBudget from "@/components/home/DriveBudget";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 
 export const metadata: Metadata = {
