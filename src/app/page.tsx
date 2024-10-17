@@ -51,8 +51,6 @@ export default function Home() {
           bgColor="#070b18"
         />
 
-        <LogoGrid />
-
         <TextBlock
           mainHeading={mainHeading}
           subHeading={subHeading}
@@ -101,7 +99,7 @@ export default function Home() {
       </div>
       <div className="bg-[#fcfcfd]">
         <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto">
-          <DriveBudget />
+          {/* <DriveBudget /> */}
           <CardsScrollAnimation />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 interface ButtonProps {
     bgColor?: string;
@@ -19,8 +20,15 @@ export default function Button({
     buttonText = 'Încearcă ClientiDirect gratuit',
     className = '',
 }: ButtonProps) {
+    const router = useRouter();
+
+    const handleClick = () => {
+        router.push('/auth/login');
+    };
+
     return (
         <button
+            onClick={handleClick}
             className={`${bgColor} ${textColor} flex items-center justify-center px-[17px] py-[9px] text-base leading-6 ${borderRadius} ${className}`}
         >
             {buttonText}
