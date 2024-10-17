@@ -1,12 +1,13 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import Snitcher from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
 import { useSearchParams } from "next/navigation";
-export default function Signup() {
+
+function LoginContent() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
@@ -19,7 +20,9 @@ export default function Signup() {
 
   useEffect(() => {
     const params = searchParams.toString();
-    localStorage.setItem("access_token", params)
+    if (params) {
+      localStorage.setItem("access_token", params);
+    }
   }, [searchParams]);
 
   const validateEmail = () => {
@@ -153,7 +156,6 @@ export default function Signup() {
         />
         {emailError && <p className="text-sm text-red-500 pt-2">{emailError}</p>}
 
-        {/* Password Input */}
         <InputField
           label="Password"
           value={password}
@@ -246,5 +248,13 @@ export default function Signup() {
         </p>
       </form>
     </div>
+  );
+}
+
+export default function Signup() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <LoginContent />
+    </Suspense>
   );
 }
