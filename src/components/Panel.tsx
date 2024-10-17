@@ -21,7 +21,7 @@ export default function Panel() {
 
 
           <a
-            href="https://clientidirect.com/auth/login"
+            href="/auth/login"
             className="inline-flex items-center justify-center bg-black text-white px-7 py-[15px] rounded-full font-semibold hover:bg-gray-900"
           >
             <p className='leading-[28px] text-[18px]'>
@@ -29,7 +29,6 @@ export default function Panel() {
             </p>
             <div>
               <Image src={arrow} alt='footer button arrow' className='ml-3' />
-
             </div>
           </a>
         </div>

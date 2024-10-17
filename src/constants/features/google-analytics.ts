@@ -47,7 +47,7 @@ export const analyticsReviewsCards = [
     reviewBy: "“Un instrument excelent pentru a-l adăuga în trusa ta de marketing”",
     content:
       "“ClientiDirect ne ajută să înțelegem mai bine traficul de pe site-ul nostru. Apreciem ușurința în utilizare și analizele oferite.”",
-    reviewer: "Marsha H",
+    reviewer: "Gabriela M.",
   },
   {
     id: 2,
@@ -55,7 +55,7 @@ export const analyticsReviewsCards = [
     reviewBy: "“O comoară ascunsă”",
     content:
       "“Ne ajută să aducem la un loc toate eforturile noastre de marketing și să vedem care canale sunt eficiente.”",
-    reviewer: "Courtenay F.",
+    reviewer: "Cristina P.",
   },
   {
     id: 3,
@@ -63,7 +63,7 @@ export const analyticsReviewsCards = [
     reviewBy: "„ClientiDirect își face treaba!”",
     content:
       "„Google Analytics nu era suficient, așa că aveam nevoie de mai multe informații, iar ClientiDirect mi le oferă în timp real”",
-    reviewer: "Sean D.",
+    reviewer: "Alexandra R.",
   },
 ];
 
@@ -215,7 +215,7 @@ export const landingReviewCardsColumn1 = [
     reviewBy: "Un instrument grozav de adăugat în trusa ta de marketing",
     content:
       "Echipa de la ClientiDirect nu doar că este ușor de lucrat cu ea, dar au proiectat o platformă intuitivă și eficientă. ClientiDirect ne ajută să înțelegem mai bine traficul de pe site-ul nostru. Apreciem ușurința de utilizare și analizele. De asemenea, se integrează în CRM-ul nostru, ceea ce este cireașa de pe tort.",
-    reviewer: "Germans F.",
+    reviewer: "Andrei N.",
   },
   {
     id: 2,
@@ -223,7 +223,7 @@ export const landingReviewCardsColumn1 = [
     reviewBy: "Cea mai bună platformă pentru a găsi lead-uri potrivite",
     content:
       "Este mai bună decât Google Analytics și Adobe și ne oferă mai multe informații despre traficul potrivit, astfel încât suntem în contact mai rapid cu lead-urile, cu detaliile de contact furnizate de ClientiDirect.",
-    reviewer: "Marsha H.",
+    reviewer: "Alexandru P.",
   },
   {
     id: 3,
@@ -231,7 +231,7 @@ export const landingReviewCardsColumn1 = [
     reviewBy: "Calitate bună a datelor comparativ cu prețul",
     content:
       "Calitatea datelor este foarte bună în raport cu prețul. Suportul pentru clienți este foarte receptiv și întotdeauna gata să facă un efort suplimentar pentru a rezolva o problemă. Este o soluție software în dezvoltare care lansează frecvent funcții noi și este mereu deschisă la feedback.",
-    reviewer: "Germans F.",
+    reviewer: "Mihai T.",
   },
 ]
 
@@ -242,7 +242,7 @@ export const landingReviewCardsColumn2 = [
     reviewBy: "Calitate bună a datelor comparativ cu prețul",
     content:
       "Dintre toate instrumentele pe care le-am testat, ClientiDirect i-a depășit pe toți în ceea ce privește câte companii a găsit și ce fel de informații suplimentare am putut extrage din datele pe care le-a obținut de la companiile care ne-au vizitat site-ul. De exemplu – alți furnizori care oferă date similare detectează (în medie) cu aproximativ 60-70% mai puține companii decât ClientiDirect.",
-    reviewer: "Germans F.",
+    reviewer: "Gabriel C.",
   },
   {
     id: 2,
@@ -250,7 +250,7 @@ export const landingReviewCardsColumn2 = [
     reviewBy: "Am acționat și am obținut câteva succese inițiale",
     content:
       "Ușor de configurat. Iar datele furnizate sunt destul de bogate. Am putut găsi informații de contact cu câteva clicuri și am luat legătura cu posibile afaceri în câteva minute.",
-    reviewer: "Vencel M.",
+    reviewer: "Cristian M.",
   },
   {
     id: 3,
@@ -258,7 +258,7 @@ export const landingReviewCardsColumn2 = [
     reviewBy: "Calitate bună a datelor comparativ cu prețul",
     content:
       "Dintre toate instrumentele pe care le-am testat, ClientiDirect i-a depășit pe toți în ceea ce privește câte companii a găsit și ce fel de informații suplimentare am putut extrage din datele pe care le-a obținut de la companiile care ne-au vizitat site-ul. De exemplu – alți furnizori care oferă date similare detectează (în medie) cu aproximativ 60-70% mai puține companii decât ClientiDirect.",
-    reviewer: "Inga B.",
+    reviewer: "Maria I.",
   },
   {
     id: 4,
@@ -266,7 +266,7 @@ export const landingReviewCardsColumn2 = [
     reviewBy: "Comoară ascunsă",
     content:
       "Am dat din greșeală peste ClientiDirect căutând un alt instrument, dar sunt foarte bucuros că am făcut-o! Fiind în B2B, acesta este o comoară ascunsă pentru a vedea ce companii vizitează site-ul tău. Acest lucru ne ajută să identificăm ce canale sunt eficiente în atragerea traficului și, de asemenea, completează strategia noastră de emailuri reci.",
-    reviewer: "Lesya L.",
+    reviewer: "Elena D.",
   },
 ]
 
@@ -277,7 +277,7 @@ export const landingReviewCardsColumn3 = [
     reviewBy: "Informații valoroase, configurare ușoară, echipă de suport prietenoasă și receptivă",
     content:
       "Îmi place configurarea ușoară, calitatea datelor care apar și capacitatea de a gestiona lucrurile pe cont propriu. Au o documentație excelentă și sunt fericiți să răspundă rapid și cuprinzător la întrebări.",
-    reviewer: "Hisham I.",
+    reviewer: "Ioana S.",
   },
   {
     id: 2,
@@ -285,7 +285,7 @@ export const landingReviewCardsColumn3 = [
     reviewBy: "Instrument foarte eficient pentru identificarea lead-urilor",
     content:
       "ClientiDirect nu este doar un instrument excelent pentru a urmări vizitatorii site-ului și a înțelege cine sunt potențialii clienți, dar este și ușor de instalat. Echipa noastră l-a configurat în 10 minute și a obținut rezultate.",
-    reviewer: "Utilizator verificat din software pentru calculatoare",
+    reviewer: "Andreea C.",
   },
   {
     id: 3,
@@ -293,6 +293,6 @@ export const landingReviewCardsColumn3 = [
     reviewBy: "Groza pentru identificarea vizitatorilor și segmentarea companiilor în Google Analytics",
     content:
       "Îmi plac caracteristicile excelente și datele pe care le are pentru identificarea lead-urilor care nu completau formularul nostru. Ne place și integrarea cu Google Analytics, unde putem vedea detaliile lead-urilor direct în Google Analytics.",
-    reviewer: "Utilizator verificat din software pentru calculatoare",
+    reviewer: "Gabriela M.",
   },
 ];

@@ -46,7 +46,7 @@ const CallToActionSection = () => {
             <p>Vorbește cu vânzări</p>
           </button>
           <a
-            href="/pricing"
+            href="/auth/login"
             className="faq-chat-button px-[20px] text-[14px] py-[12px] backdrop-filter-[8px] bg-[#ffffff1a] border border-[#0000] text-white rounded-full h-fit flex gap-2 justify-center items-center"
           >
             <div>Vedeți prețurile</div>
