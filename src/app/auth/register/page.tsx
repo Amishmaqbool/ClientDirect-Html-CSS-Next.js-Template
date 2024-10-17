@@ -24,6 +24,7 @@ export default function Signup() {
   const [errors, setErrors] = useState<Errors>({});
   const [loading, setLoading] = useState(false);
 
+
   const validateInputs = () => {
     const newErrors: Errors = {};
 
@@ -109,7 +110,7 @@ export default function Signup() {
   };
 
   const handleGoogleSignUp = async () => {
-    const redirectUrl = '/'; 
+    const redirectUrl = 'https://clientidirect.com/';
 
     const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(redirectUrl)}`;
 

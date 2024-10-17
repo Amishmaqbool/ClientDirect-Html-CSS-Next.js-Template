@@ -1,11 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Snitcher from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
-
+import { useSearchParams } from "next/navigation";
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,6 +14,13 @@ export default function Signup() {
   const [googleLoading, setGoogleLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const params = searchParams.toString();
+    localStorage.setItem("access_token", params)
+  }, [searchParams]);
 
   const validateEmail = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -83,7 +90,7 @@ export default function Signup() {
     setGoogleLoading(true);
 
     try {
-      const redirectUrl = "/";
+      const redirectUrl = 'https://clientidirect.com/';
 
       const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(
         redirectUrl
