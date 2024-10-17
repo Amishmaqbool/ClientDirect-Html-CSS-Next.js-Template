@@ -8,10 +8,9 @@ import DriveBudget from "@/components/home/DriveBudget";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 
 export const metadata: Metadata = {
-  title: "ClientiDirect | Visitor identification for Agencies | Free Trial",
+  title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
   description:
-    "Offer your clients a powerful whitelabel visitor identification solution with ClientiDirect. Drive revenue, generate leads, and support existing services.",
-  metadataBase: new URL("https://clientidirect.com/"),
+    "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",  metadataBase: new URL("https://clientidirect.com/"),
 };
 export default function Home() {
   const mainHeading =

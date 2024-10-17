@@ -5,9 +5,9 @@ import SolutionSection from "@/components/solutions/SolutionSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ClientiDirect | Marketing solutions for B2B | Free Trial",
+  title: "ClientiDirect | Soluții de marketing pentru B2B | Probă gratuită",
   description:
-    "Convert your target audience into paying customers while cutting out wasted spend. Drive revenue! Try ClientiDirect for Free. No credit card required.",
+    "Transformați publicul țintă în clienți plătitori, eliminând în același timp cheltuielile inutile. Creșteți veniturile! Încercați ClientiDirect gratuit. Nu este necesar un card de credit.",
   metadataBase: new URL("https://clientidirect.com/solutions/marketing"),
 };
 

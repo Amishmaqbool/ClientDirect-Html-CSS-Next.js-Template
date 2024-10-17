@@ -190,7 +190,7 @@ export default function Header() {
                 </div>
               )}
             </li>
-            <li className="relative flex items-center dropdown">
+            {/* <li className="relative flex items-center dropdown">
               <button
                 onClick={() =>
                   setOpenDropdown(
@@ -263,7 +263,7 @@ export default function Header() {
                   </ul>
                 </div>
               )}
-            </li>
+            </li> */}
             <li>
               <a href="#" className="hover:text-gray-300 font-bold">
                 Prețuri

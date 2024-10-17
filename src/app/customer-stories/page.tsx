@@ -6,9 +6,9 @@ import Arrow from "@/assets/svgs/arrow.svg";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Customer Stories",
+  title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
   description:
-    "Discover how businesses like yours use ClientiDirect to identify, engage, and acquire new customers",
+  "Descoperiți cum afaceri ca a dvs. folosesc ClientiDirect pentru a identifica, angaja și obține noi clienți",
   metadataBase: new URL("https://clientidirect.com/customer-stories"),
 };
 

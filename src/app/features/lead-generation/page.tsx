@@ -11,6 +11,13 @@ import { leadHeroData, reviews } from "@/constants/features/lead-generation";
 import RatingCards from "@/components/common/RatingCards";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Button from "@/components/common/Button";
+// import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
+//   description:
+//     "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",  metadataBase: new URL("https://clientidirect.com/"),
+// };
 
 export default function LeadGen() {
   return (

@@ -7,6 +7,11 @@ import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+// import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
+// };
 
 function LoginContent() {
   const [email, setEmail] = useState("");

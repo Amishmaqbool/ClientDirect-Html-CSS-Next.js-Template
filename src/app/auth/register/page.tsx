@@ -5,6 +5,11 @@ import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
+// import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
+// };
 
 interface Errors {
   name?: string;
