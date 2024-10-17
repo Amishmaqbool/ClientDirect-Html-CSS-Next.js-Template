@@ -110,8 +110,7 @@ export default function Signup() {
   };
 
   const handleGoogleSignUp = async () => {
-    const redirectUrl = 'https://clientidirect.com/'; 
-
+    const redirectUrl = 'https://clientidirect.com/auth/login';
     const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(redirectUrl)}`;
 
     try {
