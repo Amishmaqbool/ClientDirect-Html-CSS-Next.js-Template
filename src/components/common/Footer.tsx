@@ -137,7 +137,7 @@ export default function Footer() {
                 </Link>
                 <Link href="">
                   <li className="pt-3 cursor-pointer">
-                    Ghidul Snitcher pentru generarea de lead-uri B2B
+                    Ghidul ClientiDirect pentru generarea de lead-uri B2B
                   </li>
                 </Link>
                 <Link href="/blueprint/b2b-marketing-blueprint">
@@ -169,13 +169,9 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-10"></div>
         <div className="max-w-[1280px] mx-auto px-6 py-8 flex max-[500px]:flex-col justify-between items-center text-gray-400 text-sm">
           <p className="max-[500px]:text-center">
-            © Copyright 2015-2024 Snitcher B.V., toate drepturile rezervate.
+            <Link className="underline" href="clientidirect.com">ClientiDirect.Com</Link>, toate
+            drepturile rezervate
           </p>
-          <div className="max-[500px]:pt-5 flex space-x-4">
-            <a href="#">
-              <Image src={LinkedinIcon} alt="LinkedIn" width={24} height={24} />
-            </a>
-          </div>
         </div>
       </div>
     </>

@@ -16,7 +16,7 @@ export default function Button({
     borderRadius = 'rounded-[100px]',
     showChevron = false,
     chevronColor = 'text-white',
-    buttonText = 'Încearcă Snitcher gratuit',
+    buttonText = 'Încearcă ClientiDirect gratuit',
     className = '',
 }: ButtonProps) {
     return (

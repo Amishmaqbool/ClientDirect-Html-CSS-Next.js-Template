@@ -5,10 +5,10 @@ import SolutionSection from "@/components/solutions/SolutionSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Snitcher | Marketing solutions for B2B | Free Trial",
+  title: "ClientiDirect | Marketing solutions for B2B | Free Trial",
   description:
-    "Convert your target audience into paying customers while cutting out wasted spend. Drive revenue! Try Snitcher for Free. No credit card required.",
-  metadataBase: new URL("https://snitchers.vercel.app/solutions/marketing"),
+    "Convert your target audience into paying customers while cutting out wasted spend. Drive revenue! Try ClientiDirect for Free. No credit card required.",
+  metadataBase: new URL("https://clientidirect.com/solutions/marketing"),
 };
 
 export default function page() {

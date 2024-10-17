@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Snitcher from "@/assets/images/logo-icon.png";
+import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
@@ -110,10 +110,8 @@ export default function Signup() {
   };
 
   const handleGoogleSignUp = async () => {
-    const redirectUrl = '/'; 
-
+    const redirectUrl = 'https://clientidirect.com/auth/login';
     const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(redirectUrl)}`;
-
     try {
       const response = await fetch(googleAuthUrl, {
         method: 'GET',
@@ -142,7 +140,7 @@ export default function Signup() {
     <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center">
       <form onSubmit={handleSubmit} className="max-w-[352px] mx-auto max-[400px]:px-6 py-12 w-full">
         <div className="flex flex-col justify-center items-center mb-4">
-          <Image src={Snitcher} alt="Snitcher-Logo" width={48} height={48} />
+          <Image src={ClientiDirect} alt="Snitcher-Logo" width={48} height={48} />
           <div className="mt-6 flex flex-col text-center">
             <h2 className="text-3xl text-[#111827] font-bold leading-9 tracking-tight">
               Create an account
@@ -227,17 +225,6 @@ export default function Signup() {
             className="mr-2"
           />
           Sign up with Google
-        </button>
-
-        <button className="border border-gray-300 w-full max-w-[350px] py-2 font-medium text-sm text-gray-700 rounded-md flex items-center justify-center hover:bg-gray-100">
-          <Image
-            src={Linkedin}
-            alt="LinkedIn"
-            width={20}
-            height={20}
-            className="mr-2"
-          />
-          Sign up with LinkedIn
         </button>
 
         <p className="text-center py-8 text-sm text-[#020817]">

@@ -5,10 +5,10 @@ import SolutionSection from "@/components/solutions/SolutionSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Snitcher | Expert in driving Sales success | Free Trial",
+  title: "ClientiDirect | Expert in driving Sales success | Free Trial",
   description:
-    "Identify the sales leads. Group leads into list that turn into customers. Automate sending leads and notifications to other tools. Try Snitcher for free!",
-  metadataBase: new URL("https://snitchers.vercel.app/solutions/sales"),
+    "Identify the sales leads. Group leads into list that turn into customers. Automate sending leads and notifications to other tools. Try ClientiDirect for free!",
+  metadataBase: new URL("https://clientidirect.com/solutions/sales"),
 };
 
 export default function page() {
@@ -27,7 +27,7 @@ export default function page() {
       />
       <SolutionSection
         title="Nu mai rata vizitele companiilor țintă"
-        description="Snitcher dezvăluie companiile din spatele traficului tău anonim, fără a depinde de conversii sau formulare."
+        description="ClientiDirect dezvăluie companiile din spatele traficului tău anonim, fără a depinde de conversii sau formulare."
         listItems={[
           "Aplică scorarea lead-urilor pentru a pre-califica și segmenta companiile potrivite.",
           "Combină detaliile companiei cu comportamentul pentru a găsi ceea ce este important pentru tine.",

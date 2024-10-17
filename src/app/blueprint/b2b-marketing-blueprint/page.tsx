@@ -6,10 +6,10 @@ import { sectionData } from "@/constants/b2b/sectionData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Snitcher",
+  title: "ClientiDirect",
   description:
-    "Discover how businesses like yours use Snitcher to identify, engage, and acquire new customers",
-  metadataBase: new URL("https://snitchers.vercel.app/blueprint/b2b-marketing-blueprint"),
+    "Discover how businesses like yours use ClientiDirect to identify, engage, and acquire new customers",
+  metadataBase: new URL("https://clientidirect.com/blueprint/b2b-marketing-blueprint"),
 };
 
 const MarketingBlueprint = () => {

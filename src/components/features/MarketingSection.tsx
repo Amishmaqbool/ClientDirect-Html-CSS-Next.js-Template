@@ -12,7 +12,7 @@ type PageProps = {
 
 const ContentPage: React.FC<PageProps> = ({ contentList }) => {
   const Heading = "Alimentează operațiunile de marketing, vânzări, suport și venituri, în felul tău.";
-  const Paragraph = "Implementează stratul de identificare al Snitcher pentru a adăuga context vital acolo unde ai nevoie.";
+  const Paragraph = "Implementează stratul de identificare al ClientiDirect pentru a adăuga context vital acolo unde ai nevoie.";
   const Button = "Începe perioada de probă gratuită de 14 zile";
   return (
     <div className="relative bg-[#101828]">

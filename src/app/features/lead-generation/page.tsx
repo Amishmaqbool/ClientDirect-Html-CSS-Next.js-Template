@@ -18,7 +18,7 @@ export default function LeadGen() {
       <HeroSection
         headingText="Capturează leaduri de pe site-ul tău pe care nu știai că le ai."
         headingLineBreaks={[3, 8]}
-        paragraphText="Snitcher dezvăluie cine se află în spatele traficului anonim pentru a transforma site-ul tău în cel mai valoros atu!"
+        paragraphText="ClientiDirect dezvăluie cine se află în spatele traficului anonim pentru a transforma site-ul tău în cel mai valoros atu!"
         paragraphLineBreaks={[7]}
         maxWidth="900px"
         bgColor="#070b18"
@@ -40,7 +40,7 @@ export default function LeadGen() {
               <div className="flex gap-20 max-lg:flex-col-reverse max-md:gap-12">
                 <div className="w-1/2 max-lg:w-full pb-8 pt-9">
                   <h2 className="text-4xl leading-[44px] font-bold text-black">
-                    Datele Snitcher sunt pur și simplu mai bune.
+                    Datele ClientiDirect sunt pur și simplu mai bune.
                     <br />
                     <span>Vezi cu ochii tăi.</span>
                   </h2>

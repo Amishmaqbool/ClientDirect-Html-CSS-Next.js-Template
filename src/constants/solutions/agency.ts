@@ -31,14 +31,14 @@ export const faqList = [
     {
         question: 'Voi primi suport și instruire?',
         answer: [
-            'Da, lucrăm îndeaproape cu partenerii noștri din agenții și cu cei care folosesc soluția noastră White-label pentru a vă asigura că sunteți complet pregătit atât în utilizările de bază, cât și în cele mai detaliate ale Snitcher în procesele de marketing și vânzări.',
+            'Da, lucrăm îndeaproape cu partenerii noștri din agenții și cu cei care folosesc soluția noastră White-label pentru a vă asigura că sunteți complet pregătit atât în utilizările de bază, cât și în cele mai detaliate ale ClientiDirect în procesele de marketing și vânzări.',
             'Prin procesul de integrare, vom crea un plan scalabil personalizat pe care să-l folosiți cu clienții dvs. și ne vom asigura de succesul acestora cu platforma.',
             'Suntem, de asemenea, bucuroși să lucrăm direct cu clienții atunci când este solicitat de parteneri pentru a configura sau oferi suport pentru cazuri de utilizare mai complexe.'
         ]
     },
     {
         question: 'Trebuie să folosesc propriul meu branding?',
-        answer: 'Nu, puteți folosi și brandul „powered by Snitcher” dacă preferați.',
+        answer: 'Nu, puteți folosi și brandul „powered by ClientiDirect” dacă preferați.',
     },
     {
         question: 'Cum funcționează perioadele de probă gratuită pentru clienții mei?',

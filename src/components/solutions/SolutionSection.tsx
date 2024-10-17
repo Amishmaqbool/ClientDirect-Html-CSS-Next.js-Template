@@ -22,7 +22,7 @@ interface SolutionSectionProps {
 
 export default function SolutionSection({
   title = "Never miss target company visits, again",
-  description = "Snitcher reveals the companies behind your anonymous traffic, without depending on conversions or form submissions.",
+  description = "ClientiDirect reveals the companies behind your anonymous traffic, without depending on conversions or form submissions.",
   paragraphs = [],
   listItems = [],
   buttonPrimaryText = "Start Free Trial",

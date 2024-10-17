@@ -16,7 +16,7 @@ import Home9 from "@/assets/images/home-9.webp";
 import Home10 from "@/assets/images/home-10.webp";
 import Home11 from "@/assets/images/home-11.webp";
 import Home12 from "@/assets/images/home-12.webp";
-import Snitcher from "@/assets/images/snitcher-logo.webp";
+import ClientiDirect from "@/assets/images/snitcher-logo.webp";
 import GoogleAIcon from "@/assets/images/google-analytics-logo.webp";
 import RealIcon from "@/assets/images/real-icon.webp";
 
@@ -46,7 +46,7 @@ const IntegrationSection = () => {
               Îmbogățiți campaniile și umpleți conductele de vânzări prin integrarea cu produsele pe care le cunoașteți și le iubiți. Cu peste 5.000 de aplicații deja disponibile, instrumentele preferate ale echipei tale sunt la doar un clic distanță.
             </p>
             <button className="mt-7 flex items-center justify-center gap-2 rounded-full pt-2 pb-[6px] pl-4 pr-3 text-white bg-[#ffffff1a] border-[1.5px] border-[#ffffff1a] text-sm">
-              Încearcă Snitcher gratuit
+              Încearcă ClientiDirect gratuit
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -108,7 +108,7 @@ const IntegrationSection = () => {
             </div>
 
             <div className="absolute z-10">
-              <Image src={Snitcher} alt="Central Icon" width={162} height={162} className="max-xs:w-24 max-xs:h-24" />
+              <Image src={ClientiDirect} alt="Central Icon" width={162} height={162} className="max-xs:w-24 max-xs:h-24" />
             </div>
 
             <div className="absolute w-full h-full z-10 flex max-lg:flex-col justify-between items-center max-xl:gap-6">

@@ -15,10 +15,10 @@ import OptimizeSection from "../../../components/OptimizeSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Snitcher Supercharge Google Analytics for B2B | 14-Day Free Trial",
+  title: "ClientiDirect Supercharge Google Analytics for B2B | 14-Day Free Trial",
   description:
-    "Transform Google Analytics for B2B with Snitcher! Enrich your data with company information, analyze marketing actions, and optimize your budget. Try our 14-day free trial, no credit card required, and unlock your website's full potential.",
-  metadataBase: new URL("https://snitchers.vercel.app/features/google-analytics"),
+    "Transform Google Analytics for B2B with ClientiDirect! Enrich your data with company information, analyze marketing actions, and optimize your budget. Try our 14-day free trial, no credit card required, and unlock your website's full potential.",
+  metadataBase: new URL("https://clientidirect.com/features/google-analytics"),
 };
 
 export default function googleAnalytics() {
@@ -38,7 +38,7 @@ export default function googleAnalytics() {
 
       <div className="bacground-gradient-2 sm:pt-16 md:pt-24 pb-[90px]">
         <TextBlock
-          mainHeading={"$48 din fiecare $50 pe care îi cheltuiești pe reclame sunt irosiți."}
+          mainHeading={"90 RON din fiecare 100 RON pe care îi cheltuiești pe reclame sunt pierduți."}
           subHeading={
             "Google Analytics nu a fost creat pentru B2B și urmărește doar vizitatori individuali. Acest lucru face imposibilă înțelegerea clară a impactului inițiativelor tale de marketing, ducând la bugete irosite și date statistic nesemnificative pentru a lua decizii de calitate."
           }
@@ -75,7 +75,7 @@ export default function googleAnalytics() {
       <MarketingSection
         tag="Îmbogățește"
         heading="Cunoaște-ți traficul pe nume."
-        description="Cifrele fără context nu spun prea multe, Snitcher adaugă context vital în Google Analytics prin îmbogățirea cifrelor cu identificări de companii. Astfel, poți cheltui mai puțin și converti mai mult."
+        description="Cifrele fără context nu spun prea multe, ClientiDirect adaugă context vital în Google Analytics prin îmbogățirea cifrelor cu identificări de companii. Astfel, poți cheltui mai puțin și converti mai mult."
         ctaButton="Începe perioada de probă gratuită de 14 zile"
         contentList={MarketingSectionData}
       />
