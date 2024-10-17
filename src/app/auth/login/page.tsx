@@ -146,7 +146,6 @@ export default function Signup() {
         />
         {emailError && <p className="text-sm text-red-500 pt-2">{emailError}</p>}
 
-        {/* Password Input */}
         <InputField
           label="Password"
           value={password}
