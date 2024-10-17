@@ -7,9 +7,9 @@ import CallToActionSection from '@/components/solutions/CallToActionSection';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ClientiDirect | Visitor identification for Agencies | Free Trial",
+  title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
   description:
-    "Offer your clients a powerful whitelabel visitor identification solution with ClientiDirect. Drive revenue, generate leads, and support existing services.",
+    "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor, sub marcă albă, cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",
   metadataBase: new URL("https://clientidirect.com/solutions/agency"),
 };
 

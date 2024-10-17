@@ -9,9 +9,9 @@ import matter from "gray-matter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FAQ | ClientiDirect Help Center",
+  title: "FAQ | Centrul de Ajutor ClientiDirect",
   description:
-    "Get answers to all the questions you have about ClientiDirect.",
+    "Obțineți răspunsuri la toate întrebările pe care le aveți despre ClientiDirect.",
   metadataBase: new URL("https://clientidirect.com/faq"),
 };
 

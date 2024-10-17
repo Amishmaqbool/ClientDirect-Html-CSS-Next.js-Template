@@ -40,8 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .replace(/\b\w/g, (char) => char.toUpperCase());  
 
   return {
-    title: `${formattedTitle} | ClientiDirect Help Center`,
-    description: `Find all the information about ${formattedTitle} in the ClientiDirect Help Center. Get your questions answered about this topic.`,
+    title: `${formattedTitle} | ClientiDirect Centru de Ajutor`,
+    description: `Găsiți toate informațiile despre ${formattedTitle} în Centrul de Ajutor ClientiDirect. Obțineți răspunsuri la întrebările dvs. despre acest subiect.`,
     metadataBase: new URL(`https://clientidirect.com/faq/${slug}`),
   };
 }

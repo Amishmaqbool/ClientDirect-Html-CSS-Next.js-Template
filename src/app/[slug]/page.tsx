@@ -3,6 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { redirect } from 'next/navigation';
 import { MDXProvider } from '@mdx-js/react';
 import HeroSection from '@/components/home/HeroSection';
+// import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
+//   description:
+//     "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",  metadataBase: new URL("https://clientidirect.com/"),
+// };
 const fetchMDXContent = async (slug: string) => {
   try {
     const content = await import(`../content/${slug}.mdx`);

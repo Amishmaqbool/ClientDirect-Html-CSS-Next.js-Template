@@ -62,7 +62,7 @@ export default function Footer() {
                 </Link>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <p className="font-semibold mb-4 text-[#667085]">Resurse</p>
               <ul className="space-y-3">
                 <Link href="">
@@ -90,7 +90,7 @@ export default function Footer() {
                   </li>
                 </Link>
               </ul>
-            </div>
+            </div> */}
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Legal</p>
               <ul className="space-y-3">

@@ -15,9 +15,9 @@ import OptimizeSection from "../../../components/OptimizeSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ClientiDirect Supercharge Google Analytics for B2B | 14-Day Free Trial",
+  title: "ClientiDirect îmbunătățește Google Analytics pentru B2B | Probă gratuită de 14 zile",
   description:
-    "Transform Google Analytics for B2B with ClientiDirect! Enrich your data with company information, analyze marketing actions, and optimize your budget. Try our 14-day free trial, no credit card required, and unlock your website's full potential.",
+    "Transformați Google Analytics pentru B2B cu ClientiDirect! Îmbogățiți datele cu informații despre companii, analizați acțiunile de marketing și optimizați bugetul. Încercați gratuit timp de 14 zile, fără a fi necesar un card de credit, și deblocați întregul potențial al site-ului dvs.",
   metadataBase: new URL("https://clientidirect.com/features/google-analytics"),
 };
 

@@ -5,9 +5,9 @@ import SolutionSection from "@/components/solutions/SolutionSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ClientiDirect | Expert in driving Sales success | Free Trial",
+  title: "ClientiDirect | Expert în succesul vânzărilor | Probă gratuită",
   description:
-    "Identify the sales leads. Group leads into list that turn into customers. Automate sending leads and notifications to other tools. Try ClientiDirect for free!",
+    "Identificați lead-urile de vânzări. Gruparea lead-urilor în liste care se transformă în clienți. Automatizați trimiterea de lead-uri și notificări către alte instrumente. Încercați ClientiDirect gratuit!",
   metadataBase: new URL("https://clientidirect.com/solutions/sales"),
 };
 
