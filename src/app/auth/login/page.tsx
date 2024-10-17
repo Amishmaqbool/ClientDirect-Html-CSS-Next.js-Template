@@ -6,6 +6,7 @@ import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import Linkedin from "@/assets/images/linked.webp";
 import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 function LoginContent() {
   const [email, setEmail] = useState("");
@@ -17,13 +18,14 @@ function LoginContent() {
   const [passwordError, setPasswordError] = useState("");
 
   const searchParams = useSearchParams();
-
+  const router = useRouter();
   useEffect(() => {
     const params = searchParams.toString();
     if (params) {
       localStorage.setItem("access_token", params);
+      router.push('/');
     }
-  }, [searchParams]);
+  }, [router, searchParams]);
 
   const validateEmail = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -93,7 +95,7 @@ function LoginContent() {
     setGoogleLoading(true);
 
     try {
-      const redirectUrl = 'https://clientidirect.com/';
+      const redirectUrl = 'https://clientidirect.com/auth/login';
 
       const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(
         redirectUrl
