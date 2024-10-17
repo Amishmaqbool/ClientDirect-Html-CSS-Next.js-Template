@@ -213,7 +213,7 @@ export default function Header() {
                           </p>
                           <p className="text-sm text-gray-400 pt-2">
                             Sfaturi, bune practici și răspunsuri de la echipa
-                            Snitchers.
+                            ClientiDirect.
                           </p>
                         </div>
                       </li>
@@ -225,7 +225,7 @@ export default function Header() {
                             Povești ale clienților
                           </p>
                           <p className="text-sm text-gray-400 pt-2">
-                            Află cum afaceri similare cu a ta folosesc Snitchers
+                            Află cum afaceri similare cu a ta folosesc ClientiDirect
                             pentru a identifica, angaja și obține noi clienți.
                           </p>
                         </div>

@@ -70,7 +70,7 @@ const gradientClasses: Record<"purple" | "blue" | "aqua", string> = {
 
 export default function HeroSection({
   headingText = "Know who’s on your website, drive more revenue.",
-  paragraphText = "Snitcher empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights.",
+  paragraphText = "ClientiDirect empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights.",
   maxWidth = "900px",
   bgColor = "#070b18",
   featureContents = [],
@@ -132,7 +132,7 @@ export default function HeroSection({
                   borderRadius="rounded-[100px]"
                   showChevron={isHomePage}
                   chevronColor="text-white"
-                  buttonText="Încearcă Snitcher gratuit"
+                  buttonText="Încearcă ClientiDirect gratuit"
                 />
                 <span className="text-[#667085]">
                   Nu este necesar un card de credit

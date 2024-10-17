@@ -41,7 +41,7 @@ const MarketingSection: React.FC<CardsProps> = ({
           </p>
 
           <Link
-            href="/"
+            href="/auth/login"
             className="py-2 px-3.5 flex items-center border rounded-full border-[#0000] backdrop-blur whitespace-nowrap bg-[#ffffff1a] cursor-pointer"
           >
             <button className="flex gap-3 items-center mr-2 font-semibold text-sm text-white cursor-pointer">

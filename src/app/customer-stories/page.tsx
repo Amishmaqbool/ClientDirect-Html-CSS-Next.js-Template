@@ -8,44 +8,44 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Customer Stories",
   description:
-    "Discover how businesses like yours use Snitcher to identify, engage, and acquire new customers",
-  metadataBase: new URL("https://snitchers.vercel.app/customer-stories"),
+    "Discover how businesses like yours use ClientiDirect to identify, engage, and acquire new customers",
+  metadataBase: new URL("https://clientidirect.com/customer-stories"),
 };
 
 const caseStudies = [
   {
     title:
-      "Cum Usersnap a obținut vizibilitate critică asupra campaniilor de marketing cu Snitcher",
+      "Cum Usersnap a obținut vizibilitate critică asupra campaniilor de marketing cu ClientiDirect",
     description:
-      "Usersnap își optimizează campaniile de marketing și vânzări cu Snitcher, obținând informații critice despre segmentarea vizitatorilor și tendințele din industrie, ceea ce duce la strategii mai bine țintite și mai eficiente, care rezonează cu audiența lor corporativă.",
+      "Usersnap își optimizează campaniile de marketing și vânzări cu ClientiDirect, obținând informații critice despre segmentarea vizitatorilor și tendințele din industrie, ceea ce duce la strategii mai bine țintite și mai eficiente, care rezonează cu audiența lor corporativă.",
     logo: "/images/customer-stories-image.png",
     link: "/",
   },
   {
     title: "Cum Waylay a crescut ratele de conversie cu 4,7%",
     description:
-      "Waylay folosește datele precise și capacitățile de integrare ale Snitcher pentru a-și alimenta procesele de generare de lead-uri și vânzări, realizând o creștere de 4,7% a ratelor de conversie și optimizându-și interacțiunile cu persona țintă.",
+      "Waylay folosește datele precise și capacitățile de integrare ale ClientiDirect pentru a-și alimenta procesele de generare de lead-uri și vânzări, realizând o creștere de 4,7% a ratelor de conversie și optimizându-și interacțiunile cu persona țintă.",
     logo: "/images/customer-stories-image2.png",
     link: "/",
   },
   {
-    title: "Cum Fleetdm a crescut veniturile cu 70 de conturi noi de la Snitcher",
+    title: "Cum Fleetdm a crescut veniturile cu 70 de conturi noi de la ClientiDirect",
     description:
-      "Fleetdm își crește eficient pipeline-ul cu 70 de conturi noi implementând Snitcher, îmbunătățind procesul de calificare a lead-urilor și interacțiunea în vânzări, asigurând astfel o abordare țintită către prospecte interesate, ceea ce duce la o creștere semnificativă a veniturilor.",
+      "Fleetdm își crește eficient pipeline-ul cu 70 de conturi noi implementând ClientiDirect, îmbunătățind procesul de calificare a lead-urilor și interacțiunea în vânzări, asigurând astfel o abordare țintită către prospecte interesate, ceea ce duce la o creștere semnificativă a veniturilor.",
     logo: "/images/customer-stories-image3.png",
     link: "/",
   },
   {
-    title: "Cum TalentDesk a câștigat un client valoros în 30 de zile de la utilizarea Snitcher",
+    title: "Cum TalentDesk a câștigat un client valoros în 30 de zile de la utilizarea ClientiDirect",
     description:
-      "TalentDesk câștigă un client valoros în 30 de zile de la începutul utilizării Snitcher, alimentându-și strategiile de marketing și procesele de vânzări pentru a ținti și converti eficient lead-uri care anterior erau trecute cu vederea în campaniile digitale și procesele de vânzări.",
+      "TalentDesk câștigă un client valoros în 30 de zile de la începutul utilizării ClientiDirect, alimentându-și strategiile de marketing și procesele de vânzări pentru a ținti și converti eficient lead-uri care anterior erau trecute cu vederea în campaniile digitale și procesele de vânzări.",
     logo: "/images/customer-stories-image4.png",
     link: "/",
   },
   {
     title: "Adacta descoperă funnel-ul ascuns identificând cu 500% mai multe companii",
     description:
-      "Adacta a crescut dramatic vizibilitatea traficului de pe site-ul lor web, integrând fără efort Snitcher în stack-ul lor tehnologic pentru a înțelege în profunzime călătoria cumpărătorului și pentru a alimenta campaniile ABM țintite.",
+      "Adacta a crescut dramatic vizibilitatea traficului de pe site-ul lor web, integrând fără efort ClientiDirect în stack-ul lor tehnologic pentru a înțelege în profunzime călătoria cumpărătorului și pentru a alimenta campaniile ABM țintite.",
     logo: "/images/customer-stories-image5.png",
     link: "/",
   },
@@ -53,7 +53,7 @@ const caseStudies = [
     title:
       "Cum Influential Software a închis $10k MRR în 6 săptămâni și a îmbunătățit ratele de succes cu 5%",
     description:
-      "În doar șase săptămâni, Influential Software își îmbunătățește dramatic eficiența în vânzări și identificarea lead-urilor, rezultând într-o creștere a ratei de succes și o creștere puternică a veniturilor, datorită implementării strategice a Snitcher.",
+      "În doar șase săptămâni, Influential Software își îmbunătățește dramatic eficiența în vânzări și identificarea lead-urilor, rezultând într-o creștere a ratei de succes și o creștere puternică a veniturilor, datorită implementării strategice a ClientiDirect.",
     logo: "/images/customer-stories-image6.png",
     link: "/",
   },
@@ -64,7 +64,7 @@ const CaseStudyList = () => {
     <div>
       <HeroSection
         headingText={"Poveștile clienților \n"}
-        paragraphText={"Descoperă cum afaceri ca a ta folosesc Snitcher pentru a identifica, \n implica și achiziționa noi clienți."}
+        paragraphText={"Descoperă cum afaceri ca a ta folosesc ClientiDirect pentru a identifica, \n implica și achiziționa noi clienți."}
         maxWidth="960px"
         bgColor="#070b18"
         buttonVisible = {false}

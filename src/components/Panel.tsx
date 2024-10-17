@@ -21,15 +21,14 @@ export default function Panel() {
 
 
           <a
-            href="https://app.snitcher.com/register?ref=https%3A%2F%2Fwww.upwork.com%2F"
+            href="/auth/login"
             className="inline-flex items-center justify-center bg-black text-white px-7 py-[15px] rounded-full font-semibold hover:bg-gray-900"
           >
             <p className='leading-[28px] text-[18px]'>
-              Încearcă Snitcher gratuit
+              Încearcă ClientiDirect gratuit
             </p>
             <div>
               <Image src={arrow} alt='footer button arrow' className='ml-3' />
-
             </div>
           </a>
         </div>

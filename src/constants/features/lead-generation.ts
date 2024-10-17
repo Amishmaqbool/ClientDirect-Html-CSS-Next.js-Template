@@ -9,23 +9,23 @@ export const reviews = [
   {
     id: 1,
     rating: 5, 
-    reviewBy: "Snitcher i-a întrecut pe toți",
-    content: "Dintre toate instrumentele similare pe care le-am testat, Snitcher i-a întrecut pe toți. Alți furnizori detectează cu aproximativ 60-70% mai puține companii.",
-    reviewer: "Inga B.",
+    reviewBy: "ClientiDirect i-a întrecut pe toți",
+    content: "Dintre toate instrumentele similare pe care le-am testat, ClientiDirect i-a întrecut pe toți. Alți furnizori detectează cu aproximativ 60-70% mai puține companii.",
+    reviewer: "Ana N.",
   },
   {
     id: 2,
     rating: 5,
     reviewBy: "Date extrem de precise pentru un preț corect",
     content: "Găsim jucătorii B2B care accesează site-ul nostru pentru a-i viza cu outreach rece – Date extrem de precise despre companii pentru un preț corect.",
-    reviewer: "Courtenay F.",
+    reviewer: "Daniela L",
   },
   {
     id: 3,
     rating: 4.5, 
     revieBy: "Generare de leaduri și urmărire a vizitatorilor clară și precisă",
-    content: "Nu sunt sigur cum fac asta, dar Snitcher a reușit să identifice cu precizie cel mai mare procent din traficul nostru.",
-    reviewer: "Becca R.",
+    content: "Nu sunt sigur cum fac asta, dar ClientiDirect a reușit să identifice cu precizie cel mai mare procent din traficul nostru.",
+    reviewer: "Simona F.",
   }
 ];
 

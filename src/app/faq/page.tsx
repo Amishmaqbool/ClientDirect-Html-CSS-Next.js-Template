@@ -9,10 +9,10 @@ import matter from "gray-matter";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FAQ | Snitcher Help Center",
+  title: "FAQ | ClientiDirect Help Center",
   description:
-    "Get answers to all the questions you have about Snitcher.",
-  metadataBase: new URL("https://snitchers.vercel.app/faq"),
+    "Get answers to all the questions you have about ClientiDirect.",
+  metadataBase: new URL("https://clientidirect.com/faq"),
 };
 
 const articlesDirectory = path.resolve("src/app/content/articles");
@@ -44,7 +44,7 @@ const FAQ: React.FC = () => {
         />
         <h1 className="pt-5 font-bold text-[32px] text-[#1a1a1a]">FAQ</h1>
         <p className="font-normal text-base text-[#1a1a1a]">
-          Get answers to all the questions you have about Snitcher.
+          Get answers to all the questions you have about ClientiDirect.
         </p>
 
         <div className="pt-5 flex gap-2 items-center">

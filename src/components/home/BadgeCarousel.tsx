@@ -27,7 +27,7 @@ const BadgeCarousel = () => {
         <div className="absolute z-50">
           <Image
             src={HighPerformSummer}
-            alt="Snitcher Logo"
+            alt="ClientiDirect Logo"
             width={128}
             height={166}
             className="max-md:w-[98px] max-md:h-[122px]"

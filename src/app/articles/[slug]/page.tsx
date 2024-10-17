@@ -40,9 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .replace(/\b\w/g, (char) => char.toUpperCase());  
 
   return {
-    title: `${formattedTitle} | Snitcher Help Center`,
-    description: `Find all the information about ${formattedTitle} in the Snitcher Help Center. Get your questions answered about this topic.`,
-    metadataBase: new URL(`https://snitchers.vercel.app/faq/${slug}`),
+    title: `${formattedTitle} | ClientiDirect Help Center`,
+    description: `Find all the information about ${formattedTitle} in the ClientiDirect Help Center. Get your questions answered about this topic.`,
+    metadataBase: new URL(`https://clientidirect.com/faq/${slug}`),
   };
 }
 

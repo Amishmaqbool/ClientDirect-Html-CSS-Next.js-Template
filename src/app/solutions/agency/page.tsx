@@ -7,10 +7,10 @@ import CallToActionSection from '@/components/solutions/CallToActionSection';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Snitcher | Visitor identification for Agencies | Free Trial",
+  title: "ClientiDirect | Visitor identification for Agencies | Free Trial",
   description:
-    "Offer your clients a powerful whitelabel visitor identification solution with Snitcher. Drive revenue, generate leads, and support existing services.",
-  metadataBase: new URL("https://snitchers.vercel.app/solutions/agency"),
+    "Offer your clients a powerful whitelabel visitor identification solution with ClientiDirect. Drive revenue, generate leads, and support existing services.",
+  metadataBase: new URL("https://clientidirect.com/solutions/agency"),
 };
 
 export default function page() {

@@ -8,10 +8,10 @@ import DriveBudget from "@/components/home/DriveBudget";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 
 export const metadata: Metadata = {
-  title: "Snitcher | Visitor identification for Agencies | Free Trial",
+  title: "ClientiDirect | Visitor identification for Agencies | Free Trial",
   description:
-    "Offer your clients a powerful whitelabel visitor identification solution with Snitcher. Drive revenue, generate leads, and support existing services.",
-  metadataBase: new URL("https://snitchers.vercel.app/"),
+    "Offer your clients a powerful whitelabel visitor identification solution with ClientiDirect. Drive revenue, generate leads, and support existing services.",
+  metadataBase: new URL("https://clientidirect.com/"),
 };
 export default function Home() {
   const mainHeading =
@@ -19,24 +19,24 @@ export default function Home() {
   const subHeading =
     "Primiți notificări atunci când companiile țintă vă vizitează site-ul web și vedeți ce le interesează. Ajutați echipele să înceapă și să țină conversații mai relevante pe parcursul ciclului de vânzări.";
   const ctaText = "Începeți proba gratuită";
-  const secondaryCtaText = "Explorați Snitcher pentru vânzări";
+  const secondaryCtaText = "Explorați ClientiDirect pentru vânzări";
   const FirstTestimonial = {
     quote:
-      "Recomand în mod constant Snitcher - în testarea noastră, ei nu numai că au adunat informații despre un număr mai mare de clienți potențiali decât concurenții săi, dar au avut și informații mai detaliate despre acești clienți potențiali.",
+      "Recomand în mod constant ClientiDirect - în testarea noastră, ei nu numai că au adunat informații despre un număr mai mare de clienți potențiali decât concurenții săi, dar au avut și informații mai detaliate despre acești clienți potențiali.",
     author: "David G.",
     role: "Head of Sales",
   };
 
   const SecondTestimonial = {
     quote:
-      "Snitcher ne-a permis să știm ce companii ne vizitează site-ul web. Este un instrument ideal pentru marketing bazat pe cont și ajută la adunarea de noi clienți potențiali.",
+      "ClientiDirect ne-a permis să știm ce companii ne vizitează site-ul web. Este un instrument ideal pentru marketing bazat pe cont și ajută la adunarea de noi clienți potențiali.",
     author: "Marc-Antoine C.",
     role: "Marketing and Sales Coordinator",
   };
 
   const ThirdTestimonial = {
     quote:
-      "Oamenii navighează pe piața noastră, iar Snitcher este mecanismul prin care putem înțelege cine caută produsele noastre și de ce.",
+      "Oamenii navighează pe piața noastră, iar ClientiDirect este mecanismul prin care putem înțelege cine caută produsele noastre și de ce.",
     author: "Tyler E.",
     role: "Founder and CEO",
   };
@@ -46,12 +46,10 @@ export default function Home() {
       <div className="">
         <HeroSection
           headingText="Aflați cine se află pe site-ul dvs. și obțineți mai multe venituri."
-          paragraphText="Snitcher dă putere echipelor B2B să înțeleagă, să implice și să transforme vizitatorii anonimi ai site-ului web în potențiali clienți potențiali, utilizând tehnologia de ultimă oră de identificare, urmărirea în timp real a vizitatorilor și informații despre public bazate pe date."
+          paragraphText="ClientiDirect dă putere echipelor B2B să înțeleagă, să implice și să transforme vizitatorii anonimi ai site-ului web în potențiali clienți potențiali, utilizând tehnologia de ultimă oră de identificare, urmărirea în timp real a vizitatorilor și informații despre public bazate pe date."
           maxWidth="960px"
           bgColor="#070b18"
         />
-
-        <LogoGrid />
 
         <TextBlock
           mainHeading={mainHeading}
@@ -71,7 +69,7 @@ export default function Home() {
             "Redirecționați sau excludeți vizitatori pentru a îmbunătăți continuu performanța campaniei dvs. Personalizați călătoriile și difuzați conținut relevant publicului dvs. la momentul potrivit"
           }
           ctaText={"Începeți proba gratuită"}
-          secondaryCtaText={"Explorați Snitcher pentru vânzări"}
+          secondaryCtaText={"Explorați ClientiDirect pentru vânzări"}
           testimonial={SecondTestimonial}
           lottieUrl="https://lottie.host/e7e6bfef-6fd9-4b22-8825-dc67d973bfb9/1diB1j1H81.json"
           isReversed={true}
@@ -82,7 +80,7 @@ export default function Home() {
             "Obțineți informații mult mai profunde despre ceea ce atrage, antrenează și convertește vizitatorii dvs. ideali. Nu mai investiți în reclame și conținut cu un ROI scăzut și începeți să optimizați pentru venituri."
           }
           ctaText={"Începeți proba gratuită"}
-          secondaryCtaText={"Explorați Snitcher pentru vânzări"}
+          secondaryCtaText={"Explorați ClientiDirect pentru vânzări"}
           testimonial={ThirdTestimonial}
           lottieUrl="https://lottie.host/ade35443-289d-416d-98a7-12f616efb5bd/GxNxOf0TXi.json"
           isReversed={false}
@@ -101,7 +99,7 @@ export default function Home() {
       </div>
       <div className="bg-[#fcfcfd]">
         <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto">
-          <DriveBudget />
+          {/* <DriveBudget /> */}
           <CardsScrollAnimation />
         </div>
       </div>

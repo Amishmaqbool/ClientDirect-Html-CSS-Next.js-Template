@@ -71,7 +71,7 @@ export default function OptimizeSection() {
                 />
                 <div className="testimonial text-left max-w-lg w-full lg:w-full mb-8">
                   <blockquote className="text-gray-700 italic text-sm">
-                    &quot;Snitcher, împreună cu contul nostru de Google
+                    &quot;ClientiDirect, împreună cu contul nostru de Google
                     Analytics, oferă echipei noastre web mai multe informații
                     despre audiența noastră și despre cum interacționează
                     anumite tipuri de utilizatori cu site-ul nostru.&quot;

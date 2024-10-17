@@ -3,12 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Panel from "../Panel";
 import arrow from "@/assets/svgs/arrow.svg";
-import highPerformerSummer from "@/assets/svgs/high-performer-summer.svg";
-import momentumLeader from "@/assets/svgs/momentum-leader.svg";
-import highPerformerBussiness from "@/assets/svgs/high-performer-small-bussiness.svg";
-import highPerformerAsia from "@/assets/svgs/high-performer-asia.svg";
-import highPerformerEmea from "@/assets/svgs/high-performer-emea.svg";
-import highPerformerUk from "@/assets/svgs/high-uk.svg";
 import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg";
 import logo from "@/assets/svgs/logo.svg";
 
@@ -23,58 +17,8 @@ export default function Footer() {
               <Image src={logo} height={35} width={125} alt="Logo" />
             </Link>
 
-            <div className="flex max-sm:flex-wrap items-center max-sm:gap-2 sm:-space-x-4 my-[18px]">
-              <Image
-                src={highPerformerSummer}
-                width={68}
-                height={88.25}
-                loading="lazy"
-                alt="Performant de top vara"
-                className="z-10"
-              />
-              <Image
-                src={momentumLeader}
-                loading="lazy"
-                alt="Lider de momentum"
-                width={68}
-                height={88.25}
-              />
-              <Image
-                src={highPerformerBussiness}
-                loading="lazy"
-                alt="Performant de top pentru afaceri mici"
-                width={68}
-                height={88.25}
-                className="z-40"
-              />
-              <Image
-                src={highPerformerAsia}
-                loading="lazy"
-                alt="Performant de top Asia Pacific"
-                width={68}
-                height={88.25}
-                className="z-30"
-              />
-              <Image
-                src={highPerformerEmea}
-                loading="lazy"
-                alt="Performant de top EMEA"
-                width={68}
-                height={88.25}
-                className="z-20"
-              />
-              <Image
-                src={highPerformerUk}
-                loading="lazy"
-                alt="Performant de top Regatul Unit"
-                width={68}
-                height={88.25}
-                className="z-10"
-              />
-            </div>
-
             <div>
-              <button className="w-max bg-[#ffffff1a] max-[420px]:text-xs text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center">
+              <button className="w-max bg-[#ffffff1a] mt-8 max-[420px]:text-xs text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center">
                 Începe perioada de probă gratuită de 14 zile
                 <Image
                   src={arrow}
@@ -137,7 +81,7 @@ export default function Footer() {
                 </Link>
                 <Link href="">
                   <li className="pt-3 cursor-pointer">
-                    Ghidul Snitcher pentru generarea de lead-uri B2B
+                    Ghidul ClientiDirect pentru generarea de lead-uri B2B
                   </li>
                 </Link>
                 <Link href="/blueprint/b2b-marketing-blueprint">
@@ -169,13 +113,9 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-10"></div>
         <div className="max-w-[1280px] mx-auto px-6 py-8 flex max-[500px]:flex-col justify-between items-center text-gray-400 text-sm">
           <p className="max-[500px]:text-center">
-            © Copyright 2015-2024 Snitcher B.V., toate drepturile rezervate.
+            <Link className="underline" href="clientidirect.com">ClientiDirect.Com</Link>, toate
+            drepturile rezervate
           </p>
-          <div className="max-[500px]:pt-5 flex space-x-4">
-            <a href="#">
-              <Image src={LinkedinIcon} alt="LinkedIn" width={24} height={24} />
-            </a>
-          </div>
         </div>
       </div>
     </>

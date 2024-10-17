@@ -16,9 +16,9 @@ export const reviews = [
   {
     id: 1,
     rating: 5,
-    reviewBy: "Snitcher i-a întrecut pe toți",
+    reviewBy: "ClientiDirect i-a întrecut pe toți",
     content:
-      "Dintre toate instrumentele similare pe care le-am testat, Snitcher i-a întrecut pe toți. Alți furnizori detectează cu aproximativ 60-70% mai puține companii.",
+      "Dintre toate instrumentele similare pe care le-am testat, ClientiDirect i-a întrecut pe toți. Alți furnizori detectează cu aproximativ 60-70% mai puține companii.",
     reviewer: "Inga B.",
   },
   {
@@ -34,7 +34,7 @@ export const reviews = [
     rating: 4.5,
     reviewBy: "Generare de leaduri și urmărire a vizitatorilor clară și precisă",
     content:
-      "Nu sunt sigur cum fac asta, dar Snitcher a reușit să identifice cu precizie cel mai mare procent din traficul nostru.",
+      "Nu sunt sigur cum fac asta, dar ClientiDirect a reușit să identifice cu precizie cel mai mare procent din traficul nostru.",
     reviewer: "Becca R.",
   },
 ];
@@ -46,8 +46,8 @@ export const analyticsReviewsCards = [
     rating: 5,
     reviewBy: "“Un instrument excelent pentru a-l adăuga în trusa ta de marketing”",
     content:
-      "“Snitcher ne ajută să înțelegem mai bine traficul de pe site-ul nostru. Apreciem ușurința în utilizare și analizele oferite.”",
-    reviewer: "Marsha H",
+      "“ClientiDirect ne ajută să înțelegem mai bine traficul de pe site-ul nostru. Apreciem ușurința în utilizare și analizele oferite.”",
+    reviewer: "Gabriela M.",
   },
   {
     id: 2,
@@ -55,15 +55,15 @@ export const analyticsReviewsCards = [
     reviewBy: "“O comoară ascunsă”",
     content:
       "“Ne ajută să aducem la un loc toate eforturile noastre de marketing și să vedem care canale sunt eficiente.”",
-    reviewer: "Courtenay F.",
+    reviewer: "Cristina P.",
   },
   {
     id: 3,
     rating: 4.5,
-    reviewBy: "„Snitcher își face treaba!”",
+    reviewBy: "„ClientiDirect își face treaba!”",
     content:
-      "„Google Analytics nu era suficient, așa că aveam nevoie de mai multe informații, iar Snitcher mi le oferă în timp real”",
-    reviewer: "Sean D.",
+      "„Google Analytics nu era suficient, așa că aveam nevoie de mai multe informații, iar ClientiDirect mi le oferă în timp real”",
+    reviewer: "Alexandra R.",
   },
 ];
 
@@ -91,7 +91,7 @@ export const MarketingSectionData = [
     alt: "Imaginea unu",
     title: "De la numere la companii",
     content:
-      "Folosind date de identificare în timp real, Snitcher adaugă nume de companii și informații firmografice la sesiuni, fără a se baza pe conversii.",
+      "Folosind date de identificare în timp real, ClientiDirect adaugă nume de companii și informații firmografice la sesiuni, fără a se baza pe conversii.",
   },
   {
     image: MarketingCard2,
@@ -160,7 +160,7 @@ export const OptimizeCardData = [
 export const analyticsFaqList = [
   {
     question:
-      "Pot alege ce informații trimite Snitcher către Google Analytics?",
+      "Pot alege ce informații trimite ClientiDirect către Google Analytics?",
     answer: [
       "Da, este posibil să selectezi care atribute ale companiei dorești să sincronizezi în Google Analytics.",
       "Exemple includ:",
@@ -172,7 +172,7 @@ export const analyticsFaqList = [
     ],
   },
   {
-    question: "Cum pot accesa datele Snitcher în GA?",
+    question: "Cum pot accesa datele SnitcClientiDirecther în GA?",
     answer:
       "Atributele companiei sunt sincronizate în Google Analytics ca dimensiuni personalizate cu care poți îmbogăți sau filtra rapoartele, crea audiențe și construi tablouri de bord.",
   },
@@ -187,7 +187,7 @@ export const analyticsFaqList = [
       "Nu, nu sunt necesare abilități tehnice pentru a configura integrările. Este o instalare cu un singur clic. Suntem, de asemenea, disponibili să te sprijinim dacă este necesar.",
   },
   {
-    question: "Snitcher suportă GA4?",
+    question: "ClientiDirect suportă GA4?",
     answer: "Da, suportăm!",
   },
   {
@@ -214,16 +214,16 @@ export const landingReviewCardsColumn1 = [
     rating: 5,
     reviewBy: "Un instrument grozav de adăugat în trusa ta de marketing",
     content:
-      "Echipa de la Snitcher nu doar că este ușor de lucrat cu ea, dar au proiectat o platformă intuitivă și eficientă. Snitcher ne ajută să înțelegem mai bine traficul de pe site-ul nostru. Apreciem ușurința de utilizare și analizele. De asemenea, se integrează în CRM-ul nostru, ceea ce este cireașa de pe tort.",
-    reviewer: "Germans F.",
+      "Echipa de la ClientiDirect nu doar că este ușor de lucrat cu ea, dar au proiectat o platformă intuitivă și eficientă. ClientiDirect ne ajută să înțelegem mai bine traficul de pe site-ul nostru. Apreciem ușurința de utilizare și analizele. De asemenea, se integrează în CRM-ul nostru, ceea ce este cireașa de pe tort.",
+    reviewer: "Andrei N.",
   },
   {
     id: 2,
     rating: 4.5,
     reviewBy: "Cea mai bună platformă pentru a găsi lead-uri potrivite",
     content:
-      "Este mai bună decât Google Analytics și Adobe și ne oferă mai multe informații despre traficul potrivit, astfel încât suntem în contact mai rapid cu lead-urile, cu detaliile de contact furnizate de Snitcher.",
-    reviewer: "Marsha H.",
+      "Este mai bună decât Google Analytics și Adobe și ne oferă mai multe informații despre traficul potrivit, astfel încât suntem în contact mai rapid cu lead-urile, cu detaliile de contact furnizate de ClientiDirect.",
+    reviewer: "Alexandru P.",
   },
   {
     id: 3,
@@ -231,7 +231,7 @@ export const landingReviewCardsColumn1 = [
     reviewBy: "Calitate bună a datelor comparativ cu prețul",
     content:
       "Calitatea datelor este foarte bună în raport cu prețul. Suportul pentru clienți este foarte receptiv și întotdeauna gata să facă un efort suplimentar pentru a rezolva o problemă. Este o soluție software în dezvoltare care lansează frecvent funcții noi și este mereu deschisă la feedback.",
-    reviewer: "Germans F.",
+    reviewer: "Mihai T.",
   },
 ]
 
@@ -241,8 +241,8 @@ export const landingReviewCardsColumn2 = [
     rating: 5,
     reviewBy: "Calitate bună a datelor comparativ cu prețul",
     content:
-      "Dintre toate instrumentele pe care le-am testat, Snitcher i-a depășit pe toți în ceea ce privește câte companii a găsit și ce fel de informații suplimentare am putut extrage din datele pe care le-a obținut de la companiile care ne-au vizitat site-ul. De exemplu – alți furnizori care oferă date similare detectează (în medie) cu aproximativ 60-70% mai puține companii decât Snitcher.",
-    reviewer: "Germans F.",
+      "Dintre toate instrumentele pe care le-am testat, ClientiDirect i-a depășit pe toți în ceea ce privește câte companii a găsit și ce fel de informații suplimentare am putut extrage din datele pe care le-a obținut de la companiile care ne-au vizitat site-ul. De exemplu – alți furnizori care oferă date similare detectează (în medie) cu aproximativ 60-70% mai puține companii decât ClientiDirect.",
+    reviewer: "Gabriel C.",
   },
   {
     id: 2,
@@ -250,23 +250,23 @@ export const landingReviewCardsColumn2 = [
     reviewBy: "Am acționat și am obținut câteva succese inițiale",
     content:
       "Ușor de configurat. Iar datele furnizate sunt destul de bogate. Am putut găsi informații de contact cu câteva clicuri și am luat legătura cu posibile afaceri în câteva minute.",
-    reviewer: "Vencel M.",
+    reviewer: "Cristian M.",
   },
   {
     id: 3,
     rating: 5,
     reviewBy: "Calitate bună a datelor comparativ cu prețul",
     content:
-      "Dintre toate instrumentele pe care le-am testat, Snitcher i-a depășit pe toți în ceea ce privește câte companii a găsit și ce fel de informații suplimentare am putut extrage din datele pe care le-a obținut de la companiile care ne-au vizitat site-ul. De exemplu – alți furnizori care oferă date similare detectează (în medie) cu aproximativ 60-70% mai puține companii decât Snitcher.",
-    reviewer: "Inga B.",
+      "Dintre toate instrumentele pe care le-am testat, ClientiDirect i-a depășit pe toți în ceea ce privește câte companii a găsit și ce fel de informații suplimentare am putut extrage din datele pe care le-a obținut de la companiile care ne-au vizitat site-ul. De exemplu – alți furnizori care oferă date similare detectează (în medie) cu aproximativ 60-70% mai puține companii decât ClientiDirect.",
+    reviewer: "Maria I.",
   },
   {
     id: 4,
     rating: 5,
     reviewBy: "Comoară ascunsă",
     content:
-      "Am dat din greșeală peste Snitcher căutând un alt instrument, dar sunt foarte bucuros că am făcut-o! Fiind în B2B, acesta este o comoară ascunsă pentru a vedea ce companii vizitează site-ul tău. Acest lucru ne ajută să identificăm ce canale sunt eficiente în atragerea traficului și, de asemenea, completează strategia noastră de emailuri reci.",
-    reviewer: "Lesya L.",
+      "Am dat din greșeală peste ClientiDirect căutând un alt instrument, dar sunt foarte bucuros că am făcut-o! Fiind în B2B, acesta este o comoară ascunsă pentru a vedea ce companii vizitează site-ul tău. Acest lucru ne ajută să identificăm ce canale sunt eficiente în atragerea traficului și, de asemenea, completează strategia noastră de emailuri reci.",
+    reviewer: "Elena D.",
   },
 ]
 
@@ -277,15 +277,15 @@ export const landingReviewCardsColumn3 = [
     reviewBy: "Informații valoroase, configurare ușoară, echipă de suport prietenoasă și receptivă",
     content:
       "Îmi place configurarea ușoară, calitatea datelor care apar și capacitatea de a gestiona lucrurile pe cont propriu. Au o documentație excelentă și sunt fericiți să răspundă rapid și cuprinzător la întrebări.",
-    reviewer: "Hisham I.",
+    reviewer: "Ioana S.",
   },
   {
     id: 2,
     rating: 5,
     reviewBy: "Instrument foarte eficient pentru identificarea lead-urilor",
     content:
-      "Snitcher nu este doar un instrument excelent pentru a urmări vizitatorii site-ului și a înțelege cine sunt potențialii clienți, dar este și ușor de instalat. Echipa noastră l-a configurat în 10 minute și a obținut rezultate.",
-    reviewer: "Utilizator verificat din software pentru calculatoare",
+      "ClientiDirect nu este doar un instrument excelent pentru a urmări vizitatorii site-ului și a înțelege cine sunt potențialii clienți, dar este și ușor de instalat. Echipa noastră l-a configurat în 10 minute și a obținut rezultate.",
+    reviewer: "Andreea C.",
   },
   {
     id: 3,
@@ -293,6 +293,6 @@ export const landingReviewCardsColumn3 = [
     reviewBy: "Groza pentru identificarea vizitatorilor și segmentarea companiilor în Google Analytics",
     content:
       "Îmi plac caracteristicile excelente și datele pe care le are pentru identificarea lead-urilor care nu completau formularul nostru. Ne place și integrarea cu Google Analytics, unde putem vedea detaliile lead-urilor direct în Google Analytics.",
-    reviewer: "Utilizator verificat din software pentru calculatoare",
+    reviewer: "Gabriela M.",
   },
 ];
