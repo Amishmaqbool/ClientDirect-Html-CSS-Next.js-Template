@@ -3,7 +3,6 @@ import React, {useEffect , Suspense} from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import {ClipLoader} from 'react-spinners';
-//import { time } from "console";
 
 function RedirectAfter() {
     const searchParams = useSearchParams();
