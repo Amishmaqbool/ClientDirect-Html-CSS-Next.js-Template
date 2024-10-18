@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import BLueTick from "@/assets/svgs/blue-tick.svg";
 import Button from "./common/Button";
-import PricingFeatureSection from "@/components/pricing-featue-section";
+import PricingFeatureSection from "@/components/PricingFeatueSection";
 import {
   companiesData,
   data,

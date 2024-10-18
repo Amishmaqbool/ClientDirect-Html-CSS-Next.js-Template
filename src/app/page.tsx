@@ -1,16 +1,17 @@
 import HeroSection from "@/components/home/HeroSection";
-//import LogoGrid from "@/components/home/LogosGrid";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
 import { Metadata } from "next";
-//import DriveBudget from "@/components/home/DriveBudget";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
+import VideoSection from "@/components/VideoSection";
 
 export const metadata: Metadata = {
-  title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
+  title:
+    "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
   description:
-    "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",  metadataBase: new URL("https://clientidirect.com/"),
+    "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",
+  metadataBase: new URL("https://clientidirect.com/"),
 };
 export default function Home() {
   const mainHeading =
@@ -42,13 +43,15 @@ export default function Home() {
 
   return (
     <>
-      <div className="">
+      <div>
         <HeroSection
           headingText="Aflați cine se află pe site-ul dvs. și obțineți mai multe venituri."
           paragraphText="ClientiDirect dă putere echipelor B2B să înțeleagă, să implice și să transforme vizitatorii anonimi ai site-ului web în potențiali clienți potențiali, utilizând tehnologia de ultimă oră de identificare, urmărirea în timp real a vizitatorilor și informații despre public bazate pe date."
           maxWidth="960px"
           bgColor="#070b18"
         />
+
+        <VideoSection />
 
         <TextBlock
           mainHeading={mainHeading}
