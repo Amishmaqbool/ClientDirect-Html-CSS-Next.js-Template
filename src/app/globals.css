@@ -34,9 +34,9 @@ body {
 }
 
 .hero-noise-png {
-  opacity: .14;
+  opacity: 0.14;
   object-fit: cover;
-  background-image: url('https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/641c3042046d40dbf1cabd3c_noiseTile.png');
+  background-image: url("https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/641c3042046d40dbf1cabd3c_noiseTile.png");
   background-position: 0 0;
   background-size: auto;
   background-attachment: scroll;
@@ -55,7 +55,11 @@ body {
 }
 
 .review-lead--card {
-  background: linear-gradient(110.65deg, #FFFFFF 1.16%, rgba(255, 255, 255, 0.2) 100%) !important;
+  background: linear-gradient(
+    110.65deg,
+    #ffffff 1.16%,
+    rgba(255, 255, 255, 0.2) 100%
+  ) !important;
 }
 
 .c-review-cards {
@@ -134,7 +138,7 @@ select:focus {
 }
 
 .custom-select-wrapper::after {
-  content: '\25BC';
+  content: "\25BC";
   font-size: 12px;
   color: white;
   position: absolute;
@@ -170,7 +174,6 @@ select:focus {
   border-radius: 16px;
   padding-top: 56px;
   padding-bottom: 0;
-  padding-left: 48px;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -223,27 +226,38 @@ select:focus {
   width: 150px;
 }
 
-/* .item {
-  width: 90px;
-  height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
+.container-pricing {
+  background: rgba(242, 244, 247, 0.6);
+  box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+    inset 0px -4px 4px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(62.5px);
+  -webkit-backdrop-filter: blur(62.5px);
 }
-
-.radio {
-  display: none;
+.pricing-gradient-1 {
+  background-image: url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/640b3cd997b40f3918658aae_pricing1.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 247%;
 }
-
-.radio ~ span {
-  font-size: 32px;
-  filter: grayscale(0%);
-  cursor: pointer;
-  transition: 0.3s;
+@media screen and (min-width: 768px) {
+  .pricing-bg {
+    background-color: #101828;
+    background-image: url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/641c3d98ce1efeb11ed5ca20_gridPattern.png);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 16px;
+    padding-top: 56px;
+    padding-bottom: 0;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
 }
-
-.radio:checked ~ span {
-  filter: grayscale(100%);
-  font-size: 3rem;
-} */
+@media screen and (min-width: 1154px) {
+  .padding-adjustment-pricing{
+    padding: 56px 32px !important;
+  }
+}

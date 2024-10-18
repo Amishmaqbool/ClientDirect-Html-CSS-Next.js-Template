@@ -265,7 +265,7 @@ export default function Header() {
               )}
             </li> */}
             <li>
-              <a href="#" className="hover:text-gray-300 font-bold">
+              <a href="/pricing" className="hover:text-gray-300 font-bold">
                 Prețuri
               </a>
             </li>

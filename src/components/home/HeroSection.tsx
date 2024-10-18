@@ -88,13 +88,14 @@ export default function HeroSection({
 
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const isPricingPage = pathname === "/pricing";
 
   return (
     <div className="relative overflow-hidden mt-[-88px]">
-      <div className="mb-8 relative">
+      <div className="relative">
         <div
           style={{ backgroundColor: bgColor }}
-          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28  relative z-10 ${isHomePage ? "pb-40" : "pb-[58px]"}`}
+          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 relative z-10 ${isHomePage ? "pb-40" : isPricingPage ? "pb-[140px]" : "pb-[58px]"}`}
         >
           <Image
             src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
