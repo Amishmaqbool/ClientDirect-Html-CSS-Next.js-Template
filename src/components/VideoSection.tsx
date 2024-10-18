@@ -70,7 +70,7 @@ export default function VideoSection() {
   };
 
   return (
-    <div className="mt-10 max-w-[1280px] mx-auto px-6">
+    <div className="mt-10 sm:mt-16 max-w-[1280px] mx-auto px-6">
       <div className="relative">
         {!hasPlayed && (
           <div className="relative cursor-pointer" onClick={handlePlay}>
@@ -83,9 +83,7 @@ export default function VideoSection() {
               <Image
                 src={PlayIcon}
                 alt="Play Icon"
-                className="cursor-pointer"
-                width={100}
-                height={100}
+                className="cursor-pointer w-10 sm:w-[100px] h-10 sm:h-[100px]"
               />
             </div>
           </div>
