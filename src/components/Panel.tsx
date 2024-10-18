@@ -11,7 +11,7 @@ export default function Panel() {
   const pathname = usePathname();
 
   if (pathname === '/redirect') {
-    return null; 
+    return null;
   }
 
   return (
@@ -20,7 +20,7 @@ export default function Panel() {
         <div className="max-w-[1000px] mx-auto px-5 lg:px-10 relative z-20">
 
           <h2 className="text-[33px] lg:text-5xl font-bold -tracking-[2px] leading-[39px] lg:leading-[60px]">
-          Te străduiești să înțelegi ce primești înapoi din cei 90 RON pentru fiecare 100 RON cheltuiți pe promovare?
+            Te străduiești să înțelegi ce primești înapoi din cei 90 RON pentru fiecare 100 RON cheltuiți pe promovare?
           </h2>
 
 

@@ -49,7 +49,7 @@ export default function RootLayout({
   const isRedirectPage = pathname === '/redirect';
 
   useEffect(() => {
-    const token = localStorage.getItem("access_token"); 
+    const token = localStorage.getItem("access_token");
 
     if (token && isAuthPage) {
       router.push("/");

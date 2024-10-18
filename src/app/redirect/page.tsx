@@ -12,7 +12,6 @@ function RedirectAfter() {
     useEffect(() => {
         const params = searchParams.toString();
         console.log("this is params");
-        const timer = setTimeout(() => {
         if (params) {
             localStorage.setItem("access_token", params);
         }
@@ -21,12 +20,11 @@ function RedirectAfter() {
         }, 3000); 
 
     return () => clearTimeout(timer);
-    });
   });
 
     return(
     <>
-    <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto pb-20">
+    <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto pb-24">
         <h1 className="text-3xl text-[#111827] mt-8">This is the Redirect Page</h1>
           <ClipLoader className="mt-3"
             color={"#111827"} 
@@ -45,4 +43,3 @@ export default function Redirect() {
       </Suspense>
     );
 }
-
