@@ -46,9 +46,10 @@ export default function RootLayout({
   const router = useRouter();
   const isAuthPage = pathname === "/auth/login" || pathname === "/auth/register";
   const isCustomerStoriesPage = pathname === '/customer-stories';
+  const isRedirectPage = pathname === '/redirect';
 
   useEffect(() => {
-    const token = localStorage.getItem("access_token"); 
+    const token = localStorage.getItem("access_token");
 
     if (token && isAuthPage) {
       router.push("/");
