@@ -16,11 +16,13 @@ function RedirectAfter() {
         if (params) {
             localStorage.setItem("access_token", params);
         }
+        const timer = setTimeout(() => {
         router.push("/"); 
-        }, 7000); 
+        }, 3000); 
 
     return () => clearTimeout(timer);
-    }, [router, searchParams]);
+    });
+  });
 
     return(
     <>
@@ -42,4 +44,5 @@ export default function Redirect() {
         <RedirectAfter />
       </Suspense>
     );
-} 
+}
+

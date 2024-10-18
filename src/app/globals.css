@@ -16,7 +16,7 @@ body {
 
 .hero-noise-png {
   opacity: 0.14;
-  background-image: url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/641c3042046d40dbf1cabd3c_noiseTile.png);
+  background-image: url("../assets/images/bg-noise-tile.png");
   background-position: top left;
   background-size: cover;
   background-attachment: scroll;
@@ -27,28 +27,14 @@ body {
 }
 
 .bacground-gradient-2 {
-  background-image: url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6410418e268519401c97144f_image%2012.svg);
+  background-image: url("../assets/svgs/gradient-bg.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.hero-noise-png {
-  opacity: 0.14;
-  object-fit: cover;
-  background-image: url("https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/641c3042046d40dbf1cabd3c_noiseTile.png");
-  background-position: 0 0;
-  background-size: auto;
-  background-attachment: scroll;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  inset: 0% auto auto 0%;
-}
-
 .section-gray25-bg.background-gradient-4 {
-  background-image: url(https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6410594415fa7b862eacd8b9_Features%20section-img.png);
+  background-image: url("../assets/images/gradient-bg-analytics.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
