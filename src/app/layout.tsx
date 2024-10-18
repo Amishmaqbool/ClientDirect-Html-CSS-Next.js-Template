@@ -90,11 +90,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${soleil.variable} antialiased`}>
         {isFaqPage ? <FaqHeader /> : <Header />}
-        <div className={`bg-[#fcfcfd] ${!isCustomerStoriesPage && !isRedirectPage ? 'pb-40' : ''}`}>
-        {children}
+        <div className={`flex flex-col min-h-screen ${!isCustomerStoriesPage && !isRedirectPage ? 'bg-[#fcfcfd]' : ''}`}>
+          <div className={`flex-grow ${!isCustomerStoriesPage && !isRedirectPage ? 'pb-40' : ''}`}>
+            {children}
+          </div>
+          {isFaqPage ? <FaqFooter /> : <Footer />}
         </div>
         <ToastContainer />
-        {isFaqPage ? <FaqFooter /> : <Footer />}
       </body>
     </html>
   );

@@ -8,8 +8,6 @@ import arrow from "@/assets/svgs/arrow.svg";
 import logo from "@/assets/svgs/logo.svg";
 import { usePathname } from 'next/navigation';
 
-
-
 export default function Footer() {
   const pathname = usePathname();
   const isRedirectPage = pathname === '/redirect';
