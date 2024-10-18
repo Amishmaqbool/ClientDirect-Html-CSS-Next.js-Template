@@ -72,7 +72,6 @@ function LoginContent() {
       }
 
       const data = await response.json();
-      alert(JSON.stringify(data));
     } catch (err: unknown) {
       if (err instanceof Error) {
         console.error(err.message);
