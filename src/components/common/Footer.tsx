@@ -17,7 +17,7 @@ export default function Footer() {
     <>
       <Panel />
       <div className="bg-[#101726] relative">
-        <div className={`max-w-[1216px] max-lg:px-4 mx-auto pb-16 ${!isRedirectPage ? 'pt-[348px]' : ''}  flex max-lg:flex-col justify-between max-sm:gap-16 gap-32`}>
+      <div className={`max-w-[1216px] max-lg:px-4 mx-auto pb-16 ${!isRedirectPage ? 'pt-[348px]' : 'pt-10'}  flex max-lg:flex-col justify-between max-sm:gap-16 gap-32`}>
           <div className="flex flex-col">
             <Link href="/">
               <Image src={logo} height={35} width={125} alt="Logo" />

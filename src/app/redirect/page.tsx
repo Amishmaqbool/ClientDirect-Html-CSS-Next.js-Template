@@ -3,6 +3,7 @@ import React, {useEffect , Suspense} from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import {ClipLoader} from 'react-spinners';
+//import { time } from "console";
 
 function RedirectAfter() {
     const searchParams = useSearchParams();
@@ -19,15 +20,16 @@ function RedirectAfter() {
         }, 3000); 
 
     return () => clearTimeout(timer);
-    }, [router, searchParams]);
+  });
 
     return(
     <>
-    <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto py-20">
-          <ClipLoader
+    <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto pb-24">
+        <h1 className="text-3xl text-[#111827] mt-8">This is the Redirect Page</h1>
+          <ClipLoader className="mt-3"
             color={"#111827"} 
             loading={true}
-            size={50} 
+            size={40} 
           />
     </div>
     </>
@@ -35,9 +37,9 @@ function RedirectAfter() {
 }
 
 export default function Redirect() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <RedirectAfter />
-    </Suspense>
-  );
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <RedirectAfter />
+      </Suspense>
+    );
 }
