@@ -25,8 +25,7 @@ function RedirectAfter() {
     return(
     <>
     <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto pb-24">
-        <h1 className="text-3xl text-[#111827] mt-8">This is the Redirect Page</h1>
-          <ClipLoader className="mt-3"
+          <ClipLoader className="mt-8"
             color={"#111827"} 
             loading={true}
             size={40} 
