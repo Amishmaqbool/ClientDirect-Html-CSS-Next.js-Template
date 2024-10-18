@@ -102,7 +102,6 @@ export default function Signup() {
       }
 
       const data = await response.json();
-      alert(JSON.stringify(data));
     } catch (err: unknown) {
       if (err instanceof Error) {
         setErrors((prev) => ({ ...prev, general: err.message }));
