@@ -32,7 +32,7 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
 
   return (
     <div className="faq-section lg:max-w-[720px] mx-auto mt-16 sm:mt-28 max-lg:mx-4">
-      <h2 className="faq-heading text-4xl mb-16 font-black text-center">
+      <h2 className="faq-heading text-4xl mb-10 sm:mb-16 font-black text-center">
         Întrebări frecvente
       </h2>
       {faqList.map((faq, index) => (
@@ -44,7 +44,7 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
             className="faq- flex justify-between cursor-pointer mb-[24px]"
             onClick={() => toggleFAQ(index)}
           >
-            <h3 className="text-[18px] font-bold">{faq.question}</h3>
+            <h3 className="text-[18px] font-bold pr-4">{faq.question}</h3>
             <span>
               <Image
                 src={
@@ -63,12 +63,12 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
             <div className="faq-answer mb-[24px] mt-[-10px] text-[#333] text-[16px] leading-[20px]">
               {Array.isArray(faq.answer) ? (
                 faq.answer.map((ans, ansIndex) => (
-                  <p key={ansIndex} className="mt-2 leading-[24px]">
+                  <p key={ansIndex} className="mt-2 leading-[24px] pr-8">
                     {ans}
                   </p>
                 ))
               ) : (
-                <p className="leading-[24px]">{faq.answer}</p>
+                <p className="leading-[24px] pr-8">{faq.answer}</p>
               )}
             </div>
           )}
