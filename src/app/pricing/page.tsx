@@ -1,6 +1,6 @@
 import React from "react";
 import HeroSection from "@/components/home/HeroSection";
-import Pricingcard from "@/components/pricing-card";
+import Pricingcard from "@/components/PricingCard";
 import FaqSection from "@/components/common/FaqSection"
 import { pricingFaqsData } from "@/constants/pricing/pricing";
 
