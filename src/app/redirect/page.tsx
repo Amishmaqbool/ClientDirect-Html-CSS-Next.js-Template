@@ -1,10 +1,10 @@
 "use client";
-import React, {useEffect} from "react";
+import React, {useEffect , Suspense} from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { time } from "console";
+//import { time } from "console";
 
-export default function Redirect(){
+function RedirectAfter() {
     const searchParams = useSearchParams();
     const router = useRouter();
     useEffect(() => {
@@ -24,3 +24,12 @@ export default function Redirect(){
     </>
     );
 }
+
+export default function Redirect() {
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <RedirectAfter />
+      </Suspense>
+    );
+  } 
+  

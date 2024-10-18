@@ -4,7 +4,7 @@ import Image from "next/image";
 import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
 // import { Metadata } from "next";
 
 // export const metadata: Metadata = {
@@ -19,7 +19,7 @@ function LoginContent() {
   const [googleLoading, setGoogleLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const router = useRouter();
+  //const router = useRouter();
   const validateEmail = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email.trim()) {
@@ -88,7 +88,6 @@ function LoginContent() {
     setGoogleLoading(true);
 
     try {
-      
       const redirectUrl = 'https://clientidirect.com/redirect';
       const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(
         redirectUrl
