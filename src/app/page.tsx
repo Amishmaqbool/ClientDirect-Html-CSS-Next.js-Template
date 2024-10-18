@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="">
+      <div>
         <HeroSection
           headingText="Aflați cine se află pe site-ul dvs. și obțineți mai multe venituri."
           paragraphText="ClientiDirect dă putere echipelor B2B să înțeleagă, să implice și să transforme vizitatorii anonimi ai site-ului web în potențiali clienți potențiali, utilizând tehnologia de ultimă oră de identificare, urmărirea în timp real a vizitatorilor și informații despre public bazate pe date."

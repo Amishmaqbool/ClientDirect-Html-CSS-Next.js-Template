@@ -1,10 +1,24 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import PlayIcon from "@/assets/svgs/play-icon.svg";
 import Thumbnail from "@/assets/images/thumbnail.png";
 
-function VideoModal({ isOpen, onClose, videoRef, showControls, handlePause } : any) {
+interface VideoModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  videoRef: React.RefObject<HTMLVideoElement>;
+  showControls: boolean;
+  handlePause: () => void;
+}
+
+function VideoModal({
+  isOpen,
+  onClose,
+  videoRef,
+  showControls,
+  handlePause,
+}: VideoModalProps) {
   if (!isOpen) return null;
 
   return (
@@ -12,10 +26,7 @@ function VideoModal({ isOpen, onClose, videoRef, showControls, handlePause } : a
       className="fixed inset-0 z-[9999] flex justify-center items-center bg-black bg-opacity-30"
       onClick={onClose}
     >
-      <div
-        className="relative w-[93%]"
-        onClick={(e) => e.stopPropagation()} 
-      >
+      <div className="relative w-[93%]" onClick={(e) => e.stopPropagation()}>
         <video
           className="w-full max-h-[96vh] rounded-md object-cover"
           ref={videoRef}
@@ -33,19 +44,19 @@ function VideoModal({ isOpen, onClose, videoRef, showControls, handlePause } : a
 
 export default function VideoSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [hasPlayed, setHasPlayed] = useState(false); 
+  const [hasPlayed, setHasPlayed] = useState(false);
   const [showControls, setShowControls] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false); 
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const handlePlay = () => {
     setIsFullscreen(true);
-    setShowControls(true); 
+    setShowControls(true);
     setHasPlayed(true);
     document.body.style.overflow = "hidden";
   };
 
   const handlePause = () => {
     if (videoRef.current) {
-      videoRef.current.pause(); 
+      videoRef.current.pause();
     }
   };
 
