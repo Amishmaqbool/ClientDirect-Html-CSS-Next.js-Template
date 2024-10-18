@@ -10,7 +10,7 @@ export default function Panel() {
         <div className="max-w-[1000px] mx-auto px-5 lg:px-10 relative z-20">
 
           <h2 className="text-[33px] lg:text-5xl font-bold -tracking-[2px] leading-[39px] lg:leading-[60px]">
-            Te chinui să vezi ce îți oferă 48 de dolari din fiecare 50?
+          Te străduiești să înțelegi ce primești înapoi din cei 90 RON pentru fiecare 100 RON cheltuiți pe promovare?
           </h2>
 
 

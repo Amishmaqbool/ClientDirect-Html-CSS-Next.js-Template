@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Panel from "../Panel";
 import arrow from "@/assets/svgs/arrow.svg";
-import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg";
+//import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg";
 import logo from "@/assets/svgs/logo.svg";
 
 export default function Footer() {
@@ -62,7 +62,7 @@ export default function Footer() {
                 </Link>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <p className="font-semibold mb-4 text-[#667085]">Resurse</p>
               <ul className="space-y-3">
                 <Link href="">
@@ -90,7 +90,7 @@ export default function Footer() {
                   </li>
                 </Link>
               </ul>
-            </div>
+            </div> */}
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Legal</p>
               <ul className="space-y-3">
