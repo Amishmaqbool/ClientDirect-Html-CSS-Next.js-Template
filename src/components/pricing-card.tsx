@@ -7,14 +7,13 @@ import PricingFeatureSection from "@/components/pricing-featue-section";
 import {
   companiesData,
   data,
-  pricingFaqsData,
 } from "@/constants/pricing/pricing";
 
 export default function PricingCard() {
   const [isMonthly, setIsMonthly] = useState(true);
   const [selectedCompany, setSelectedCompany] = useState(companiesData[0]);
 
-  const handleSelectCompany = (company: any) => {
+  const handleSelectCompany = (company: React.SetStateAction<{ value: string; monthlyPrice: string; annualPrice: string; }>) => {
     setSelectedCompany(company);
   };
 
@@ -49,7 +48,7 @@ export default function PricingCard() {
               identificări unice
             </p>
 
-            {data.map((item: any, index: any) => (
+            {data.map((item, index) => (
               <div key={index} className="mb-4 flex gap-2 items-start">
                 <div className="flex-shrink-0">
                   <Image src={BLueTick} alt="tick" width={15} height={15} />
@@ -110,7 +109,7 @@ export default function PricingCard() {
 
               <div className="pt-4 -ml-8">
                 <div className="pl-8 lg:border-l border-white">
-                  {companiesData.map((item: any, index: any) => (
+                  {companiesData.map((item, index) => (
                     <div className="border-b border-white" key={index}>
                       <div
                         className={`px-4 py-3 flex justify-between cursor-pointer rounded-full transition duration-200 ${
