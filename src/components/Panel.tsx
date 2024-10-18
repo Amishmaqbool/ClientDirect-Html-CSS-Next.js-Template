@@ -1,9 +1,19 @@
+"use client"
 import React from 'react';
 import Image from 'next/image';
 import arrow from '@/assets/svgs/arrow.svg'
 import footerCtaLeft from '@/assets/svgs/footer-cta-left-gradient.svg'
 import footerCtaRight from '@/assets/svgs/footer-cta-right-gradient.svg'
+import { usePathname } from 'next/navigation';
+
 export default function Panel() {
+
+  const pathname = usePathname();
+
+  if (pathname === '/redirect') {
+    return null; 
+  }
+
   return (
     <div className='bg-[#fcfcfd]'>
       <div className="relative max-w-[1216px] -mt-28 mx-auto z-10 bg-[#3257ff] rounded-2xl py-[96px] text-center text-white overflow-hidden -mb-[295px]">
