@@ -17,7 +17,7 @@ function RedirectAfter() {
         }
         const timer = setTimeout(() => {
         router.push("/"); 
-        }, 7000); 
+        }, 3000); 
 
     return () => clearTimeout(timer);
     }, [router, searchParams]);
@@ -35,4 +35,10 @@ function RedirectAfter() {
     );
 }
 
-export default RedirectAfter;
+export default function Redirect() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RedirectAfter />
+    </Suspense>
+  );
+}
