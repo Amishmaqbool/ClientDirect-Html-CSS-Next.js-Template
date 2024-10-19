@@ -1,12 +1,13 @@
 import HeroSection from "@/components/home/HeroSection";
-import Image from "next/image";
+// import Image from "next/image";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
 import { Metadata } from "next";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 import VideoSection from "@/components/VideoSection";
-import RightArrow from "@/assets/svgs/right-arrow.svg"
+// import RightArrow from "@/assets/svgs/right-arrow.svg"
+import Button from "@/components/common/Button";
 
 export const metadata: Metadata = {
   title:
@@ -63,6 +64,7 @@ export default function Home() {
           testimonial={FirstTestimonial}
           lottieUrl="https://lottie.host/67c29b1c-f8f5-4262-9529-d7d089de0a37/ZooYErX6nm.json"
           isReversed={false}
+          route={'/solutions/sales'}
         />
 
         <TextBlock
@@ -73,10 +75,11 @@ export default function Home() {
             "Redirecționați sau excludeți vizitatori pentru a îmbunătăți continuu performanța campaniei dvs. Personalizați călătoriile și difuzați conținut relevant publicului dvs. la momentul potrivit"
           }
           ctaText={"Începeți proba gratuită"}
-          secondaryCtaText={"Explorați ClientiDirect pentru vânzări"}
+          secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
           testimonial={SecondTestimonial}
           lottieUrl="https://lottie.host/e7e6bfef-6fd9-4b22-8825-dc67d973bfb9/1diB1j1H81.json"
           isReversed={true}
+          route ={'/solutions/marketing'}
         />
         <TextBlock
           mainHeading={"Înțelegeți ce își dorește de fapt publicul țintă"}
@@ -84,10 +87,11 @@ export default function Home() {
             "Obțineți informații mult mai profunde despre ceea ce atrage, antrenează și convertește vizitatorii dvs. ideali. Nu mai investiți în reclame și conținut cu un ROI scăzut și începeți să optimizați pentru venituri."
           }
           ctaText={"Începeți proba gratuită"}
-          secondaryCtaText={"Explorați ClientiDirect pentru vânzări"}
+          secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
           testimonial={ThirdTestimonial}
           lottieUrl="https://lottie.host/ade35443-289d-416d-98a7-12f616efb5bd/GxNxOf0TXi.json"
           isReversed={false}
+          route ={'/solutions/marketing'}
         />
       </div>
       <div
@@ -108,16 +112,21 @@ export default function Home() {
               Generează mai multe venituri din bugetul tău actual
             </h2>
 
-            <p className="text-xl max-lg:text-lg text-center pt-5 text-[#475467]">
+            <p className="text-xl max-lg:text-lg text-center pt-5 pb-2 text-[#475467]">
               Snitcher oferă mii de echipe de vânzări și marketing B2B din
               întreaga lume informațiile de care au nevoie pentru a genera mai
               multe venituri din bugetele lor existente.
             </p>
 
-            <button className="mt-6 flex items-center justify-center gap-2 font-semibold rounded-full py-2 pl-4 pr-3 text-white bg-[#101828] border-[1.5px] border-[#00000026] text-sm">
-              Începe perioada de probă gratuită de 14 zile
-              <Image src={RightArrow} alt="Right Arrow"/>
-            </button>
+            <Button
+            bgColor="bg-[#101828]"
+            textColor="text-white"
+            borderRadius="rounded-[100px]"
+            className="max-[420px]:text-xs text-sm border border-[#ffffff1a]"
+            showChevron={true}
+            chevronColor="text-white"
+            buttonText="Începe perioada de probă gratuită de 14 zile"
+          />
           </div>
           <CardsScrollAnimation />
         </div>

@@ -20,6 +20,7 @@ interface SalesSectionProps {
   testimonial?: Testimonial;
   lottieUrl: string;
   isReversed?: boolean;
+  route: string;
 }
 
 const TextBlock: React.FC<SalesSectionProps> = ({
@@ -30,18 +31,24 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   secondaryCtaText,
   testimonial,
   lottieUrl,
+  route,
   isReversed = false,
 }) => {
   const router = useRouter();
 
-  const handlePrimaryCtaClick = () => {
-    router.push("/auth/login");
-  };
-
   const handleSecondaryCtaClick = () => {
     // You can add a different navigation or action here if needed
-    console.log("Secondary CTA clicked");
+    router.push(route);
   };
+
+  const handlePrimaryCtaClick = () => {
+    router.push("/auth/register");
+  };
+
+  // const handleSecondaryCtaClick = () => {
+  //   // You can add a different navigation or action here if needed
+  //   router.push("/solutions/sales");
+  // };
 
   return (
     <section className="lg:py-12">

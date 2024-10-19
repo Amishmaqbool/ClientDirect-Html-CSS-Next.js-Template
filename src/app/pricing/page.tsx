@@ -3,6 +3,14 @@ import HeroSection from "@/components/home/HeroSection";
 import Pricingcard from "@/components/PricingCard";
 import FaqSection from "@/components/common/FaqSection"
 import { pricingFaqsData } from "@/constants/pricing/pricing";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Prețuri ClientiDirect | Obțineți prețuri flexibile | Test gratuit de 14 zile",
+  description:
+    "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",
+};
 
 export default function page() {
   return (

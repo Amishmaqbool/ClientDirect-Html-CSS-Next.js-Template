@@ -71,7 +71,7 @@ function LoginContent() {
         throw new Error(errorData.message || "Failed to login");
       }
 
-      const data = await response.json();
+      // const data = await response.json();
       router.push('/');
     } catch (err: unknown) {
       if (err instanceof Error) {

@@ -75,13 +75,13 @@ const SegmentSection = () => {
                 &quot;Am putut găsi informațiile de contact în câteva clicuri și
                 am contactat posibile oportunități de afaceri.&quot;
               </p>
-              <p className="text-[#101828] flex gap-2 items-center pt-3">
+              <div className="text-[#101828] flex gap-2 items-center pt-3">
                 Vencel M.
                 <span>
                   <div className="w-[15px] bg-[#98a2b3] h-[2px] -mt-[2px]"></div>
                 </span>
                 <span className="text-[#667085]">Șef Dezvoltare, Partner</span>
-              </p>
+              </div>
             </div>
           </div>
         </div>
