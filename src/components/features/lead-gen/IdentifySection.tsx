@@ -27,7 +27,7 @@ const IdentifySection = () => {
           bgColor="bg-[#ffffff1a]"
           textColor="text-white"
           borderRadius="rounded-[100px]"
-          className = "mt-[18px] max-[420px]:text-xs text-sm border border-[#ffffff1a]"
+          className="mt-[18px] max-[420px]:text-xs text-sm border border-[#ffffff1a]"
           showChevron={true}
           chevronColor="text-white"
           buttonText="Începe perioada de probă gratuită de 14 zile"
@@ -114,21 +114,18 @@ const IdentifySection = () => {
             />
             <div className="text-xs font-semibold">
               <p className="italic text-[#eaecf0] ">
-                &quot;Designul software-ului este grozav - Este un instrument
-                ideal pentru marketing bazat pe conturi și ajută la obținerea de
-                leaduri noi.&quot;
+                &quot;Designul software-ului este grozav - Este un instrument ideal pentru marketing bazat pe conturi și ajută la obținerea de leaduri noi.&quot;
               </p>
               <p className="text-[#b9c0d4] flex gap-2 items-center pt-[14px]">
                 Marc-Antoine C.
-                <span>
-                  <div className="w-[15px] bg-[#98a2b3] h-[2px] -mt-[2px]"></div>
-                </span>{" "}
+                <span className="w-[15px] bg-[#98a2b3] h-[2px] -mt-[2px] inline-block"></span>
                 <span className="text-[#7d89b0]">
                   Coordonator Marketing și Vânzări
                 </span>
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -136,3 +133,5 @@ const IdentifySection = () => {
 };
 
 export default IdentifySection;
+
+
