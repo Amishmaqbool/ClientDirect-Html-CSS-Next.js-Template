@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -23,7 +24,7 @@ export default function Button({
     const router = useRouter();
 
     const handleClick = () => {
-        router.push('/auth/login');
+        router.push('/auth/register');
     };
 
     return (

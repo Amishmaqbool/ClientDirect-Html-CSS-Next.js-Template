@@ -31,7 +31,7 @@ export default function Panel() {
 
 
           <a
-            href="/auth/login"
+            href="/auth/register"
             className="inline-flex items-center justify-center bg-black text-white px-7 py-[15px] rounded-full font-semibold hover:bg-gray-900"
           >
             <p className='leading-[28px] text-[18px]'>

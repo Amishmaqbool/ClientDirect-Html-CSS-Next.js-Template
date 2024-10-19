@@ -102,7 +102,7 @@ export default function Signup() {
         throw new Error("Failed to register");
       }
 
-      const data = await response.json();
+      // const data = await response.json();
       router.push('/login');
     } catch (err: unknown) {
       if (err instanceof Error) {

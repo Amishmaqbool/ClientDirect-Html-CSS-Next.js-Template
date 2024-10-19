@@ -7,10 +7,17 @@ import arrow from "@/assets/svgs/arrow.svg";
 //import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg";
 import logo from "@/assets/svgs/logo.svg";
 import { usePathname } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
   const isRedirectPage = pathname === '/redirect';
+  const route = useRouter();
+
+  const handleClick = () =>{
+    route.push('/auth/register');
+  }
+  
   return (
     <>
       <Panel />
@@ -22,7 +29,7 @@ export default function Footer() {
             </Link>
 
             <div>
-              <button className="w-max bg-[#ffffff1a] mt-8 max-[420px]:text-xs text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center">
+              <button className="w-max bg-[#ffffff1a] mt-8 max-[420px]:text-xs text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center" onClick={handleClick}>
                 Începe perioada de probă gratuită de 14 zile
                 <Image
                   src={arrow}

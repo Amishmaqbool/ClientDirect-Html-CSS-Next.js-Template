@@ -1,5 +1,7 @@
+// "use client";
 import React from "react";
 import Image from "next/image";
+
 type ContentData = {
   image: string;
   heading: string;
@@ -14,6 +16,7 @@ const ContentPage: React.FC<PageProps> = ({ contentList }) => {
   const Heading = "Alimentează operațiunile de marketing, vânzări, suport și venituri, în felul tău.";
   const Paragraph = "Implementează stratul de identificare al ClientiDirect pentru a adăuga context vital acolo unde ai nevoie.";
   const Button = "Începe perioada de probă gratuită de 14 zile";
+
   return (
     <div className="relative bg-[#101828]">
       <div className=""></div>

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,13 +19,15 @@ interface CardsProps {
   contentList: ContentList[]; 
 }
 
-const MarketingSection: React.FC<CardsProps> = ({
+const MarketingSection: React.FC<CardsProps> = (
+  {
   tag,
   heading,
   description,
   ctaButton,
   contentList,
 }) => {
+
   return (
     <div className="relative bg-[#132137]">
       <div className="relative max-w-[1280px] mx-auto px-6 z-10">
@@ -41,7 +44,7 @@ const MarketingSection: React.FC<CardsProps> = ({
           </p>
 
           <Link
-            href="/auth/login"
+            href="/auth/register"
             className="py-2 px-3.5 flex items-center border rounded-full border-[#0000] backdrop-blur whitespace-nowrap bg-[#ffffff1a] cursor-pointer"
           >
             <button className="flex gap-3 items-center mr-2 font-semibold text-sm text-white cursor-pointer">

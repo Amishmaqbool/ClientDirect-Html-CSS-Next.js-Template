@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import HeroSection from "@/components/home/HeroSection";
 import ProsSection from "@/components/features/lead-gen/ProsSection";
@@ -9,15 +8,15 @@ import gradientImage from "@/assets/images/colours.webp";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import { leadHeroData, reviews } from "@/constants/features/lead-generation";
 import RatingCards from "@/components/common/RatingCards";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Button from "@/components/common/Button";
-// import { Metadata } from "next";
+import LottieAnimation from "@/components/common/LottieAnimation";
+import { Metadata } from "next";
 
-// export const metadata: Metadata = {
-//   title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
-//   description:
-//     "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",  metadataBase: new URL("https://clientidirect.com/"),
-// };
+export const metadata: Metadata = {
+  title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
+  description:
+    "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",  metadataBase: new URL("https://clientidirect.com/"),
+};
 
 export default function LeadGen() {
   return (
@@ -73,13 +72,14 @@ export default function LeadGen() {
                   />
                 </div>
                 <div className="w-1/2 max-lg:w-full max-lg:flex max-lg:justify-center">
-                  <DotLottieReact
+                  {/* <DotLottieReact
                     src="https://lottie.host/b871977f-5b98-40d7-8a81-84feba62224a/yrwVnOrz2C.json"
                     autoplay
                     loop
                     width={560}
                     height={363}
-                  />
+                  /> */}
+                <LottieAnimation src={"https://lottie.host/b871977f-5b98-40d7-8a81-84feba62224a/yrwVnOrz2C.json"} />
                 </div>
               </div>
 
