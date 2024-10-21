@@ -12,7 +12,6 @@ import MarketingSection from "@/components/common/MarketingComponent";
 import FaqSection from "@/components/common/FaqSection";
 import RevenueSection from "@/components/RevenueSection";
 import OptimizeSection from "../../../components/OptimizeSection";
-import Script from "next/script";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
