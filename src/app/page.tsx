@@ -60,7 +60,7 @@ export default function Home() {
           ctaText={ctaText}
           secondaryCtaText={secondaryCtaText}
           testimonial={FirstTestimonial}
-          lottieUrl="https://lottie.host/67c29b1c-f8f5-4262-9529-d7d089de0a37/ZooYErX6nm.json"
+          lottieUrl="https://lottie.host/embed/9c8a30ff-fd51-4ff1-8cd6-8ef27740326c/lcMSIYiI93.lottie"
           isReversed={false}
           route={"/solutions/sales"}
         />
@@ -75,7 +75,7 @@ export default function Home() {
           ctaText={"Începeți proba gratuită"}
           secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
           testimonial={SecondTestimonial}
-          lottieUrl="https://lottie.host/e7e6bfef-6fd9-4b22-8825-dc67d973bfb9/1diB1j1H81.json"
+          lottieUrl="https://lottie.host/embed/3986babc-f225-4202-b210-90c47d93bf77/6A3FrFOGQp.lottie"
           isReversed={true}
           route={"/solutions/marketing"}
         />
@@ -87,7 +87,7 @@ export default function Home() {
           ctaText={"Începeți proba gratuită"}
           secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
           testimonial={ThirdTestimonial}
-          lottieUrl="./LanderThree.json"
+          lottieUrl="https://lottie.host/embed/343fab7f-c2ee-49a9-80be-e2453a6944fa/X1mJM75bU3.lottie"
           isReversed={false}
           route={"/solutions/marketing"}
         />
