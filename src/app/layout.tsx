@@ -64,28 +64,6 @@ export default function RootLayout({
     }
   }, [pathname]);
 
-  if (isAuthPage) {
-    return (
-      <html lang="en">
-        <body className={`${soleil.variable} antialiased`}>
-          <div>{children}</div>
-          <ToastContainer />
-        </body>
-      </html>
-    );
-  }
-
-  if (isFaqPage === null) {
-    return (
-      <html lang="en">
-        <body className={`${soleil.variable} antialiased`}>
-          <div className="pb-36">{children}</div>
-          <ToastContainer />
-        </body>
-      </html>
-    );
-  }
-
   return (
     <html lang="en">
       <body className={`${soleil.variable} antialiased`}>
@@ -94,6 +72,7 @@ export default function RootLayout({
           <div className={`flex-grow ${!isCustomerStoriesPage && !isRedirectPage ? 'pb-40' : ''}`}>
             {children}
           </div>
+          <ToastContainer />
           {isFaqPage ? <FaqFooter /> : <Footer />}
         </div>
         <ToastContainer />

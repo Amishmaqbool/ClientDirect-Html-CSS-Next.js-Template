@@ -1,14 +1,9 @@
 "use client";
-import React, { useMemo } from "react";
+import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import dynamic from "next/dynamic";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import RightArrow from "../../assets/svgs/right-arrow.svg";
-
-const DynamicLottiePlayer = dynamic(
-  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player), 
-  { ssr: false } 
-);
 
 interface Testimonial {
   quote: string;
@@ -36,39 +31,42 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   secondaryCtaText,
   testimonial,
   lottieUrl,
+  route,
   isReversed = false,
 }) => {
   const router = useRouter();
 
-  const handlePrimaryCtaClick = () => {
-    router.push("/auth/login");
-  };
-
   const handleSecondaryCtaClick = () => {
-    console.log("Secondary CTA clicked");
+    // You can add a different navigation or action here if needed
+    router.push(route);
   };
 
-  const MemoizedLottiePlayer = useMemo(() => (
-    <DynamicLottiePlayer
-      src={lottieUrl}
-      autoplay
-      loop
-      style={{ width: '100%', height: 'auto', maxWidth: '500px' }} 
-    />
-  ), [lottieUrl]);
+  const handlePrimaryCtaClick = () => {
+    router.push("/auth/register");
+  };
+
+  // const handleSecondaryCtaClick = () => {
+  //   // You can add a different navigation or action here if needed
+  //   router.push("/solutions/sales");
+  // };
 
   return (
     <section className="lg:py-12">
       <div
-        className={`max-w-[1280px] mx-auto p-4 flex ${isReversed
-          ? "flex-col-reverse lg:flex-row-reverse"
-          : "flex-col-reverse lg:flex-row"
-          } justify-between items-center`}
+        className={`max-w-[1280px] mx-auto p-4 flex ${
+          isReversed
+            ? "flex-col-reverse lg:flex-row-reverse"
+            : "flex-col-reverse lg:flex-row"
+        } justify-between items-center flex-`}
       >
         <div className="w-full lg:w-[50%]">
           <h1 className="text-2xl sm:text-4xl font-bold mb-4">{mainHeading}</h1>
-          <p className="text-base sm:text-lg mb-6 text-gray-600">{subHeading}</p>
-          {description && <p className="text-base sm:text-lg mb-6 text-gray-600">{description}</p>}
+          <p className="text-base sm:text-lg mb-6 text-gray-600">
+            {subHeading}
+          </p>
+          <p className="text-base sm:text-lg mb-6 text-gray-600">
+            {description}
+          </p>
           <div className="flex flex-wrap justify-start gap-4 mb-8">
             <button
               className="flex gap-2 items-center bg-black rounded-full text-white px-6 py-3 max-[420px]:text-xs text-sm"
@@ -90,25 +88,36 @@ const TextBlock: React.FC<SalesSectionProps> = ({
               </button>
             )}
           </div>
-          {testimonial && testimonial.quote && testimonial.author && testimonial.role && (
-            <div className="testimonial text-left max-w-lg w-full lg:w-full mb-8">
-              <blockquote className="text-gray-700 italic text-sm">
-                &quot;{testimonial.quote}&quot;
-              </blockquote>
-              <cite className="text-xs text-gray-500 not-italic">
-                <span className="text-black">{testimonial.author}</span> -{" "}
-                {testimonial.role}
-              </cite>
-            </div>
-          )}
+          {testimonial &&
+            testimonial.quote &&
+            testimonial.author &&
+            testimonial.role && (
+              <div className="testimonial text-left max-w-lg w-full lg:w-full mb-8">
+                <blockquote className="text-gray-700 italic text-sm">
+                  &quot;{testimonial.quote}&quot;
+                </blockquote>
+                <cite className="text-xs text-gray-500 not-italic">
+                  <span className="text-black">{testimonial.author}</span> -{" "}
+                  {testimonial.role}
+                </cite>
+              </div>
+            )}
         </div>
 
         <div className="md:pb-10 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-64 sm:h-96">
-          {MemoizedLottiePlayer}
+          <iframe
+            src={lottieUrl}
+            width={855}
+            height={844}
+          ></iframe>
+          <script
+            src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"
+          ></script>
         </div>
       </div>
     </section>
   );
 };
 
-export default React.memo(TextBlock);
+export default TextBlock;
