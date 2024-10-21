@@ -4,6 +4,7 @@ import Image from "next/image";
 import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
+import { useRouter } from "next/navigation";
 //import Linkedin from "@/assets/images/linked.webp";
 // import { Metadata } from "next";
 
@@ -28,7 +29,7 @@ export default function Signup() {
   const [phone, setPhone] = useState("");
   const [errors, setErrors] = useState<Errors>({});
   const [loading, setLoading] = useState(false);
-
+  const router = useRouter();
 
   const validateInputs = () => {
     const newErrors: Errors = {};
@@ -101,8 +102,8 @@ export default function Signup() {
         throw new Error("Failed to register");
       }
 
-      const data = await response.json();
-      alert(JSON.stringify(data));
+      // const data = await response.json();
+      router.push('/login');
     } catch (err: unknown) {
       if (err instanceof Error) {
         setErrors((prev) => ({ ...prev, general: err.message }));
@@ -127,7 +128,6 @@ export default function Signup() {
 
       if (response.ok) {
         const data = await response.json();
-
         if (data.authorization_url) {
           window.location.href = data.authorization_url;
         } else {

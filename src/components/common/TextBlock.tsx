@@ -7,6 +7,7 @@ import RightArrow from "../../assets/svgs/right-arrow.svg";
 
 const DynamicLottiePlayer = dynamic(
   () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player), 
+  { ssr: false } 
 );
 
 interface Testimonial {
@@ -24,6 +25,7 @@ interface SalesSectionProps {
   testimonial?: Testimonial;
   lottieUrl: string;
   isReversed?: boolean;
+  route: string;
 }
 
 const TextBlock: React.FC<SalesSectionProps> = ({
@@ -35,6 +37,7 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   testimonial,
   lottieUrl,
   isReversed = false,
+  route,
 }) => {
   const router = useRouter();
 

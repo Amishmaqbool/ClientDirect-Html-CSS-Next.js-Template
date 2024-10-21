@@ -19,9 +19,11 @@ import Home12 from "@/assets/images/home-12.webp";
 import ClientiDirect from "@/assets/images/snitcher-logo.webp";
 import GoogleAIcon from "@/assets/images/google-analytics-logo.webp";
 import RealIcon from "@/assets/images/real-icon.webp";
+import { useRouter } from "next/navigation";
 
 const IntegrationSection = () => {
   const [animationKey, setAnimationKey] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,6 +32,17 @@ const IntegrationSection = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const handleClick = () => {
+   router.push('/auth/register');
+  };
+  const handleGoogle = () => {
+    router.push('/features/google-analytics');
+   };
+   const handleAPI = () => {
+    router.push('/features/lead-generation');
+   };
+  
 
   return (
     <>
@@ -45,7 +58,7 @@ const IntegrationSection = () => {
             <p className="text-[#7d89b0] text-lg text-center pt-5">
               Îmbogățiți campaniile și umpleți conductele de vânzări prin integrarea cu produsele pe care le cunoașteți și le iubiți. Cu peste 5.000 de aplicații deja disponibile, instrumentele preferate ale echipei tale sunt la doar un clic distanță.
             </p>
-            <button className="mt-7 flex items-center justify-center gap-2 rounded-full pt-2 pb-[6px] pl-4 pr-3 text-white bg-[#ffffff1a] border-[1.5px] border-[#ffffff1a] text-sm">
+            <button className="mt-7 flex items-center justify-center gap-2 rounded-full pt-2 pb-[6px] pl-4 pr-3 text-white bg-[#ffffff1a] border-[1.5px] border-[#ffffff1a] text-sm" onClick={handleClick}>
               Încearcă ClientiDirect gratuit
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +168,7 @@ const IntegrationSection = () => {
             </div>
 
             <div className="w-full flex md:justify-end">
-              <button className="flex items-center justify-center gap-2 rounded-full pt-[7px] pb-1 pl-[14px] pr-3 text-white bg-[#3257ff] border-[3px] border-[#0000] text-sm">
+              <button className="flex items-center justify-center gap-2 rounded-full pt-[7px] pb-1 pl-[14px] pr-3 text-white bg-[#3257ff] border-[3px] border-[#0000] text-sm" onClick={handleAPI}>
                 Află mai multe
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +201,7 @@ const IntegrationSection = () => {
 
             </div>
             <div className="w-full flex md:justify-end">
-              <button className="flex items-center justify-center gap-2 rounded-full pt-[7px] pb-1 pl-[14px] pr-3 text-white bg-[#3257ff] border-[3px] border-[#0000] text-sm">
+              <button className="flex items-center justify-center gap-2 rounded-full pt-[7px] pb-1 pl-[14px] pr-3 text-white bg-[#3257ff] border-[3px] border-[#0000] text-sm" onClick={handleGoogle}>
                 Află mai multe
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

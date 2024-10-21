@@ -48,6 +48,7 @@ export default function googleAnalytics() {
           ctaText={"Începe perioada de probă gratuită de 14 zile"}
           lottieUrl="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/644678dde63efd7e77fe336e_Sec_17.json"
           isReversed={true}
+          route={'/auth/register'}
         />
 
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 sm:mt-8">

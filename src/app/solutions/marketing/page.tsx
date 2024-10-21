@@ -34,6 +34,7 @@ export default function page() {
        buttonSecondaryText="Află mai multe"
         flexDirection="row-reverse"
         lottieUrl="https://lottie.host/f6345aeb-07cc-46cb-95c4-8d53a6843776/6q267JMB8h.json"
+        route="/features/google-analytics"
       />
 
       <SolutionSection
@@ -46,6 +47,7 @@ export default function page() {
         buttonSecondaryText="Află mai multe"
         lottieUrl="https://lottie.host/e4382fd0-b46d-400a-967b-6215228eb33a/fBaLWbHaYm.json"
         flexDirection="row"
+        route="/features/google-analytics"
       />
 
       <SolutionSection
@@ -58,6 +60,7 @@ export default function page() {
         buttonSecondaryText="Află mai multe"
         flexDirection="row-reverse"
         lottieUrl="https://lottie.host/a0823732-82a1-42cb-93ae-e24d198d5410/uakxoKutzx.json"
+        route="/features/google-analytics"
       />
 
       <SolutionSection
@@ -70,6 +73,7 @@ export default function page() {
         buttonSecondaryText="Află mai multe"
         lottieUrl="https://lottie.host/99c99765-0406-472c-80cd-3bbea0bdd7e2/qbrPPDZWeX.json"
         flexDirection="row"
+        route="/features/google-analytics"
       />
     </div>
   );

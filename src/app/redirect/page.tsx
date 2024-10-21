@@ -20,15 +20,15 @@ function RedirectAfter() {
         }, 3000); 
 
     return () => clearTimeout(timer);
-    }, [router, searchParams]);
+  });
 
     return(
     <>
-    <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto py-20">
-          <ClipLoader
+    <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto pb-24">
+          <ClipLoader className="mt-8"
             color={"#111827"} 
             loading={true}
-            size={50} 
+            size={40} 
           />
     </div>
     </>
@@ -36,9 +36,9 @@ function RedirectAfter() {
 }
 
 export default function Redirect() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <RedirectAfter />
-    </Suspense>
-  );
+    return (
+      <Suspense fallback={<div>Loading...</div>}>
+        <RedirectAfter />
+      </Suspense>
+    );
 }

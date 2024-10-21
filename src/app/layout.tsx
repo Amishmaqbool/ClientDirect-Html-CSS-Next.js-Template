@@ -46,9 +46,10 @@ export default function RootLayout({
   const router = useRouter();
   const isAuthPage = pathname === "/auth/login" || pathname === "/auth/register";
   const isCustomerStoriesPage = pathname === '/customer-stories';
+  const isRedirectPage = pathname === '/redirect';
 
   useEffect(() => {
-    const token = localStorage.getItem("access_token"); 
+    const token = localStorage.getItem("access_token");
 
     if (token && isAuthPage) {
       router.push("/");
@@ -89,11 +90,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${soleil.variable} antialiased`}>
         {isFaqPage ? <FaqHeader /> : <Header />}
-        <div className={`bg-[#fcfcfd] ${!isCustomerStoriesPage ? 'pb-40' : ''}`}>
-          {children}
+        <div className={`flex flex-col min-h-screen ${!isCustomerStoriesPage && !isRedirectPage ? 'bg-[#fcfcfd]' : ''}`}>
+          <div className={`flex-grow ${!isCustomerStoriesPage && !isRedirectPage ? 'pb-40' : ''}`}>
+            {children}
+          </div>
+          {isFaqPage ? <FaqFooter /> : <Footer />}
         </div>
         <ToastContainer />
-        {isFaqPage ? <FaqFooter /> : <Footer />}
       </body>
     </html>
   );
