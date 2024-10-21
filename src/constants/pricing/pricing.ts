@@ -1,5 +1,5 @@
 export const data = [
-  "Nivelul tău se bazează pe câte companii unice lunare identificăm. Începe un trial gratuit pentru o estimare exactă.",
+  "Platesti numai pentru câte companii unice lunare identificăm. Începe un trial gratuit pentru o estimare exactă.",
   "Poți elimina companiile irelevante, și acestea nu vor fi contorizate în cota ta.",
   "Toate funcțiile pe care ClientiDirect le oferă sunt incluse.",
   "Prețurile se vor ajusta automat pe baza utilizării tale. Vezi tabelul de prețuri pentru referință.",
