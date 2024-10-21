@@ -46,7 +46,7 @@ export default function Header() {
           <Link href="/">
             <div className="flex gap-3 items-center">
               <Image src={logo} height={28} width={28} alt="Logo" />
-              <p className="pt-1 font-medium text-xl text-white">ClientiDirect</p>
+              <p className="pt-1 font-semibold text-xl text-white">ClientiDirect</p>
             </div>
           </Link>
         </div>
