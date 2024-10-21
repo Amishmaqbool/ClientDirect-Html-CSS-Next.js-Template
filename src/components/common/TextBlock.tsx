@@ -2,8 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import RightArrow from "../../assets/svgs/right-arrow.svg";
+import Script from "next/script";
 
 interface Testimonial {
   quote: string;
@@ -53,15 +53,20 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   return (
     <section className="lg:py-12">
       <div
-        className={`max-w-[1280px] mx-auto p-4 flex ${isReversed
+        className={`max-w-[1280px] mx-auto p-4 flex ${
+          isReversed
             ? "flex-col-reverse lg:flex-row-reverse"
             : "flex-col-reverse lg:flex-row"
-          } justify-between items-center flex-`}
+        } justify-between items-center flex-`}
       >
         <div className="w-full lg:w-[50%]">
           <h1 className="text-2xl sm:text-4xl font-bold mb-4">{mainHeading}</h1>
-          <p className="text-base sm:text-lg mb-6 text-gray-600">{subHeading}</p>
-          <p className="text-base sm:text-lg mb-6 text-gray-600">{description}</p>
+          <p className="text-base sm:text-lg mb-6 text-gray-600">
+            {subHeading}
+          </p>
+          <p className="text-base sm:text-lg mb-6 text-gray-600">
+            {description}
+          </p>
           <div className="flex flex-wrap justify-start gap-4 mb-8">
             <button
               className="flex gap-2 items-center bg-black rounded-full text-white px-6 py-3 max-[420px]:text-xs text-sm"
@@ -83,26 +88,28 @@ const TextBlock: React.FC<SalesSectionProps> = ({
               </button>
             )}
           </div>
-          {testimonial && testimonial.quote && testimonial.author && testimonial.role && (
-            <div className="testimonial text-left max-w-lg w-full lg:w-full mb-8">
-              <blockquote className="text-gray-700 italic text-sm">
-                &quot;{testimonial.quote}&quot;
-              </blockquote>
-              <cite className="text-xs text-gray-500 not-italic">
-                <span className="text-black">{testimonial.author}</span> -{" "}
-                {testimonial.role}
-              </cite>
-            </div>
-          )}
+          {testimonial &&
+            testimonial.quote &&
+            testimonial.author &&
+            testimonial.role && (
+              <div className="testimonial text-left max-w-lg w-full lg:w-full mb-8">
+                <blockquote className="text-gray-700 italic text-sm">
+                  &quot;{testimonial.quote}&quot;
+                </blockquote>
+                <cite className="text-xs text-gray-500 not-italic">
+                  <span className="text-black">{testimonial.author}</span> -{" "}
+                  {testimonial.role}
+                </cite>
+              </div>
+            )}
         </div>
 
         <div className="md:pb-10 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-64 sm:h-96">
-          <DotLottieReact
-            src={lottieUrl}
-            autoplay
-            loop
-            width={855}
-            height={844}
+          <iframe src={lottieUrl} width={855} height={844}></iframe>
+          <Script
+            src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            strategy="lazyOnload"
+            type="module"
           />
         </div>
       </div>

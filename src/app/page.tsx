@@ -1,12 +1,10 @@
 import HeroSection from "@/components/home/HeroSection";
-// import Image from "next/image";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
 import { Metadata } from "next";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 import VideoSection from "@/components/VideoSection";
-// import RightArrow from "@/assets/svgs/right-arrow.svg"
 import Button from "@/components/common/Button";
 
 export const metadata: Metadata = {
@@ -62,9 +60,9 @@ export default function Home() {
           ctaText={ctaText}
           secondaryCtaText={secondaryCtaText}
           testimonial={FirstTestimonial}
-          lottieUrl="https://lottie.host/67c29b1c-f8f5-4262-9529-d7d089de0a37/ZooYErX6nm.json"
+          lottieUrl="https://lottie.host/embed/9c8a30ff-fd51-4ff1-8cd6-8ef27740326c/lcMSIYiI93.lottie"
           isReversed={false}
-          route={'/solutions/sales'}
+          route={"/solutions/sales"}
         />
 
         <TextBlock
@@ -77,9 +75,9 @@ export default function Home() {
           ctaText={"Începeți proba gratuită"}
           secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
           testimonial={SecondTestimonial}
-          lottieUrl="https://lottie.host/e7e6bfef-6fd9-4b22-8825-dc67d973bfb9/1diB1j1H81.json"
+          lottieUrl="https://lottie.host/embed/3986babc-f225-4202-b210-90c47d93bf77/6A3FrFOGQp.lottie"
           isReversed={true}
-          route ={'/solutions/marketing'}
+          route={"/solutions/marketing"}
         />
         <TextBlock
           mainHeading={"Înțelegeți ce își dorește de fapt publicul țintă"}
@@ -89,9 +87,9 @@ export default function Home() {
           ctaText={"Începeți proba gratuită"}
           secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
           testimonial={ThirdTestimonial}
-          lottieUrl="https://lottie.host/ade35443-289d-416d-98a7-12f616efb5bd/GxNxOf0TXi.json"
+          lottieUrl="https://lottie.host/embed/343fab7f-c2ee-49a9-80be-e2453a6944fa/X1mJM75bU3.lottie"
           isReversed={false}
-          route ={'/solutions/marketing'}
+          route={"/solutions/marketing"}
         />
       </div>
       <div
@@ -119,14 +117,14 @@ export default function Home() {
             </p>
 
             <Button
-            bgColor="bg-[#101828]"
-            textColor="text-white"
-            borderRadius="rounded-[100px]"
-            className="max-[420px]:text-xs text-sm border border-[#ffffff1a]"
-            showChevron={true}
-            chevronColor="text-white"
-            buttonText="Începe perioada de probă gratuită de 14 zile"
-          />
+              bgColor="bg-[#101828]"
+              textColor="text-white"
+              borderRadius="rounded-[100px]"
+              className="max-[420px]:text-xs text-sm border border-[#ffffff1a]"
+              showChevron={true}
+              chevronColor="text-white"
+              buttonText="Începe perioada de probă gratuită de 14 zile"
+            />
           </div>
           <CardsScrollAnimation />
         </div>
