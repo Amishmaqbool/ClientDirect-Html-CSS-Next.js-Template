@@ -33,7 +33,7 @@ export default function page() {
        buttonPrimaryText="Începe perioada de probă gratuită"
        buttonSecondaryText="Află mai multe"
         flexDirection="row-reverse"
-        lottieUrl="https://lottie.host/f6345aeb-07cc-46cb-95c4-8d53a6843776/6q267JMB8h.json"
+        lottieUrl="https://lottie.host/embed/647f78ae-02e3-4521-acb3-902ce328f251/qIfrWWkJ3w.lottie"
         route="/features/google-analytics"
       />
 
@@ -45,7 +45,7 @@ export default function page() {
         ]}
         buttonPrimaryText="Începe perioada de probă gratuită"
         buttonSecondaryText="Află mai multe"
-        lottieUrl="https://lottie.host/e4382fd0-b46d-400a-967b-6215228eb33a/fBaLWbHaYm.json"
+        lottieUrl="https://lottie.host/embed/e38b8cc8-7dd4-4e58-9de2-c24eba9a2d76/XO43vQbWnb.lottie"
         flexDirection="row"
         route="/features/google-analytics"
       />
@@ -59,7 +59,7 @@ export default function page() {
         buttonPrimaryText="Începe perioada de probă gratuită"
         buttonSecondaryText="Află mai multe"
         flexDirection="row-reverse"
-        lottieUrl="https://lottie.host/a0823732-82a1-42cb-93ae-e24d198d5410/uakxoKutzx.json"
+        lottieUrl="https://lottie.host/embed/0d1f9ed0-a78b-4a9d-9904-9f0498c0f011/oZO9OT8IX6.lottie"
         route="/features/google-analytics"
       />
 
@@ -71,7 +71,7 @@ export default function page() {
         ]}
         buttonPrimaryText="Începe perioada de probă gratuită"
         buttonSecondaryText="Află mai multe"
-        lottieUrl="https://lottie.host/99c99765-0406-472c-80cd-3bbea0bdd7e2/qbrPPDZWeX.json"
+        lottieUrl="https://lottie.host/embed/4140541d-6405-4c74-8429-eb49036223f6/00Tb1okqub.lottie"
         flexDirection="row"
         route="/features/google-analytics"
       />

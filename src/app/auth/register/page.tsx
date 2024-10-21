@@ -145,7 +145,7 @@ export default function Signup() {
     <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center">
       <form onSubmit={handleSubmit} className="max-w-[352px] mx-auto max-[400px]:px-6 py-12 w-full">
         <div className="flex flex-col justify-center items-center mb-4">
-          <Image src={ClientiDirect} alt="Snitcher-Logo" width={48} height={48} />
+          <Image src={ClientiDirect} alt="ClientiDirect-Logo" width={48} height={48} />
           <div className="mt-6 flex flex-col text-center">
             <h2 className="text-3xl text-[#111827] font-bold leading-9 tracking-tight">
               Create an account

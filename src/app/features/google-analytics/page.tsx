@@ -12,6 +12,7 @@ import MarketingSection from "@/components/common/MarketingComponent";
 import FaqSection from "@/components/common/FaqSection";
 import RevenueSection from "@/components/RevenueSection";
 import OptimizeSection from "../../../components/OptimizeSection";
+import Script from "next/script";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -46,7 +47,7 @@ export default function googleAnalytics() {
             "Vinzi către companii, nu către vizitatori. Obține imaginea completă și transformă Google Analytics într-o soluție de analiză bazată pe conturi."
           }
           ctaText={"Începe perioada de probă gratuită de 14 zile"}
-          lottieUrl="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/644678dde63efd7e77fe336e_Sec_17.json"
+          lottieUrl="https://lottie.host/embed/9f7371ab-3a9d-4713-b45e-a764111af47b/Z7YZpi8EJR.lottie"
           isReversed={true}
           route={'/auth/register'}
         />

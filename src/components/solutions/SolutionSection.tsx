@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Tick from "@/assets/svgs/tick.svg";
 import Coin from "@/assets/svgs/line-chart.svg";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Script from "next/script";
 import { useRouter } from "next/navigation";
 interface SolutionSectionProps {
   title: string;
@@ -19,7 +19,7 @@ interface SolutionSectionProps {
   lottieUrl?: string;
   flexDirection?: "row" | "row-reverse";
   gradientColors?: string[];
-  route: string
+  route: string;
 }
 export default function SolutionSection({
   title = "Never miss target company visits, again",
@@ -33,14 +33,14 @@ export default function SolutionSection({
   paragraphLineBreakIndices = {},
   lottieUrl = "",
   flexDirection = "row",
-  route
+  route,
 }: SolutionSectionProps) {
   const router = useRouter();
 
   const handleClick = () => {
     router.push("/auth/register");
   };
-  
+
   const handleClicktoSecondary = () => {
     router.push(route);
   };
@@ -58,15 +58,15 @@ export default function SolutionSection({
   };
 
   return (
-    <div className="relative bg-white text-black py-10 md:py-4 max-2xl:px-4 mt-8 max-md:mt-4 max-lg:px-0">
+    <div className="relative text-black py-10 md:py-4 max-2xl:px-4 mt-0 sm:mt-20 max-lg:px-0">
       <div
         className={`max-w-[1280px] mx-auto flex flex-col ${
           flexDirection === "row-reverse"
-            ? "md:flex-row-reverse"
-            : "md:flex-row"
+            ? "lg:flex-row-reverse"
+            : "lg:flex-row"
         } md:gap-[64px] gap-8 items-center`}
       >
-        <div className="md:w-1/2 px-4">
+        <div className="lg:w-1/2 px-4">
           <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
             {formatTextWithLineBreaks(title, titleLineBreakIndices)}
           </h1>
@@ -107,7 +107,7 @@ export default function SolutionSection({
           <div className="mt-8 flex flex-col lg:flex-row gap-4">
             <button
               onClick={handleClick}
-              className="bg-black text-white px-4 rounded-full max-md:w-7/12 max-lg:w-10/12 max-lg:justify-center font-medium flex text-sm max-sm:text-xs sm:text-base gap-[1px] items-center py-2"
+              className="bg-black text-white px-4 rounded-full max-sm:w-full max-md:w-7/12 max-lg:w-10/12 max-lg:justify-center font-medium flex text-sm max-sm:text-xs sm:text-base gap-[1px] items-center py-2"
             >
               {buttonPrimaryText}
               <span className="ml-2">
@@ -129,7 +129,10 @@ export default function SolutionSection({
               </span>
             </button>
 
-            <button className="bg-white border border-gray-300 text-black px-4 flex gap-[2px] text-sm sm:text-base items-center py-2 rounded-full font-medium max-md:w-7/12 max-lg:w-10/12 max-lg:justify-center max-lg:gap-2" onClick={handleClicktoSecondary}>
+            <button
+              className="bg-white border border-gray-300 text-black px-4 flex gap-[2px] text-sm sm:text-base items-center py-2 rounded-full font-medium max-sm:w-full max-md:w-7/12 max-lg:w-10/12 max-lg:justify-center max-lg:gap-2"
+              onClick={handleClicktoSecondary}
+            >
               <Image src={Coin} width={20} height={20} alt="coin" />
               {buttonSecondaryText}
             </button>
@@ -139,13 +142,14 @@ export default function SolutionSection({
         <div className="md:w-1/2 mt-10 md:mt-0 relative">
           <div className="relative z-10 flex justify-center items-center">
             {lottieUrl && (
-              <DotLottieReact
-                src={lottieUrl}
-                autoplay
-                loop
-                width={855}
-                height={844}
-              />
+              <div className="max-lg:flex max-lg:justify-center">
+                <iframe className="w-[370px] sm:w-[451px] h-[240px] sm:h-[323px]" src={lottieUrl}></iframe>
+                <Script
+                  src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                  strategy="lazyOnload"
+                  type="module"
+                />
+              </div>
             )}
           </div>
         </div>

@@ -8,11 +8,11 @@ import marketingDropdown from "@/assets/svgs/marketing-dropdown.svg";
 import GoogleAnalytics from "@/assets/svgs/google-analytics-dropdown.svg";
 import IdentifyDropdown from "@/assets/svgs/identify-dropdown-icon.svg";
 import AgenciesDropdown from "@/assets/svgs/agencies-dropdown.svg";
-import logo from "../../assets/svgs/logo.svg";
+import logo from "../../assets/svgs/header-logo-icon.svg";
 import Guides from "@/assets/images/navbar-img.webp";
 import ChevronDownIcon from "../../../public/svgs/chevron-down";
 import { usePathname } from "next/navigation";
-import SalesIcon from "@/assets/svgs/sales-icon.svg"
+import SalesIcon from "@/assets/svgs/sales-icon.svg";
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -44,7 +44,10 @@ export default function Header() {
       <div className="max-w-[1280px] mx-auto p-6 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/">
-            <Image src={logo} height={35} width={125} alt="Logo" />
+            <div className="flex gap-3 items-center">
+              <Image src={logo} height={28} width={28} alt="Logo" />
+              <p className="pt-1 font-medium text-xl text-white">ClientiDirect</p>
+            </div>
           </Link>
         </div>
         <nav className="hidden lg:block">

@@ -3,8 +3,8 @@ import React from "react";
 import Image from "next/image";
 import Button from "./common/Button";
 import { OptimizeCardData } from "@/constants/features/google-analytics";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import WomenAvatar from "../assets/svgs/women-avatar.svg"
+import Script from "next/script";
+import WomenAvatar from "../assets/svgs/women-avatar.svg";
 
 export default function OptimizeSection() {
   return (
@@ -32,7 +32,7 @@ export default function OptimizeSection() {
             buttonText="Începe perioada de probă gratuită de 14 zile"
           />
 
-          <div className="mt-16 grid max-md:gap-0 gap-[77px] grid-cols-1 md:grid-cols-2">
+          <div className="mt-16 grid max-md:gap-0 gap-[77px] grid-cols-1 lg:grid-cols-2">
             <div className="col-span-1 row-span-1">
               {OptimizeCardData.map((item, index) => (
                 <div
@@ -63,12 +63,7 @@ export default function OptimizeSection() {
               ))}
 
               <div className="pt-9 flex flex-col sm:flex-row gap-4 items-start">
-                <Image
-                  src={WomenAvatar}
-                  alt="Avatar"
-                  width={48}
-                  height={48}
-                />
+                <Image src={WomenAvatar} alt="Avatar" width={48} height={48} />
                 <div className="testimonial text-left max-w-lg w-full lg:w-full mb-8">
                   <blockquote className="text-gray-700 italic text-sm">
                     &quot;ClientiDirect, împreună cu contul nostru de Google
@@ -84,11 +79,15 @@ export default function OptimizeSection() {
               </div>
             </div>
 
-            <div className="col-span-1 row-span-1 max-lg:aspect-square w-full h-full">
-              <DotLottieReact
-                src="https://lottie.host/230858b8-ad22-494c-a41b-9776915dfbda/SO03zYR87i.lottie"
-                autoplay
-                loop
+            <div className="col-span-1 row-span-1 lg:pt-32 flex justify-center">
+              <iframe
+                className="w-[300px] sm:w-[496px] lg:w-[400px] xl:w-[496px] h-[200px] sm:h-[396px] lg:h-[300px] xl:h-[396px]"
+                src="https://lottie.host/embed/0d1f9ed0-a78b-4a9d-9904-9f0498c0f011/oZO9OT8IX6.lottie"
+              ></iframe>
+              <Script
+                src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                strategy="lazyOnload"
+                type="module"
               />
             </div>
           </div>
