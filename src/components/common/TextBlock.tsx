@@ -1,9 +1,13 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import dynamic from "next/dynamic";
 import RightArrow from "../../assets/svgs/right-arrow.svg";
+
+const DynamicLottiePlayer = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player), 
+);
 
 interface Testimonial {
   quote: string;
@@ -39,22 +43,30 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   };
 
   const handleSecondaryCtaClick = () => {
-    // You can add a different navigation or action here if needed
     console.log("Secondary CTA clicked");
   };
+
+  const MemoizedLottiePlayer = useMemo(() => (
+    <DynamicLottiePlayer
+      src={lottieUrl}
+      autoplay
+      loop
+      style={{ width: '100%', height: 'auto', maxWidth: '500px' }} 
+    />
+  ), [lottieUrl]);
 
   return (
     <section className="lg:py-12">
       <div
         className={`max-w-[1280px] mx-auto p-4 flex ${isReversed
-            ? "flex-col-reverse lg:flex-row-reverse"
-            : "flex-col-reverse lg:flex-row"
-          } justify-between items-center flex-`}
+          ? "flex-col-reverse lg:flex-row-reverse"
+          : "flex-col-reverse lg:flex-row"
+          } justify-between items-center`}
       >
         <div className="w-full lg:w-[50%]">
           <h1 className="text-2xl sm:text-4xl font-bold mb-4">{mainHeading}</h1>
           <p className="text-base sm:text-lg mb-6 text-gray-600">{subHeading}</p>
-          <p className="text-base sm:text-lg mb-6 text-gray-600">{description}</p>
+          {description && <p className="text-base sm:text-lg mb-6 text-gray-600">{description}</p>}
           <div className="flex flex-wrap justify-start gap-4 mb-8">
             <button
               className="flex gap-2 items-center bg-black rounded-full text-white px-6 py-3 max-[420px]:text-xs text-sm"
@@ -90,17 +102,11 @@ const TextBlock: React.FC<SalesSectionProps> = ({
         </div>
 
         <div className="md:pb-10 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-64 sm:h-96">
-          <DotLottieReact
-            src={lottieUrl}
-            autoplay
-            loop
-            width={855}
-            height={844}
-          />
+          {MemoizedLottiePlayer}
         </div>
       </div>
     </section>
   );
 };
 
-export default TextBlock;
+export default React.memo(TextBlock);

@@ -7,6 +7,7 @@ import { Metadata } from "next";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 import VideoSection from "@/components/VideoSection";
 import RightArrow from "@/assets/svgs/right-arrow.svg"
+import Lottie from "../../public/LanderThree.json"
 
 export const metadata: Metadata = {
   title:
@@ -86,7 +87,7 @@ export default function Home() {
           ctaText={"Începeți proba gratuită"}
           secondaryCtaText={"Explorați ClientiDirect pentru vânzări"}
           testimonial={ThirdTestimonial}
-          lottieUrl="https://lottie.host/ade35443-289d-416d-98a7-12f616efb5bd/GxNxOf0TXi.json"
+          lottieUrl="./LanderThree.json"
           isReversed={false}
         />
       </div>

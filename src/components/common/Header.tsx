@@ -12,6 +12,7 @@ import logo from "../../assets/svgs/logo.svg";
 import Guides from "@/assets/images/navbar-img.webp";
 import ChevronDownIcon from "../../../public/svgs/chevron-down";
 import { usePathname } from "next/navigation";
+import SalesIcon from "@/assets/svgs/sales-icon.svg"
 
 export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -139,7 +140,7 @@ export default function Header() {
                     <Link href="/solutions/sales">
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
-                          src={AgenciesDropdown}
+                          src={SalesIcon}
                           alt="Pentru vânzări"
                           width={50}
                           height={50}
@@ -172,7 +173,7 @@ export default function Header() {
                     <Link href="/solutions/agency">
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
-                          src={marketingDropdown}
+                          src={AgenciesDropdown}
                           alt="Pentru agenții"
                           width={50}
                           height={50}
