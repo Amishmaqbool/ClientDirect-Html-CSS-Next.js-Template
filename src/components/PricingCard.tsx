@@ -27,9 +27,9 @@ export default function PricingCard() {
             </h3>
             <h1 className="font-bold text-[60px] text-center leading-[72px] text-[#000]">
               {isMonthly
-                ? `${selectedCompany.monthlyPrice.replace("/mo", "")}`
-                : `${selectedCompany.annualPrice.replace("/mo", "")}`}
-              <span className="font-semibold text-xl text-[#98a2b3]">/mo</span>
+                ? `${selectedCompany.monthlyPrice.replace("RON/lună", "")}`
+                : `${selectedCompany.annualPrice.replace("RON/lună", "")}`}
+              <span className="font-semibold text-xl text-[#98a2b3]">RON/lună</span>
             </h1>
             <p className="mb-8 font-semibold text-base text-center text-[#667085]">
               Pentru până la{" "}
@@ -39,13 +39,13 @@ export default function PricingCard() {
                 : selectedCompany.value.includes("+")
                 ? selectedCompany.value.split("+")[1]?.trim() ||
                   selectedCompany.value
-                : selectedCompany.value.toLowerCase().includes("up to")
+                : selectedCompany.value.toLowerCase().includes("până la")
                 ? selectedCompany.value
                     .toLowerCase()
-                    .split("up to")[1]
+                    .split("până la")[1]
                     ?.trim() || selectedCompany.value
-                : selectedCompany.value}{" "}
-              identificări unice
+                : selectedCompany.value}{" "} 
+               identificări unice
             </p>
 
             {data.map((item, index) => (
@@ -112,7 +112,7 @@ export default function PricingCard() {
                   {companiesData.map((item, index) => (
                     <div className="border-b border-white" key={index}>
                       <div
-                        className={`px-4 py-3 flex justify-between cursor-pointer rounded-full transition duration-200 ${
+                        className={`px-4 py-3 flex justify-between cursor-pointer max-[500px]:rounded-lg rounded-full transition duration-200 ${
                           selectedCompany === item
                             ? "bg-[#3257ff] text-white"
                             : ""
@@ -120,7 +120,7 @@ export default function PricingCard() {
                         onClick={() => handleSelectCompany(item)}
                       >
                         <p className="font-medium text-sm">{item.value}</p>
-                        <div className="flex gap-2 text-right">
+                        <div className="flex max-[500px]:flex-col-reverse flex-row gap-2 text-right">
                           {!isMonthly && (
                             <del
                               className={`text-sm ${

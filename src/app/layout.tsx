@@ -1,6 +1,6 @@
 "use client";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/common/Header";
@@ -41,12 +41,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [isFaqPage, setIsFaqPage] = useState<boolean | null>(null);
+  const [isFaqPage, setIsFaqPage] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
-  const isAuthPage = pathname === "/auth/login" || pathname === "/auth/register";
-  const isCustomerStoriesPage = pathname === '/customer-stories';
-  const isRedirectPage = pathname === '/redirect';
+
+  const isAuthPage =
+    pathname === "/auth/login" || pathname === "/auth/register";
+  const isCustomerStoriesPage = pathname === "/customer-stories";
+  const isRedirectPage = pathname === "/redirect";
 
   useEffect(() => {
     const token = localStorage.getItem("access_token");
@@ -54,7 +56,7 @@ export default function RootLayout({
     if (token && isAuthPage) {
       router.push("/");
     }
-  }, [pathname, isAuthPage, router]);
+  }, [isAuthPage, router]);
 
   useEffect(() => {
     if (pathname === "/faq" || pathname.startsWith("/articles/")) {
@@ -67,14 +69,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${soleil.variable} antialiased`}>
-        {isFaqPage ? <FaqHeader /> : <Header />}
-        <div className={`flex flex-col min-h-screen ${!isCustomerStoriesPage && !isRedirectPage ? 'bg-[#fcfcfd]' : ''}`}>
-          <div className={`flex-grow ${!isCustomerStoriesPage && !isRedirectPage ? 'pb-40' : ''}`}>
+        {!isAuthPage && (isFaqPage ? <FaqHeader /> : <Header />)}
+
+        <div
+          className={`flex flex-col min-h-screen ${
+            !isCustomerStoriesPage && !isRedirectPage ? "bg-[#fcfcfd]" : ""
+          }`}
+        >
+          <div
+            className={`flex-grow ${
+              !isCustomerStoriesPage && !isRedirectPage ? "pb-40" : ""
+            }`}
+          >
             {children}
           </div>
           <ToastContainer />
-          {isFaqPage ? <FaqFooter /> : <Footer />}
         </div>
+
+        {!isAuthPage && (isFaqPage ? <FaqFooter /> : <Footer />)}
+
         <ToastContainer />
       </body>
     </html>
