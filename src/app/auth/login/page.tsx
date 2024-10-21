@@ -23,7 +23,7 @@ function LoginContent() {
   const validateEmail = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email.trim()) {
-      setEmailError("Email is required.");
+      setEmailError("Email-ul este obligatoriu.");
     } else if (!emailRegex.test(email)) {
       setEmailError("Please enter a valid email address.");
     } else {
@@ -68,7 +68,7 @@ function LoginContent() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.message || "Failed to login");
+        throw new Error(errorData.message || "Autentificarea a eșuat");
       }
 
       // const data = await response.json();
@@ -130,10 +130,10 @@ function LoginContent() {
           <Image src={ClientiDirect} alt="ClientiDirect-Logo" width={48} height={48} />
           <div className="mt-6 flex flex-col text-center">
             <h2 className="text-3xl text-[#111827] font-bold leading-9 tracking-tight">
-              Welcome back
+              Bine ai revenit
             </h2>
             <p className="text-gray-500 mt-1 leading-8 text-[15px] font-normal">
-              Please enter your details.
+              Te rog să introduci detaliile tale.
             </p>
           </div>
         </div>
@@ -151,7 +151,7 @@ function LoginContent() {
         {emailError && <p className="text-sm text-red-500 pt-2">{emailError}</p>}
 
         <InputField
-          label="Password"
+          label="Parolă"
           value={password}
           name="password"
           type="password"
@@ -177,10 +177,10 @@ function LoginContent() {
               onChange={(e) => setRememberMe(e.target.checked)}
               className="text-gray-500"
             />
-            <p className="text-sm text-gray-500 leading-8">Remember Me</p>
+            <p className="text-sm text-gray-500 leading-8">Ține-mă minte</p>
           </label>
           <p className="text-blue-600 hover:text-blue-500 text-sm">
-            Forgot your password?
+            Ai uitat parola?
           </p>
         </div>
 
@@ -189,7 +189,7 @@ function LoginContent() {
           className="mt-[2px] border border-blue-700 bg-blue-600 align-middle py-2 font-medium text-sm w-full max-w-[350px] rounded-lg text-white cursor-pointer hover:bg-blue-700"
           disabled={loading}
         >
-          {loading ? "Signing in..." : "Sign in"}
+          {loading ? "Se conectează..." : "Conectare"}
         </button>
 
         <div className="flex items-center w-full max-w-[350px] my-4">
@@ -205,7 +205,7 @@ function LoginContent() {
           disabled={googleLoading}
         >
           {googleLoading ? (
-            "Redirecting..."
+            "Se redirecționează..."
           ) : (
             <>
               <Image
@@ -215,18 +215,18 @@ function LoginContent() {
                 height={20}
                 className="mr-2"
               />
-              Sign in with Google
-            </>
+             Înscrie-te cu Google
+          </>
           )}
         </button>
 
         <p className="text-center py-8 text-sm text-[#020817]">
-          No account yet?{" "}
+           Nu ai un cont încă?{" "}
           <a
             href="/auth/register"
             className="text-blue-600 hover:text-blue-500"
           >
-            Start your 14-day free trial
+            Începe proba gratuită de 14 zile
           </a>
         </p>
       </form>

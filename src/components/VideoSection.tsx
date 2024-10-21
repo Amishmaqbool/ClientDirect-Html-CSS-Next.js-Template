@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import PlayIcon from "@/assets/svgs/play-icon.svg";
-import Thumbnail from "@/assets/images/thumbnail.png";
+import Thumbnail from "../../public/subtitle.png";
 
 interface VideoModalProps {
   isOpen: boolean;
@@ -35,7 +35,7 @@ function VideoModal({
           onEnded={handlePause}
           autoPlay
         >
-          <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" />
+          <source src="./video.mp4" />
         </video>
       </div>
     </div>

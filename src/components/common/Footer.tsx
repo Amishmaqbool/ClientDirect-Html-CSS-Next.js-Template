@@ -5,31 +5,43 @@ import Image from "next/image";
 import Panel from "../Panel";
 import arrow from "@/assets/svgs/arrow.svg";
 //import LinkedinIcon from "@/assets/svgs/linkedin-icon.svg";
-import logo from "@/assets/svgs/logo.svg";
-import { usePathname } from 'next/navigation';
+import logo from "@/assets/svgs/header-logo-icon.svg";
+import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
-  const isRedirectPage = pathname === '/redirect';
+  const isRedirectPage = pathname === "/redirect";
   const route = useRouter();
 
-  const handleClick = () =>{
-    route.push('/auth/register');
-  }
-  
+  const handleClick = () => {
+    route.push("/auth/register");
+  };
+
   return (
     <>
       <Panel />
       <div className="bg-[#101726] relative">
-      <div className={`max-w-[1216px] max-lg:px-4 mx-auto pb-16 ${!isRedirectPage ? 'pt-[348px]' : 'pt-10'}  flex max-lg:flex-col justify-between max-sm:gap-16 gap-32`}>
+        <div
+          className={`max-w-[1216px] max-lg:px-4 mx-auto pb-16 ${
+            !isRedirectPage ? "pt-[348px]" : "pt-10"
+          }  flex max-lg:flex-col justify-between max-sm:gap-16 gap-32`}
+        >
           <div className="flex flex-col">
             <Link href="/">
-              <Image src={logo} height={35} width={125} alt="Logo" />
+              <div className="flex gap-3 items-center">
+                <Image src={logo} height={28} width={28} alt="Logo" />
+                <p className="pt-1 font-medium text-xl text-white">
+                  ClientiDirect
+                </p>
+              </div>
             </Link>
 
             <div>
-              <button className="w-max bg-[#ffffff1a] mt-8 max-[420px]:text-xs text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center" onClick={handleClick}>
+              <button
+                className="w-max bg-[#ffffff1a] mt-8 max-[420px]:text-xs text-sm text-white px-[14px] py-[7px] rounded-full hover:bg-gray-600 flex items-center"
+                onClick={handleClick}
+              >
                 Începe perioada de probă gratuită de 14 zile
                 <Image
                   src={arrow}
@@ -124,8 +136,10 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-10"></div>
         <div className="max-w-[1280px] mx-auto px-6 py-8 flex max-[500px]:flex-col justify-between items-center text-gray-400 text-sm">
           <p className="max-[500px]:text-center">
-            <Link className="underline" href="clientidirect.com">ClientiDirect.Com</Link>, toate
-            drepturile rezervate
+            <Link className="underline" href="clientidirect.com">
+              ClientiDirect.Com
+            </Link>
+            , toate drepturile rezervate
           </p>
         </div>
       </div>

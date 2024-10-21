@@ -53,7 +53,7 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   return (
     <section className="lg:py-12">
       <div
-        className={`max-w-[1280px] mx-auto p-4 flex ${
+        className={`max-w-[1280px] mx-auto p-4 flex max-lg:mt-10 ${
           isReversed
             ? "flex-col-reverse lg:flex-row-reverse"
             : "flex-col-reverse lg:flex-row"
@@ -105,7 +105,7 @@ const TextBlock: React.FC<SalesSectionProps> = ({
         </div>
 
         <div className="md:pb-10 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-64 sm:h-96">
-          <iframe src={lottieUrl} width={855} height={844}></iframe>
+          <iframe src={lottieUrl} width={594} height={481}></iframe>
           <Script
             src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
             strategy="lazyOnload"

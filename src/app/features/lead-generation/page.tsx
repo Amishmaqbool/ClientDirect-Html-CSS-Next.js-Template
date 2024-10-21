@@ -9,13 +9,15 @@ import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import { leadHeroData, reviews } from "@/constants/features/lead-generation";
 import RatingCards from "@/components/common/RatingCards";
 import Button from "@/components/common/Button";
-import LottieAnimation from "@/components/common/LottieAnimation";
+import Script from "next/script";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
+  title:
+    "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
   description:
-    "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",  metadataBase: new URL("https://clientidirect.com/"),
+    "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",
+  metadataBase: new URL("https://clientidirect.com/"),
 };
 
 export default function LeadGen() {
@@ -43,7 +45,7 @@ export default function LeadGen() {
         <div className="bacground-gradient-2">
           <div className="max-w-[1280px] mx-auto px-6 flex flex-col justify-center items-center">
             <div className="flex flex-col gap-16 max-md:gap-6 mb-24 pt-16 max-md:pt-14">
-              <div className="flex gap-20 max-lg:flex-col-reverse max-md:gap-12">
+              <div className="flex gap-20 max-lg:flex-col-reverse items-center max-md:gap-12">
                 <div className="w-1/2 max-lg:w-full pb-8 pt-9">
                   <h2 className="text-4xl leading-[44px] font-bold text-black">
                     Datele ClientiDirect sunt pur și simplu mai bune.
@@ -71,15 +73,16 @@ export default function LeadGen() {
                     buttonText="Începe perioada de probă gratuită de 14 zile"
                   />
                 </div>
-                <div className="w-1/2 max-lg:w-full max-lg:flex max-lg:justify-center">
-                  {/* <DotLottieReact
-                    src="https://lottie.host/b871977f-5b98-40d7-8a81-84feba62224a/yrwVnOrz2C.json"
-                    autoplay
-                    loop
-                    width={560}
-                    height={363}
-                  /> */}
-                <LottieAnimation src={"https://lottie.host/b871977f-5b98-40d7-8a81-84feba62224a/yrwVnOrz2C.json"} />
+                <div className="max-lg:px-6 max-lg:flex max-lg:justify-center">
+                  <iframe
+                    className="sm:w-[500px] sm:h-[302px]"
+                    src="https://lottie.host/embed/6e544615-5ce8-455f-9964-d2dcddf4a169/G3eIp2WLVh.lottie"
+                  ></iframe>
+                  <Script
+                    src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+                    strategy="lazyOnload"
+                    type="module"
+                  />
                 </div>
               </div>
 
