@@ -37,7 +37,6 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   testimonial,
   lottieUrl,
   isReversed = false,
-  route,
 }) => {
   const router = useRouter();
 

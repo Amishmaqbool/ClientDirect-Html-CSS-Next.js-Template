@@ -1,13 +1,10 @@
 import HeroSection from "@/components/home/HeroSection";
-// import Image from "next/image";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
 import IntegrationSection from "@/components/home/IntegrationsSection";
 import { Metadata } from "next";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 import VideoSection from "@/components/VideoSection";
-import RightArrow from "@/assets/svgs/right-arrow.svg";
-import Lottie from "../../public/LanderThree.json";
 import Button from "@/components/common/Button";
 
 export const metadata: Metadata = {
