@@ -2,8 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import RightArrow from "../../assets/svgs/right-arrow.svg";
+import Script from "next/script";
 
 interface Testimonial {
   quote: string;
@@ -105,15 +105,12 @@ const TextBlock: React.FC<SalesSectionProps> = ({
         </div>
 
         <div className="md:pb-10 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-64 sm:h-96">
-          <iframe
-            src={lottieUrl}
-            width={855}
-            height={844}
-          ></iframe>
-          <script
+          <iframe src={lottieUrl} width={855} height={844}></iframe>
+          <Script
             src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            strategy="lazyOnload"
             type="module"
-          ></script>
+          />
         </div>
       </div>
     </section>
