@@ -40,6 +40,8 @@ export default function Signup() {
           status: "active",
           language: "de",
           phone: phone,
+          company_name: companyName,
+          cui_company: companyVAT,
         }),
       });
 
@@ -49,7 +51,7 @@ export default function Signup() {
         throw new Error(errorMessage);
       }
 
-      router.push("/login");
+      router.push("/auth/login");
     } catch (err: unknown) {
       if (err instanceof Error) {
         toast.error(err.message, {
