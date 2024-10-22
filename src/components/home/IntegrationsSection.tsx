@@ -53,7 +53,7 @@ const IntegrationSection = () => {
               Integrari
             </div>
             <h2 className="text-center text-4xl font-bold tracking-[-1px] pt-10">
-              Stiva din Stack-ul tău
+            O mulțime de integrări
             </h2>
             <p className="text-[#7d89b0] text-lg text-center pt-5">
               Îmbogățiți campaniile și umpleți conductele de vânzări prin integrarea cu produsele pe care le cunoașteți și le iubiți. Cu peste 5.000 de aplicații deja disponibile, instrumentele preferate ale echipei tale sunt la doar un clic distanță.

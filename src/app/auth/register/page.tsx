@@ -5,23 +5,8 @@ import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import { useRouter } from "next/navigation";
-//import Linkedin from "@/assets/images/linked.webp";
-// import { Metadata } from "next";
-
-// export const metadata: Metadata = {
-//   title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
-// };
-
-interface Errors {
-  name?: string;
-  phone?: string;
-  email?: string;
-  password?: string;
-  confirmPassword?: string;
-  companyVAT?: string,
-  companyName?:string,
-  general?: string;
-}
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
@@ -31,71 +16,13 @@ export default function Signup() {
   const [phone, setPhone] = useState("");
   const [companyVAT, setCompanyVAT] = useState(""); 
   const [companyName, setCompanyName] = useState("");
-  const [errors, setErrors] = useState<Errors>({});
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-
-  const validateInputs = () => {
-    const newErrors: Errors = {};
-
-    if (!name.trim()) {
-      newErrors.name = "Numele este obligatoriu.";
-    }
-
-    const phoneRegex = /^\d{10,15}$/;
-    if (!phone.trim()) {
-      newErrors.phone = "Numărul de telefon este obligatoriu.";
-    } else if (!phoneRegex.test(phone)) {
-      newErrors.phone = "Numărul de telefon trebuie să aibă între 10 și 15 cifre.";
-    }
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email.trim()) {
-      newErrors.email = "Email-ul este obligatoriu.";
-    } else if (!emailRegex.test(email)) {
-      newErrors.email = "Email-ul este invalid.";
-    }
-
-    const alphanumericRegex = /^[a-zA-Z0-9 ]+$/;
-
-    if (!companyName.trim()) {
-      newErrors.companyName = "Numele firmei este obligatoriu.";
-    } else if (!alphanumericRegex.test(companyName)) {
-      newErrors.companyName = "Numele firmei trebuie să fie alfanumeric.";
-    }
-  
-    if (!companyVAT.trim()) {
-      newErrors.companyVAT = "CUI-ul firmei este obligatoriu.";
-    } else if (alphanumericRegex.test(companyVAT)) {
-      newErrors.companyVAT = "CUI-ul firmei trebuie să fie alfanumeric.";
-    }
-
-    if (!password) {
-      newErrors.password = "Parola este obligatorie.";
-    } else if (password.length < 8) {
-      newErrors.password = "Parola trebuie să aibă cel puțin 8 caractere.";
-    }
-
-    if (!confirmPassword) {
-      newErrors.confirmPassword = "Confirmarea parolei este obligatorie.";
-    } else if (password !== confirmPassword) {
-      newErrors.confirmPassword = "Parolele nu se potrivesc.";
-    }
-
-    return newErrors;
-  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const validationErrors = validateInputs();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-
     setLoading(true);
-    setErrors({});
 
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/register`, {
@@ -117,16 +44,35 @@ export default function Signup() {
       });
 
       if (!response.ok) {
-        throw new Error("Înregistrarea a eșuat");
+        const errorData = await response.json();
+        const errorMessage = errorData?.detail[0]?.msg || "Înregistrarea a eșuat";
+        throw new Error(errorMessage);
       }
 
-      // const data = await response.json();
-      router.push('/login');
+      router.push("/login");
     } catch (err: unknown) {
       if (err instanceof Error) {
-        setErrors((prev) => ({ ...prev, general: err.message }));
+        toast.error(err.message, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       } else {
-        setErrors((prev) => ({ ...prev, general: "Something went wrong" }));
+        toast.error("Something went wrong", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       }
     } finally {
       setLoading(false);
@@ -134,13 +80,13 @@ export default function Signup() {
   };
 
   const handleGoogleSignUp = async () => {
-    const redirectUrl = 'https://clientidirect.com/redirect';
+    const redirectUrl = "https://clientidirect.com/redirect";
     const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(redirectUrl)}`;
     try {
       const response = await fetch(googleAuthUrl, {
-        method: 'GET',
+        method: "GET",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
       });
 
@@ -149,18 +95,20 @@ export default function Signup() {
         if (data.authorization_url) {
           window.location.href = data.authorization_url;
         } else {
-          console.error('Authorization URL not found in the response');
+          console.error("Authorization URL not found in the response");
         }
       } else {
-        console.error('Error occurred during Google OAuth request:', response.statusText);
+        console.error("Error occurred during Google OAuth request:", response.statusText);
       }
     } catch (error) {
-      console.error('An error occurred:', error);
+      console.error("An error occurred:", error);
     }
   };
 
   return (
     <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center">
+      <ToastContainer />
+
       <form onSubmit={handleSubmit} className="max-w-[352px] mx-auto max-[400px]:px-6 py-12 w-full">
         <div className="flex flex-col justify-center items-center mb-4">
           <Image src={ClientiDirect} alt="ClientiDirect-Logo" width={48} height={48} />
@@ -181,7 +129,6 @@ export default function Signup() {
           type="text"
           onChange={(e) => setName(e.target.value)}
         />
-        {errors.name && <p className="text-sm text-red-500 pt-2">{errors.name}</p>}
 
         <InputField
           label="Telefon"
@@ -190,7 +137,6 @@ export default function Signup() {
           type="tel"
           onChange={(e) => setPhone(e.target.value)}
         />
-        {errors.phone && <p className="text-sm text-red-500 pt-2">{errors.phone}</p>}
 
         <InputField
           label="Email"
@@ -199,25 +145,22 @@ export default function Signup() {
           type="email"
           onChange={(e) => setEmail(e.target.value)}
         />
-        {errors.email && <p className="text-sm text-red-500 pt-2">{errors.email}</p>}
 
         <InputField
-        label="Nume Firma"
-        value={companyName}
-        name="companyName"
-        type="text"
-        onChange={(e) => setCompanyName(e.target.value)}
-      />
-      {errors.companyName && <p className="text-sm text-red-500 pt-2">{errors.companyName}</p>}
+          label="Nume Firma"
+          value={companyName}
+          name="companyName"
+          type="text"
+          onChange={(e) => setCompanyName(e.target.value)}
+        />
 
-      <InputField
-        label="CUI Firma"
-        value={companyVAT}
-        name="companyVAT"
-        type="text"
-        onChange={(e) => setCompanyVAT(e.target.value)}
-      />
-      {errors.companyVAT && <p className="text-sm text-red-500 pt-2">{errors.companyVAT}</p>}
+        <InputField
+          label="CUI Firma"
+          value={companyVAT}
+          name="companyVAT"
+          type="text"
+          onChange={(e) => setCompanyVAT(e.target.value)}
+        />
 
         <InputField
           label="Parolă"
@@ -226,7 +169,6 @@ export default function Signup() {
           type="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        {errors.password && <p className="text-sm text-red-500 pt-2">{errors.password}</p>}
 
         <InputField
           label="Confirmă parola"
@@ -235,9 +177,6 @@ export default function Signup() {
           name="confirmPassword"
           type="password"
         />
-        {errors.confirmPassword && <p className="text-sm text-red-500 pt-2">{errors.confirmPassword}</p>}
-
-        {errors.general && <p className="text-sm text-red-500 pt-2">{errors.general}</p>}
 
         <button
           type="submit"
@@ -245,7 +184,7 @@ export default function Signup() {
           disabled={loading}
         >
           {loading ? "Înregistrare..." : "Înregistrează-te"}
-          </button>
+        </button>
 
         <div className="flex items-center w-full max-w-[350px] my-4">
           <hr className="w-full border-gray-300" />
@@ -266,12 +205,12 @@ export default function Signup() {
             className="mr-2"
           />
           Înscrie-te cu Google
-          </button>
+        </button>
 
         <p className="text-center py-8 text-sm text-[#020817]">
           Ai deja un cont?{" "}
           <a href="/auth/login" className="text-blue-600 hover:text-blue-500">
-          Autentificare
+            Autentificare
           </a>
         </p>
       </form>
