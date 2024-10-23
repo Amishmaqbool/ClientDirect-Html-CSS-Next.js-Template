@@ -8,6 +8,16 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+interface ErrorState {
+  name?: string;
+  phone?: string;
+  email?: string;
+  companyName?: string;
+  companyVAT?: string;
+  password?: string;
+  confirmPassword?: string;
+}
+
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,11 +27,10 @@ export default function Signup() {
   const [companyVAT, setCompanyVAT] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState<any>({});
+  const [errors, setErrors] = useState<ErrorState>({});
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  // Display success toast if Google sign-up succeeds
   useEffect(() => {
     const success = searchParams.get("success");
     if (success === "true") {
@@ -39,12 +48,13 @@ export default function Signup() {
   }, [searchParams]);
 
   const validate = () => {
-    const newErrors: any = {};
+    const newErrors: ErrorState = {};
 
     if (!name) newErrors.name = "Numele este obligatoriu";
 
     if (!phone) newErrors.phone = "Numărul de telefon este obligatoriu";
-    else if (!/^\d{10}$/.test(phone)) newErrors.phone = "Numărul de telefon trebuie să conțină 10 cifre";
+    else if (!/^\d{10}$/.test(phone))
+      newErrors.phone = "Numărul de telefon trebuie să conțină 10 cifre";
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email) newErrors.email = "Email-ul este obligatoriu";
@@ -55,10 +65,13 @@ export default function Signup() {
     if (!companyVAT) newErrors.companyVAT = "CUI-ul companiei este obligatoriu";
 
     if (!password) newErrors.password = "Parola este obligatorie";
-    else if (password.length < 6) newErrors.password = "Parola trebuie să aibă cel puțin 6 caractere";
+    else if (password.length < 6)
+      newErrors.password = "Parola trebuie să aibă cel puțin 6 caractere";
 
-    if (!confirmPassword) newErrors.confirmPassword = "Confirmarea parolei este obligatorie";
-    else if (confirmPassword !== password) newErrors.confirmPassword = "Parolele nu se potrivesc";
+    if (!confirmPassword)
+      newErrors.confirmPassword = "Confirmarea parolei este obligatorie";
+    else if (confirmPassword !== password)
+      newErrors.confirmPassword = "Parolele nu se potrivesc";
 
     setErrors(newErrors);
 
@@ -73,25 +86,28 @@ export default function Signup() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/register`, {
-        method: "POST",
-        headers: {
-          accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          password: password,
-          firstname: name.split(" ")[0],
-          lastname: name.split(" ")[1] || "",
-          user_type: "tenant",
-          status: "active",
-          language: "de",
-          phone: phone,
-          company_name: companyName,
-          cui_company: companyVAT,
-        }),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/register`,
+        {
+          method: "POST",
+          headers: {
+            accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            password: password,
+            firstname: name.split(" ")[0],
+            lastname: name.split(" ")[1] || "",
+            user_type: "tenant",
+            status: "active",
+            language: "de",
+            phone: phone,
+            company_name: companyName,
+            cui_company: companyVAT,
+          }),
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
@@ -142,7 +158,9 @@ export default function Signup() {
 
   const handleGoogleSignUp = async () => {
     const redirectUrl = "https://clientidirect.com/redirect";
-    const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(redirectUrl)}`;
+    const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(
+      redirectUrl
+    )}`;
     try {
       const response = await fetch(googleAuthUrl, {
         method: "GET",
@@ -198,9 +216,17 @@ export default function Signup() {
     <div className="max-w-[1200px] mx-auto flex flex-col justify-center items-center">
       <ToastContainer />
 
-      <form onSubmit={handleSubmit} className="max-w-[352px] mx-auto max-[400px]:px-6 py-12 w-full">
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-[352px] mx-auto max-[400px]:px-6 py-12 w-full"
+      >
         <div className="flex flex-col justify-center items-center mb-4">
-          <Image src={ClientiDirect} alt="ClientiDirect-Logo" width={48} height={48} />
+          <Image
+            src={ClientiDirect}
+            alt="ClientiDirect-Logo"
+            width={48}
+            height={48}
+          />
           <div className="mt-6 flex flex-col text-center">
             <h2 className="text-3xl text-[#111827] font-bold leading-9 tracking-tight">
               Creează un cont
@@ -293,13 +319,7 @@ export default function Signup() {
           onClick={handleGoogleSignUp}
           className="border border-gray-300 w-full max-w-[350px] py-2 font-medium text-sm text-gray-700 rounded-md flex items-center justify-center mb-3 hover:bg-gray-100"
         >
-          <Image
-            src={Google}
-            alt="Google"
-            width={20}
-            height={20}
-            className="mr-2"
-          />
+          <Image src={Google} alt="Google" width={20} height={20} className="mr-2" />
           Înscrie-te cu Google
         </button>
 

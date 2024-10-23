@@ -9,15 +9,14 @@ import GoogleAnalytics from "@/assets/svgs/google-analytics-dropdown.svg";
 import IdentifyDropdown from "@/assets/svgs/identify-dropdown-icon.svg";
 import AgenciesDropdown from "@/assets/svgs/agencies-dropdown.svg";
 import logo from "../../assets/svgs/header-logo-icon.svg";
-import Guides from "@/assets/images/navbar-img.webp";
 import ChevronDownIcon from "../../../public/svgs/chevron-down";
 import SalesIcon from "@/assets/svgs/sales-icon.svg";
 
 export default function Header() {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleDropdown = (dropdownName : any) => {
+  const toggleDropdown = (dropdownName : string) => {
     setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName));
   };
 

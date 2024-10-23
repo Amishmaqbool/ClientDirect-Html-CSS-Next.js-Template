@@ -19,7 +19,7 @@ const cardsData: CardData[] = [
     title: "Pentru vânzări",
     description:
       "Descoperiți, calificați și prioritizați clienții potențiali cu intenții ridicate cu notificări în timp real și învingeți concurența până la urmă.",
-    linkText: "Umpleți conducta",
+    linkText: "Mai multe vânzări",
     linkUrl: "/solutions/sales",
     gradient: "#926ae5",
   },
