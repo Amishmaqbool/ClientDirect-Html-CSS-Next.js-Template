@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import MessageIcon from "../../assets/svgs/message-icon.svg";
 import React, { useState, useEffect } from "react";
 
@@ -81,12 +82,14 @@ const FAQ: React.FC<FAQProps> = ({ faqList }) => {
         <p className="mt-[8px] mb-[32px] text-[#475467] max-w-[790px] leading-[28px] text-[18px]">
           Nu găsești răspunsul pe care îl cauți? Trimite-ne un mesaj.
         </p>
+        <Link href="/auth/register">
         <div className="flex justify-center">
           <button className="faq-chat-button px-[20px] text-[14px] py-[12px] bg-black text-white rounded-full h-fit flex gap-2 justify-center items-center">
             <Image src={MessageIcon} alt="Message Icon" />
             <p>Începe un chat</p>
           </button>
         </div>
+        </Link>
       </div>
     </div>
   );
