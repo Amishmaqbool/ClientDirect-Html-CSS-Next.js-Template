@@ -20,7 +20,7 @@ const cardsData: CardData[] = [
     description:
       "Descoperiți, calificați și prioritizați clienții potențiali cu intenții ridicate cu notificări în timp real și învingeți concurența până la urmă.",
     linkText: "Umpleți conducta",
-    linkUrl: "/",
+    linkUrl: "/solutions/sales",
     gradient: "#926ae5",
   },
   {
@@ -28,7 +28,7 @@ const cardsData: CardData[] = [
     description:
       "Concentrați-vă pe conturi, nu pe indivizi. Vedeți ce vă implică publicul țintă, personalizați călătoriile pe site și îmbunătățiți redirecționarea.",
     linkText: "Generați mai multe conversii",
-    linkUrl: "/",
+    linkUrl: "/solutions/marketing",
     gradient: "#3189e3",
   },
   {
@@ -36,7 +36,7 @@ const cardsData: CardData[] = [
     description:
       "Obțineți informații mai devreme, adăugați fluxuri de venituri și generați clienți potențiali mai calificați pentru clienții dvs. cu soluția noastră cu etichetă albă.",
     linkText: "Creșteți rentabilitatea investiției clientului",
-    linkUrl: "/",
+    linkUrl: "/solutions/agency",
     gradient: "#44cfe6",
   },
 ];

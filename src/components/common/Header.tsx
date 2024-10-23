@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Bars3Icon } from "@heroicons/react/24/solid";
@@ -11,31 +11,21 @@ import AgenciesDropdown from "@/assets/svgs/agencies-dropdown.svg";
 import logo from "../../assets/svgs/header-logo-icon.svg";
 import Guides from "@/assets/images/navbar-img.webp";
 import ChevronDownIcon from "../../../public/svgs/chevron-down";
-import { usePathname } from "next/navigation";
 import SalesIcon from "@/assets/svgs/sales-icon.svg";
 
 export default function Header() {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
 
-  useEffect(() => {
-    setOpenDropdown(null);
+  const toggleDropdown = (dropdownName : any) => {
+    setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName));
+  };
+
+  const handleMenuItemClick = () => {
     setIsMobileMenuOpen(false);
-  }, [pathname]);
+    setOpenDropdown(null);
+  };
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as Element;
-      if (!target.closest(".dropdown")) {
-        setOpenDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
   return (
     <header
       className="backdrop-blur-md sticky top-0 w-full z-[9999]"
@@ -46,7 +36,9 @@ export default function Header() {
           <Link href="/">
             <div className="flex gap-3 items-center">
               <Image src={logo} height={28} width={28} alt="Logo" />
-              <p className="pt-1 font-semibold text-xl text-white">ClientiDirect</p>
+              <p className="pt-1 font-semibold text-xl text-white">
+                ClientiDirect
+              </p>
             </div>
           </Link>
         </div>
@@ -54,11 +46,7 @@ export default function Header() {
           <ul className="flex gap-x-[37px] text-white text-sm">
             <li className="relative flex items-center dropdown">
               <button
-                onClick={() =>
-                  setOpenDropdown(
-                    openDropdown === "products" ? null : "products"
-                  )
-                }
+                onClick={() => toggleDropdown("products")}
                 className="hover:text-gray-300 font-bold flex gap-2 items-center"
               >
                 <p>Produse</p>
@@ -68,11 +56,12 @@ export default function Header() {
                 <div className="absolute top-5 left-1/2 transform -translate-x-1/2 mt-2 p-5 rounded-[14px] shadow-lg w-[350px] border border-[#ffffff26] bg-[#070b18]">
                   <ul>
                     <li className="flex items-center p-2 hover:opacity-80 cursor-pointer rounded-lg">
-                      <Link href="/features/lead-generation" passHref>
+                      <Link href="/features/lead-generation" passHref onClick={() => setOpenDropdown(null)}>
                         <div className="flex items-start">
                           <Image
                             src={IdentifyDropdown}
                             alt="Identifică"
+                            loading="lazy"
                             width={50}
                             height={50}
                           />
@@ -86,11 +75,12 @@ export default function Header() {
                         </div>
                       </Link>
                     </li>
-                    <Link href="/features/google-analytics">
+                    <Link href="/features/google-analytics" onClick={() => setOpenDropdown(null)}>
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={GoogleAnalytics}
                           alt="Google Analytics"
+                          loading="lazy"
                           width={50}
                           height={50}
                         />
@@ -105,33 +95,13 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    {/* <Link href="/features/real-time-identification-api">
-                      <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
-                        <Image
-                          src={IdentifyDropdown}
-                          alt="Spotter"
-                          width={40}
-                          height={40}
-                        />
-                        <div className="ml-4">
-                          <p className="font-semibold">Spotter</p>
-                          <p className="text-sm text-gray-400 pt-2">
-                            API pentru identificarea vizitatorilor în timp real.
-                          </p>
-                        </div>
-                      </li>
-                    </Link> */}
                   </ul>
                 </div>
               )}
             </li>
             <li className="relative flex items-center dropdown">
               <button
-                onClick={() =>
-                  setOpenDropdown(
-                    openDropdown === "solutions" ? null : "solutions"
-                  )
-                }
+                onClick={() => toggleDropdown("solutions")}
                 className="hover:text-gray-300 font-bold flex gap-2 items-center"
               >
                 <p>Soluții</p>
@@ -140,11 +110,12 @@ export default function Header() {
               {openDropdown === "solutions" && (
                 <div className="absolute top-4 left-1/2 transform -translate-x-1/2 mt-2 p-5 rounded-[14px] shadow-lg w-[350px] border border-[#ffffff26] bg-[#070b18]">
                   <ul>
-                    <Link href="/solutions/sales">
+                    <Link href="/solutions/sales" onClick={() => setOpenDropdown(null)}>
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={SalesIcon}
                           alt="Pentru vânzări"
+                          loading="lazy"
                           width={50}
                           height={50}
                         />
@@ -157,10 +128,11 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    <Link href="/solutions/marketing">
+                    <Link href="/solutions/marketing" onClick={() => setOpenDropdown(null)}>
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={marketingDropdown}
+                          loading="lazy"
                           alt="Pentru marketing"
                           width={50}
                           height={50}
@@ -173,7 +145,7 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    <Link href="/solutions/agency">
+                    <Link href="/solutions/agency" onClick={() => setOpenDropdown(null)}>
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={AgenciesDropdown}
@@ -194,80 +166,6 @@ export default function Header() {
                 </div>
               )}
             </li>
-            {/* <li className="relative flex items-center dropdown">
-              <button
-                onClick={() =>
-                  setOpenDropdown(
-                    openDropdown === "resources" ? null : "resources"
-                  )
-                }
-                className="hover:text-gray-300 font-bold flex gap-2 items-center"
-              >
-                <p>Resurse</p>
-                <ChevronDownIcon />
-              </button>
-              {openDropdown === "resources" && (
-                <div className="absolute top-3 left-1/2 transform -translate-x-1/2 mt-4 p-3 pb-8 rounded-[14px] shadow-lg w-[280px] border border-[#ffffff26] bg-[#070b18]">
-                  <ul>
-                    <Link href="/">
-                      <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-5">
-                        <div className="ml-3">
-                          <p className="font-semibold text-base">
-                            Centru de ajutor
-                          </p>
-                          <p className="text-sm text-gray-400 pt-2">
-                            Sfaturi, bune practici și răspunsuri de la echipa
-                            ClientiDirect.
-                          </p>
-                        </div>
-                      </li>
-                    </Link>
-                    <Link href="/customer-stories">
-                      <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-7">
-                        <div className="ml-3">
-                          <p className="font-semibold text-base">
-                            Povești ale clienților
-                          </p>
-                          <p className="text-sm text-gray-400 pt-2">
-                            Află cum afaceri similare cu a ta folosesc ClientiDirect
-                            pentru a identifica, angaja și obține noi clienți.
-                          </p>
-                        </div>
-                      </li>
-                    </Link>
-                    <Link href="/blueprint/b2b-marketing-blueprint">
-                      <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-7">
-                        <div className="ml-3">
-                          <p className="font-semibold text-base">
-                            Planul de marketing B2B
-                          </p>
-                          <p className="text-sm text-gray-400 pt-2">
-                            Module tactice pentru creșterea marketingului B2B,
-                            bazate pe cele mai bune practici din industrie.
-                          </p>
-                        </div>
-                      </li>
-                    </Link>
-                    <Link href="/">
-                      <li className="flex items-center hover:opacity-80 cursor-pointer rounded-lg pt-7">
-                        <div className="ml-3">
-                          <p className="font-semibold text-base">Ghiduri</p>
-                          <div className="pt-2">
-                            <Image
-                              src={Guides}
-                              alt="Ghiduri Img"
-                              width={232}
-                              height={116}
-                              className="rounded-lg"
-                            />
-                          </div>
-                        </div>
-                      </li>
-                    </Link>
-                  </ul>
-                </div>
-              )}
-            </li> */}
             <li>
               <a href="/pricing" className="hover:text-gray-300 font-bold">
                 Prețuri
@@ -302,116 +200,71 @@ export default function Header() {
             : "max-h-0 opacity-0 scale-y-0"
         }`}
       >
-        <ul className="px-6 py-4 space-y-4 text-white text-sm">
+        <ul className="px-6 py-8 space-y-4 text-white text-sm">
           <li>
             <button
-              onClick={() =>
-                setOpenDropdown(openDropdown === "products" ? null : "products")
-              }
               className="w-full text-left flex items-center font-medium"
+              onClick={() => toggleDropdown("products")}
             >
               Produse
               <ChevronDownIcon />
             </button>
             {openDropdown === "products" && (
-              <ul className="py-4 space-y-2 text-gray-300">
-                <Link href="/features/lead-generation">
+              <ul className="py-2 space-y-2 text-gray-300">
+                <Link href="/features/lead-generation" onClick={handleMenuItemClick}>
                   <li className="pt-2">
                     <p className="text-base">Identifică</p>
                   </li>
                 </Link>
-                <Link href="/features/google-analytics">
+                <Link href="/features/google-analytics" onClick={handleMenuItemClick}>
                   <li className="pt-2">
                     <p className="text-base">Îmbogățitor Google Analytics</p>
                   </li>
                 </Link>
-                {/* <Link href="/features/real-time-identification-api">
-                  <li className="pt-2">
-                    <p className="text-base">Spotter</p>
-                  </li>
-                </Link> */}
               </ul>
             )}
           </li>
           <li>
             <button
-              onClick={() =>
-                setOpenDropdown(
-                  openDropdown === "solutions" ? null : "solutions"
-                )
-              }
               className="w-full text-left flex items-center font-semibold"
+              onClick={() => toggleDropdown("solutions")}
             >
               Soluții
               <ChevronDownIcon />
             </button>
             {openDropdown === "solutions" && (
-              <ul className="py-4 space-y-2 text-gray-300">
-                <li className="pt-2">
-                  <p className="text-base">Pentru vânzări</p>
-                </li>
-                <li className="pt-2">
-                  <p className="text-base">Pentru marketing</p>
-                </li>
-                <li className="flex items-start pt-2">
-                  <p className="text-base">Pentru agenții</p>
-                </li>
+              <ul className="py-2 space-y-2 text-gray-300">
+                <Link href="/solutions/sales" onClick={handleMenuItemClick}>
+                  <li className="pt-2">
+                    <p className="text-base">Pentru vânzări</p>
+                  </li>
+                </Link>
+                <Link href="/solutions/marketing" onClick={handleMenuItemClick}>
+                  <li className="pt-2">
+                    <p className="text-base">Pentru marketing</p>
+                  </li>
+                </Link>
+                <Link href="/solutions/agency" onClick={handleMenuItemClick}>
+                  <li className="pt-2">
+                    <p className="text-base">Pentru agenții</p>
+                  </li>
+                </Link>
               </ul>
             )}
           </li>
           <li>
-            <button
-              onClick={() =>
-                setOpenDropdown(
-                  openDropdown === "resources" ? null : "resources"
-                )
-              }
-              className="w-full text-left flex items-center font-semibold"
-            >
-              Resurse
-              <ChevronDownIcon />
-            </button>
-            {openDropdown === "resources" && (
-              <ul className="py-4 space-y-2 text-gray-300">
-                <li className="pt-2">
-                  <p className="text-base">Centru de ajutor</p>
-                </li>
-                <li className="pt-2">
-                  <p className="text-base">Povești ale clienților</p>
-                </li>
-                <li className="flex pt-2">
-                  <p className="text-base">Planul de marketing B2B</p>
-                </li>
-                <li className="flex items-start pt-2">
-                  <div className="">
-                    <p className="text-base">Ghiduri</p>
-                    <div className="pt-2">
-                      <Image
-                        src={Guides}
-                        alt="Ghiduri Img"
-                        width={232}
-                        height={116}
-                        className="rounded-lg"
-                      />
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            )}
-          </li>
-          <li>
-            <a href="#" className="font-medium block">
+            <a href="/pricing" className="font-medium block" onClick={handleMenuItemClick}>
               Prețuri
             </a>
           </li>
           <li className="flex items-center gap-4 mt-4 pt-4">
-            <Link href="/auth/register">
+            <Link href="/auth/register" onClick={handleMenuItemClick}>
               <button className="rounded-full bg-[#3257ff] py-[7px] pl-5 pr-3 flex items-center gap-1 hover:bg-blue-600">
                 Începe acum
                 <ChevronRightIcon className="h-5 w-5" />
               </button>
             </Link>
-            <Link href="/auth/login">
+            <Link href="/auth/login" onClick={handleMenuItemClick}>
               <button className="font-semibold">Autentificare</button>
             </Link>
           </li>

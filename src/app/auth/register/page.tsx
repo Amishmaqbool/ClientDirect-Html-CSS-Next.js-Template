@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,13 +14,61 @@ export default function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [companyVAT, setCompanyVAT] = useState(""); 
+  const [companyVAT, setCompanyVAT] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState<any>({});
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Display success toast if Google sign-up succeeds
+  useEffect(() => {
+    const success = searchParams.get("success");
+    if (success === "true") {
+      toast.success("Înregistrarea cu Google a avut succes!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
+  }, [searchParams]);
+
+  const validate = () => {
+    const newErrors: any = {};
+
+    if (!name) newErrors.name = "Numele este obligatoriu";
+
+    if (!phone) newErrors.phone = "Numărul de telefon este obligatoriu";
+    else if (!/^\d{10}$/.test(phone)) newErrors.phone = "Numărul de telefon trebuie să conțină 10 cifre";
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) newErrors.email = "Email-ul este obligatoriu";
+    else if (!emailRegex.test(email)) newErrors.email = "Email-ul nu este valid";
+
+    if (!companyName) newErrors.companyName = "Numele companiei este obligatoriu";
+
+    if (!companyVAT) newErrors.companyVAT = "CUI-ul companiei este obligatoriu";
+
+    if (!password) newErrors.password = "Parola este obligatorie";
+    else if (password.length < 6) newErrors.password = "Parola trebuie să aibă cel puțin 6 caractere";
+
+    if (!confirmPassword) newErrors.confirmPassword = "Confirmarea parolei este obligatorie";
+    else if (confirmPassword !== password) newErrors.confirmPassword = "Parolele nu se potrivesc";
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!validate()) return;
 
     setLoading(true);
 
@@ -50,6 +98,17 @@ export default function Signup() {
         const errorMessage = errorData?.detail[0]?.msg || "Înregistrarea a eșuat";
         throw new Error(errorMessage);
       }
+
+      toast.success("Înregistrarea a avut succes!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
 
       router.push("/auth/login");
     } catch (err: unknown) {
@@ -98,12 +157,40 @@ export default function Signup() {
           window.location.href = data.authorization_url;
         } else {
           console.error("Authorization URL not found in the response");
+          toast.error("Google sign-up URL missing", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
         }
       } else {
-        console.error("Error occurred during Google OAuth request:", response.statusText);
+        toast.error("Error during Google authentication", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
       }
     } catch (error) {
-      console.error("An error occurred:", error);
+      toast.error("An error occurred during Google sign-up", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     }
   };
 
@@ -130,6 +217,7 @@ export default function Signup() {
           name="name"
           type="text"
           onChange={(e) => setName(e.target.value)}
+          error={errors.name}
         />
 
         <InputField
@@ -138,6 +226,7 @@ export default function Signup() {
           name="phone"
           type="tel"
           onChange={(e) => setPhone(e.target.value)}
+          error={errors.phone}
         />
 
         <InputField
@@ -146,6 +235,7 @@ export default function Signup() {
           name="email"
           type="email"
           onChange={(e) => setEmail(e.target.value)}
+          error={errors.email}
         />
 
         <InputField
@@ -154,6 +244,7 @@ export default function Signup() {
           name="companyName"
           type="text"
           onChange={(e) => setCompanyName(e.target.value)}
+          error={errors.companyName}
         />
 
         <InputField
@@ -162,6 +253,7 @@ export default function Signup() {
           name="companyVAT"
           type="text"
           onChange={(e) => setCompanyVAT(e.target.value)}
+          error={errors.companyVAT}
         />
 
         <InputField
@@ -170,6 +262,7 @@ export default function Signup() {
           name="password"
           type="password"
           onChange={(e) => setPassword(e.target.value)}
+          error={errors.password}
         />
 
         <InputField
@@ -178,6 +271,7 @@ export default function Signup() {
           onChange={(e) => setConfirmPassword(e.target.value)}
           name="confirmPassword"
           type="password"
+          error={errors.confirmPassword}
         />
 
         <button

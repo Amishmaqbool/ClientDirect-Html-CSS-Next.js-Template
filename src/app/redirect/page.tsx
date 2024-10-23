@@ -1,44 +1,68 @@
 "use client";
-import React, {useEffect , Suspense} from "react";
+import React, { useEffect, Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import {ClipLoader} from 'react-spinners';
-//import { time } from "console";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function RedirectAfter() {
-    const searchParams = useSearchParams();
-    const router = useRouter();
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const [redirectMessage, setRedirectMessage] = useState(
+    "Processing your request..."
+  );
 
-    useEffect(() => {
-        const params = searchParams.toString();
-        console.log("this is params");
-        if (params) {
-            localStorage.setItem("access_token", params);
-        }
-        const timer = setTimeout(() => {
-        router.push("/"); 
-        }, 3000); 
+  useEffect(() => {
+    const params = searchParams.toString();
+    const token = searchParams.get("access_token");
+    console.log("this is params:", params);
 
-    return () => clearTimeout(timer);
-  });
+    if (token) {
+      localStorage.setItem("access_token", token);
+      toast.success("Successfully registered with Google!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
 
-    return(
+      setRedirectMessage(
+        "You will be redirected to the homepage in a while..."
+      );
+
+      const timer = setTimeout(() => {
+        router.push("/");
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    } else {
+      setRedirectMessage("Login failed. Redirecting to registration page...");
+
+      const timer = setTimeout(() => {
+        router.push("/auth/register");
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [searchParams, router]);
+
+  return (
     <>
-    <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto pb-24">
-          <ClipLoader className="mt-8"
-            color={"#111827"} 
-            loading={true}
-            size={40} 
-          />
-    </div>
+      <ToastContainer />
+      <div className="h-screen flex flex-col justify-center items-center mx-auto">
+        <p className="text-lg">{redirectMessage}</p>
+      </div>
     </>
-    );
+  );
 }
 
 export default function Redirect() {
-    return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <RedirectAfter />
-      </Suspense>
-    );
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RedirectAfter />
+    </Suspense>
+  );
 }

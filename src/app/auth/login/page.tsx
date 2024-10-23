@@ -5,11 +5,8 @@ import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
 import Google from "@/assets/images/google.webp";
 import { useRouter } from "next/navigation";
-// import { Metadata } from "next";
-
-// export const metadata: Metadata = {
-//   title: "ClientiDirect | Identificarea vizitatorilor pentru agenții | Probă gratuită",
-// };
+import { toast, ToastContainer } from 'react-toastify';  // Import toastify
+import 'react-toastify/dist/ReactToastify.css';          // Import styles
 
 function LoginContent() {
   const [email, setEmail] = useState("");
@@ -20,22 +17,28 @@ function LoginContent() {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const router = useRouter();
-  const validateEmail = () => {
+
+  const validateEmail = (): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email.trim()) {
       setEmailError("Email-ul este obligatoriu.");
+      return false;
     } else if (!emailRegex.test(email)) {
       setEmailError("Please enter a valid email address.");
+      return false;
     } else {
       setEmailError("");
+      return true;
     }
   };
 
-  const validatePassword = () => {
+  const validatePassword = (): boolean => {
     if (!password.trim()) {
       setPasswordError("Password is required.");
+      return false;
     } else {
       setPasswordError("");
+      return true;
     }
   };
 
@@ -43,10 +46,10 @@ function LoginContent() {
     e.preventDefault();
     setLoading(true);
 
-    validateEmail();
-    validatePassword();
+    const isEmailValid = validateEmail();
+    const isPasswordValid = validatePassword();
 
-    if (emailError || passwordError) {
+    if (!isEmailValid || !isPasswordValid) {
       setLoading(false);
       return;
     }
@@ -66,18 +69,25 @@ function LoginContent() {
         }
       );
 
-      if (!response.ok) {
+      if (response.ok) {
+        const data = await response.json();
+
+        if (data && data.access_token) {
+          localStorage.setItem('token', data.access_token);
+          toast.success('Login successful! Redirecting...');
+          router.push('/');
+        } else {
+          throw new Error("Authentication failed. Please check your credentials.");
+        }
+      } else {
         const errorData = await response.json();
         throw new Error(errorData.message || "Autentificarea a eșuat");
       }
-
-      // const data = await response.json();
-      router.push('/');
     } catch (err: unknown) {
       if (err instanceof Error) {
-        console.error(err.message);
+        toast.error(err.message);
       } else {
-        console.error("Something went wrong");
+        toast.error("Something went wrong. Please try again.");
       }
     } finally {
       setLoading(false);
@@ -114,9 +124,9 @@ function LoginContent() {
       }
     } catch (err: unknown) {
       if (err instanceof Error) {
-        console.error(err.message);
+        toast.error(err.message); // Error toast
       } else {
-        console.error("Something went wrong");
+        toast.error("Something went wrong"); // General error toast
       }
     } finally {
       setGoogleLoading(false);
@@ -125,6 +135,7 @@ function LoginContent() {
 
   return (
     <div className="max-w-[352px] mx-auto">
+      <ToastContainer /> {/* Add ToastContainer for displaying toasts */}
       <form onSubmit={handleSubmit} className="max-[400px]:px-6 py-12 w-full">
         <div className="flex flex-col justify-center items-center mb-4">
           <Image src={ClientiDirect} alt="ClientiDirect-Logo" width={48} height={48} />

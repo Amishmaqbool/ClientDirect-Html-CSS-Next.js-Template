@@ -23,7 +23,7 @@ export default function Footer() {
       <Panel />
       <div className="bg-[#101726] relative">
         <div
-          className={`max-w-[1216px] max-lg:px-4 mx-auto pb-16 ${
+          className={`max-w-[1280px] px-6 mx-auto pb-16 ${
             !isRedirectPage ? "pt-[348px]" : "pt-10"
           }  flex max-lg:flex-col justify-between max-sm:gap-16 gap-32`}
         >
@@ -54,7 +54,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid max-lg:gap-y-8 max-lg:place-content-between sm:grid-cols-2 md:grid-cols-4 sm:gap-x-28 md:gap-x-5 text-white text-sm">
+          <div className="flex flex-col sm:flex-row lg:justify-between flex-wrap max-lg:gap-y-8 sm:gap-x-28 lg:gap-x-8 text-white text-sm">
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Produs</p>
               <ul className="space-y-3">
@@ -120,13 +120,13 @@ export default function Footer() {
                 <Link href="/terms-conditions">
                   <li className="cursor-pointer">Termeni și condiții</li>
                 </Link>
+                <Link href="/faq">
+                  <li className="pt-3 cursor-pointer">FAQ</li>
+                </Link>
                 <Link href="/privacy-policy">
                   <li className="pt-3 cursor-pointer">
                     Politica de confidențialitate
                   </li>
-                </Link>
-                <Link href="#">
-                  <li className="pt-3 cursor-pointer">Securitate</li>
                 </Link>
               </ul>
             </div>
@@ -136,7 +136,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 mt-10"></div>
         <div className="max-w-[1280px] mx-auto px-6 py-8 flex max-[500px]:flex-col justify-between items-center text-gray-400 text-sm">
           <p className="max-[500px]:text-center">
-            <Link className="underline" href="clientidirect.com">
+            <Link className="underline" href="/">
               ClientiDirect.Com
             </Link>
             , toate drepturile rezervate
