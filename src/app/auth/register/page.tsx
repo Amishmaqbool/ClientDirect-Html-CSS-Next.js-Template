@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
@@ -18,7 +18,7 @@ interface ErrorState {
   confirmPassword?: string;
 }
 
-export default function Signup() {
+function SignupForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -198,7 +198,7 @@ export default function Signup() {
           theme: "colored",
         });
       }
-    } catch (error) {
+    } catch {
       toast.error("An error occurred during Google sign-up", {
         position: "top-right",
         autoClose: 5000,
@@ -331,5 +331,13 @@ export default function Signup() {
         </p>
       </form>
     </div>
+  );
+}
+
+export default function Signup() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SignupForm />
+    </Suspense>
   );
 }
