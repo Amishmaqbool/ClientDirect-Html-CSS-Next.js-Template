@@ -178,7 +178,7 @@ function SignupForm() {
   };
 
   const handleGoogleSignUp = async () => {
-    const redirectUrl = "http://localhost:3000";
+    const redirectUrl = "https://clientidirect.com";
     const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(
       redirectUrl
     )}`;

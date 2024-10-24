@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/home/HeroSection";
 import TextBlock from "@/components/common/TextBlock";
 import gradientPurple from "@/assets/images/img-second-leadgen.webp";
@@ -6,7 +7,11 @@ import { Metadata } from "next";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 import VideoSection from "@/components/VideoSection";
 import Button from "@/components/common/Button";
-import TokenToaster from "@/components/TokenToaster";
+
+// Dynamically import the TokenToaster so it only renders on the client
+const TokenToaster = dynamic(() => import("@/components/TokenToaster"), {
+  ssr: false, // Ensure this only renders on the client
+});
 
 export const metadata: Metadata = {
   title:
@@ -15,13 +20,16 @@ export const metadata: Metadata = {
     "Oferiți clienților dvs. o soluție puternică de identificare a vizitatorilor cu etichetă albă cu ClientiDirect. Creșteți veniturile, generați lead-uri și susțineți serviciile existente.",
   metadataBase: new URL("https://clientidirect.com/"),
 };
-export default function Home() {
+
+
+export default function Home({ token } : any) {
   const mainHeading =
     "Oferă vânzărilor avantajul pentru a găsi și a încheia mai multe oferte";
   const subHeading =
     "Primiți notificări atunci când companiile țintă vă vizitează site-ul web și vedeți ce le interesează. Ajutați echipele să înceapă și să țină conversații mai relevante pe parcursul ciclului de vânzări.";
   const ctaText = "Începeți proba gratuită";
   const secondaryCtaText = "Explorați ClientiDirect pentru vânzări";
+
   const FirstTestimonial = {
     quote:
       "Recomand în mod constant ClientiDirect - în testarea noastră, ei nu numai că au adunat informații despre un număr mai mare de clienți potențiali decât concurenții săi, dar au avut și informații mai detaliate despre acești clienți potențiali.",
@@ -45,7 +53,8 @@ export default function Home() {
 
   return (
     <>
-    <TokenToaster />
+      {/* Pass the token to the TokenToaster component */}
+      <TokenToaster />
       <div>
         <HeroSection
           headingText="Aflați cine se află pe site-ul dvs. și obțineți mai multe venituri."
@@ -101,6 +110,7 @@ export default function Home() {
           />
         </div>
       </div>
+
       <div
         className="max-w-full bg-[#101828] pb-[97px]"
         style={{
@@ -112,6 +122,7 @@ export default function Home() {
       >
         <IntegrationSection />
       </div>
+
       <div className="bg-[#fcfcfd]">
         <div className="max-w-[1200px] flex flex-col justify-center items-center mx-auto">
           <div className="max-w-[790px] max-md:px-2 flex flex-col items-center max-md:py-14 md:py-20">
