@@ -99,7 +99,10 @@ function SignupForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!validate()) return;
+    if (!validate()) {
+      scrollToFirstError(); 
+      return;
+    }
 
     setLoading(true);
 
