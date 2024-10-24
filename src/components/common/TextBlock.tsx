@@ -53,10 +53,10 @@ const TextBlock: React.FC<SalesSectionProps> = ({
   return (
     <section className="lg:py-12">
       <div
-        className={`max-w-[1280px] mx-auto p-4 flex max-lg:mt-10 ${
+        className={`max-w-[1280px] mx-auto p-4 flex ${
           isReversed
-            ? "flex-col-reverse lg:flex-row-reverse"
-            : "flex-col-reverse lg:flex-row"
+            ? "flex-col-reverse max-[400px]:gap-4 gap-16 sm:gap-0 lg:flex-row-reverse"
+            : "flex-col-reverse max-[400px]:gap-4 gap-16 sm:gap-0 lg:flex-row"
         } justify-between items-center flex-`}
       >
         <div className="w-full lg:w-[50%]">
@@ -81,7 +81,7 @@ const TextBlock: React.FC<SalesSectionProps> = ({
             </button>
             {secondaryCtaText && (
               <button
-                className="border border-gray-300 px-6 py-3 rounded-full text-sm"
+                className="border border-gray-300 px-6 py-3 rounded-full max-[341px]:text-xs text-sm"
                 onClick={handleSecondaryCtaClick}
               >
                 {secondaryCtaText}
@@ -104,7 +104,7 @@ const TextBlock: React.FC<SalesSectionProps> = ({
             )}
         </div>
 
-        <div className="md:pb-10 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] h-64 sm:h-96">
+        <div className="md:pb-10 lg:pb-0 relative flex max-lg:justify-center justify-end items-center w-full lg:w-[50%] max-[430px]:h-48 h-64 sm:h-96">
           <iframe src={lottieUrl} width={594} height={481}></iframe>
           <Script
             src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"

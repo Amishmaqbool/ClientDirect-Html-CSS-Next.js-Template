@@ -96,7 +96,7 @@ export default function HeroSection({
         <div
           style={{ backgroundColor: bgColor }}
           className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 relative z-10 ${
-            isHomePage ? "pb-40" : isPricingPage ? "pb-[140px]" : "pb-[58px]"
+            isHomePage ? "max-sm:pb-20 pb-40" : isPricingPage ? "pb-[140px]" : "pb-[58px]"
           }`}
         >
           <Image
@@ -172,7 +172,7 @@ export default function HeroSection({
             {cardsData.map((card, index) => (
               <div
                 key={index}
-                className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg z-10 overflow-hidden bg-[#101828] h-full"
+                className="relative rounded-2xl text-white shadow-lg z-10 overflow-hidden bg-[#101828] h-full"
               >
                 <div
                   className={`h-2 ${

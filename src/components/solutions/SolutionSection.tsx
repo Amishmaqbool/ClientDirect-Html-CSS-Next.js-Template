@@ -58,13 +58,13 @@ export default function SolutionSection({
   };
 
   return (
-    <div className="relative text-black py-10 md:py-4 max-2xl:px-4 mt-0 sm:mt-20 max-lg:px-0">
+    <div className="relative text-black max-2xl:px-4 mt-0 sm:mt-20 md:mt-10 lg:mt-20 max-lg:px-0">
       <div
         className={`max-w-[1280px] mx-auto flex flex-col ${
           flexDirection === "row-reverse"
             ? "lg:flex-row-reverse"
             : "lg:flex-row"
-        } md:gap-[64px] gap-8 items-center`}
+        } md:gap-[64px] items-center`}
       >
         <div className="lg:w-1/2 px-4">
           <h1 className="text-3xl sm:text-4xl font-bold leading-tight">
@@ -143,7 +143,7 @@ export default function SolutionSection({
           <div className="relative z-10 flex justify-center items-center">
             {lottieUrl && (
               <div className="max-lg:flex max-lg:justify-center">
-                <iframe className="w-[370px] sm:w-[451px] h-[240px] sm:h-[323px]" src={lottieUrl}></iframe>
+                <iframe className="max-[380px]:w-auto w-[370px] sm:w-[451px] h-[240px] sm:h-[323px]" src={lottieUrl}></iframe>
                 <Script
                   src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
                   strategy="lazyOnload"

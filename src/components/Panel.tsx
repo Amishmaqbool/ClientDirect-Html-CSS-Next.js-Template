@@ -34,7 +34,7 @@ export default function Panel() {
             href="/auth/register"
             className="inline-flex items-center justify-center bg-black text-white px-7 py-[15px] rounded-full font-semibold hover:bg-gray-900"
           >
-            <p className='leading-[28px] text-[18px]'>
+            <p className='leading-[28px] max-[376px]:text-sm text-[18px]'>
               Încearcă ClientiDirect gratuit
             </p>
             <div>

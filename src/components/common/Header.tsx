@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Bars3Icon } from "@heroicons/react/24/solid";
@@ -16,7 +16,19 @@ export default function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleDropdown = (dropdownName : string) => {
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMobileMenuOpen]);
+
+  const toggleDropdown = (dropdownName: string) => {
     setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName));
   };
 
@@ -49,13 +61,19 @@ export default function Header() {
                 className="hover:text-gray-300 font-bold flex gap-2 items-center"
               >
                 <p>Produse</p>
-                <ChevronDownIcon />
+                <div className="w-3 h-3">
+                  <ChevronDownIcon />
+                </div>
               </button>
               {openDropdown === "products" && (
                 <div className="absolute top-5 left-1/2 transform -translate-x-1/2 mt-2 p-5 rounded-[14px] shadow-lg w-[350px] border border-[#ffffff26] bg-[#070b18]">
                   <ul>
                     <li className="flex items-center p-2 hover:opacity-80 cursor-pointer rounded-lg">
-                      <Link href="/features/lead-generation" passHref onClick={() => setOpenDropdown(null)}>
+                      <Link
+                        href="/features/lead-generation"
+                        passHref
+                        onClick={() => setOpenDropdown(null)}
+                      >
                         <div className="flex items-start">
                           <Image
                             src={IdentifyDropdown}
@@ -74,7 +92,10 @@ export default function Header() {
                         </div>
                       </Link>
                     </li>
-                    <Link href="/features/google-analytics" onClick={() => setOpenDropdown(null)}>
+                    <Link
+                      href="/features/google-analytics"
+                      onClick={() => setOpenDropdown(null)}
+                    >
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={GoogleAnalytics}
@@ -104,12 +125,17 @@ export default function Header() {
                 className="hover:text-gray-300 font-bold flex gap-2 items-center"
               >
                 <p>Soluții</p>
-                <ChevronDownIcon />
+                <div className="w-3 h-3">
+                  <ChevronDownIcon />
+                </div>
               </button>
               {openDropdown === "solutions" && (
                 <div className="absolute top-4 left-1/2 transform -translate-x-1/2 mt-2 p-5 rounded-[14px] shadow-lg w-[350px] border border-[#ffffff26] bg-[#070b18]">
                   <ul>
-                    <Link href="/solutions/sales" onClick={() => setOpenDropdown(null)}>
+                    <Link
+                      href="/solutions/sales"
+                      onClick={() => setOpenDropdown(null)}
+                    >
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={SalesIcon}
@@ -127,7 +153,10 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    <Link href="/solutions/marketing" onClick={() => setOpenDropdown(null)}>
+                    <Link
+                      href="/solutions/marketing"
+                      onClick={() => setOpenDropdown(null)}
+                    >
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={marketingDropdown}
@@ -144,7 +173,10 @@ export default function Header() {
                         </div>
                       </li>
                     </Link>
-                    <Link href="/solutions/agency" onClick={() => setOpenDropdown(null)}>
+                    <Link
+                      href="/solutions/agency"
+                      onClick={() => setOpenDropdown(null)}
+                    >
                       <li className="flex items-start p-2 hover:opacity-80 cursor-pointer rounded-lg">
                         <Image
                           src={AgenciesDropdown}
@@ -206,16 +238,24 @@ export default function Header() {
               onClick={() => toggleDropdown("products")}
             >
               Produse
-              <ChevronDownIcon />
+              <div className="max-lg:ml-2 w-3 h-3">
+                <ChevronDownIcon />
+              </div>
             </button>
             {openDropdown === "products" && (
               <ul className="py-2 space-y-2 text-gray-300">
-                <Link href="/features/lead-generation" onClick={handleMenuItemClick}>
+                <Link
+                  href="/features/lead-generation"
+                  onClick={handleMenuItemClick}
+                >
                   <li className="pt-2">
                     <p className="text-base">Identifică</p>
                   </li>
                 </Link>
-                <Link href="/features/google-analytics" onClick={handleMenuItemClick}>
+                <Link
+                  href="/features/google-analytics"
+                  onClick={handleMenuItemClick}
+                >
                   <li className="pt-2">
                     <p className="text-base">Îmbogățitor Google Analytics</p>
                   </li>
@@ -229,7 +269,9 @@ export default function Header() {
               onClick={() => toggleDropdown("solutions")}
             >
               Soluții
-              <ChevronDownIcon />
+              <div className="max-lg:ml-2 w-3 h-3">
+                <ChevronDownIcon />
+              </div>
             </button>
             {openDropdown === "solutions" && (
               <ul className="py-2 space-y-2 text-gray-300">
@@ -252,7 +294,11 @@ export default function Header() {
             )}
           </li>
           <li>
-            <a href="/pricing" className="font-medium block" onClick={handleMenuItemClick}>
+            <a
+              href="/pricing"
+              className="font-medium block"
+              onClick={handleMenuItemClick}
+            >
               Prețuri
             </a>
           </li>

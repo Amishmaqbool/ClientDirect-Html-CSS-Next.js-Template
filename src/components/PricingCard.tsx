@@ -20,7 +20,7 @@ export default function PricingCard() {
   return (
     <div className="pricing-gradient-1">
       <div className="max-w-[1280px] mx-auto px-6">
-        <div className="container-pricing grid grid-cols-1 lg:grid-cols-2 gap-8 py-12 px-8 relative top-[-90px] rounded-lg bg-[rgb(242 244 247 / 60%)] z-50">
+        <div className="container-pricing grid grid-cols-1 lg:grid-cols-2 gap-8 py-12 max-[500px]:px-6 px-8 relative top-[-90px] rounded-lg bg-[rgb(242 244 247 / 60%)] z-50">
           <div className="px-0 sm:px-24 sm:pl-8">
             <h3 className="mb-[9px] font-semibold text-xl text-center text-[#000]">
               Prețul la
@@ -89,12 +89,12 @@ export default function PricingCard() {
                     onClick={() => setIsMonthly(false)}
                     className={`${
                       !isMonthly
-                        ? "flex gap-2 justify-center items-center rounded-md bg-white text-black"
-                        : "flex gap-2 justify-center items-center text-gray-600 cursor-pointer"
+                        ? "flex max-[550px]:flex-wrap gap-2 justify-center items-center rounded-md bg-white text-black"
+                        : "flex max-[550px]:flex-wrap gap-2 justify-center items-center text-gray-600 cursor-pointer"
                     } py-1.5 px-4 rounded-full font-semibold transition duration-300 cursor-pointer`}
                   >
                     <p className="font-medium text-xs">Anual</p>
-                    <div className="max-[550px]:hidden flex items-center bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-md">
+                    <div className="flex items-center bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-md">
                       <span className="mr-1">🔥</span>
                       3,5 luni GRATUIT!
                     </div>
