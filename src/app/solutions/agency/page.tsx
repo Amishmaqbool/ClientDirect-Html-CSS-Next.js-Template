@@ -76,7 +76,7 @@ export default function page() {
         />
       </div>
 
-      <div className="max-lg:px-6 mt-16"><CallToActionSection /></div>
+      <div className="mt-16"><CallToActionSection /></div>
       <FaqSection faqList={faqList} />
     </div>
   );

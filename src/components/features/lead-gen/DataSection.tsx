@@ -29,7 +29,7 @@ const DataSection = () => {
         />
       </div>
 
-      <div className="flex max-md:flex-wrap justify-center gap-7 mt-8 max-xl:px-4 max-md:px-0 max-sm:mb-20 mb-2">
+      <div className="flex max-md:flex-wrap justify-center gap-7 mt-8 max-xl:px-4 max-md:px-0 max-sm:mb-4 mb-2">
         {data.map((item) => (
           <div
             key={item.id}

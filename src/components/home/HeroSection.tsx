@@ -96,7 +96,7 @@ export default function HeroSection({
         <div
           style={{ backgroundColor: bgColor }}
           className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 relative z-10 ${
-            isHomePage ? "pb-40" : isPricingPage ? "pb-[140px]" : "pb-[58px]"
+            isHomePage ? "max-sm:pb-20 pb-40" : isPricingPage ? "pb-[140px]" : "pb-[58px]"
           }`}
         >
           <Image

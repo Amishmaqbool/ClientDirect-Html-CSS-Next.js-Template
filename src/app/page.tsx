@@ -8,9 +8,8 @@ import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 import VideoSection from "@/components/VideoSection";
 import Button from "@/components/common/Button";
 
-// Dynamically import the TokenToaster so it only renders on the client
 const TokenToaster = dynamic(() => import("@/components/TokenToaster"), {
-  ssr: false, // Ensure this only renders on the client
+  ssr: false, 
 });
 
 export const metadata: Metadata = {
@@ -22,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 
-export default function Home({ token } : any) {
+export default function Home() {
   const mainHeading =
     "Oferă vânzărilor avantajul pentru a găsi și a încheia mai multe oferte";
   const subHeading =
