@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../../assets/images/logo-icon.png";
 import GlobeIcon from "../../assets/svgs/globe.svg";
 import SearchIcon from "../../assets/svgs/search-icon.svg";
@@ -13,12 +14,21 @@ export default function FaqHeader() {
             <div className="relative w-full mb-6 pb-6">
               <div className="pt-6 leading-none">
                 <div className="flex justify-between items-center">
-                  <Image className="cursor-pointer" src={Logo} alt="Logo" width={35} height={35} />
+                  <Link href="/">
+                    <Image
+                      className="cursor-pointer"
+                      src={Logo}
+                      alt="Logo"
+                      width={35}
+                      height={35}
+                    />
+                  </Link>
                   <div className="flex gap-1 items-center">
                     <Image src={GlobeIcon} alt="Globe Icon" />
-                    <select name="language" id="language-select">
+                    {/* <select name="language" id="language-select">
                       <option value="Romania">Romania</option>
-                    </select>
+                    </select> */}
+                    <p className="text-sm text-white">Romania</p>
                   </div>
                 </div>
               </div>

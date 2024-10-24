@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense, useRef } from "react";
 import Image from "next/image";
 import ClientiDirect from "@/assets/images/logo-icon.png";
 import InputField from "@/components/common/InputField";
@@ -30,6 +30,16 @@ function SignupForm() {
   const [errors, setErrors] = useState<ErrorState>({});
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  const refs = {
+    name: useRef<HTMLInputElement>(null),
+    phone: useRef<HTMLInputElement>(null),
+    email: useRef<HTMLInputElement>(null),
+    companyName: useRef<HTMLInputElement>(null),
+    companyVAT: useRef<HTMLInputElement>(null),
+    password: useRef<HTMLInputElement>(null),
+    confirmPassword: useRef<HTMLInputElement>(null),
+  };
 
   useEffect(() => {
     const success = searchParams.get("success");
@@ -76,6 +86,14 @@ function SignupForm() {
     setErrors(newErrors);
 
     return Object.keys(newErrors).length === 0;
+  };
+
+  const scrollToFirstError = () => {
+    const firstErrorField = Object.keys(errors).find((key) => errors[key as keyof ErrorState]);
+    if (firstErrorField && refs[firstErrorField as keyof typeof refs].current) {
+      refs[firstErrorField as keyof typeof refs].current!.scrollIntoView({ behavior: "smooth" });
+      refs[firstErrorField as keyof typeof refs].current!.focus();
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -157,7 +175,7 @@ function SignupForm() {
   };
 
   const handleGoogleSignUp = async () => {
-    const redirectUrl = "https://clientidirect.com/redirect";
+    const redirectUrl = "http://localhost:3000";
     const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(
       redirectUrl
     )}`;
@@ -242,6 +260,7 @@ function SignupForm() {
           value={name}
           name="name"
           type="text"
+          ref={refs.name}
           onChange={(e) => setName(e.target.value)}
           error={errors.name}
         />
@@ -251,6 +270,7 @@ function SignupForm() {
           value={phone}
           name="phone"
           type="tel"
+          ref={refs.phone}
           onChange={(e) => setPhone(e.target.value)}
           error={errors.phone}
         />
@@ -260,6 +280,7 @@ function SignupForm() {
           value={email}
           name="email"
           type="email"
+          ref={refs.email}
           onChange={(e) => setEmail(e.target.value)}
           error={errors.email}
         />
@@ -269,6 +290,7 @@ function SignupForm() {
           value={companyName}
           name="companyName"
           type="text"
+          ref={refs.companyName}
           onChange={(e) => setCompanyName(e.target.value)}
           error={errors.companyName}
         />
@@ -278,6 +300,7 @@ function SignupForm() {
           value={companyVAT}
           name="companyVAT"
           type="text"
+          ref={refs.companyVAT}
           onChange={(e) => setCompanyVAT(e.target.value)}
           error={errors.companyVAT}
         />
@@ -287,6 +310,7 @@ function SignupForm() {
           value={password}
           name="password"
           type="password"
+          ref={refs.password}
           onChange={(e) => setPassword(e.target.value)}
           error={errors.password}
         />
@@ -294,6 +318,7 @@ function SignupForm() {
         <InputField
           label="Confirmă parola"
           value={confirmPassword}
+          ref={refs.confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           name="confirmPassword"
           type="password"

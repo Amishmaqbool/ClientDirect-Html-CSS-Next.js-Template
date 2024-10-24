@@ -172,7 +172,7 @@ export default function HeroSection({
             {cardsData.map((card, index) => (
               <div
                 key={index}
-                className="relative max-sm:mt-6 rounded-2xl text-white shadow-lg z-10 overflow-hidden bg-[#101828] h-full"
+                className="relative rounded-2xl text-white shadow-lg z-10 overflow-hidden bg-[#101828] h-full"
               >
                 <div
                   className={`h-2 ${

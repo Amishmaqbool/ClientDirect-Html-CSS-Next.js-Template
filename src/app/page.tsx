@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import CardsScrollAnimation from "@/components/CardsScrollAnimation";
 import VideoSection from "@/components/VideoSection";
 import Button from "@/components/common/Button";
+import TokenToaster from "@/components/TokenToaster";
 
 export const metadata: Metadata = {
   title:
@@ -44,6 +45,7 @@ export default function Home() {
 
   return (
     <>
+    <TokenToaster />
       <div>
         <HeroSection
           headingText="Aflați cine se află pe site-ul dvs. și obțineți mai multe venituri."
@@ -54,43 +56,50 @@ export default function Home() {
 
         <VideoSection />
 
-        <TextBlock
-          mainHeading={mainHeading}
-          subHeading={subHeading}
-          ctaText={ctaText}
-          secondaryCtaText={secondaryCtaText}
-          testimonial={FirstTestimonial}
-          lottieUrl="https://lottie.host/embed/9c8a30ff-fd51-4ff1-8cd6-8ef27740326c/lcMSIYiI93.lottie"
-          isReversed={false}
-          route={"/solutions/sales"}
-        />
+        <div className="max-lg:mt-10">
+          <TextBlock
+            mainHeading={mainHeading}
+            subHeading={subHeading}
+            ctaText={ctaText}
+            secondaryCtaText={secondaryCtaText}
+            testimonial={FirstTestimonial}
+            lottieUrl="https://lottie.host/embed/9c8a30ff-fd51-4ff1-8cd6-8ef27740326c/lcMSIYiI93.lottie"
+            isReversed={false}
+            route={"/solutions/sales"}
+          />
+        </div>
 
-        <TextBlock
-          mainHeading={
-            "Reduceți cheltuielile publicitare risipite și convertiți mai mulți vizitatori vizați"
-          }
-          subHeading={
-            "Redirecționați sau excludeți vizitatori pentru a îmbunătăți continuu performanța campaniei dvs. Personalizați călătoriile și difuzați conținut relevant publicului dvs. la momentul potrivit"
-          }
-          ctaText={"Începeți proba gratuită"}
-          secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
-          testimonial={SecondTestimonial}
-          lottieUrl="https://lottie.host/embed/3986babc-f225-4202-b210-90c47d93bf77/6A3FrFOGQp.lottie"
-          isReversed={true}
-          route={"/solutions/marketing"}
-        />
-        <TextBlock
-          mainHeading={"Înțelegeți ce își dorește de fapt publicul țintă"}
-          subHeading={
-            "Obțineți informații mult mai profunde despre ceea ce atrage, antrenează și convertește vizitatorii dvs. ideali. Nu mai investiți în reclame și conținut cu un ROI scăzut și începeți să optimizați pentru venituri."
-          }
-          ctaText={"Începeți proba gratuită"}
-          secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
-          testimonial={ThirdTestimonial}
-          lottieUrl="https://lottie.host/embed/343fab7f-c2ee-49a9-80be-e2453a6944fa/X1mJM75bU3.lottie"
-          isReversed={false}
-          route={"/solutions/marketing"}
-        />
+        <div className="max-[360px]:-mt-5 max-[430px]:mt-1 max-lg:mt-10">
+          <TextBlock
+            mainHeading={
+              "Reduceți cheltuielile publicitare risipite și convertiți mai mulți vizitatori vizați"
+            }
+            subHeading={
+              "Redirecționați sau excludeți vizitatori pentru a îmbunătăți continuu performanța campaniei dvs. Personalizați călătoriile și difuzați conținut relevant publicului dvs. la momentul potrivit"
+            }
+            ctaText={"Începeți proba gratuită"}
+            secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
+            testimonial={SecondTestimonial}
+            lottieUrl="https://lottie.host/embed/3986babc-f225-4202-b210-90c47d93bf77/6A3FrFOGQp.lottie"
+            isReversed={true}
+            route={"/solutions/marketing"}
+          />
+        </div>
+
+        <div className="max-[430px]:mt-1 max-lg:mt-10">
+          <TextBlock
+            mainHeading={"Înțelegeți ce își dorește de fapt publicul țintă"}
+            subHeading={
+              "Obțineți informații mult mai profunde despre ceea ce atrage, antrenează și convertește vizitatorii dvs. ideali. Nu mai investiți în reclame și conținut cu un ROI scăzut și începeți să optimizați pentru venituri."
+            }
+            ctaText={"Începeți proba gratuită"}
+            secondaryCtaText={"Explorați ClientiDirect pentru marketing"}
+            testimonial={ThirdTestimonial}
+            lottieUrl="https://lottie.host/embed/343fab7f-c2ee-49a9-80be-e2453a6944fa/X1mJM75bU3.lottie"
+            isReversed={false}
+            route={"/solutions/marketing"}
+          />
+        </div>
       </div>
       <div
         className="max-w-full bg-[#101828] pb-[97px]"

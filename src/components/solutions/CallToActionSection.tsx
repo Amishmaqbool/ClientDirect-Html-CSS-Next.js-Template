@@ -6,8 +6,8 @@ import CardImage from "../../assets/svgs/card-image.svg";
 
 const CallToActionSection = () => {
   return (
-    <div className="c-cta--call-pricing relative overflow-hidden bg-[#101828] rounded-[16px] pt-14 pb-0 pl-12 flex max-w-[1024px] mx-auto">
-      <div className="w-[40%] pb-14">
+    <div className="max-lg:h-[650px] c-cta--call-pricing relative overflow-hidden bg-[#101828] rounded-[16px] pt-14 pb-0 max-sm:px-6 sm:pl-12 flex max-w-[1024px] mx-auto">
+      <div className="w-full lg:w-[40%] pb-14">
         <h3 className="text-[#54edf0] text-left text-2xl font-bold leading-7">
           Creșteți venitul pe client
         </h3>
@@ -41,13 +41,13 @@ const CallToActionSection = () => {
           </p>
         </div>
         <div className="flex gap-3 flex-wrap items-center">
-          <button className="faq-chat-button px-[20px] text-[14px] py-[12px] backdrop-filter-[8px] bg-[#ffffff1a] border border-[#0000] text-white rounded-full h-fit flex gap-2 justify-center items-center">
+          <button className="faq-chat-button px-[20px] text-[14px] max-[474px]:py-2 py-[12px] backdrop-filter-[8px] bg-[#ffffff1a] border border-[#0000] text-white rounded-full h-fit flex gap-2 justify-center items-center">
             <Image src={MessageIcon} alt="Message Icon" />
             <p>Vorbește cu vânzări</p>
           </button>
           <a
             href="/auth/login"
-            className="faq-chat-button px-[20px] text-[14px] py-[12px] backdrop-filter-[8px] bg-[#ffffff1a] border border-[#0000] text-white rounded-full h-fit flex gap-2 justify-center items-center"
+            className="faq-chat-button px-[20px] text-[14px] max-[474px]:py-2 py-[12px] backdrop-filter-[8px] bg-[#ffffff1a] border border-[#0000] text-white rounded-full h-fit flex gap-2 justify-center items-center"
           >
             <div>Vedeți prețurile</div>
             <div className="w-5">
@@ -71,13 +71,13 @@ const CallToActionSection = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-[-15px] right-0 h-[90%]">
+      <div className="mt-3 absolute bottom-[-15px] right-0 lg:h-[90%]">
         <Image
           src={CardImage}
           alt="CTA Image"
           width={500}
           height={450}
-          className="object-cover h-full w-full"
+          className="object-cover lg:h-full w-full"
         />
       </div>
     </div>
