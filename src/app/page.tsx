@@ -52,7 +52,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Pass the token to the TokenToaster component */}
       <TokenToaster />
       <div>
         <HeroSection
