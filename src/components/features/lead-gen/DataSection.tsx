@@ -5,7 +5,7 @@ import Button from "@/components/common/Button";
 const DataSection = () => {
   return (
     <>
-      <div className="max-w-[790px] flex flex-col items-center pb-10 md:pb-32">
+      <div className="max-w-[790px] flex flex-col items-center pb-10 md:pb-16">
         <div className="inline-block rounded-2xl bg-[#d1e0ff] border border-[#d1e0ff] pt-1 pb-[2px] px-4 text-xs font-bold text-center text-[#0040c1]">
           Automatizează
         </div>

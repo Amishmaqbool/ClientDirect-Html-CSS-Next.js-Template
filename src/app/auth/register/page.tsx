@@ -98,14 +98,14 @@ function SignupForm() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+  
     if (!validate()) {
       scrollToFirstError(); 
       return;
     }
-
+  
     setLoading(true);
-
+  
     try {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/auth/register`,
@@ -129,56 +129,61 @@ function SignupForm() {
           }),
         }
       );
-
+  
       if (!response.ok) {
         const errorData = await response.json();
         const errorMessage = errorData?.detail[0]?.msg || "Înregistrarea a eșuat";
         throw new Error(errorMessage);
       }
-
-      toast.success("Înregistrarea a avut succes!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-
-      router.push("/auth/login");
+  
+      setTimeout(() => {
+        toast.success("Înregistrarea a avut succes!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      }, 3000);
+  
+      router.push("/confirmation");
     } catch (err: unknown) {
-      if (err instanceof Error) {
-        toast.error(err.message, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
-      } else {
-        toast.error("Something went wrong", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        });
-      }
+      setTimeout(() => {
+        if (err instanceof Error) {
+          toast.error(err.message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+        } else {
+          toast.error("Something went wrong", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+        }
+      }, 3000); 
     } finally {
       setLoading(false);
     }
   };
+  
 
   const handleGoogleSignUp = async () => {
-    const redirectUrl = "https://clientidirect.com";
+    const redirectUrl = "https://clientidirect.com/confirmation";
     const googleAuthUrl = `${process.env.NEXT_PUBLIC_API_URL}/auth/login/google?user_type=tenant&language=de&redirect_url=${encodeURIComponent(
       redirectUrl
     )}`;
