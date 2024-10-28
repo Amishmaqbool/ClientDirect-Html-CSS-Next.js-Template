@@ -1,0 +1,21 @@
+[33mcommit 4a83f63462142689dbba299accc3578cc3fd268d[m[33m ([m[1;36mHEAD[m[33m)[m
+Merge: d191b07 92aa3d8
+Author: Amishmaqbool <amishmaqbool@gmail.com>
+Date:   Sat Oct 26 17:59:16 2024 +0500
+
+    Merge branch 'main' of https://github.com/Landmarklens/snitcher into auth-updates
+
+[33mcommit d191b07ed839753659903d1d85d163f27a596ba7[m
+Author: Amishmaqbool <amishmaqbool@gmail.com>
+Date:   Sat Oct 26 17:59:07 2024 +0500
+
+    Confirmation Page added
+
+[33mcommit 92aa3d800b30a57b2845ed1446a0f1a95aa4ba85[m
+Merge: a678017 10baf8c
+Author: Amish Maqbool <44437037+Amishmaqbool@users.noreply.github.com>
+Date:   Sat Oct 26 17:40:44 2024 +0500
+
+    Merge pull request #39 from Landmarklens/auth-updates
+    
+    Auth updates

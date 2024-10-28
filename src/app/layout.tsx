@@ -10,6 +10,7 @@ import FaqFooter from "@/components/common/FaqFooter";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Script from "next/script";
+import 'intersection-observer';
 
 const soleil = localFont({
   src: [
@@ -70,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <Script
           id="gtm-script"
           strategy="afterInteractive"
