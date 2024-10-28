@@ -71,8 +71,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
-
+      <Script
+          src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"
+          strategy="beforeInteractive"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <Script
           id="gtm-script"
