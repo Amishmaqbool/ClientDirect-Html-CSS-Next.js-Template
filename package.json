@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "@heroicons/react": "latest",
     "@lottiefiles/dotlottie-react": "^0.9.1",
     "@lottiefiles/react-lottie-player": "^3.5.4",
