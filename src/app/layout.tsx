@@ -1,4 +1,5 @@
 "use client";
+import 'intersection-observer';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import localFont from "next/font/local";
@@ -10,7 +11,7 @@ import FaqFooter from "@/components/common/FaqFooter";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Script from "next/script";
-import 'intersection-observer';
+
 
 const soleil = localFont({
   src: [
