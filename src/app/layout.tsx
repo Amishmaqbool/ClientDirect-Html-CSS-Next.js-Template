@@ -1,4 +1,5 @@
 "use client";
+import 'intersection-observer';
 import { ToastContainer } from "react-toastify";
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
