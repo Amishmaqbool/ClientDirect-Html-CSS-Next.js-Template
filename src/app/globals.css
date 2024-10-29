@@ -8,7 +8,6 @@ body {
   font-family: var(--font-soleil, Arial, Helvetica, sans-serif);
 }
 
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -244,7 +243,7 @@ select:focus {
   }
 }
 @media screen and (min-width: 1154px) {
-  .padding-adjustment-pricing{
+  .padding-adjustment-pricing {
     padding: 56px 32px !important;
   }
 }

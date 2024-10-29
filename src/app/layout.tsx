@@ -1,6 +1,10 @@
 "use client";
 import 'intersection-observer';
 import { ToastContainer } from "react-toastify";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import 'mutationobserver-polyfill';
+import Promise from 'promise-polyfill';
 import "react-toastify/dist/ReactToastify.css";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -11,7 +15,7 @@ import FaqFooter from "@/components/common/FaqFooter";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import Script from "next/script";
-
+import "intersection-observer";
 
 const soleil = localFont({
   src: [
@@ -47,6 +51,23 @@ export default function RootLayout({
   const [isFaqPage, setIsFaqPage] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  useEffect(() => {
+    if (!window.Promise) {
+      window.Promise = Promise;
+    }
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            console.log(mutation);
+        });
+    });
+
+    const targetNode = document.getElementById('some-element');
+    if (targetNode) {
+        observer.observe(targetNode, { attributes: true, childList: true, subtree: true });
+    }
+
+    return () => observer.disconnect();
+}, []);
 
   const isAuthPage =
     pathname === "/auth/login" || pathname === "/auth/register";
@@ -72,11 +93,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <Script
+        <Script
           src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"
           strategy="beforeInteractive"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, height=device-height"/>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, height=device-height"
+        />
 
         <Script
           id="gtm-script"
@@ -92,7 +116,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      
+
       <body className={`${soleil.variable} antialiased`}>
         <noscript>
           <iframe
