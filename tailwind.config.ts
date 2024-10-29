@@ -1,18 +1,18 @@
 import type { Config } from "tailwindcss";
-import typography from '@tailwindcss/typography';
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./contents/**/*.mdx"
+    "./contents/**/*.mdx",
   ],
   theme: {
     extend: {
       screens: {
-        'xs': '480px', 
-        'base': '990px'
+        xs: "480px",
+        base: "990px",
       },
       colors: {
         background: "var(--background)",
@@ -24,12 +24,12 @@ const config: Config = {
       },
       keyframes: {
         boxBounce: {
-          '0%, 100%': { boxShadow: '0 0 5px 2px rgba(50, 87, 255, 0.5)' },
-          '50%': { boxShadow: '0 0 20px 10px rgba(50, 87, 255, 0.8)' },
+          "0%, 100%": { boxShadow: "0 0 5px 2px rgba(50, 87, 255, 0.5)" },
+          "50%": { boxShadow: "0 0 20px 10px rgba(50, 87, 255, 0.8)" },
         },
       },
       animation: {
-        boxBounce: 'boxBounce 1.5s ease-in-out infinite',
+        boxBounce: "boxBounce 1.5s ease-in-out infinite",
       },
     },
   },

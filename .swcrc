@@ -1,7 +1,7 @@
 {
-    "jsc": {
-      "keepClassNames": true,
-      "target": "es2017"
-    },
-    "minify": true
-  }
+  "jsc": {
+    "keepClassNames": true,
+    "target": "es2017"
+  },
+  "minify": true
+}
