@@ -34,7 +34,7 @@ const config: Config = {
     },
   },
   plugins: [
-    typography, // Updated to use the imported variable
+    typography,
   ],
 };
 
