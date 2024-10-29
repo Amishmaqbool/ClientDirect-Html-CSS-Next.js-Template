@@ -3,9 +3,10 @@ import typography from '@tailwindcss/typography';
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/constants/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/services/**/*.{js,ts,jsx,tsx,mdx}",
     "./contents/**/*.mdx"
   ],
   theme: {
