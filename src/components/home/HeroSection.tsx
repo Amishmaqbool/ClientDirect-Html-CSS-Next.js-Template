@@ -83,8 +83,9 @@ export default function HeroSection({
       <div className="relative">
         <div
           style={{ backgroundColor: bgColor }}
-          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 relative z-10 ${isHomePage ? "max-sm:pb-20 pb-40" : isPricingPage ? "pb-[140px]" : "pb-[58px]"
-            }`}
+          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 relative z-10 ${
+            isHomePage ? "max-sm:pb-20 pb-40" : isPricingPage ? "pb-[140px]" : "pb-[58px]"
+          }`}
         >
           <Image
             src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
@@ -163,14 +164,14 @@ export default function HeroSection({
               >
                 <div
                   className="h-2"
-                  style={{ background: card.gradient }}
+                  style={{background: card.gradient}}
                 ></div>
 
                 <div className="flex flex-col justify-between">
                   <div className="relative z-10 px-4 md:px-6 py-5">
                     <h2
                       className="text-lg font-semibold text-transparent bg-clip-text"
-                      style={{ color: card.gradient }}
+                      style={{color: card.gradient}}
                     >
                       {card.title}
                     </h2>
