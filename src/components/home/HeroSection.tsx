@@ -56,23 +56,12 @@ interface HeroSectionProps {
   buttonVisible?: boolean
 }
 
-const gradientColorMap: Record<string, 'purple' | 'blue' | 'aqua'> = {
-  '#926ae5': 'purple',
-  '#3189e3': 'blue',
-  '#44cfe6': 'aqua'
-}
+export default function HeroSection({
+  headingText = "Aflați cine se află pe site-ul dvs., obțineți mai multe venituri.",
+  paragraphText = "ClientiDirect împuternicește echipele B2B să înțeleagă, să implice și să transforme vizitatorii anonimi ai site-ului web în potențiali clienți potențiali, utilizând tehnologia de ultimă oră de identificare, urmărirea în timp real a vizitatorilor și informații despre public bazate pe date.",
+  maxWidth = "900px",
+  bgColor = "#070b18",
 
-const gradientClasses: Record<'purple' | 'blue' | 'aqua', string> = {
-  purple: 'bg-gradient-to-r from-[#7f56d9] to-[#9e77ed]',
-  blue: 'bg-gradient-to-r from-[#41a7f0] to-[#1b61d1]',
-  aqua: 'bg-gradient-to-r from-[#54edf0] to-[#30a9d9]'
-}
-
-export default function HeroSection ({
-  headingText = 'Know who’s on your website, drive more revenue.',
-  paragraphText = 'ClientiDirect empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights.',
-  maxWidth = '900px',
-  bgColor = '#070b18',
   featureContents = [],
   buttonVisible = true
 }: HeroSectionProps) {
@@ -179,17 +168,15 @@ export default function HeroSection ({
                 className='relative rounded-2xl text-white shadow-lg z-10 overflow-hidden bg-[#101828] h-full'
               >
                 <div
-                  className={`h-2 ${
-                    gradientClasses[gradientColorMap[card.gradient]]
-                  }`}
+                  className="h-2"
+                  style={{background: card.gradient}}
                 ></div>
 
                 <div className='flex flex-col justify-between'>
                   <div className='relative z-10 px-4 md:px-6 py-5'>
                     <h2
-                      className={`text-lg font-semibold text-transparent bg-clip-text ${
-                        gradientClasses[gradientColorMap[card.gradient]]
-                      }`}
+                      className="text-lg font-semibold text-transparent bg-clip-text"
+                      style={{color: card.gradient}}
                     >
                       {card.title}
                     </h2>
