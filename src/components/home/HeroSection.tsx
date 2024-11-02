@@ -56,18 +56,6 @@ interface HeroSectionProps {
   buttonVisible?: boolean;
 }
 
-const gradientColorMap: Record<string, "purple" | "blue" | "aqua"> = {
-  "#926ae5": "purple",
-  "#3189e3": "blue",
-  "#44cfe6": "aqua",
-};
-
-const gradientClasses: Record<"purple" | "blue" | "aqua", string> = {
-  purple: "bg-gradient-to-r from-[#7f56d9] to-[#9e77ed]",
-  blue: "bg-gradient-to-r from-[#41a7f0] to-[#1b61d1]",
-  aqua: "bg-gradient-to-r from-[#54edf0] to-[#30a9d9]",
-};
-
 export default function HeroSection({
   headingText = "Know who’s on your website, drive more revenue.",
   paragraphText = "ClientiDirect empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights.",
@@ -95,9 +83,8 @@ export default function HeroSection({
       <div className="relative">
         <div
           style={{ backgroundColor: bgColor }}
-          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 relative z-10 ${
-            isHomePage ? "max-sm:pb-20 pb-40" : isPricingPage ? "pb-[140px]" : "pb-[58px]"
-          }`}
+          className={`w-full pt-[140px] sm:pt-[200px] 2xl:pt-28 relative z-10 ${isHomePage ? "max-sm:pb-20 pb-40" : isPricingPage ? "pb-[140px]" : "pb-[58px]"
+            }`}
         >
           <Image
             src="https://cdn.prod.website-files.com/64084dfdb78deb68d06600ed/6411ddd013532dd1d71d5a98_Polygon%202.svg"
@@ -175,17 +162,15 @@ export default function HeroSection({
                 className="relative rounded-2xl text-white shadow-lg z-10 overflow-hidden bg-[#101828] h-full"
               >
                 <div
-                  className={`h-2 ${
-                    gradientClasses[gradientColorMap[card.gradient]]
-                  }`}
+                  className="h-2"
+                  style={{ background: card.gradient }}
                 ></div>
 
                 <div className="flex flex-col justify-between">
                   <div className="relative z-10 px-4 md:px-6 py-5">
                     <h2
-                      className={`text-lg font-semibold text-transparent bg-clip-text ${
-                        gradientClasses[gradientColorMap[card.gradient]]
-                      }`}
+                      className="text-lg font-semibold text-transparent bg-clip-text"
+                      style={{ color: card.gradient }}
                     >
                       {card.title}
                     </h2>
