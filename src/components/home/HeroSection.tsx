@@ -57,8 +57,8 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({
-  headingText = "Know who’s on your website, drive more revenue.",
-  paragraphText = "ClientiDirect empowers B2B teams to understand, engage, and convert anonymous website visitors into potential leads using cutting-edge identification technology, real-time visitor tracking, and data-driven audience insights.",
+  headingText = "Aflați cine se află pe site-ul dvs., obțineți mai multe venituri.",
+  paragraphText = "ClientiDirect împuternicește echipele B2B să înțeleagă, să implice și să transforme vizitatorii anonimi ai site-ului web în potențiali clienți potențiali, utilizând tehnologia de ultimă oră de identificare, urmărirea în timp real a vizitatorilor și informații despre public bazate pe date.",
   maxWidth = "900px",
   bgColor = "#070b18",
   featureContents = [],
