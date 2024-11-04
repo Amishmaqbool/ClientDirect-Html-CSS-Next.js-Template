@@ -156,7 +156,7 @@ const IntegrationSection = () => {
 
         <div className="flex max-lg:flex-col sm:gap-7 justify-center items-center max-w-full max-lg:max-w-[90%] mt-28 max-xl:px-4 max-lg:px-8 max-md:px-0 max-md:max-w-[95%] max-lg:mt-56 max-lg:pt-10 max-sm:pt-4 max-xs:pb-0 max-xs:mt-36">
 
-          <div className="w-1/2 max-md:flex-col max-lg:w-full md:h-44 flex justify-center items-center gap-2 p-6 rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
+          <div className="w-1/2 max-md:flex-col max-lg:w-full md:h-44 flex justify-center items-center sm:gap-2 p-6 rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
             <div className="flex flex-col sm:gap-4">
               <div className="flex sm:gap-3">
                 <Image src={RealIcon} alt="Real-Time" width={28.35} height={28.84} className="max-xl:h-7" />
@@ -167,7 +167,7 @@ const IntegrationSection = () => {
               </p>
             </div>
 
-            <div className="w-full flex md:justify-end">
+            <div className="max-sm:mt-2 w-full flex md:justify-end">
               <button className="flex items-center justify-center gap-2 rounded-full pt-[7px] pb-1 pl-[14px] pr-3 text-white bg-[#3257ff] border-[3px] border-[#0000] text-sm" onClick={handleAPI}>
                 Află mai multe
                 <svg
@@ -187,7 +187,7 @@ const IntegrationSection = () => {
             </div>
           </div>
 
-          <div className="max-sm:mt-7 w-1/2 max-md:flex-col max-lg:w-full md:h-44 p-6 flex gap-2 justify-center items-center rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
+          <div className="max-sm:mt-7 w-1/2 max-md:flex-col max-lg:w-full md:h-44 p-6 flex sm:gap-2 justify-center items-center rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
             <div className="flex flex-col sm:gap-4">
               <div className="flex sm:gap-3">
                 <Image src={GoogleAIcon} alt="Google Analytics" width={28.35} height={28.84} className="max-xl:h-7" />
@@ -200,7 +200,7 @@ const IntegrationSection = () => {
               </p>
 
             </div>
-            <div className="w-full flex md:justify-end">
+            <div className="max-sm:mt-2 w-full flex md:justify-end">
               <button className="flex items-center justify-center gap-2 rounded-full pt-[7px] pb-1 pl-[14px] pr-3 text-white bg-[#3257ff] border-[3px] border-[#0000] text-sm" onClick={handleGoogle}>
                 Află mai multe
                 <svg
