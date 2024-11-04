@@ -30,7 +30,7 @@ export default function pricingfeatuesection() {
         ))}
       </div>
 
-      <div className="mt-20 flex flex-col lg:flex-row gap-6 lg:gap-9 xl:gap-12 items-center">
+      <div className="mt-20 flex flex-col lg:flex-row gap-0 lg:gap-9 xl:gap-12 items-center">
         <div className="padding-adjustment-pricing w-full lg:w-[35%] py-14 lg:py-[72px] px-6 md:px-8 xl:px-12 rounded-2xl bg-[#101828]">
           <h2 className="font-semibold text-2xl leading-7 text-[#a48afb]">
             Integrarea datelor
@@ -51,7 +51,7 @@ export default function pricingfeatuesection() {
           </div>
         </div>
 
-        <div className="w-full lg:w-[65%] pricing-bg relative overflow-hidden bg-[#101828] rounded-[16px] pt-14 pb-0 max-md:px-6 md:pl-8 flex">
+        <div className="max-lg:mt-6 w-full lg:w-[65%] pricing-bg relative overflow-hidden bg-[#101828] rounded-[16px] pt-14 pb-0 max-md:px-6 md:pl-8 flex">
           <div className="w-full md:w-[40%] pb-14">
             <h2 className="font-semibold text-2xl leading-7 text-[#54edf0]">
               Etichetă albă
