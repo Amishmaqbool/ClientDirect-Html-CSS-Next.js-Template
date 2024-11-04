@@ -25,13 +25,13 @@ export default function Footer() {
         <div
           className={`max-w-[1280px] px-6 mx-auto pb-16 ${
             !isRedirectPage ? "pt-[348px]" : "pt-10"
-          }  flex max-lg:flex-col justify-between max-sm:gap-16 gap-32`}
+          }  flex max-lg:flex-col justify-between max-sm:gap-0 gap-32`}
         >
           <div className="flex flex-col">
             <Link href="/">
-              <div className="flex gap-3 items-center">
+              <div className="flex sm:gap-3 items-center">
                 <Image src={logo} height={28} width={28} alt="Logo" />
-                <p className="pt-1 font-semibold text-xl text-white">
+                <p className="max-sm:ml-3 pt-1 font-semibold text-xl text-white">
                   ClientiDirect
                 </p>
               </div>
@@ -54,7 +54,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row lg:justify-between flex-wrap max-sm:gap-y-0 max-lg:gap-y-8 md:gap-x-28 lg:gap-x-8 text-white text-sm">
+          <div className=" max-sm:mt-16 flex flex-col sm:flex-row lg:justify-between flex-wrap max-sm:gap-y-0 max-lg:gap-y-8 md:gap-x-28 lg:gap-x-8 text-white text-sm">
             <div>
               <p className="font-semibold mb-4 text-[#667085]">Produs</p>
               <ul className="space-y-3">
@@ -131,7 +131,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-            <div className="max-md:block max-sm:-mt-6 max-md:-mt-16 text-white text-sm hidden">
+            <div className="max-md:block max-sm:mt-8 max-md:-mt-16 text-white text-sm hidden">
               <p className="font-semibold mb-4 text-[#667085]">Legal</p>
               <ul className="space-y-3">
                 <Link href="/terms-conditions">
