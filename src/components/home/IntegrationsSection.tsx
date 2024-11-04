@@ -154,15 +154,15 @@ const IntegrationSection = () => {
           </div>
         </div>
 
-        <div className="flex max-lg:flex-col gap-7 justify-center items-center max-w-full max-lg:max-w-[90%] mt-28 max-xl:px-4 max-lg:px-8 max-md:px-0 max-md:max-w-[95%] max-lg:mt-56 max-lg:pt-10 max-sm:pt-4 max-xs:pb-0 max-xs:mt-36">
+        <div className="flex max-lg:flex-col sm:gap-7 justify-center items-center max-w-full max-lg:max-w-[90%] mt-28 max-xl:px-4 max-lg:px-8 max-md:px-0 max-md:max-w-[95%] max-lg:mt-56 max-lg:pt-10 max-sm:pt-4 max-xs:pb-0 max-xs:mt-36">
 
           <div className="w-1/2 max-md:flex-col max-lg:w-full md:h-44 flex justify-center items-center gap-2 p-6 rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
             <div className="flex flex-col gap-4">
-              <div className="flex gap-3">
+              <div className="flex sm:gap-3">
                 <Image src={RealIcon} alt="Real-Time" width={28.35} height={28.84} className="max-xl:h-7" />
                 <p className="text-lg text-white">API de identificare în timp real</p>
               </div>
-              <p className="text-[#98a2b3] w-full text-sm">
+              <p className="max-sm:ml-3 text-[#98a2b3] w-full text-sm">
                 Vrei puterea deplină în propriile mâini? Transmiteți datele de identificare ale companiei oriunde aveți nevoie de ele cu Spotter, API-ul nostru de identificare în timp real.
               </p>
             </div>
@@ -187,11 +187,11 @@ const IntegrationSection = () => {
             </div>
           </div>
 
-          <div className="w-1/2 max-md:flex-col max-lg:w-full md:h-44 p-6 flex gap-2 justify-center items-center rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
+          <div className="max-sm:mt-7 w-1/2 max-md:flex-col max-lg:w-full md:h-44 p-6 flex gap-2 justify-center items-center rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
             <div className="flex flex-col gap-4">
-              <div className="flex gap-3">
+              <div className="flex sm:gap-3">
                 <Image src={GoogleAIcon} alt="Google Analytics" width={28.35} height={28.84} className="max-xl:h-7" />
-                <p className="text-lg text-white">Îmbogățitor Google Analytics</p>
+                <p className="max-sm:ml-3 text-lg text-white">Îmbogățitor Google Analytics</p>
               </div>
               <p className="text-[#98a2b3] w-full text-sm">
                 Google Analytics pur și simplu nu a fost creat pentru B2B - vindeți companiilor, nu
