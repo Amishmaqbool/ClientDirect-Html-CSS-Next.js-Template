@@ -45,9 +45,9 @@ export default function Header() {
       <div className="max-w-[1280px] mx-auto p-6 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/">
-            <div className="flex gap-3 items-center">
+            <div className="flex items-center">
               <Image src={logo} height={28} width={28} alt="Logo" />
-              <p className="pt-1 font-semibold text-xl text-white">
+              <p className="ml-3 pt-1 font-semibold text-xl text-white">
                 ClientiDirect
               </p>
             </div>

@@ -90,11 +90,17 @@ function SignupForm() {
 
   const scrollToFirstError = () => {
     const firstErrorField = Object.keys(errors).find((key) => errors[key as keyof ErrorState]);
-    if (firstErrorField && refs[firstErrorField as keyof typeof refs].current) {
-      refs[firstErrorField as keyof typeof refs].current!.scrollIntoView({ behavior: "smooth" });
-      refs[firstErrorField as keyof typeof refs].current!.focus();
+    const errorFieldRef = firstErrorField && refs[firstErrorField as keyof typeof refs].current;
+  
+    if (errorFieldRef) {
+      errorFieldRef.scrollIntoView({ behavior: "smooth", block: "center" });
+  
+      setTimeout(() => {
+        errorFieldRef.focus();
+      }, 300);
     }
   };
+  
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -11,7 +11,7 @@ interface CardData {
   description: string
   linkText: string
   linkUrl: string
-  gradient: '#926ae5' | '#3189e3' | '#44cfe6'
+  textColor: string
 }
 
 const cardsData: CardData[] = [
@@ -21,7 +21,7 @@ const cardsData: CardData[] = [
       'Descoperiți, calificați și prioritizați clienții potențiali cu intenții ridicate cu notificări în timp real și învingeți concurența până la urmă.',
     linkText: 'Mai multe vânzări',
     linkUrl: '/solutions/sales',
-    gradient: '#926ae5'
+    textColor: '#926ae5'
   },
   {
     title: 'Pentru Marketing',
@@ -29,7 +29,7 @@ const cardsData: CardData[] = [
       'Concentrați-vă pe conturi, nu pe indivizi. Vedeți ce vă implică publicul țintă, personalizați călătoriile pe site și îmbunătățiți redirecționarea.',
     linkText: 'Generați mai multe conversii',
     linkUrl: '/solutions/marketing',
-    gradient: '#3189e3'
+    textColor: '#3189e3'
   },
   {
     title: 'Pentru Agenții',
@@ -37,7 +37,7 @@ const cardsData: CardData[] = [
       'Obțineți informații mai devreme, adăugați fluxuri de venituri și generați clienți potențiali mai calificați pentru clienții dvs. cu soluția noastră cu etichetă albă.',
     linkText: 'Creșteți rentabilitatea investiției clientului',
     linkUrl: '/solutions/agency',
-    gradient: '#44cfe6'
+    textColor: '#44cfe6'
   }
 ]
 
@@ -169,14 +169,14 @@ export default function HeroSection({
               >
                 <div
                   className="h-2"
-                  style={{background: card.gradient}}
+                  style={{background: card.textColor}}
                 ></div>
 
                 <div className='flex flex-col justify-between'>
                   <div className='relative z-10 px-4 md:px-6 py-5'>
                     <h2
                       className="text-lg font-semibold text-transparent bg-clip-text"
-                      style={{color: card.gradient}}
+                      style={{color: card.textColor}}
                     >
                       {card.title}
                     </h2>
