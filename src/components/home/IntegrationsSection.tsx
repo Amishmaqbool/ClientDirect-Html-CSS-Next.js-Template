@@ -124,7 +124,7 @@ const IntegrationSection = () => {
               <Image src={ClientiDirect} alt="Central Icon" width={162} height={162} className="max-xs:w-24 max-xs:h-24" />
             </div>
 
-            <div className="absolute w-full h-full z-10 flex max-lg:flex-col justify-between items-center max-xl:gap-6">
+            <div className="absolute w-full h-full z-10 flex max-lg:flex-col justify-between items-center max-sm:gap-0 max-xl:gap-6">
               <div className="flex flex-col sm:gap-[30px] xl:-ml-36 max-lg:mb-36 max-lg:-mt-72 max-xs:-mt-[200px] max-xs:mb-20">
                 <div className="flex sm:gap-6 justify-center md:mr-4">
                   <Image src={Home1} alt="Home 1" width={87} height={88} className="max-sm:mr-6 max-xs:w-[59.31px] max-xs:h-[60px]" />
@@ -138,7 +138,7 @@ const IntegrationSection = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:gap-[30px] xl:-mr-36 max-lg:top-16">
+              <div className="max-sm:mt-6 flex flex-col sm:gap-[30px] xl:-mr-36 max-lg:top-16">
                 <div className="flex sm:gap-6 justify-center md:mr-4">
                   <Image src={Home7} alt="Home 7" width={87} height={88} className="max-sm:mr-6 max-xs:w-[59.31px] max-xs:h-[60px]" />
                   <Image src={Home8} alt="Home 8" width={87} height={88} className="max-sm:mr-6 max-xs:w-[59.31px] max-xs:h-[60px]" />
@@ -157,12 +157,12 @@ const IntegrationSection = () => {
         <div className="flex max-lg:flex-col sm:gap-7 justify-center items-center max-w-full max-lg:max-w-[90%] mt-28 max-xl:px-4 max-lg:px-8 max-md:px-0 max-md:max-w-[95%] max-lg:mt-56 max-lg:pt-10 max-sm:pt-4 max-xs:pb-0 max-xs:mt-36">
 
           <div className="w-1/2 max-md:flex-col max-lg:w-full md:h-44 flex justify-center items-center gap-2 p-6 rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col sm:gap-4">
               <div className="flex sm:gap-3">
                 <Image src={RealIcon} alt="Real-Time" width={28.35} height={28.84} className="max-xl:h-7" />
-                <p className="text-lg text-white">API de identificare în timp real</p>
+                <p className="max-sm:ml-4 text-lg text-white">API de identificare în timp real</p>
               </div>
-              <p className="max-sm:ml-3 text-[#98a2b3] w-full text-sm">
+              <p className="max-sm:mt-3 max-sm:ml-3 text-[#98a2b3] w-full text-sm">
                 Vrei puterea deplină în propriile mâini? Transmiteți datele de identificare ale companiei oriunde aveți nevoie de ele cu Spotter, API-ul nostru de identificare în timp real.
               </p>
             </div>
@@ -188,12 +188,12 @@ const IntegrationSection = () => {
           </div>
 
           <div className="max-sm:mt-7 w-1/2 max-md:flex-col max-lg:w-full md:h-44 p-6 flex gap-2 justify-center items-center rounded-lg bg-[#ffffff17] border border-[#ffffff26]">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col sm:gap-4">
               <div className="flex sm:gap-3">
                 <Image src={GoogleAIcon} alt="Google Analytics" width={28.35} height={28.84} className="max-xl:h-7" />
                 <p className="max-sm:ml-3 text-lg text-white">Îmbogățitor Google Analytics</p>
               </div>
-              <p className="text-[#98a2b3] w-full text-sm">
+              <p className="max-sm:mt-4 text-[#98a2b3] w-full text-sm">
                 Google Analytics pur și simplu nu a fost creat pentru B2B - vindeți companiilor, nu
                 indivizii. Transformați GA într-o soluție de analiză bazată pe cont și obțineți
                 poza completă.
