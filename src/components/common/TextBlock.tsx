@@ -67,7 +67,7 @@ const TextBlock: React.FC<SalesSectionProps> = ({
           <p className="text-base sm:text-lg mb-6 text-gray-600">
             {description}
           </p>
-          <div className="flex flex-wrap justify-start gap-4 mb-8">
+          <div className="flex max-sm:flex-col max-sm:items-start justify-start sm:gap-4 mb-8">
             <button
               className="flex gap-2 items-center bg-black rounded-full text-white px-6 py-3 max-[420px]:text-xs text-sm"
               onClick={handlePrimaryCtaClick}
@@ -81,7 +81,7 @@ const TextBlock: React.FC<SalesSectionProps> = ({
             </button>
             {secondaryCtaText && (
               <button
-                className="border border-gray-300 px-6 py-3 rounded-full max-[341px]:text-xs text-sm"
+                className="max-sm:mt-4 border border-gray-300 px-6 py-3 rounded-full max-[341px]:text-xs text-sm"
                 onClick={handleSecondaryCtaClick}
               >
                 {secondaryCtaText}

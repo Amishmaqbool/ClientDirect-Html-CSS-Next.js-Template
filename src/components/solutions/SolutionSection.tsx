@@ -104,7 +104,7 @@ export default function SolutionSection({
             </ul>
           )}
 
-          <div className="mt-8 flex flex-col lg:flex-row gap-4">
+          <div className="mt-8 flex flex-col lg:flex-row lg:gap-4">
             <button
               onClick={handleClick}
               className="bg-black text-white px-4 rounded-full max-sm:w-full max-md:w-7/12 max-lg:w-10/12 max-lg:justify-center font-medium flex text-sm max-sm:text-xs sm:text-base gap-[1px] items-center py-2"
@@ -130,7 +130,7 @@ export default function SolutionSection({
             </button>
 
             <button
-              className="bg-white border border-gray-300 text-black px-4 flex gap-[2px] text-sm sm:text-base items-center py-2 rounded-full font-medium max-sm:w-full max-md:w-7/12 max-lg:w-10/12 max-lg:justify-center max-lg:gap-2"
+              className="max-lg:mt-4 bg-white border border-gray-300 text-black px-4 flex gap-[2px] text-sm sm:text-base items-center py-2 rounded-full font-medium max-sm:w-full max-md:w-7/12 max-lg:w-10/12 max-lg:justify-center max-lg:gap-2"
               onClick={handleClicktoSecondary}
             >
               <Image src={Coin} width={20} height={20} alt="coin" />
