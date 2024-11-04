@@ -120,12 +120,12 @@ const IntegrationSection = () => {
               </div>
             </div>
 
-            <div className="absolute z-10">
+            <div className="max-sm:hidden absolute z-10">
               <Image src={ClientiDirect} alt="Central Icon" width={162} height={162} className="max-xs:w-24 max-xs:h-24" />
             </div>
 
             <div className="absolute w-full h-full z-10 flex max-lg:flex-col justify-between items-center max-sm:gap-0 max-xl:gap-6">
-              <div className="xl:-ml-36 max-lg:mb-36 max-lg:-mt-72 max-xs:-mt-[200px] max-xs:mb-20">
+              <div className="xl:-ml-36 max-sm:mb-20 max-lg:mb-36 max-lg:-mt-72 max-xs:-mt-[170px] max-xs:mb-20">
                 <div className="flex sm:gap-6 justify-center md:mr-4">
                   <Image src={Home1} alt="Home 1" width={87} height={88} className="max-sm:mr-6 max-xs:w-[59.31px] max-xs:h-[60px]" />
                   <Image src={Home2} alt="Home 2" width={87} height={88} className="max-sm:mr-6 max-xs:w-[59.31px] max-xs:h-[60px]" />
@@ -138,7 +138,7 @@ const IntegrationSection = () => {
                 </div>
               </div>
 
-              <div className="max-sm:mt-6 xl:-mr-36 max-lg:top-16">
+              <div className="max-sm:-mt-8 xl:-mr-36">
                 <div className="flex sm:gap-6 justify-center md:mr-4">
                   <Image src={Home7} alt="Home 7" width={87} height={88} className="max-sm:mr-6 max-xs:w-[59.31px] max-xs:h-[60px]" />
                   <Image src={Home8} alt="Home 8" width={87} height={88} className="max-sm:mr-6 max-xs:w-[59.31px] max-xs:h-[60px]" />
