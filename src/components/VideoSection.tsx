@@ -1,20 +1,23 @@
 "use client";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import ReactPlayer from "react-player";
 import PlayIcon from "@/assets/svgs/play-icon.svg";
 import Thumbnail from "../../public/subtitle.png";
 
 interface VideoModalProps {
   isOpen: boolean;
   onClose: () => void;
+  videoRef: React.RefObject<HTMLVideoElement>;
   showControls: boolean;
+  handlePause: () => void;
 }
 
 function VideoModal({
   isOpen,
   onClose,
+  videoRef,
   showControls,
+  handlePause,
 }: VideoModalProps) {
   if (!isOpen) return null;
 
@@ -23,28 +26,27 @@ function VideoModal({
       className="fixed inset-0 z-[9999] flex justify-center items-center bg-black bg-opacity-30"
       onClick={onClose}
     >
-      <div
-        className="relative w-[93%]"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <ReactPlayer
-          url="./video.mp4"
-          playing={true}
+      <div className="relative w-[93%]" onClick={(e) => e.stopPropagation()}>
+        <video
+          className="w-full max-h-[96vh] rounded-md object-cover"
+          ref={videoRef}
           controls={showControls}
-          width="100%"
-          height="100%"
-          className="w-full h-[96vh] rounded-md object-cover"
-        />
+          onPause={handlePause}
+          onEnded={handlePause}
+          autoPlay
+        >
+          <source src="./video.mp4" />
+        </video>
       </div>
     </div>
   );
 }
 
 export default function VideoSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
   const [hasPlayed, setHasPlayed] = useState(false);
   const [showControls, setShowControls] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-
   const handlePlay = () => {
     setIsFullscreen(true);
     setShowControls(true);
@@ -52,10 +54,19 @@ export default function VideoSection() {
     document.body.style.overflow = "hidden";
   };
 
-  const handlePauseAndClose = () => {
-    setIsFullscreen(false);
-    setHasPlayed(false);
-    document.body.style.overflow = "";
+  const handlePause = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
+
+  const handleClickOutside = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      setIsFullscreen(false);
+      setHasPlayed(false);
+      document.body.style.overflow = "";
+    }
   };
 
   return (
@@ -78,13 +89,13 @@ export default function VideoSection() {
           </div>
         )}
 
-        <div>
         <VideoModal
           isOpen={isFullscreen}
-          onClose={handlePauseAndClose} 
+          onClose={handleClickOutside}
+          videoRef={videoRef}
           showControls={showControls}
+          handlePause={handlePause}
         />
-        </div>
       </div>
     </div>
   );
