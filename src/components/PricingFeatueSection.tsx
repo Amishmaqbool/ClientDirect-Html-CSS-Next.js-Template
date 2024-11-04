@@ -21,11 +21,11 @@ export default function pricingfeatuesection() {
 
       <div className="max-[490px]:px-0 px-10 pt-10 md:pt-20 grid gap-x-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {featureData.map((item, index) => (
-          <div key={index} className="flex gap-2 items-center border-b">
+          <div key={index} className="flex sm:gap-2 items-center border-b">
             <div className="flex-shrink-0">
               <Image src={BLueTick} alt="tick" width={15} height={15} />
             </div>
-            <p className="py-3.5 text-[#475467]">{item}</p>
+            <p className="max-sm:ml-2 py-3.5 text-[#475467]">{item}</p>
           </div>
         ))}
       </div>
