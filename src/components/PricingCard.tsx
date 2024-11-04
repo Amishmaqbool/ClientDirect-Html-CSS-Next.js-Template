@@ -49,11 +49,11 @@ export default function PricingCard() {
             </p>
 
             {data.map((item, index) => (
-              <div key={index} className="mb-4 flex gap-2 items-start">
+              <div key={index} className="mb-4 flex sm:gap-2 items-start">
                 <div className="flex-shrink-0">
                   <Image src={BLueTick} alt="tick" width={15} height={15} />
                 </div>
-                <p className="text-[#000]">{item}</p>
+                <p className="max-sm:ml-2 text-[#000]">{item}</p>
               </div>
             ))}
 

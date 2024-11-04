@@ -302,7 +302,7 @@ export default function Header() {
               Prețuri
             </a>
           </li>
-          <li className="flex items-center gap-4 mt-4 pt-4">
+          <li className="flex items-center sm:gap-4 mt-4 pt-4">
             <Link href="/auth/register" onClick={handleMenuItemClick}>
               <button className="rounded-full bg-[#3257ff] py-[7px] pl-5 pr-3 flex items-center gap-1 hover:bg-blue-600">
                 Începe acum
@@ -310,7 +310,7 @@ export default function Header() {
               </button>
             </Link>
             <Link href="/auth/login" onClick={handleMenuItemClick}>
-              <button className="font-semibold">Autentificare</button>
+              <button className="max-sm:ml-4 font-semibold">Autentificare</button>
             </Link>
           </li>
         </ul>
