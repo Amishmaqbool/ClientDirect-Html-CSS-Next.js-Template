@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -6,7 +7,7 @@ import RightArrow from "@/assets/svgs/right-arrow.svg";
 
 declare global {
   interface Window {
-    dataLayer: Record<string, any>[];
+    dataLayer: Array<{ event: string; [key: string]: unknown }>;
   }
 }
 
