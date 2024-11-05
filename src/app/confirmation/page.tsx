@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import RightArrow from "@/assets/svgs/right-arrow.svg";
 
+declare global {
+  interface Window {
+    dataLayer: Record<string, any>[];
+  }
+}
+
 const TokenToaster = dynamic(() => import("@/components/TokenToaster"), {
   ssr: false,
 });
 
-export default function page() {
+export default function Page() {
+  useEffect(() => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "new_registration",
+    });
+  }, []);
+
   return (
     <>
       <TokenToaster />
